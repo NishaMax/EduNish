@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - EduNish</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200">
+  <div class="bg-white p-10 rounded-2xl shadow-xl text-center max-w-lg w-full">
+    <h1 class="text-3xl font-bold text-gray-800 mb-4">Welcome to the Quiz!</h1>
+    <p class="text-gray-600 mb-6">
+      Your Student ID: <span id="studentId" class="font-mono text-blue-600"></span>
+    </p>
+    <p class="text-gray-500">🚧 Quiz content coming soon...</p>
+  </div>
+
+  <script>
+    const studentData = JSON.parse(localStorage.getItem("studentData"));
+    if (studentData) {
+      document.getElementById("studentId").textContent = studentData.id;
+    }
+  </script>
+</body>
+</html>

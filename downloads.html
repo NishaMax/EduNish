@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduNish - Downloads</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50">
+
+  <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        EduNish
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="downloads.html" class="text-gray-700 hover:text-blue-600">Resources</a>
+                    <a href="quiz.html" class="text-gray-700 hover:text-blue-600">Quizzes</a>
+                    <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
+                    <!-- Auth Buttons -->
+                    <button id="loginBtn" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login</button>
+                    <button id="logoutBtn" class="hidden bg-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg">Logout</button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-md border-t hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700">Home</a>
+                <a href="downloads.html" class="block px-3 py-2 text-gray-700">Resources</a>
+                <a href="quiz.html" class="block px-3 py-2 text-gray-700">Quizzes</a>
+                <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
+                <!-- Auth Buttons -->
+                <button id="loginBtn" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login</button>
+                <button id="logoutBtn" class="hidden bg-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+  <!-- ================= DOWNLOADS PAGE ================= -->
+<section class="pt-28 pb-12 text-center">
+  <h1 class="text-4xl font-bold text-gray-800">📂 Downloads</h1>
+  <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+    Find Grade 10 & 11 Notes, Past Papers, and Test Papers. Search or filter to quickly access your files.
+  </p>
+</section>
+
+<!-- Search & Filter -->
+<div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center mb-12 gap-4">
+  <input id="searchBar" type="text" placeholder="🔍 Search files..."
+    class="w-full sm:w-1/2 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+  <select id="filterCategory" class="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500">
+    <option value="all">All Categories</option>
+    <option value="grade10">Grade 10 Notes</option>
+    <option value="grade11">Grade 11 Notes</option>
+    <option value="past">Past Papers</option>
+    <option value="answers">Past Paper Answers</option>
+  </select>
+</div>
+
+<!-- ================= GRADE 10 ================= -->
+<section class="max-w-6xl mx-auto px-6 py-10">
+  <h2 class="text-2xl font-bold text-gray-800 mb-6" id = "tute10">📘 Grade 10 Tutes</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Example Card -->
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade10" data-name="Grade 10 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 10 - Chapter 1 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade10_chapter1_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+     <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade10" data-name="Grade 10 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 10 - Chapter 2 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade10_chapter2_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+     <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade10" data-name="Grade 10 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 10 - Chapter 3 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade10_chapter3_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+     <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade10" data-name="Grade 10 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 10 - Chapter 4 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade10_chapter4_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+     <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade10" data-name="Grade 10 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 10 - Chapter 5 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade10_chapter5_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+     <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade10" data-name="Grade 10 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 10 - Chapter 6 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade10_chapter6_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+     <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade10" data-name="Grade 10 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 10 - Chapter 7 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade10_chapter7_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+     <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade10" data-name="Grade 10 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 10 - Chapter 8 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade10_chapter8_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+     <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade10" data-name="Grade 10 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 10 - Chapter 9 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade10_chapter9_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= GRADE 11 ================= -->
+<section class="max-w-6xl mx-auto px-6 py-10">
+  <h2 class="text-2xl font-bold text-gray-800 mb-6" id = "tute11">📗 Grade 11 Tutes</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Example Card -->
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade11" data-name="Grade 11 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 11 - Chapter 1 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade11_chapter1_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade11" data-name="Grade 11 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 11 - Chapter 2 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade11_chapter2_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade11" data-name="Grade 11 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 11 - Chapter 3 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade11_chapter3_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade11" data-name="Grade 11 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 11 - Chapter 4 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade11_chapter4_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade11" data-name="Grade 11 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 11 - Chapter 5 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade11_chapter5_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="grade11" data-name="Grade 11 - Chapter 1 Notes">
+      <h3 class="text-xl font-semibold text-gray-800">Grade 11 - Chapter 6 Tute</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/grade11_chapter6_notes.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= PAST PAPERS ================= -->
+<section class="max-w-6xl mx-auto px-6 py-10">
+  <h2 class="text-2xl font-bold text-gray-800 mb-6" id = "pp">📄 O/L Past Papers</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Example Card -->
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="past" data-name="2013 O/L ICT Paper">
+      <h3 class="text-xl font-semibold text-gray-800">2013 O/L ICT</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2013_OL_ICT.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="past" data-name="2013 O/L ICT Paper">
+      <h3 class="text-xl font-semibold text-gray-800">2014 O/L ICT</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2014_OL_ICT.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="past" data-name="2013 O/L ICT Paper">
+      <h3 class="text-xl font-semibold text-gray-800">2015 O/L ICT</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2015_OL_ICT.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="past" data-name="2013 O/L ICT Paper">
+      <h3 class="text-xl font-semibold text-gray-800">2016 O/L ICT</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2016_OL_ICT.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="past" data-name="2013 O/L ICT Paper">
+      <h3 class="text-xl font-semibold text-gray-800">2017 O/L ICT</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2017_OL_ICT.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="past" data-name="2013 O/L ICT Paper">
+      <h3 class="text-xl font-semibold text-gray-800">2018 O/L ICT</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2018_OL_ICT.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="past" data-name="2013 O/L ICT Paper">
+      <h3 class="text-xl font-semibold text-gray-800">2019 O/L ICT</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2019_OL_ICT.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="past" data-name="2013 O/L ICT Paper">
+      <h3 class="text-xl font-semibold text-gray-800">2020 O/L ICT</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2020_OL_ICT.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="past" data-name="2013 O/L ICT Paper">
+      <h3 class="text-xl font-semibold text-gray-800">2021 O/L ICT</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2021_OL_ICT.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="past" data-name="2013 O/L ICT Paper">
+      <h3 class="text-xl font-semibold text-gray-800">2022 O/L ICT</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2022_OL_ICT.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="past" data-name="2013 O/L ICT Paper">
+      <h3 class="text-xl font-semibold text-gray-800">2023 O/L ICT</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2023_OL_ICT.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="past" data-name="2013 O/L ICT Paper">
+      <h3 class="text-xl font-semibold text-gray-800">2024 O/L ICT</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2024_OL_ICT.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= ANSWERS ================= -->
+<section class="max-w-6xl mx-auto px-6 py-10">
+  <h2 class="text-2xl font-bold text-gray-800 mb-6" id = "pa">📝 O/L Past Paper Answers</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Example Card -->
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="answers" data-name="2013 O/L ICT Answers">
+      <h3 class="text-xl font-semibold text-gray-800">2013 O/L ICT - Answers</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2013_OL_ICT_Answers.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="answers" data-name="2013 O/L ICT Answers">
+      <h3 class="text-xl font-semibold text-gray-800">2014 O/L ICT - Answers</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2014_OL_ICT_Answers.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="answers" data-name="2013 O/L ICT Answers">
+      <h3 class="text-xl font-semibold text-gray-800">2015 O/L ICT - Answers</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2015_OL_ICT_Answers.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="answers" data-name="2013 O/L ICT Answers">
+      <h3 class="text-xl font-semibold text-gray-800">2016 O/L ICT - Answers</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2016_OL_ICT_Answers.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="answers" data-name="2013 O/L ICT Answers">
+      <h3 class="text-xl font-semibold text-gray-800">2017 O/L ICT - Answers</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2017_OL_ICT_Answers.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="answers" data-name="2013 O/L ICT Answers">
+      <h3 class="text-xl font-semibold text-gray-800">2018 O/L ICT - Answers</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2018_OL_ICT_Answers.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="answers" data-name="2013 O/L ICT Answers">
+      <h3 class="text-xl font-semibold text-gray-800">2019 O/L ICT - Answers</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2019_OL_ICT_Answers.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="answers" data-name="2013 O/L ICT Answers">
+      <h3 class="text-xl font-semibold text-gray-800">2020 O/L ICT - Answers</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2020_OL_ICT_Answers.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="answers" data-name="2013 O/L ICT Answers">
+      <h3 class="text-xl font-semibold text-gray-800">2021 O/L ICT - Answers</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2021_OL_ICT_Answers.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="answers" data-name="2013 O/L ICT Answers">
+      <h3 class="text-xl font-semibold text-gray-800">2022 O/L ICT - Answers</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2022_OL_ICT_Answers.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="answers" data-name="2013 O/L ICT Answers">
+      <h3 class="text-xl font-semibold text-gray-800">2023 O/L ICT - Answers</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2023_OL_ICT_Answers.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+
+    <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all"
+         data-category="answers" data-name="2013 O/L ICT Answers">
+      <h3 class="text-xl font-semibold text-gray-800">2024 O/L ICT - Answers</h3>
+      <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+      <a href="Notes_papers/2024_OL_ICT_Answers.pdf" download
+         class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+        Download
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold">EduNish</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Making ICT learning easy and enjoyable for O/L students across Sri Lanka.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="downloads.html" class="hover:text-white transition-colors">Study Materials</a></li>
+                        <li><a href="downloads.html" class="hover:text-white transition-colors">Past Papers</a></li>
+                        <li><a href="quiz.html" class="hover:text-white transition-colors">Quizzes</a></li>
+                        <li><a href="quiz.html" class="hover:text-white transition-colors">Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Community</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Discussion Forum</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Study Groups</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Share Resources</a></li>
+                        <li><a href="community.html" class="hover:text-white transition-colors">Help Center</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="community.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="community.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="community.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="community.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 EduNish. All rights reserved. Made with ❤️ for ICT students.</p>
+            </div>
+        </div>
+    </footer>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>lucide.createIcons();</script>
+
+  <!-- Filtering & Search -->
+  <script>
+    const searchBar = document.getElementById("searchBar");
+    const filterCategory = document.getElementById("filterCategory");
+    const cards = document.querySelectorAll(".file-card");
+
+    function filterFiles() {
+      const searchText = searchBar.value.toLowerCase();
+      const category = filterCategory.value;
+
+      cards.forEach(card => {
+        const fileName = card.dataset.name.toLowerCase();
+        const fileCategory = card.dataset.category;
+
+        if (
+          (category === "all" || fileCategory === category) &&
+          fileName.includes(searchText)
+        ) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+
+    searchBar.addEventListener("input", filterFiles);
+    filterCategory.addEventListener("change", filterFiles);
+  </script>
+</body>
+</html>
