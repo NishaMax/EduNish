@@ -164,6 +164,9 @@ function startQuiz(questions, key) {
   quizContainer.classList.remove("hidden");
   seriesSection.classList.add("hidden");
 
+  // 🔥 Hide the whole selection card after quiz starts
+  mediumSelect.parentElement.parentElement.classList.add("hidden");
+
   // Reset & start 20-min timer
   clearInterval(timerInterval);
   timeLeft = 20 * 60; // reset to 20 minutes
@@ -172,6 +175,7 @@ function startQuiz(questions, key) {
   renderQuestion();
   updateProgress();
 }
+
 
 // ===== Timer =====
 function startTimer() {
@@ -290,15 +294,24 @@ function finishQuiz() {
   });
 
   document.getElementById("back-btn").addEventListener("click", () => {
-    resultContainer.classList.add("hidden");
-    seriesSection.classList.add("hidden");
-    lessonSelect.parentElement.classList.add("hidden");
-    gradeSelect.parentElement.classList.add("hidden");
-    mediumSelect.value = "";
-    gradeSelect.value = "";
-    lessonSelect.innerHTML = `<option value="">--Choose Lesson--</option>`;
-    mediumSelect.parentElement.classList.remove("hidden");
-  });
+  // ✅ Stop the timer completely
+  clearInterval(timerInterval);
+
+  resultContainer.classList.add("hidden");
+  quizContainer.classList.add("hidden");
+
+  // ✅ Show the selection card again
+  mediumSelect.parentElement.parentElement.classList.remove("hidden");
+
+  seriesSection.classList.add("hidden");
+  lessonSelect.parentElement.classList.add("hidden");
+  gradeSelect.parentElement.classList.add("hidden");
+
+  // Reset dropdowns
+  mediumSelect.value = "";
+  gradeSelect.value = "";
+  lessonSelect.innerHTML = `<option value="">--Choose Lesson--</option>`;
+});
 
   renderProgressOverview();
 }

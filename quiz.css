@@ -686,3 +686,15 @@ pre {
   50% { box-shadow: 0 0 35px rgba(139,92,246,0.8); }
 }
 
+/* Responsive fix for Timer */
+@media (max-width: 768px) {
+  #timer {
+    top: auto;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 80px;
+    height: 80px;
+    font-size: 18px;
+  }
+}
