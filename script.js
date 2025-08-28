@@ -9,15 +9,18 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
 // =================== Firebase Config ===================
-const firebaseConfig = {
-  apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
-  authDomain: "edunish-211d0.firebaseapp.com",
-  projectId: "edunish-211d0",
-  storageBucket: "edunish-211d0.firebasestorage.app",
-  messagingSenderId: "1002400429038",
-  appId: "1:1002400429038:web:12ee9a586de10e518694ff",
-  measurementId: "G-7ZSDMMKFQ0",
-};
+  const firebaseConfig = {
+    apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
+    authDomain: "edunish-211d0.firebaseapp.com",
+    projectId: "edunish-211d0",
+    storageBucket: "edunish-211d0.appspot.com",   // ✅ Correct now
+    messagingSenderId: "1002400429038",
+    appId: "1:1002400429038:web:12ee9a586de10e518694ff",
+    measurementId: "G-7ZSDMMKFQ0"
+  };
+
+
+
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -28,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const logoutBtnDesktop = document.getElementById("logoutBtnDesktop");
   const loginBtnMobile = document.getElementById("loginBtnMobile");
   const logoutBtnMobile = document.getElementById("logoutBtnMobile");
+  const profileBtnDesktop = document.getElementById("profileBtnDesktop");
+  const profileBtnMobile = document.getElementById("profileBtnMobile");
   const authModal = document.getElementById("authModal");
   const authTitle = document.getElementById("authTitle");
   const authForm = document.getElementById("authForm");
@@ -217,7 +222,7 @@ if (loginBtnMobile) {
 }
 
   // ===== Auth state → keep active record in sync =====
-  onAuthStateChanged(auth, (user) => {
+ onAuthStateChanged(auth, (user) => {
   if (user) {
     loginBtnDesktop?.classList.add("hidden");
     logoutBtnDesktop?.classList.remove("hidden");
@@ -226,10 +231,17 @@ if (loginBtnMobile) {
     logoutBtnMobile?.classList.remove("hidden");
 
     const rec = getByEmail(user.email);
-    if (rec) {
+
+    if (rec && rec.studentId) {
       localStorage.setItem("edunishStudentData", JSON.stringify(rec));
+      // ✅ Show profile buttons
+      profileBtnDesktop?.classList.remove("hidden");
+      profileBtnMobile?.classList.remove("hidden");
     } else {
       localStorage.removeItem("edunishStudentData");
+      // ❌ Hide profile buttons if no ID
+      profileBtnDesktop?.classList.add("hidden");
+      profileBtnMobile?.classList.add("hidden");
     }
   } else {
     loginBtnDesktop?.classList.remove("hidden");
@@ -239,8 +251,11 @@ if (loginBtnMobile) {
     logoutBtnMobile?.classList.add("hidden");
 
     localStorage.removeItem("edunishStudentData");
+    profileBtnDesktop?.classList.add("hidden");
+    profileBtnMobile?.classList.add("hidden");
   }
 });
+
 
   // ===== Quick registration on Home (optional shortcut) =====
   if (quickRegForm) {
@@ -276,25 +291,37 @@ if (loginBtnMobile) {
 
   // ===== Open Quiz flow =====
   window.openQuiz = function () {
-    const user = auth.currentUser;
-    if (!user) {
-      authModal?.classList.remove("hidden");
-      return;
+  const user = auth.currentUser;
+  if (!user) {
+    authModal?.classList.remove("hidden");
+    return;
+  }
+
+  const email = (user.email || "").toLowerCase();
+  let rec = getByEmail(email); // looks in edunishStudentsByEmail
+
+  // Fallback: if we have a single active record that matches this email, index it.
+  if (!rec) {
+    const active = JSON.parse(localStorage.getItem("edunishStudentData") || "null");
+    if (active && active.email && active.email.toLowerCase() === email) {
+      const map = JSON.parse(localStorage.getItem("edunishStudentsByEmail") || "{}");
+      map[email] = active;
+      localStorage.setItem("edunishStudentsByEmail", JSON.stringify(map));
+      rec = active;
     }
+  }
 
-    const email = (user.email || "").toLowerCase();
-    const rec = getByEmail(email);
+  if (!rec || !rec.studentId) {
+    // No StudentID for this email → go to registration
+    window.location.href = `registration.html?email=${encodeURIComponent(email)}`;
+    return;
+  }
 
-    if (!rec || !rec.studentId) {
-      // No StudentID for this email → go to registration
-      window.location.href = `registration.html?email=${encodeURIComponent(email)}`;
-      return;
-    }
+  // Have StudentID → set as active and go to quiz
+  localStorage.setItem("edunishStudentData", JSON.stringify(rec));
+  window.location.href = "quiz.html";
+};
 
-    // Have StudentID → set as active and go to quiz
-    localStorage.setItem("edunishStudentData", JSON.stringify(rec));
-    window.location.href = "quiz.html";
-  };
 });
 
 

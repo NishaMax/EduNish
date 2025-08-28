@@ -8,6 +8,17 @@
   <link rel="stylesheet" href="quiz.css">
   <link rel="stylesheet" href="styles.css">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const studentData = JSON.parse(localStorage.getItem("edunishStudentData") || "null");
+
+    if (!studentData || !studentData.studentId) {
+      // Not registered → kick them to registration
+      window.location.href = "registration.html";
+    }
+  });
+</script>
+
 </head>
 <body> 
   <div id="timer" class="absolute -right-20 top-1/2 transform -translate-y-1/2"></div>

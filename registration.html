@@ -5,83 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>EduNish — Registration</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import { getAuth } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-    import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-
-    // Firebase setup
-    const firebaseConfig = {
-      apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
-      authDomain: "edunish-211d0.firebaseapp.com",
-      projectId: "edunish-211d0",
-      storageBucket: "edunish-211d0.appspot.com",
-      messagingSenderId: "1002400429038",
-      appId: "1:1002400429038:web:12ee9a586de10e518694ff",
-      measurementId: "G-7ZSDMMKFQ0",
-    };
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
-
-    // Generate Student ID like EduNish1234
-    function genStudentId() {
-      const rnd = Math.floor(1000 + Math.random() * 9000);
-      return "EduNish" + rnd;
-    }
-
-    async function saveStudent(uid, record) {
-      await setDoc(doc(db, "students", uid), record, { merge: true });
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const form = document.getElementById("regForm");
-      const msg  = document.getElementById("regMsg");
-
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault(); // stop refresh
-
-        const fullName = document.getElementById("regName").value.trim();
-        const grade    = document.getElementById("regGrade").value;
-        const email    = document.getElementById("regEmail").value.trim().toLowerCase();
-
-        if (!fullName || !grade || !email) {
-          msg.className = "text-red-600";
-          msg.textContent = "⚠️ Please fill all fields.";
-          return;
-        }
-
-        // Always create a Student ID
-        const studentId = genStudentId();
-        const record = {
-          studentId,
-          fullName,
-          grade,
-          email,
-          medium: "english",
-          createdAt: new Date().toISOString(),
-        };
-
-        try {
-          const user = auth.currentUser;
-          if (user) {
-            await saveStudent(user.uid, record);
-          }
-          localStorage.setItem("edunishStudentData", JSON.stringify(record));
-
-          msg.className = "text-green-600 font-semibold";
-          msg.textContent = `✅ Student ID created: ${studentId}`;
-
-          // redirect after 1.5s
-          setTimeout(() => (window.location.href = "quiz.html"), 1500);
-        } catch (err) {
-          console.error(err);
-          msg.className = "text-yellow-600 font-semibold";
-          msg.textContent = `⚠️ Saved locally only. Your Student ID: ${studentId}`;
-        }
-      });
-    });
-  </script>
 </head>
 <body class="bg-gray-50 text-gray-900">
   <div class="max-w-lg mx-auto px-4 py-12">
@@ -115,5 +38,80 @@
       <a href="index.html" class="text-blue-600">← Back to Home</a>
     </div>
   </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+    apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
+    authDomain: "edunish-211d0.firebaseapp.com",
+    projectId: "edunish-211d0",
+    storageBucket: "edunish-211d0.appspot.com",   // ✅ Correct now
+    messagingSenderId: "1002400429038",
+    appId: "1:1002400429038:web:12ee9a586de10e518694ff",
+    measurementId: "G-7ZSDMMKFQ0"
+    };
+
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // Generate unique ID like EduNish001
+    async function genUniqueStudentId() {
+      let id, exists = true;
+      while (exists) {
+        const rnd = Math.floor(1 + Math.random() * 999).toString().padStart(3, "0");
+        id = "EduNish" + rnd;
+        const snap = await getDoc(doc(db, "students", id));
+        exists = snap.exists();
+      }
+      return id;
+    }
+
+    async function saveStudent(record) {
+      await setDoc(doc(db, "students", record.studentId), record, { merge: true });
+    }
+
+    document.getElementById("regForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const msg = document.getElementById("regMsg");
+
+      const fullName = document.getElementById("regName").value.trim();
+      const grade    = document.getElementById("regGrade").value;
+      const email    = document.getElementById("regEmail").value.trim().toLowerCase();
+
+      if (!fullName || !grade || !email) {
+        msg.className = "text-red-600";
+        msg.textContent = "⚠️ Please fill all fields.";
+        return;
+      }
+
+      msg.className = "text-blue-600";
+      msg.textContent = "⏳ Creating your Student ID…";
+
+      try {
+        const studentId = await genUniqueStudentId();
+        const record = { studentId, fullName, grade, email, createdAt: new Date().toISOString() };
+
+        await saveStudent(record);
+        localStorage.setItem("edunishStudentData", JSON.stringify(record));
+        // also index by email so openQuiz() can find it
+        const map = JSON.parse(localStorage.getItem("edunishStudentsByEmail") || "{}");
+        map[email] = record;                    // use the same 'email' you already have
+        localStorage.setItem("edunishStudentsByEmail", JSON.stringify(map));
+
+
+        msg.className = "text-green-600 font-semibold";
+        msg.textContent = `✅ Student ID created: ${studentId}`;
+
+        setTimeout(() => (window.location.href = "quiz.html"), 1500);
+      } catch (err) {
+        console.error(err);
+        msg.className = "text-red-600";
+        msg.textContent = "❌ Error creating Student ID. Try again.";
+      }
+    });
+  </script>
 </body>
 </html>
