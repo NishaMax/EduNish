@@ -1,0 +1,406 @@
+{
+  "Series 1": [
+    {
+      "question": "පහත දක්වා ඇතිවලින් Basic logic gate එකක් නොවන එක මොකක්ද?",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "NAND"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "AND gate එක output 1 දෙනවා කවද්ද?",
+      "options": [
+        "कम से कम एक input 1",
+        "Both inputs 1",
+        "All inputs 0",
+        "Any input 0"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "OR gate එක output 1 දෙනවා කවද්ද?",
+      "options": [
+        "Both inputs 0",
+        "कम से कम एक input 1",
+        "All inputs 1",
+        "Inputs opposite"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "NOT gate එකට වෙනත් නමක් කියන්නේ?",
+      "options": [
+        "Inverter",
+        "Buffer",
+        "Amplifier",
+        "Comparator"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "AND gate එකේ Boolean expression එක මොකක්ද?",
+      "options": [
+        "A + B",
+        "A . B",
+        "A'",
+        "A ⊕ B"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "OR gate එකේ Boolean expression එක මොකක්ද?",
+      "options": [
+        "A + B",
+        "A . B",
+        "A'",
+        "AB'"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "NOT gate එකේ Boolean expression එක මොකක්ද?",
+      "options": [
+        "A + B",
+        "A'",
+        "A . B",
+        "AB"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "AND gate එකේ Truth table එකේ Output 1 එන්නේ?",
+      "options": [
+        "Inputs 0,0",
+        "Inputs 1,1",
+        "Inputs 0,1",
+        "Inputs 1,0"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "OR gate එක Represent කරන symbol එක මොකක්ද?",
+      "options": [
+        "+",
+        ".",
+        "⊕",
+        "→"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Input එකේ Opposite Output දෙන Logic gate එක මොකක්ද?",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "NAND"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Boolean algebra එකේ 1 + 0 = ?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "10"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Boolean algebra එකේ 1 . 0 = ?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "10"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Boolean algebra එකේ A + A = ?",
+      "options": [
+        "A",
+        "0",
+        "1",
+        "A'"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Boolean algebra එකේ A . A = ?",
+      "options": [
+        "A",
+        "0",
+        "1",
+        "A'"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Street lights (either switch ON නම් light ON) සඳහා භාවිතා කරන gate එක මොකක්ද?",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "NAND"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Alarm එකක් (All sensors danger නම් ON) represent කරන්න Gate එක මොකක්ද?",
+      "options": [
+        "OR",
+        "AND",
+        "NOT",
+        "NOR"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "NOT(1) = ?",
+      "options": [
+        "0",
+        "1",
+        "10",
+        "11"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "A . 1 = ?",
+      "options": [
+        "A",
+        "1",
+        "0",
+        "A'"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "A + 0 = ?",
+      "options": [
+        "A",
+        "0",
+        "1",
+        "A'"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Boolean algebra එක deal කරනවා මොනවා සමගද?",
+      "options": [
+        "Decimal numbers",
+        "Binary values",
+        "Octal numbers",
+        "Hexadecimal numbers"
+      ],
+      "answer": 1
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "OR gate එකේ Complement එක මොකක්ද?",
+      "options": [
+        "AND",
+        "NOR",
+        "NAND",
+        "NOT"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "AND gate එකේ Complement එක මොකක්ද?",
+      "options": [
+        "OR",
+        "NOR",
+        "NAND",
+        "NOT"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "NAND gate එක Output 0 දෙනවා කවද්ද?",
+      "options": [
+        "All inputs 0",
+        "All inputs 1",
+        "कम से कम एक input 0",
+        "Inputs different"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "NOR gate එක Output 1 දෙනවා කවද්ද?",
+      "options": [
+        "All inputs 1",
+        "All inputs 0",
+        "कम से कम एक input 1",
+        "Inputs different"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Universal gate එකක් කියන්නේ?",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "NAND"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "NAND ගේට්ටුවට අමතරව තවත් Universal gate එකක් මොකක්ද?",
+      "options": [
+        "OR",
+        "NOR",
+        "NOT",
+        "XOR"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "XOR gate එක Output 1 දෙනවා කවද්ද?",
+      "options": [
+        "Inputs same",
+        "Inputs different",
+        "All inputs 1",
+        "All inputs 0"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "XNOR gate එක Output 1 දෙනවා කවද්ද?",
+      "options": [
+        "Inputs same",
+        "Inputs different",
+        "All inputs 1",
+        "कम से कम एक input 1"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Parity checkers වල භාවිතා කරන Gate එක මොකක්ද?",
+      "options": [
+        "AND",
+        "OR",
+        "XOR",
+        "NOR"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Even/odd parity detect කර Errors stop කරන්න භාවිතා කරන Gate එක මොකක්ද?",
+      "options": [
+        "XOR",
+        "XNOR",
+        "NOR",
+        "NAND"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Boolean algebra එකේ A + A' = ?",
+      "options": [
+        "0",
+        "1",
+        "A",
+        "A'"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Boolean algebra එකේ A . A' = ?",
+      "options": [
+        "0",
+        "1",
+        "A",
+        "A'"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Alarm system එකක් (Any sensor ON නම් Ring) සඳහා භාවිතා කරන Gate එක මොකක්ද?",
+      "options": [
+        "AND",
+        "OR",
+        "NOR",
+        "NOT"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Street light එකක් (Both switches ON නම් light ON) සඳහා භාවිතා කරන Gate එක මොකක්ද?",
+      "options": [
+        "OR",
+        "AND",
+        "NAND",
+        "NOR"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Logic gates තියෙන IC family එක මොකක්ද?",
+      "options": [
+        "TTL",
+        "CMOS",
+        "Both TTL and CMOS",
+        "None"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Only NAND gates භාවිතා කරලා Represent කරන්න පුළුවන් Gates මොනවාද?",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "All of these"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Only NOR gates භාවිතා කරලා Represent කරන්න පුළුවන් Gates මොනවාද?",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "All of these"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Calculators වල Addition සඳහා භාවිතා කරන Gate එක මොකක්ද?",
+      "options": [
+        "AND",
+        "XOR",
+        "NAND",
+        "XNOR"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Memory storage devices වල භාවිතා කරන Gate එක මොකක්ද?",
+      "options": [
+        "NAND",
+        "NOR",
+        "XOR",
+        "AND"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Both inputs LOW නම් HIGH output දෙන Gate එක මොකක්ද?",
+      "options": [
+        "AND",
+        "OR",
+        "NOR",
+        "NAND"
+      ],
+      "answer": 2
+    }
+  ]
+}

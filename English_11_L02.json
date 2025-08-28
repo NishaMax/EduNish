@@ -1,0 +1,206 @@
+{
+  "Series 1": [
+    {
+      "question": "What are the three basic components of a system?",
+      "options": ["Input, Processing, Output", "Data, Hardware, Software", "Users, Input, Output", "Hardware, Software, Process"],
+      "answer": 0
+    },
+    {
+      "question": "Which of the following best defines an information system?",
+      "options": ["A collection of only hardware devices", "A process that converts data into information", "A group of interconnected users", "A method to store files manually"],
+      "answer": 1
+    },
+    {
+      "question": "Which type of information system processes all tasks without using computers?",
+      "options": ["Computer-based system", "Online system", "Manual system", "Hybrid system"],
+      "answer": 2
+    },
+    {
+      "question": "Which of the following is an advantage of a computer-based information system?",
+      "options": ["More errors due to human processing", "Consumes large storage space", "Fast data processing with high accuracy", "Difficult to ensure security"],
+      "answer": 2
+    },
+    {
+      "question": "In a school progress report system, identifying the student index number belongs to which step?",
+      "options": ["Input", "Processing", "Output", "Storage"],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is NOT a characteristic of manual information systems?",
+      "options": ["Takes large physical storage space", "Processes data slowly", "Uses barcodes to track records", "Prone to more errors"],
+      "answer": 2
+    },
+    {
+      "question": "Which phase of SDLC identifies user requirements?",
+      "options": ["Designing the solution", "Requirement gathering and analysis", "Coding", "Testing"],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is an example of requirement gathering?",
+      "options": ["Creating code in Python", "Collecting document samples from users", "Installing a new system", "Debugging code errors"],
+      "answer": 1
+    },
+    {
+      "question": "In SDLC, at which stage is hardware and software requirement decided?",
+      "options": ["Requirement gathering", "Designing the solution", "Testing", "Maintenance"],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is NOT a step of SDLC?",
+      "options": ["Deployment", "Designing the solution", "Requirement gathering", "Encryption"],
+      "answer": 3
+    },
+    {
+      "question": "The stage where errors in planning and coding are corrected is called?",
+      "options": ["Testing and Debugging", "Maintenance", "Designing", "Deployment"],
+      "answer": 0
+    },
+    {
+      "question": "Unit testing is performed to check?",
+      "options": ["The entire system", "Each component separately", "User acceptance", "Integration of all modules"],
+      "answer": 1
+    },
+    {
+      "question": "Which deployment method runs both old and new systems simultaneously?",
+      "options": ["Direct deployment", "Parallel deployment", "Pilot deployment", "Phased deployment"],
+      "answer": 1
+    },
+    {
+      "question": "Which deployment method replaces the old system all at once?",
+      "options": ["Pilot", "Direct", "Phased", "Iterative"],
+      "answer": 1
+    },
+    {
+      "question": "In which deployment method is the system first tested in a small region?",
+      "options": ["Pilot", "Parallel", "Phased", "Direct"],
+      "answer": 0
+    },
+    {
+      "question": "Which of the following is NOT a system development life cycle model?",
+      "options": ["Waterfall", "Spiral", "Iterative Incremental", "Agile-Scrum"],
+      "answer": 3
+    },
+    {
+      "question": "Which SDLC model is linear and step-by-step?",
+      "options": ["Iterative Incremental", "Prototyping", "Waterfall", "Spiral"],
+      "answer": 2
+    },
+    {
+      "question": "Which SDLC model develops a system in repeated cycles?",
+      "options": ["Waterfall", "Iterative Incremental", "Direct deployment", "Manual system"],
+      "answer": 1
+    },
+    {
+      "question": "Maintaining a system to meet new user requirements is part of?",
+      "options": ["Deployment", "Maintenance", "Requirement gathering", "Testing"],
+      "answer": 1
+    },
+    {
+      "question": "Which is the correct order of SDLC stages?",
+      "options": ["Requirement → Design → Coding → Testing → Deployment → Maintenance", "Design → Requirement → Coding → Testing → Deployment", "Requirement → Coding → Deployment → Maintenance", "Requirement → Testing → Coding → Design"],
+      "answer": 0
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "A system that predicts tomorrow’s weather from temperature, humidity and wind direction is an example of?",
+      "options": ["Manual system", "Computer-based system", "Hybrid system", "Traditional system"],
+      "answer": 1
+    },
+    {
+      "question": "Which component of a system converts input into output?",
+      "options": ["Input", "Processing", "Output", "Storage"],
+      "answer": 1
+    },
+    {
+      "question": "A barcode-based library management system is an example of?",
+      "options": ["Manual system", "Computer-based information system", "Hybrid system", "Traditional system"],
+      "answer": 1
+    },
+    {
+      "question": "Which is a drawback of manual systems?",
+      "options": ["Data accuracy", "Faster processing", "Consumes more storage space", "Automated searching"],
+      "answer": 2
+    },
+    {
+      "question": "Which stage of SDLC involves preparing prototypes?",
+      "options": ["Requirement gathering", "Designing", "Coding", "Maintenance"],
+      "answer": 0
+    },
+    {
+      "question": "Deciding required hardware and software belongs to?",
+      "options": ["Requirement gathering", "Design stage", "Testing", "Deployment"],
+      "answer": 1
+    },
+    {
+      "question": "Debugging is part of which phase?",
+      "options": ["Coding", "Testing", "Deployment", "Maintenance"],
+      "answer": 1
+    },
+    {
+      "question": "Which testing ensures the entire system works as expected?",
+      "options": ["Unit testing", "System testing", "Integration testing", "Acceptance testing"],
+      "answer": 1
+    },
+    {
+      "question": "Which testing is done by the actual user to approve the system?",
+      "options": ["System testing", "Acceptance testing", "Unit testing", "Integration testing"],
+      "answer": 1
+    },
+    {
+      "question": "The type of deployment where the new system is introduced step by step is?",
+      "options": ["Direct", "Pilot", "Phased", "Parallel"],
+      "answer": 2
+    },
+    {
+      "question": "Which system development model creates a working mock-up before the final system?",
+      "options": ["Waterfall", "Prototyping", "Iterative Incremental", "Spiral"],
+      "answer": 1
+    },
+    {
+      "question": "Which SDLC model combines repeated cycles with gradual system expansion?",
+      "options": ["Waterfall", "Iterative Incremental", "Spiral", "Direct"],
+      "answer": 1
+    },
+    {
+      "question": "Spiral model is designed to?",
+      "options": ["Perform only linear development", "Incorporate risk analysis in iterative development", "Test only unit components", "Eliminate the need for coding"],
+      "answer": 1
+    },
+    {
+      "question": "Collecting library cards and report formats during requirement gathering is an example of?",
+      "options": ["Questionnaires", "Document sample collection", "Prototyping", "Unit testing"],
+      "answer": 1
+    },
+    {
+      "question": "Which stage ensures systems are upgraded to meet new requirements?",
+      "options": ["Testing", "Deployment", "Maintenance", "Designing"],
+      "answer": 2
+    },
+    {
+      "question": "Which deployment method is considered most risky because the old system is removed at once?",
+      "options": ["Parallel", "Pilot", "Direct", "Phased"],
+      "answer": 2
+    },
+    {
+      "question": "In requirement gathering, which technique uses staff interviews?",
+      "options": ["Surveys", "Questionnaires", "Direct Interviews", "Prototyping"],
+      "answer": 2
+    },
+    {
+      "question": "Which phase of SDLC is concerned with resolving software bugs?",
+      "options": ["Designing", "Maintenance", "Testing and Debugging", "Deployment"],
+      "answer": 2
+    },
+    {
+      "question": "Which testing combines independently tested modules?",
+      "options": ["System testing", "Unit testing", "Acceptance testing", "Integration testing"],
+      "answer": 3
+    },
+    {
+      "question": "Which type of system reduces physical storage by using databases?",
+      "options": ["Manual information system", "Computer-based information system", "Hybrid", "Traditional"],
+      "answer": 1
+    }
+  ]
+}

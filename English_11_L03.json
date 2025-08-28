@@ -1,0 +1,308 @@
+{
+  "Series 1": [
+    {
+      "question": "What does URL stand for?",
+      "options": ["Uniform Resource Locator", "Universal Routing Link", "Unified Resource Label", "Unique Reference Locator"],
+      "answer": 0
+    },
+    {
+      "question": "In a URL, which part specifies the communication protocol?",
+      "options": ["Domain name", "Path", "http:// or https://", "File extension"],
+      "answer": 2
+    },
+    {
+      "question": "The numeric label assigned to every device on a network is called?",
+      "options": ["MAC address", "URL", "IP address", "Domain name"],
+      "answer": 2
+    },
+    {
+      "question": "Which version of IP uses 128-bit addresses?",
+      "options": ["IPv4", "IPv6", "IPX", "DNS"],
+      "answer": 1
+    },
+    {
+      "question": "The part of a URL that identifies the website’s name is?",
+      "options": ["Protocol", "Domain name", "Port", "File path"],
+      "answer": 1
+    },
+    {
+      "question": "Which system translates domain names into IP addresses?",
+      "options": ["HTTP", "FTP", "DNS", "ISP"],
+      "answer": 2
+    },
+    {
+      "question": "Which protocol is used to send emails?",
+      "options": ["HTTP", "SMTP", "IMAP", "FTP"],
+      "answer": 1
+    },
+    {
+      "question": "Which protocol is used to transfer files between computers?",
+      "options": ["FTP", "HTTP", "SMTP", "DNS"],
+      "answer": 0
+    },
+    {
+      "question": "The protocol that ensures secure communication over the web is?",
+      "options": ["HTTP", "HTTPS", "FTP", "DNS"],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is NOT an Internet service?",
+      "options": ["World Wide Web", "Streaming", "DNS", "Manual filing system"],
+      "answer": 3
+    },
+    {
+      "question": "Google, Bing, and Yahoo are examples of?",
+      "options": ["Web browsers", "Search engines", "Protocols", "Domain names"],
+      "answer": 1
+    },
+    {
+      "question": "Which Internet service allows watching movies or listening to music in real-time?",
+      "options": ["Email", "Streaming", "FTP", "WWW"],
+      "answer": 1
+    },
+    {
+      "question": "Which Internet service uses URLs and hyperlinks?",
+      "options": ["FTP", "WWW", "DNS", "Streaming"],
+      "answer": 1
+    },
+    {
+      "question": "Which type of cloud service provides virtual machines and storage?",
+      "options": ["SaaS", "PaaS", "IaaS", "VPN"],
+      "answer": 2
+    },
+    {
+      "question": "Which cloud service provides ready-to-use applications like Google Docs?",
+      "options": ["IaaS", "PaaS", "SaaS", "DNS"],
+      "answer": 2
+    },
+    {
+      "question": "A key advantage of cloud computing is?",
+      "options": ["Requires expensive hardware", "Limited scalability", "Accessibility from anywhere", "High setup cost"],
+      "answer": 2
+    },
+    {
+      "question": "Which of the following is a disadvantage of cloud computing?",
+      "options": ["Accessibility from anywhere", "Dependence on Internet connectivity", "Automatic updates", "Scalability"],
+      "answer": 1
+    },
+    {
+      "question": "Which email component specifies the recipient?",
+      "options": ["Subject", "To", "Cc", "Bcc"],
+      "answer": 1
+    },
+    {
+      "question": "Sending irrelevant or unsolicited bulk emails is called?",
+      "options": ["Phishing", "Hacking", "Spam", "Streaming"],
+      "answer": 2
+    },
+    {
+      "question": "Which social network feature allows real-time chatting?",
+      "options": ["Post", "Comment", "Instant messaging", "Streaming"],
+      "answer": 2
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Which part of the URL indicates the resource location within a website?",
+      "options": ["Protocol", "Domain name", "Path", "IP address"],
+      "answer": 2
+    },
+    {
+      "question": "An IP address such as 192.168.1.1 belongs to which version of IP?",
+      "options": ["IPv4", "IPv6", "IPX", "DNS"],
+      "answer": 0
+    },
+    {
+      "question": "Which organization manages domain names globally?",
+      "options": ["ICANN", "IETF", "W3C", "ISO"],
+      "answer": 0
+    },
+    {
+      "question": "Which of the following is a Top-Level Domain (TLD)?",
+      "options": [".com", "example.com", "http://", "index.html"],
+      "answer": 0
+    },
+    {
+      "question": "Which protocol retrieves emails from a server?",
+      "options": ["SMTP", "POP3", "FTP", "DNS"],
+      "answer": 1
+    },
+    {
+      "question": "HTTPS is more secure than HTTP because it uses?",
+      "options": ["Data compression", "Encryption", "DNS", "Proxy servers"],
+      "answer": 1
+    },
+    {
+      "question": "Which Internet service allows remote login to another computer?",
+      "options": ["WWW", "Telnet/SSH", "FTP", "DNS"],
+      "answer": 1
+    },
+    {
+      "question": "Which Internet service is used to share large files across networks?",
+      "options": ["FTP", "WWW", "Email", "Streaming"],
+      "answer": 0
+    },
+    {
+      "question": "A software that allows users to view web pages is called?",
+      "options": ["Search engine", "Web browser", "Protocol", "URL"],
+      "answer": 1
+    },
+    {
+      "question": "Which Internet service provides access to online discussion boards?",
+      "options": ["Email", "Newsgroups/Forums", "Streaming", "DNS"],
+      "answer": 1
+    },
+    {
+      "question": "Which type of cloud service provides an environment for developers to build apps?",
+      "options": ["IaaS", "PaaS", "SaaS", "WWW"],
+      "answer": 1
+    },
+    {
+      "question": "Dropbox and Google Drive are examples of?",
+      "options": ["IaaS", "PaaS", "SaaS", "Cloud storage services"],
+      "answer": 3
+    },
+    {
+      "question": "Which Internet service helps users locate information quickly?",
+      "options": ["FTP", "WWW", "Search engines", "Cloud computing"],
+      "answer": 2
+    },
+    {
+      "question": "Which of the following is NOT an advantage of cloud computing?",
+      "options": ["Flexibility", "Scalability", "Requires no Internet", "Cost-effectiveness"],
+      "answer": 2
+    },
+    {
+      "question": "What does SaaS stand for?",
+      "options": ["System as a Service", "Software as a Service", "Storage as a System", "Service and Application System"],
+      "answer": 1
+    },
+    {
+      "question": "Which Internet service allows face-to-face communication via video?",
+      "options": ["Streaming", "Video conferencing", "Email", "File transfer"],
+      "answer": 1
+    },
+    {
+      "question": "Which Internet protocol is commonly used to browse web pages?",
+      "options": ["FTP", "SMTP", "HTTP", "SSH"],
+      "answer": 2
+    },
+    {
+      "question": "Which cloud computing advantage reduces the need for local storage?",
+      "options": ["Elasticity", "Scalability", "Remote storage", "Virtualization"],
+      "answer": 2
+    },
+    {
+      "question": "What is the main role of DNS?",
+      "options": ["Encrypts data", "Converts domain names to IP addresses", "Stores user emails", "Provides cloud services"],
+      "answer": 1
+    },
+    {
+      "question": "Which protocol allows secure file transfer?",
+      "options": ["HTTP", "FTP", "SFTP", "SMTP"],
+      "answer": 2
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "Which of the following is an example of a country code top-level domain (ccTLD)?",
+      "options": [".com", ".org", ".lk", ".net"],
+      "answer": 2
+    },
+    {
+      "question": "Which type of IP address can change each time a device connects to the Internet?",
+      "options": ["Static IP", "Dynamic IP", "IPv6", "Public IP"],
+      "answer": 1
+    },
+    {
+      "question": "Which component of a URL comes immediately after the domain name?",
+      "options": ["File path", "Protocol", "Port number", "IP address"],
+      "answer": 0
+    },
+    {
+      "question": "Which protocol is used to retrieve emails while keeping them stored on the server?",
+      "options": ["POP3", "IMAP", "SMTP", "FTP"],
+      "answer": 1
+    },
+    {
+      "question": "Which Internet service lets you watch YouTube videos?",
+      "options": ["Streaming", "Email", "FTP", "Newsgroups"],
+      "answer": 0
+    },
+    {
+      "question": "Which Internet service allows collaborative editing like Google Docs?",
+      "options": ["Streaming", "Cloud computing", "WWW", "Email"],
+      "answer": 1
+    },
+    {
+      "question": "Which Internet service stores web pages and links through hyperlinks?",
+      "options": ["WWW", "FTP", "Streaming", "DNS"],
+      "answer": 0
+    },
+    {
+      "question": "Which IP version provides a larger address space to overcome IPv4 limitations?",
+      "options": ["IPv2", "IPv4", "IPv6", "Dynamic IP"],
+      "answer": 2
+    },
+    {
+      "question": "Which cloud computing model allows developers to deploy their apps without managing infrastructure?",
+      "options": ["SaaS", "PaaS", "IaaS", "DNS"],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is an example of SaaS?",
+      "options": ["Dropbox", "Microsoft Azure", "Google Docs", "VMware"],
+      "answer": 2
+    },
+    {
+      "question": "Which Internet protocol transfers hypertext documents?",
+      "options": ["SMTP", "FTP", "HTTP", "POP3"],
+      "answer": 2
+    },
+    {
+      "question": "Which of the following is an advantage of cloud computing?",
+      "options": ["Only works offline", "Reduces local hardware costs", "Needs expensive servers", "Limited accessibility"],
+      "answer": 1
+    },
+    {
+      "question": "Which cloud service provides networking and storage resources as virtual services?",
+      "options": ["IaaS", "PaaS", "SaaS", "HTTP"],
+      "answer": 0
+    },
+    {
+      "question": "Which part of a domain name is read from right to left?",
+      "options": ["Subdomain → Domain → Top-Level Domain", "Domain → Subdomain → Path", "Protocol → Domain → File path", "Path → Domain → Protocol"],
+      "answer": 0
+    },
+    {
+      "question": "What is the main purpose of IP addresses?",
+      "options": ["Identify devices on a network", "Store emails", "Encrypt data", "Provide search engine results"],
+      "answer": 0
+    },
+    {
+      "question": "Which Internet service is mainly used for collaborative discussions?",
+      "options": ["Newsgroups/Forums", "Streaming", "Cloud computing", "Telnet"],
+      "answer": 0
+    },
+    {
+      "question": "What is the role of an ISP?",
+      "options": ["Provide Internet access to users", "Assign domain names", "Translate IP addresses", "Create cloud apps"],
+      "answer": 0
+    },
+    {
+      "question": "Which of the following is NOT a protocol?",
+      "options": ["HTTP", "SMTP", "FTP", "Google"],
+      "answer": 3
+    },
+    {
+      "question": "Which Internet service requires both microphone and camera?",
+      "options": ["Video conferencing", "Streaming", "File transfer", "Email"],
+      "answer": 0
+    },
+    {
+      "question": "Which protocol provides secure remote login?",
+      "options": ["Telnet", "SSH", "FTP", "HTTP"],
+      "answer": 1
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "Series 1": [
+    {
+      "question": "ICT entertainment example එකක් මොකක්ද?",
+      "options": [
+        "Gaming",
+        "Cooking",
+        "Driving",
+        "Reading books"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Holography mainly use කරනවා?",
+      "options": [
+        "3D images",
+        "2D drawings",
+        "Text only",
+        "Audio only"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Simulation mainly use කරනවා?",
+      "options": [
+        "Real world imitation",
+        "Music",
+        "Art",
+        "Cooking"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Digital audio mainly mean කරනවා?",
+      "options": [
+        "Sound stored digitally",
+        "Sound stored physically",
+        "Video",
+        "Images"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Intellectual property mainly protect කරනවා?",
+      "options": [
+        "Creative works",
+        "Food",
+        "Machines",
+        "Furniture"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Malware කියන්නේ?",
+      "options": [
+        "Malicious software",
+        "Normal software",
+        "Hardware",
+        "Data only"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Virus mainly do කරනවා?",
+      "options": [
+        "Infect files",
+        "Clean files",
+        "Backup files",
+        "Compress files"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Worm mainly spread කරන විදිය?",
+      "options": [
+        "Self-replicate through network",
+        "Manual copy",
+        "USB only",
+        "CD only"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Trojan horse mainly do කරනවා?",
+      "options": [
+        "Hidden harmful program",
+        "Normal program",
+        "Safe file",
+        "Backup file"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Spyware mainly do කරනවා?",
+      "options": [
+        "Secretly collect user info",
+        "Clean computer",
+        "Backup files",
+        "Encrypt data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Adware mainly do කරනවා?",
+      "options": [
+        "Show unwanted ads",
+        "Clean system",
+        "Backup",
+        "Encrypt data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Phishing mainly mean කරනවා?",
+      "options": [
+        "Fake attempt to steal info",
+        "Safe website",
+        "Backup",
+        "Cloud"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Botnet mainly use කරනවා?",
+      "options": [
+        "Group of infected computers",
+        "Normal network",
+        "Database",
+        "Backup system"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Plagiarism mainly mean කරනවා?",
+      "options": [
+        "Copying others' work",
+        "Original work",
+        "Encrypted data",
+        "Safe backup"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Copyright mainly protect කරනවා?",
+      "options": [
+        "Author rights",
+        "Hardware",
+        "Printer",
+        "USB"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "UPS mainly provide කරනවා?",
+      "options": [
+        "Backup power",
+        "Internet",
+        "Data storage",
+        "Antivirus"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Surge protector mainly protect කරනවා?",
+      "options": [
+        "Electrical spikes",
+        "Viruses",
+        "Data loss",
+        "Backup"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "CCTV mainly use කරනවා?",
+      "options": [
+        "Security monitoring",
+        "Gaming",
+        "Cooking",
+        "Music"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Firewall mainly use කරනවා?",
+      "options": [
+        "Network security",
+        "Cooking",
+        "Painting",
+        "Printing"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Backup mainly mean කරනවා?",
+      "options": [
+        "Copy of data",
+        "Delete data",
+        "Encrypt data",
+        "Print data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Physical security example එකක් මොකක්ද?",
+      "options": [
+        "Lock and key",
+        "Firewall",
+        "Antivirus",
+        "Backup"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Logical security example එකක් මොකක්ද?",
+      "options": [
+        "Password",
+        "Lock and key",
+        "CCTV",
+        "Door"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Ergonomics mainly mean කරනවා?",
+      "options": [
+        "Safe workstation design",
+        "Backup",
+        "Software design",
+        "Hardware design"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "RSI mainly mean කරනවා?",
+      "options": [
+        "Repetitive Strain Injury",
+        "Random Security Issue",
+        "Remote System Input",
+        "Rapid Server Installation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "CTS mainly mean කරනවා?",
+      "options": [
+        "Carpal Tunnel Syndrome",
+        "Central Tech System",
+        "Computer Terminal Service",
+        "Cyber Threat Solution"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "CVS mainly mean කරනවා?",
+      "options": [
+        "Computer Vision Syndrome",
+        "Central Vision System",
+        "Cyber Virtual Security",
+        "Control Visual Service"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "E-waste mainly mean කරනවා?",
+      "options": [
+        "Electronic waste",
+        "Energy waste",
+        "Easy waste",
+        "Eco waste"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Cloud backup mainly provide කරනවා?",
+      "options": [
+        "Online data storage",
+        "Paper storage",
+        "CD storage",
+        "USB only"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "Digital divide mainly mean කරනවා?",
+      "options": [
+        "Gap in ICT access",
+        "Equal ICT",
+        "Backup",
+        "Cloud"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "De-skilling mainly mean කරනවා?",
+      "options": [
+        "Loss of human skills due to ICT",
+        "Increase of skills",
+        "Backup",
+        "Encrypt"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Cyber crime example එකක්?",
+      "options": [
+        "Hacking",
+        "Painting",
+        "Cooking",
+        "Driving"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Cyber bullying mainly mean කරනවා?",
+      "options": [
+        "Harassing online",
+        "Playing games",
+        "Safe chatting",
+        "Cloud storage"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Identity theft mainly mean කරනවා?",
+      "options": [
+        "Stealing personal info",
+        "Safe login",
+        "Encrypt",
+        "Backup"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Spam mainly mean කරනවා?",
+      "options": [
+        "Unwanted messages",
+        "Safe emails",
+        "Secure data",
+        "Backup"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Cyber security mainly provide කරනවා?",
+      "options": [
+        "Protection of ICT systems",
+        "Cooking",
+        "Painting",
+        "Driving"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "ICT employment mainly mean කරනවා?",
+      "options": [
+        "Jobs in ICT sector",
+        "Cooking jobs",
+        "Farming",
+        "Driving"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Ethical ICT use mainly mean කරනවා?",
+      "options": [
+        "Using ICT responsibly",
+        "Illegal use",
+        "Abuse ICT",
+        "Ignore laws"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Safe social media practice example එකක්?",
+      "options": [
+        "Strong password",
+        "Share password",
+        "Ignore privacy",
+        "Fake account"
+      ],
+      "answer": 0
+    }
+  ]
+}

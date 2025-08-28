@@ -1,0 +1,308 @@
+{
+  "Series 1": [
+    {
+      "question": "Internet කියන්නේ කුමක්ද?",
+      "options": [
+        "Global network of computers",
+        "Single computer",
+        "Local software",
+        "One website"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "URL කියන්නේ?",
+      "options": [
+        "Uniform Resource Locator",
+        "Universal Record Link",
+        "Uniform Resource Link",
+        "Universal Routing Locator"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "IP address mainly use කරනවා?",
+      "options": [
+        "Identify devices",
+        "Print documents",
+        "Store data",
+        "Write programs"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "DNS (Domain Name System) mainly use කරනවා?",
+      "options": [
+        "Convert domain names to IP",
+        "Store data",
+        "Print web pages",
+        "Encrypt files"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "HTTP කියන්නේ?",
+      "options": [
+        "Hyper Text Transfer Protocol",
+        "High Transfer Text Program",
+        "Hyperlink Text Transfer Process",
+        "High Text Transfer Protocol"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "HTTPS කියන්නේ?",
+      "options": [
+        "Secure HTTP",
+        "Hyperlink Transfer",
+        "High Transfer Protocol",
+        "Hyper Text Process"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Web browser mainly use කරනවා?",
+      "options": [
+        "Access websites",
+        "Print pages",
+        "Store data",
+        "Write programs"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Search engine example එකක් මොකක්ද?",
+      "options": [
+        "Google",
+        "MS Word",
+        "Excel",
+        "PowerPoint"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Email කියන්නේ?",
+      "options": [
+        "Electronic mail",
+        "External mail",
+        "Easy mail",
+        "Encrypted mail"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "VoIP mainly mean කරනවා?",
+      "options": [
+        "Voice over IP",
+        "Video over IP",
+        "Virtual IP",
+        "Verified IP"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Cloud computing mainly mean කරනවා?",
+      "options": [
+        "Internet-based services",
+        "Offline software",
+        "Single computer only",
+        "USB storage"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Cloud storage example එකක් මොකක්ද?",
+      "options": [
+        "Google Drive",
+        "MS Word",
+        "Excel",
+        "Paint"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "E-commerce කියන්නේ?",
+      "options": [
+        "Buying & selling online",
+        "Email sending",
+        "Watching TV",
+        "Printing"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Social media platform එකක් මොකක්ද?",
+      "options": [
+        "Facebook",
+        "MS Excel",
+        "WordPad",
+        "Notepad"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Blog mainly mean කරනවා?",
+      "options": [
+        "Personal/Professional website",
+        "Search engine",
+        "Database",
+        "Spreadsheet"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Firewall mainly use කරනවා?",
+      "options": [
+        "Protect network",
+        "Delete files",
+        "Print files",
+        "Format disks"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Antivirus software mainly use කරනවා?",
+      "options": [
+        "Protect from malware",
+        "Print pages",
+        "Run programs",
+        "Create tables"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Phishing කියන්නේ?",
+      "options": [
+        "Fake attempt to steal info",
+        "Valid email",
+        "Genuine website",
+        "Database process"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Cyber crime එකක් මොකක්ද?",
+      "options": [
+        "Hacking",
+        "Painting",
+        "Driving",
+        "Cooking"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "E-banking mainly mean කරනවා?",
+      "options": [
+        "Online banking",
+        "Offline banking",
+        "Manual banking",
+        "Cash only"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "IP address එකේ IPv4 format එක?",
+      "options": [
+        "4 numbers separated by dots",
+        "2 numbers",
+        "6 numbers",
+        "8 numbers"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "IPv6 mainly use කරනවා?",
+      "options": [
+        "Large address space",
+        "Small address space",
+        "Delete IPs",
+        "Short addresses"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Wi-Fi mainly use කරනවා?",
+      "options": [
+        "Wireless connection",
+        "Wired connection",
+        "Print documents",
+        "Save data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Bluetooth mainly use කරනවා?",
+      "options": [
+        "Short range communication",
+        "Long range internet",
+        "Database storage",
+        "Web browsing"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "ISP mainly mean කරනවා?",
+      "options": [
+        "Internet Service Provider",
+        "Internal Service Program",
+        "Internet Secure Protocol",
+        "International Software Provider"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Domain name example එකක් මොකක්ද?",
+      "options": [
+        "www.google.com",
+        "192.168.1.1",
+        "HTTP",
+        "IPV6"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Cookies mainly use කරනවා?",
+      "options": [
+        "Store user data",
+        "Print data",
+        "Encrypt files",
+        "Delete viruses"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Digital signature mainly use කරනවා?",
+      "options": [
+        "Verify authenticity",
+        "Print files",
+        "Encrypt viruses",
+        "Paint image"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "VPN mainly use කරනවා?",
+      "options": [
+        "Secure private connection",
+        "Public browsing only",
+        "Delete files",
+        "Paint images"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Hosting service mainly provide කරනවා?",
+      "options": [
+        "Website storage online",
+        "Offline data",
+        "Print pages",
+        "Delete websites"
+      ],
+      "answer": 0
+    }
+  ]
+}

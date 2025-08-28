@@ -1,0 +1,708 @@
+{
+  "Series 1": [
+    {
+      "question": "Which part of a URL indicates the protocol used for accessing a resource on the web?",
+      "options": [
+        "Domain name",
+        "Path",
+        "http:// or https://",
+        "Port number"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "In web publishing, the role of DNS is to",
+      "options": [
+        "Encrypt data on the server",
+        "Translate domain names to IP addresses",
+        "Validate HTML code",
+        "Compress website assets"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is the most accurate description of a domain name?",
+      "options": [
+        "A unique numeric label for a device",
+        "A human-friendly alias that maps to an IP",
+        "A protocol for transferring files",
+        "A web page’s file path"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the main difference between HTTP and HTTPS in web design context?",
+      "options": [
+        "HTTPS uses encryption (TLS/SSL) for secure communication",
+        "HTTP is newer than HTTPS",
+        "HTTPS only works for images",
+        "HTTP cannot load CSS files"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which of the following is a valid top-level domain (TLD)?",
+      "options": [
+        "example",
+        ".com",
+        "http",
+        "index.html"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "A typical public IPv4 address looks like",
+      "options": [
+        "2001:0db8:85a3::8a2e:0370:7334",
+        "192.168.1.25",
+        "example.com",
+        "file:///C:/index.html"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which part of the URL https://www.schoolnet.lk/resources/notes.html is the path?",
+      "options": [
+        "https://",
+        "www.schoolnet.lk",
+        "/resources/notes.html",
+        "www"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "When hosting a website, a static IP on the server is useful because it",
+      "options": [
+        "Changes on every connection",
+        "Keeps the DNS from working",
+        "Provides a stable address for the domain to map to",
+        "Blocks inbound traffic"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which protocol is primarily used for transferring files during web deployment?",
+      "options": [
+        "SMTP",
+        "FTP/SFTP",
+        "POP3",
+        "IMAP"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the purpose of a subdomain such as blog.example.com?",
+      "options": [
+        "It replaces the TLD",
+        "It identifies a specific section or service within a domain",
+        "It encrypts the main domain",
+        "It is the server’s IP address"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which organization coordinates global domain name system policies?",
+      "options": [
+        "W3C",
+        "ICANN",
+        "IETF",
+        "ISO"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "In cloud computing, SaaS best matches which description?",
+      "options": [
+        "User manages virtual machines and storage",
+        "Provider delivers complete applications over the internet",
+        "Platform solely for domain registration",
+        "Secure file transfer between hosts"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is a common advantage of deploying a website on cloud hosting?",
+      "options": [
+        "No need for DNS records",
+        "Automatic scalability and global availability options",
+        "Eliminates the need for HTML",
+        "Works only without HTTPS"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which entry would you typically add at your DNS provider to point a domain to a web server?",
+      "options": [
+        "MX record",
+        "CNAME or A record",
+        "TXT record only",
+        "PTR record only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which protocol is used by browsers to request and fetch web pages?",
+      "options": [
+        "SMTP",
+        "HTTP/HTTPS",
+        "FTP",
+        "SSH"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the main benefit of using a CDN for a website?",
+      "options": [
+        "Registers the domain automatically",
+        "Serves content from locations closer to users to reduce latency",
+        "Replaces HTML with images",
+        "Removes the need for DNS"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which statement about IPv6 is true for modern web hosting?",
+      "options": [
+        "It replaces DNS",
+        "It provides a vastly larger address space than IPv4",
+        "It cannot be used with HTTPS",
+        "It is only for private networks"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which part of the URL often identifies the specific file or resource, e.g., index.html?",
+      "options": [
+        "Protocol",
+        "Domain",
+        "Path",
+        "Port"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "In a typical shared hosting environment, multiple websites",
+      "options": [
+        "Run on isolated dedicated servers",
+        "Share the same physical server resources",
+        "Cannot use domain names",
+        "Must use IP addresses only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is a likely disadvantage when relying entirely on cloud services for a website?",
+      "options": [
+        "Flexible scaling",
+        "Global distribution",
+        "Dependency on Internet connectivity",
+        "Built-in encryption for all data by default"
+      ],
+      "answer": 2
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Which tag defines the root of an HTML document?",
+      "options": [
+        "<head>",
+        "<body>",
+        "<html>",
+        "<meta>"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which tag contains metadata like title and linked CSS?",
+      "options": [
+        "<meta>",
+        "<head>",
+        "<title>",
+        "<link>"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which tag sets the page title shown in the browser tab?",
+      "options": [
+        "<h1>",
+        "<title>",
+        "<header>",
+        "<caption>"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which attribute of <a> specifies the link destination?",
+      "options": [
+        "alt",
+        "href",
+        "src",
+        "target"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which attribute of <a> opens a link in a new tab?",
+      "options": [
+        "download",
+        "rel",
+        "target=\"_blank\"",
+        "title"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which tag is used to display an image?",
+      "options": [
+        "<img>",
+        "<image>",
+        "<figure>",
+        "<media>"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which attribute of <img> provides alternative text for accessibility?",
+      "options": [
+        "src",
+        "alt",
+        "title",
+        "aria"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which tag creates a numbered list?",
+      "options": [
+        "<ul>",
+        "<ol>",
+        "<li>",
+        "<dl>"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which pair correctly nests list elements?",
+      "options": [
+        "<ul><li>Item</li></ul>",
+        "<li><ul>Item</ul></li>",
+        "<ol><ul>Item</ul></ol>",
+        "<dl><li>Item</li></dl>"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which tag defines a table?",
+      "options": [
+        "<tbody>",
+        "<table>",
+        "<tr>",
+        "<th>"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which tag defines a table row?",
+      "options": [
+        "<td>",
+        "<tr>",
+        "<th>",
+        "<thead>"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which attribute merges a table cell across multiple columns?",
+      "options": [
+        "rowspan",
+        "colspan",
+        "span",
+        "merge"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which element groups table header content?",
+      "options": [
+        "<thead>",
+        "<tbody>",
+        "<tfoot>",
+        "<caption>"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which tag creates a text input in a form?",
+      "options": [
+        "<input type=\"text\">",
+        "<textarea>",
+        "<input type=\"button\">",
+        "<label>"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which attribute of <input> connects it with a <label>?",
+      "options": [
+        "name",
+        "id",
+        "for",
+        "value"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which tag is used to submit a form to a server?",
+      "options": [
+        "<input type=\"button\">",
+        "<button type=\"button\">",
+        "<button type=\"submit\">",
+        "<label>"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which attribute of <form> defines where the form data is sent?",
+      "options": [
+        "action",
+        "method",
+        "name",
+        "target"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which form method sends data in the URL’s query string?",
+      "options": [
+        "POST",
+        "GET",
+        "PUT",
+        "PATCH"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which tag embeds a video in HTML5?",
+      "options": [
+        "<movie>",
+        "<media>",
+        "<video>",
+        "<embed>"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which attribute of <video> shows playback controls?",
+      "options": [
+        "autoplay",
+        "controls",
+        "loop",
+        "muted"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which element is most appropriate for the main content of a page?",
+      "options": [
+        "<section>",
+        "<main>",
+        "<article>",
+        "<div>"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which tag defines a navigation section of links?",
+      "options": [
+        "<menu>",
+        "<nav>",
+        "<aside>",
+        "<footer>"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which tag semantically represents a standalone piece of content (e.g., a blog post)?",
+      "options": [
+        "<section>",
+        "<article>",
+        "<div>",
+        "<span>"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which tag is used to include an external CSS file?",
+      "options": [
+        "<style>",
+        "<script>",
+        "<link rel=\"stylesheet\">",
+        "<meta>"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which tag is used to include an external JavaScript file?",
+      "options": [
+        "<style>",
+        "<script src=\"...\">",
+        "<link>",
+        "<meta http-equiv>"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which attribute adds a unique identifier to an element for styling or scripting?",
+      "options": [
+        "class",
+        "name",
+        "id",
+        "for"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which attribute is used to group multiple elements for styling?",
+      "options": [
+        "id",
+        "class",
+        "name",
+        "style"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which attribute of <img>, <script>, or <video> specifies the file location?",
+      "options": [
+        "href",
+        "src",
+        "alt",
+        "name"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which tag adds a short description about a page for search engines?",
+      "options": [
+        "<meta name=\"description\">",
+        "<title>",
+        "<h1>",
+        "<caption>"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which tag is used to force a line break in text?",
+      "options": [
+        "<p>",
+        "<hr>",
+        "<br>",
+        "<pre>"
+      ],
+      "answer": 2
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "What is web hosting in the context of publishing a website?",
+      "options": [
+        "Registering a domain name",
+        "Renting server space to store and serve website files",
+        "Validating HTML code",
+        "Creating CSS styles"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which record type would you modify to point your domain to a new web server IP?",
+      "options": [
+        "MX",
+        "TXT",
+        "A",
+        "SRV"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which is a common step in publishing a static website to a host?",
+      "options": [
+        "Upload files via FTP/SFTP",
+        "Install a database",
+        "Write server-side code",
+        "Register an MX record"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which is the best description of a content management system (CMS)?",
+      "options": [
+        "A protocol for secure file transfer",
+        "A platform to build and manage website content without coding everything manually",
+        "A domain registrar",
+        "A DNS server"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which statement about responsive web design is true?",
+      "options": [
+        "It only works on desktop screens",
+        "It adapts layout to different screen sizes and devices",
+        "It requires tables for layout",
+        "It cannot use CSS"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Why is alt text important for images on a website?",
+      "options": [
+        "It changes the file size",
+        "It provides accessibility and text descriptions when images can’t load",
+        "It improves server security",
+        "It replaces the src attribute"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which hosting type gives you full control over the server configuration?",
+      "options": [
+        "Shared hosting",
+        "Virtual Private Server (VPS) or Dedicated",
+        "Free hosting",
+        "Static site hosting only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the main purpose of a site map in a website project?",
+      "options": [
+        "To store IP addresses",
+        "To outline website structure and navigation",
+        "To configure DNS records",
+        "To compress images"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is a good practice before publishing a website?",
+      "options": [
+        "Skip testing to save time",
+        "Validate HTML/CSS and test on multiple browsers/devices",
+        "Avoid using alt attributes",
+        "Remove the <meta> description"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which statement about domain registration is true?",
+      "options": [
+        "Domains never expire",
+        "You register a domain through a registrar for a period (e.g., 1–2 years)",
+        "The registrar hosts your files by default",
+        "DNS records cannot be changed later"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the purpose of an SSL/TLS certificate on a website?",
+      "options": [
+        "To improve image quality",
+        "To encrypt data in transit and enable HTTPS",
+        "To compress CSS",
+        "To host video files"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is version control (e.g., Git) useful for in web projects?",
+      "options": [
+        "Storing DNS records",
+        "Tracking changes to code and collaborating safely",
+        "Registering domains",
+        "Hosting databases only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which term best describes releasing updates to a limited audience or section first?",
+      "options": [
+        "Direct deployment",
+        "Pilot/Phased rollout",
+        "Parallel deployment",
+        "Manual upload"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following improves website performance for global users?",
+      "options": [
+        "Very large uncompressed images",
+        "Multiple blocking scripts in <head>",
+        "Using a CDN to cache assets near users",
+        "No browser caching"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Why is regular maintenance important after publishing a website?",
+      "options": [
+        "To keep domain costs high",
+        "To update content, fix bugs, patch security issues",
+        "To remove backups",
+        "To disable HTTPS"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is a typical step when connecting a custom domain to a hosted site?",
+      "options": [
+        "Edit the A/CNAME records at the registrar or DNS provider",
+        "Disable DNSSEC",
+        "Delete all existing records",
+        "Use only IPv6"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which tool helps reduce file sizes of images before upload?",
+      "options": [
+        "Code validator",
+        "Image optimizer/compressor",
+        "Browser DevTools network tab",
+        "DNS zone editor"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is a good practice for file and folder naming on a website?",
+      "options": [
+        "Use spaces and uppercase randomly",
+        "Use clear, lowercase, hyphen-separated names",
+        "Include special characters like # and %",
+        "Change names frequently after publishing"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which folder typically stores website images in many basic projects?",
+      "options": [
+        "styles/",
+        "scripts/",
+        "images/",
+        "server/"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which step helps search engines understand your page content?",
+      "options": [
+        "Remove headings",
+        "Use relevant titles and meta descriptions",
+        "Disable sitemaps",
+        "Block the site with robots.txt"
+      ],
+      "answer": 1
+    }
+  ]
+}

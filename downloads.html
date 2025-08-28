@@ -25,12 +25,12 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
-                    <a href="downloads.html" class="text-gray-700 hover:text-blue-600">Resources</a>
+                    <a href="downloads.html" class="text-gray-700 hover:text-blue-600 nav-link">Resources</a>
                     <a href="quiz.html" class="text-gray-700 hover:text-blue-600">Quizzes</a>
                     <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
-                    <!-- Auth Buttons -->
+                    <!-- Auth Buttons 
                     <button id="loginBtn" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login</button>
-                    <button id="logoutBtn" class="hidden bg-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg">Logout</button>
+                    <button id="logoutBtn" class="hidden bg-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg">Logout</button>-->
                 </div>
 
                 <!-- Mobile menu button -->
@@ -47,9 +47,9 @@
                 <a href="downloads.html" class="block px-3 py-2 text-gray-700">Resources</a>
                 <a href="quiz.html" class="block px-3 py-2 text-gray-700">Quizzes</a>
                 <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
-                <!-- Auth Buttons -->
+                <!-- Auth Buttons 
                 <button id="loginBtn" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login</button>
-                <button id="logoutBtn" class="hidden bg-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg">Logout</button>
+                <button id="logoutBtn" class="hidden bg-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg">Logout</button>-->
             </div>
         </div>
     </nav>
@@ -76,7 +76,7 @@
 </div>
 
 <!-- ================= GRADE 10 ================= -->
-<section class="max-w-6xl mx-auto px-6 py-10">
+<section class="max-w-6xl mx-auto px-6 py-10"  id="g10-tute">
   <h2 class="text-2xl font-bold text-gray-800 mb-6" id = "tute10">📘 Grade 10 Tutes</h2>
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -175,7 +175,7 @@
 </section>
 
 <!-- ================= GRADE 11 ================= -->
-<section class="max-w-6xl mx-auto px-6 py-10">
+<section class="max-w-6xl mx-auto px-6 py-10" id="g11-tute">
   <h2 class="text-2xl font-bold text-gray-800 mb-6" id = "tute11">📗 Grade 11 Tutes</h2>
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -244,7 +244,7 @@
 </section>
 
 <!-- ================= PAST PAPERS ================= -->
-<section class="max-w-6xl mx-auto px-6 py-10">
+<section class="max-w-6xl mx-auto px-6 py-10" id="quiz-pp">
   <h2 class="text-2xl font-bold text-gray-800 mb-6" id = "pp">📄 O/L Past Papers</h2>
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -373,7 +373,7 @@
 </section>
 
 <!-- ================= ANSWERS ================= -->
-<section class="max-w-6xl mx-auto px-6 py-10">
+<section class="max-w-6xl mx-auto px-6 py-10" id="answers-pp">
   <h2 class="text-2xl font-bold text-gray-800 mb-6" id = "pa">📝 O/L Past Paper Answers</h2>
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -532,9 +532,9 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Community</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Discussion Forum</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Study Groups</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Share Resources</a></li>
+                        <li><a href="community.html" class="hover:text-white transition-colors">Discussion Forum</a></li>
+                        <li><a href="downloads.html" class="hover:text-white transition-colors">Study Groups</a></li>
+                        <li><a href="downloads.html" class="hover:text-white transition-colors">Share Resources</a></li>
                         <li><a href="community.html" class="hover:text-white transition-colors">Help Center</a></li>
                     </ul>
                 </div>
@@ -544,8 +544,8 @@
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="community.html" class="hover:text-white transition-colors">About Us</a></li>
                         <li><a href="community.html" class="hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="community.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="community.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
@@ -588,5 +588,6 @@
     searchBar.addEventListener("input", filterFiles);
     filterCategory.addEventListener("change", filterFiles);
   </script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

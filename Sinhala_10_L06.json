@@ -1,0 +1,406 @@
+{
+  "Series 1": [
+    {
+      "question": "MS Word කියන්නේ කුමන software එකක්ද?",
+      "options": [
+        "Word Processing",
+        "Spreadsheet",
+        "Presentation",
+        "Database"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ default file extension එක මොකක්ද?",
+      "options": [
+        ".doc",
+        ".docx",
+        ".txt",
+        ".xlsx"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "MS Word එකේ Home tab එකේ තියෙන group එකක් මොකක්ද?",
+      "options": [
+        "Clipboard",
+        "Tables",
+        "Transitions",
+        "Animations"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Ribbon කියන්නේ?",
+      "options": [
+        "Toolbar",
+        "Menu bar",
+        "Status bar",
+        "Taskbar"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Text Bold කරන්න භාවිතා කරන shortcut key එක මොකක්ද?",
+      "options": [
+        "Ctrl + B",
+        "Ctrl + I",
+        "Ctrl + U",
+        "Ctrl + C"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Text Italic කරන්න භාවිතා කරන shortcut key එක මොකක්ද?",
+      "options": [
+        "Ctrl + B",
+        "Ctrl + I",
+        "Ctrl + U",
+        "Ctrl + C"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Text Underline කරන්න භාවිතා කරන shortcut key එක මොකක්ද?",
+      "options": [
+        "Ctrl + B",
+        "Ctrl + I",
+        "Ctrl + U",
+        "Ctrl + C"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Save As command එකේ main use එක මොකක්ද?",
+      "options": [
+        "Save new copy",
+        "Close file",
+        "Print file",
+        "Exit Word"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Print preview බලන්න MS Word එකේ shortcut key එක මොකක්ද?",
+      "options": [
+        "Ctrl + P",
+        "Ctrl + N",
+        "Ctrl + O",
+        "Ctrl + S"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Find command එක open කරන්න shortcut key එක මොකක්ද?",
+      "options": [
+        "Ctrl + F",
+        "Ctrl + H",
+        "Ctrl + G",
+        "Ctrl + C"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Replace command එක open කරන්න shortcut key එක මොකක්ද?",
+      "options": [
+        "Ctrl + F",
+        "Ctrl + H",
+        "Ctrl + G",
+        "Ctrl + R"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "MS Word එකේ Insert tab එකේ තියෙන feature එකක් මොකක්ද?",
+      "options": [
+        "Table",
+        "Slide",
+        "Chart",
+        "Transition"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ References tab එක mostly use කරනවා?",
+      "options": [
+        "Citations & Bibliography",
+        "Animations",
+        "Slide design",
+        "Spreadsheets"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Mail Merge mainly use කරනවා?",
+      "options": [
+        "Send bulk letters",
+        "Create tables",
+        "Insert images",
+        "Make charts"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Word document එකේ Page orientation options මොනවාද?",
+      "options": [
+        "Portrait & Landscape",
+        "Up & Down",
+        "Left & Right",
+        "Horizontal & Vertical"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ default font එක මොකක්ද?",
+      "options": [
+        "Calibri",
+        "Times New Roman",
+        "Arial",
+        "Verdana"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Word එකේ Zoom control තියෙන්නේ කොහෙද?",
+      "options": [
+        "Status bar",
+        "Ribbon",
+        "Taskbar",
+        "Menu bar"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Header & Footer mainly use කරනවා?",
+      "options": [
+        "Page numbers",
+        "Animations",
+        "Slide transition",
+        "Formulas"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Table insert කරන්න තියෙන tab එක මොකක්ද?",
+      "options": [
+        "Insert",
+        "Home",
+        "References",
+        "Review"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Spelling & Grammar check කරන්න shortcut key එක මොකක්ද?",
+      "options": [
+        "F7",
+        "F2",
+        "Ctrl + G",
+        "Ctrl + F"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "MS Word එකේ Mail Merge mainly use කරනවා?",
+      "options": [
+        "Send personalized letters",
+        "Create slides",
+        "Insert clipart",
+        "Draw charts"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Track Changes feature mainly use කරනවා?",
+      "options": [
+        "Document editing review",
+        "Insert images",
+        "Slide animations",
+        "Page setup"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Table of Contents generate කරන්න තියෙන tab එක මොකක්ද?",
+      "options": [
+        "References",
+        "Insert",
+        "Review",
+        "Home"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Watermark insert කරන්න තියෙන tab එක මොකක්ද?",
+      "options": [
+        "Design",
+        "Layout",
+        "Home",
+        "Review"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Comments add කරන්න mainly use කරන tab එක මොකක්ද?",
+      "options": [
+        "Review",
+        "Insert",
+        "View",
+        "References"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Page Break insert කරන්න තියෙන shortcut key එක මොකක්ද?",
+      "options": [
+        "Ctrl + Enter",
+        "Ctrl + P",
+        "Ctrl + S",
+        "Ctrl + N"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Thesaurus open කරන්න shortcut key එක මොකක්ද?",
+      "options": [
+        "Shift + F7",
+        "Ctrl + F7",
+        "Alt + F7",
+        "Ctrl + Shift + F7"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ default page size එක මොකක්ද?",
+      "options": [
+        "A4",
+        "Letter",
+        "Legal",
+        "A3"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ SmartArt mainly use කරනවා?",
+      "options": [
+        "Graphics",
+        "Tables",
+        "Animations",
+        "Formulas"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Shortcut key Ctrl + C use කරනවා?",
+      "options": [
+        "Copy",
+        "Cut",
+        "Paste",
+        "Close"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Shortcut key Ctrl + V use කරනවා?",
+      "options": [
+        "Paste",
+        "Copy",
+        "Cut",
+        "Close"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Shortcut key Ctrl + X use කරනවා?",
+      "options": [
+        "Cut",
+        "Paste",
+        "Copy",
+        "Save"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Shortcut key Ctrl + Z use කරනවා?",
+      "options": [
+        "Undo",
+        "Redo",
+        "Save",
+        "Open"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Shortcut key Ctrl + Y use කරනවා?",
+      "options": [
+        "Redo",
+        "Undo",
+        "Copy",
+        "Cut"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Shortcut key Ctrl + N use කරනවා?",
+      "options": [
+        "New document",
+        "Open document",
+        "Save document",
+        "Print document"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Shortcut key Ctrl + O use කරනවා?",
+      "options": [
+        "Open document",
+        "New document",
+        "Save document",
+        "Close document"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Shortcut key Ctrl + S use කරනවා?",
+      "options": [
+        "Save document",
+        "Open document",
+        "Close document",
+        "Print document"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Shortcut key Ctrl + P use කරනවා?",
+      "options": [
+        "Print document",
+        "Save document",
+        "Open document",
+        "Paste document"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Shortcut key Ctrl + A use කරනවා?",
+      "options": [
+        "Select all",
+        "Save all",
+        "Close all",
+        "Print all"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Word එකේ Shortcut key Ctrl + U use කරනවා?",
+      "options": [
+        "Underline",
+        "Bold",
+        "Italic",
+        "Save"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,60 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EduNish - Learn ICT Easily & Creatively</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EduNish — Home</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="circuit.js" defer></script>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-
-  <!-- Navigation -->
-    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center space-x-2">
-                    <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                        <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
-                    </div>
-                    <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                        EduNish
-                    </span>
-                </div>
-
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
-                    <a href="downloads.html" class="text-gray-700 hover:text-blue-600">Resources</a>
-                    <a href="quiz.html" class="text-gray-700 hover:text-blue-600">Quizzes</a>
-                    <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
-                    <!-- Auth Buttons -->
-                    <button id="loginBtn" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login</button>
-                    <button id="logoutBtn" class="hidden bg-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg">Logout</button>
-                </div>
-
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
+<body class="bg-gray-50 text-gray-900">
+    <!-- ✅ Navbar with correct IDs -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+          <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
         </div>
-
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-md border-t hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="block px-3 py-2 text-gray-700">Home</a>
-                <a href="downloads.html" class="block px-3 py-2 text-gray-700">Resources</a>
-                <a href="quiz.html" class="block px-3 py-2 text-gray-700">Quizzes</a>
-                <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
-                <!-- Auth Buttons -->
-                <button id="loginBtn" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login</button>
-                <button id="logoutBtn" class="hidden bg-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg">Logout</button>
-            </div>
-        </div>
-    </nav>
+        <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          EduNish
+        </span>
+      </div>
+      <!-- Desktop -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-gray-700 hover:text-blue-600 nav-link">Home</a>
+        <a href="downloads.html" class="text-gray-700 hover:text-blue-600">Resources</a>
+        <a href="quiz.html" class="text-gray-700 hover:text-blue-600">Quizzes</a>
+        <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
+        <button id="loginBtnDesktop" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login</button>
+        <button id="logoutBtnDesktop" class="hidden bg-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg">Logout</button>
+      </div>
+      <!-- Mobile -->
+      <button id="mobile-menu-btn" class="md:hidden p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden mobile-menu-transition transform scale-y-0 opacity-0">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="index.html" class="block px-3 py-2 text-gray-700">Home</a>
+        <a href="downloads.html" class="block px-3 py-2 text-gray-700">Resources</a>
+        <a href="quiz.html" class="block px-3 py-2 text-gray-700">Quizzes</a>
+        <a href="community.html" class="block px-3 py-2 text-gray-700">Community</a>
+        <a id="loginBtnMobile" class="block px-3 py-2 text-gray-800 hover:bg-gray-200">Login</a>
+        <a id="logoutBtnMobile" class="hidden block px-3 py-2 text-gray-800 hover:bg-gray-200">Logout</a>
+      </div>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
     <section id="home" class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -76,13 +67,26 @@
                     Master O/L ICT for Grade 10 & 11 with comprehensive notes, past papers, and interactive quizzes
                 </p>
 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                    <button onclick="openFullRegistration()" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center space-x-2">
-                        <span>Create Your Account</span>
-                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
-                    </button>
-                    
+                <!-- Creative Feature Section -->
+                <div class="max-w-2xl mx-auto grid sm:grid-cols-3 gap-4 mb-12">
+                <div class="bg-white p-4 rounded-xl shadow text-center">
+                    <i data-lucide="book-open" class="w-6 h-6 mx-auto text-blue-600 mb-2"></i>
+                    <p class="font-semibold">100+ Quizzes</p>
+                    <p class="text-xs text-gray-500">For Grade 10 & 11</p>
                 </div>
+                <div class="bg-white p-4 rounded-xl shadow text-center">
+                    <i data-lucide="award" class="w-6 h-6 mx-auto text-yellow-500 mb-2"></i>
+                    <p class="font-semibold">Track Progress</p>
+                    <p class="text-xs text-gray-500">See your growth</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow text-center">
+                    <i data-lucide="users" class="w-6 h-6 mx-auto text-green-600 mb-2"></i>
+                    <p class="font-semibold">Join Community</p>
+                    <p class="text-xs text-gray-500">Learn together</p>
+                </div>
+                </div>
+
+
 
                 <!-- Stats -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
@@ -107,118 +111,81 @@
         </div>
     </section>
 
-    <!-- Registration Benefits -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-    <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                Register and Get a Student ID
-            </h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                Start your ICT learning journey with personalized resources
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <!-- Benefits Side -->
-            <div class="space-y-8">
-                <div class="flex items-start space-x-4 group">
-                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="book-open" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Comprehensive Study Materials</h3>
-                        <p class="text-gray-600">Complete Grade 10 & 11 ICT syllabus coverage with detailed notes and explanations</p>
-                    </div>
-                </div>
-
-                <div class="flex items-start space-x-4 group">
-                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="target" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Past Papers & Solutions</h3>
-                        <p class="text-gray-600">Practice with previous O/L ICT examination papers and detailed marking schemes</p>
-                    </div>
-                </div>
-
-                <div class="flex items-start space-x-4 group">
-                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="award" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Interactive Quizzes</h3>
-                        <p class="text-gray-600">Test your knowledge with fun quizzes and get instant feedback on your progress</p>
-                    </div>
-                </div>
-
-                <div class="flex items-start space-x-4 group">
-                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="users" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Community Learning</h3>
-                        <p class="text-gray-600">Share resources and help fellow students in their ICT learning journey</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Registration Form Side -->
-            <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 shadow-xl border border-blue-100">
-                <div class="text-center mb-8">
-                    <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="graduation-cap" class="w-8 h-8 text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Quick Registration</h3>
-                    <p class="text-gray-600">Get started in just 30 seconds</p>
-                </div>
-
-                <form id="quickRegForm" class="space-y-6">
-                    <div>
-                        <label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-                        <input type="text" id="fullName" name="fullName" required
-                            class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                            placeholder="Enter your full name">
-                    </div>
-
-                    <div>
-                        <label for="grade" class="block text-sm font-medium text-gray-700 mb-2">Grade *</label>
-                        <select id="grade" name="grade" required
-                            class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 bg-white">
-                            <option value="">Select your grade</option>
-                            <option value="grade10">Grade 10</option>
-                            <option value="grade11">Grade 11</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email (Optional)</label>
-                        <input type="email" id="email" name="email"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                            placeholder="Enter your email">
-                    </div>
-
-                    <button type="submit" 
-                        class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-xl font-semibold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-2">
-                        <i data-lucide="user-plus" class="w-5 h-5"></i>
-                        <span>Create Account & Get Student ID</span>
-                    </button>
-                </form>
-
-                <div class="mt-6 text-center">
-                    <p class="text-sm text-gray-500">
-                        Need more options? 
-                        <button onclick="openFullRegistration()" class="text-blue-600 hover:text-blue-700 font-medium underline">
-                            Open Full Registration
-                        </button>
-                    </p>
-                </div>
-            </div>
-        </div>
+  <!-- Header 
+  <header class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <h1 class="text-xl font-bold">EduNish</h1>
+      <div class="space-x-3">
+        <button id="loginBtnDesktop" class="px-4 py-2 rounded-lg bg-blue-600 text-white">Login</button>
+        <button id="logoutBtnDesktop" class="px-4 py-2 rounded-lg bg-gray-200 hidden">Logout</button>
+      </div>
     </div>
-    </section>
+  </header>-->
+  <!-- Replace your circuit section with this Digital Waterfall section -->
+<div class="digital-waterfall-container">
+  <section class="waterfall-title">
+    <h1>Digital Knowledge Waterfall</h1>
+    <p>Catch the flowing knowledge bubbles as they cascade down!</p>
+  </section>
 
-    <!-- Grade-specific Features -->
+  <!-- Grade 10 Waterfall -->
+  <section class="waterfall-section">
+    <h2 class="grade-label grade10-flow">Grade 10 Knowledge Stream</h2>
+    <div class="waterfall-canvas-container">
+      <canvas id="waterfall10" class="waterfall-canvas"></canvas>
+      <div class="waterfall-overlay">
+        <div class="stream-info grade10-info">
+          <div class="topic-display" id="topic10">Hover over bubbles to explore topics</div>
+          <div class="progress-indicator">
+            <div class="progress-bar grade10-progress" style="width: 65%;"></div>
+            <span class="progress-text">65% Mastered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grade 11 Waterfall -->
+  <section class="waterfall-section">
+    <h2 class="grade-label grade11-flow">Grade 11 Advanced Stream</h2>
+    <div class="waterfall-canvas-container">
+      <canvas id="waterfall11" class="waterfall-canvas"></canvas>
+      <div class="waterfall-overlay">
+        <div class="stream-info grade11-info">
+          <div class="topic-display" id="topic11">Dive deeper into advanced concepts</div>
+          <div class="progress-indicator">
+            <div class="progress-bar grade11-progress" style="width: 40%;"></div>
+            <span class="progress-text">40% Mastered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievement Pool -->
+  <section class="achievement-pool">
+    <h3>Achievement Pool</h3>
+    <div class="pool-container">
+      <div class="achievement-bubble completed">
+        <i data-lucide="cpu" class="achievement-icon"></i>
+        <span>Hardware Expert</span>
+      </div>
+      <div class="achievement-bubble completed">
+        <i data-lucide="code" class="achievement-icon"></i>
+        <span>Logic Master</span>
+      </div>
+      <div class="achievement-bubble locked">
+        <i data-lucide="database" class="achievement-icon"></i>
+        <span>Data Wizard</span>
+      </div>
+      <div class="achievement-bubble locked">
+        <i data-lucide="shield" class="achievement-icon"></i>
+        <span>Security Guardian</span>
+      </div>
+    </div>
+  </section>
+</div>
+  <!-- Grade-specific Features -->
     <section id="resources" class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-purple-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
@@ -241,7 +208,7 @@
                         <p class="text-gray-600 mb-6 leading-relaxed">
                             Comprehensive study materials covering all Grade 10 ICT syllabus topics
                         </p>
-                        <a href="downloads.html" 
+                        <a href="downloads.html#g10-tute" 
                         class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center space-x-2 mx-auto">
                             <i data-lucide="download" class="w-4 h-4"></i>
                             <span>Download Notes</span>
@@ -257,9 +224,9 @@
                         </div>
                         <h3 class="text-2xl font-bold text-green-700 mb-4">Past Papers</h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Practice with previous O/L ICT examination papers and marking schemes
+                            Practice with previous O/L ICT examination papers
                         </p>
-                        <a href="downloads.html" 
+                        <a href="downloads.html#quiz-pp" 
                         class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center space-x-2 mx-auto">
                             <i data-lucide="download" class="w-4 h-4"></i>
                             <span>Download Papers</span>
@@ -267,7 +234,6 @@
 
                     </div>
                 </div>
-
                 <!-- Interactive Quizzes -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-orange-200 hover:shadow-xl transition-all duration-300">
                     <div class="text-center">
@@ -278,12 +244,12 @@
                         <p class="text-gray-600 mb-6 leading-relaxed">
                             Test your knowledge with fun, interactive quizzes and instant feedback
                         </p>
-                        <!-- Example for Grade 10 Interactive Quizzes -->
                         <button onclick="openQuiz()" 
-                            class="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-12 py-4 rounded-full text-xl font-bold hover:shadow-2xl hover:scale-105 transform transition-all duration-300 inline-flex items-center">
-                            <i data-lucide="play" class="w-6 h-6 mr-3"></i>
-                            View Quiz
+                          class="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-12 py-4 rounded-full text-xl font-bold hover:shadow-2xl hover:scale-105 transform transition-all duration-300 inline-flex items-center">
+                          <i data-lucide="play" class="w-6 h-6 mr-3"></i>
+                          View Quiz
                         </button>
+
                     </div>
                 </div>
             </div>
@@ -309,7 +275,7 @@
                         <p class="text-gray-600 mb-6 leading-relaxed">
                             In-depth study materials for Grade 11 ICT covering advanced topics
                         </p>
-                       <a href="downloads.html" 
+                       <a href="downloads.html#g11-tute" 
                         class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center space-x-2 mx-auto">
                             <i data-lucide="download" class="w-4 h-4"></i>
                             <span>Download Notes</span>
@@ -324,19 +290,18 @@
                         <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                             <i data-lucide="clipboard-list" class="w-8 h-8 text-green-600"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-green-700 mb-4">Past Papers</h3>
+                        <h3 class="text-2xl font-bold text-green-700 mb-4">Past Papers Answers</h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Grade 11 examination papers with detailed solutions and explanations
+                            Check Answers with previous O/L ICT examination marking schemes
                         </p>
-                        <a href="downloads.html" 
+                        <a href="downloads.html#answers-pp" 
                         class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center space-x-2 mx-auto">
                             <i data-lucide="download" class="w-4 h-4"></i>
-                            <span>Download Papers</span>
+                            <span>Download Marking Schemes</span>
                         </a>
 
                     </div>
                 </div>
-
                 <!-- Interactive Quizzes -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-orange-200 hover:shadow-xl transition-all duration-300">
                     <div class="text-center">
@@ -345,17 +310,18 @@
                         </div>
                         <h3 class="text-2xl font-bold text-orange-700 mb-4">Interactive Quizzes</h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Advanced quizzes to challenge your understanding and exam preparation
+                            Test your knowledge with fun, interactive quizzes and instant feedback
                         </p>
                         <button onclick="openQuiz()" 
-                            class="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-12 py-4 rounded-full text-xl font-bold hover:shadow-2xl hover:scale-105 transform transition-all duration-300 inline-flex items-center">
-                            <i data-lucide="play" class="w-6 h-6 mr-3"></i>
-                            View Quiz
+                          class="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-12 py-4 rounded-full text-xl font-bold hover:shadow-2xl hover:scale-105 transform transition-all duration-300 inline-flex items-center">
+                          <i data-lucide="play" class="w-6 h-6 mr-3"></i>
+                          View Quiz
                         </button>
+
                     </div>
                 </div>
             </div>
-        </div>
+         </div>
     </section>
 
     <!-- Fun Learning Quizzes Section - Updated Design -->
@@ -421,15 +387,16 @@
             <!-- Register Button -->
             <div class="text-center">
                 <button onclick="openQuiz()" 
-                    class="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-12 py-4 rounded-full text-xl font-bold hover:shadow-2xl hover:scale-105 transform transition-all duration-300 inline-flex items-center">
-                    <i data-lucide="play" class="w-6 h-6 mr-3"></i>
-                        View Quiz
+                  class="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-12 py-4 rounded-full text-xl font-bold hover:shadow-2xl hover:scale-105 transform transition-all duration-300 inline-flex items-center">
+                  <i data-lucide="play" class="w-6 h-6 mr-3"></i>
+                  View Quiz
                 </button>
+
             </div>
         </div>
     </section>
 
-   <!-- ====== Calendar + Number Converter Section ====== -->
+    <!-- ====== Calendar + Number Converter Section ====== -->
 <section class="py-16 bg-gradient-to-r from-blue-50 to-purple-100">
   <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
 
@@ -450,18 +417,17 @@
         <button id="saveNote" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg">Save Note</button>
       </div>
     </div>
-
-    <!-- 🔢 Number Converter -->
+ <!-- 🔢 Number Converter -->
     <div class="bg-white rounded-2xl shadow-xl p-6">
       <h2 class="text-xl font-bold text-gray-800 mb-4">Number System Converter</h2>
       <div class="flex flex-col sm:flex-row items-stretch sm:items-center mb-4 space-y-2 sm:space-y-0 sm:space-x-2">
         <input id="numInput" type="text" placeholder="Enter number"
-            class="flex-1 border rounded-lg p-2 w-full" />
+          class="flex-1 border rounded-lg p-2 w-full" />
         <select id="numBase" class="border rounded-lg p-2 w-full sm:w-auto">
-            <option value="2">Binary</option>
-            <option value="10" selected>Decimal</option>
-            <option value="8">Octal</option>
-            <option value="16">Hexadecimal</option>
+          <option value="2">Binary</option>
+          <option value="10" selected>Decimal</option>
+          <option value="8">Octal</option>
+          <option value="16">Hexadecimal</option>
         </select>
       </div>
 
@@ -476,107 +442,123 @@
   </div>
 </section>
 
-<!-- ====== Script ====== -->
+<!-- ====== Script for Calendar + Converter ====== -->
 <script>
-  /* ---------------- Calendar ---------------- */
-  const calendarTitle = document.getElementById("calendarTitle");
-  const calendarDays = document.getElementById("calendarDays");
-  const noteSection = document.getElementById("noteSection");
-  const noteDateEl = document.getElementById("noteDate");
-  const noteInput = document.getElementById("noteInput");
-  let currentDate = new Date();
-  let selectedDate = null;
+/* ---------------- Calendar ---------------- */
+const calendarTitle = document.getElementById("calendarTitle");
+const calendarDays = document.getElementById("calendarDays");
+const noteSection = document.getElementById("noteSection");
+const noteDateEl = document.getElementById("noteDate");
+const noteInput = document.getElementById("noteInput");
+let currentDate = new Date();
+let selectedDate = null;
 
-  function renderCalendar() {
-    const year = currentDate.getFullYear();
-    const month = currentDate.getMonth();
-    const firstDay = new Date(year, month, 1).getDay();
-    const lastDate = new Date(year, month + 1, 0).getDate();
-    calendarTitle.textContent = currentDate.toLocaleString("default", { month: "long", year: "numeric" });
-    calendarDays.innerHTML = "";
+function renderCalendar() {
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+  const firstDay = new Date(year, month, 1).getDay();
+  const lastDate = new Date(year, month + 1, 0).getDate();
+  calendarTitle.textContent = currentDate.toLocaleString("default", { month: "long", year: "numeric" });
+  calendarDays.innerHTML = "";
 
-    // Padding days
-    for (let i = 0; i < firstDay; i++) {
-      calendarDays.innerHTML += `<div></div>`;
-    }
-    // Dates
-    for (let day = 1; day <= lastDate; day++) {
-      const fullDate = `${year}-${month + 1}-${day}`;
-      const storedNote = localStorage.getItem("note-" + fullDate);
-      const isToday = new Date().toDateString() === new Date(year, month, day).toDateString();
-      calendarDays.innerHTML += `
-        <div class="p-2 rounded-lg cursor-pointer ${isToday ? "bg-blue-200 font-bold" : "hover:bg-gray-100"} ${storedNote ? "bg-yellow-100" : ""}" 
-             onclick="selectDate(${year}, ${month}, ${day})">${day}</div>
-      `;
-    }
+  // Padding days
+  for (let i = 0; i < firstDay; i++) {
+    calendarDays.innerHTML += `<div></div>`;
   }
 
-  window.selectDate = function (year, month, day) {
-    selectedDate = `${year}-${month + 1}-${day}`;
-    noteDateEl.textContent = new Date(year, month, day).toDateString();
-    noteInput.value = localStorage.getItem("note-" + selectedDate) || "";
-    noteSection.classList.remove("hidden");
-  };
+  // Dates
+  for (let day = 1; day <= lastDate; day++) {
+    const fullDate = `${year}-${month + 1}-${day}`;
+    const storedNote = localStorage.getItem("note-" + fullDate);
+    const isToday = new Date().toDateString() === new Date(year, month, day).toDateString();
 
-  document.getElementById("prevMonth").onclick = () => { currentDate.setMonth(currentDate.getMonth() - 1); renderCalendar(); };
-  document.getElementById("nextMonth").onclick = () => { currentDate.setMonth(currentDate.getMonth() + 1); renderCalendar(); };
+    calendarDays.innerHTML += `
+      <div class="p-2 rounded-lg cursor-pointer ${isToday ? "bg-blue-200 font-bold" : "hover:bg-gray-100"} ${storedNote ? "bg-yellow-100" : ""}"
+           onclick="selectDate(${year}, ${month}, ${day})">${day}</div>
+    `;
+  }
+}
 
-  document.getElementById("saveNote").onclick = () => {
-    if (selectedDate) {
-      localStorage.setItem("note-" + selectedDate, noteInput.value);
-      renderCalendar();
-      alert("Note saved!");
-    }
-  };
+window.selectDate = function (year, month, day) {
+  selectedDate = `${year}-${month + 1}-${day}`;
+  noteDateEl.textContent = new Date(year, month, day).toDateString();
+  noteInput.value = localStorage.getItem("note-" + selectedDate) || "";
+  noteSection.classList.remove("hidden");
+};
 
+document.getElementById("prevMonth").onclick = () => {
+  currentDate.setMonth(currentDate.getMonth() - 1);
   renderCalendar();
+};
 
-  /* ---------------- Number Converter ---------------- */
-  const numInput = document.getElementById("numInput");
-  const numBase = document.getElementById("numBase");
+document.getElementById("nextMonth").onclick = () => {
+  currentDate.setMonth(currentDate.getMonth() + 1);
+  renderCalendar();
+};
 
-  function convertNumber() {
-    let val = numInput.value.trim();
-    if (!val) { return; }
+document.getElementById("saveNote").onclick = () => {
+  if (selectedDate) {
+    localStorage.setItem("note-" + selectedDate, noteInput.value);
+    renderCalendar();
+    alert("Note saved!");
+  }
+};
 
-    let base = parseInt(numBase.value);
-    let decimal;
+renderCalendar();
 
-    try {
-      decimal = parseInt(val, base);
-      if (isNaN(decimal)) throw "Invalid";
-    } catch {
-      document.getElementById("binResult").textContent = "Invalid";
-      document.getElementById("decResult").textContent = "Invalid";
-      document.getElementById("octResult").textContent = "Invalid";
-      document.getElementById("hexResult").textContent = "Invalid";
-      return;
-    }
+/* ---------------- Number Converter ---------------- */
+const numInput = document.getElementById("numInput");
+const numBase = document.getElementById("numBase");
 
-    document.getElementById("binResult").textContent = decimal.toString(2);
-    document.getElementById("decResult").textContent = decimal.toString(10);
-    document.getElementById("octResult").textContent = decimal.toString(8);
-    document.getElementById("hexResult").textContent = decimal.toString(16).toUpperCase();
+function convertNumber() {
+  let val = numInput.value.trim();
+  if (!val) return;
+
+  let base = parseInt(numBase.value);
+  let decimal;
+
+  try {
+    decimal = parseInt(val, base);
+    if (isNaN(decimal)) throw "Invalid";
+  } catch {
+    document.getElementById("binResult").textContent = "Invalid";
+    document.getElementById("decResult").textContent = "Invalid";
+    document.getElementById("octResult").textContent = "Invalid";
+    document.getElementById("hexResult").textContent = "Invalid";
+    return;
   }
 
-  numInput.addEventListener("input", convertNumber);
-  numBase.addEventListener("change", convertNumber);
+  document.getElementById("binResult").textContent = decimal.toString(2);
+  document.getElementById("decResult").textContent = decimal.toString(10);
+  document.getElementById("octResult").textContent = decimal.toString(8);
+  document.getElementById("hexResult").textContent = decimal.toString(16).toUpperCase();
+}
+
+numInput.addEventListener("input", convertNumber);
+numBase.addEventListener("change", convertNumber);
 </script>
 
 
   <!-- Auth Modal -->
-  <div id="authModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div class="bg-white rounded-xl shadow-lg p-8 w-96">
-      <h2 id="authTitle" class="text-2xl font-bold text-gray-800 mb-6 text-center">Login</h2>
+  <div id="authModal" class="fixed inset-0 bg-black/40 items-center justify-center hidden z-50">
+    <div class="bg-white rounded-2xl p-6 w-full max-w-sm">
+      <div class="flex justify-between items-center mb-4">
+        <h3 id="authTitle" class="text-lg font-semibold">Login</h3>
+        <button onclick="document.getElementById('authModal').classList.add('hidden')" class="text-gray-500">✕</button>
+      </div>
       <form id="authForm" class="space-y-4">
-        <input type="email" id="authEmail" placeholder="Email" required class="w-full border rounded-lg p-3">
-        <input type="password" id="authPassword" placeholder="Password" required class="w-full border rounded-lg p-3">
-        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold">Submit</button>
+        <div>
+          <label class="block text-sm font-medium mb-1">Email</label>
+          <input id="authEmail" type="email" class="w-full border rounded-lg px-3 py-2" required />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Password</label>
+          <input id="authPassword" type="password" class="w-full border rounded-lg px-3 py-2" required />
+        </div>
+        <div id="authMessage" class="text-sm"></div>
+        <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">Continue</button>
       </form>
-      <p id="authMessage" class="mt-4 text-center text-sm text-gray-600"></p>
-      <p class="mt-4 text-center text-sm">
-        <span id="toggleAuthMode" class="text-blue-600 cursor-pointer">Don't have an account? Sign up</span>
-      </p>
+      <button id="toggleAuthMode" class="text-blue-600 text-sm mt-3">Don't have an account? Sign up</button>
     </div>
   </div>
 
@@ -609,9 +591,9 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Community</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Discussion Forum</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Study Groups</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Share Resources</a></li>
+                        <li><a href="community.html" class="hover:text-white transition-colors">Discussion Forum</a></li>
+                        <li><a href="downloads.html" class="hover:text-white transition-colors">Study Groups</a></li>
+                        <li><a href="downloads.html" class="hover:text-white transition-colors">Share Resources</a></li>
                         <li><a href="community.html" class="hover:text-white transition-colors">Help Center</a></li>
                     </ul>
                 </div>
@@ -621,8 +603,8 @@
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="community.html" class="hover:text-white transition-colors">About Us</a></li>
                         <li><a href="community.html" class="hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="community.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="community.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
@@ -633,23 +615,7 @@
         </div>
     </footer>
 
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <script>lucide.createIcons();</script>
-
-  <!-- Main Script -->
   <script type="module" src="script.js"></script>
-  <!-- JavaScript -->
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-        function openFullRegistration() {
-        window.open(
-        "registration.html",
-        "registration",
-        "width=500,height=700,scrollbars=yes,resizable=yes"
-    );
-  }
-    </script>
 </body>
 </html>

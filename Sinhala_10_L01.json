@@ -1,0 +1,406 @@
+{
+  "Series 1": [
+    {
+      "question": "දත්ත යනු කුමක්ද?",
+      "options": [
+        "අර්ථවත් තොරතුරු",
+        "Raw facts (අංක, වචන, සංකේත වගේ)",
+        "තොරතුරු මත ගත් තීරණ",
+        "Computer process එකක්"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "තොරතුරු යනු කුමක්ද?",
+      "options": [
+        "Unprocessed facts",
+        "අර්ථ නැති අංක",
+        "අර්ථවත් බවට පරිපාලනය කළ Data",
+        "පෙළ සහ රූප පමණයි"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "පහත දෑ අතුරින් තොරතුරකට උදාහරණයක් වන්නේ කුමක්ද?",
+      "options": [
+        "ලකුණු ලැයිස්තුව: 78, 90, 79",
+        "ශිෂ්‍යයන්ගේ සාමාන්‍ය ලකුණු",
+        "ශිෂ්‍යයෙකුගේ නම",
+        "අර්ථ නෑති සංකේත"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "පහත දෑ අතුරින් දත්තයක් නොවන්නේ කුමක්ද?",
+      "options": [
+        "අංක",
+        "අවිධිමත් වචන",
+        "සැකසූ වාර්තා",
+        "සංකේත"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "පරිගණකයේ පියා ලෙස හැඳින්වෙන්නේ කවුරුන්ද?",
+      "options": [
+        "Charles Babbage",
+        "Joseph Jacquard",
+        "Blaise Pascal",
+        "Howard Aiken"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "පැරණිතම ගණන යන්ත්‍රය කුමක්ද?",
+      "options": [
+        "Analytical Engine",
+        "Abacus",
+        "MARK I",
+        "Napier’s Bones"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "පැස්කලයින් යන්ත්‍රය නිර්මාණය කළේ කවුද?",
+      "options": [
+        "Napier",
+        "Leibniz",
+        "Pascal",
+        "Babbage"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "‍රෙදි විවීම සඳහා punched cards භාවිතා කළ යන්ත්‍රය කුමක්ද?",
+      "options": [
+        "Analytical Engine",
+        "Jacquard Loom",
+        "Pascaline",
+        "Napier’s Bones"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "ලඝූ නිර්මාණය කළ ගණිතඥයා කවුද?",
+      "options": [
+        "Leibniz",
+        "Napier",
+        "Pascal",
+        "Aiken"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Charles Babbage නිර්මාණය කළ උපකරණය කුමක්ද?",
+      "options": [
+        "Analytical Engine",
+        "Abacus",
+        "Napier’s Bones",
+        "Jacquard Loom"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Analytical Engine හදුන්වන වෙනත් නමක් වන්නේ?",
+      "options": [
+        "පළමු mechanical calculator",
+        "පළමු programmable computer design",
+        "පළමු electronic device",
+        "පළමු tabulating machine"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Herman Hollerith සම්බන්ධ වෙන්නේ?",
+      "options": [
+        "Abacus",
+        "Pascaline",
+        "Punched card tabulating machine",
+        "Jacquard Loom"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "1890 US census එකට භාවිතා කළ උපකරණය කුමක්ද?",
+      "options": [
+        "Jacquard Loom",
+        "Hollerith’s tabulating machine",
+        "Analytical Engine",
+        "Napier’s Bones"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "MARK I computer නිර්මාණය කළේ කවුරුන් සමගද?",
+      "options": [
+        "IBM and Harvard",
+        "Microsoft and Apple",
+        "MIT and NASA",
+        "UNIVAC and ENIAC"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Difference Engine නිර්මාණය කළේ කවුද?",
+      "options": [
+        "Napier",
+        "Pascal",
+        "Babbage",
+        "Aiken"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "UNIVAC I යනු?",
+      "options": [
+        "පළමු digital electronic computer",
+        "පළමු programmable loom",
+        "පළමු graphical computer",
+        "පළමු handheld calculator"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Binary system for computation සොයාගත්තේ කවුරුන් විසින්ද?",
+      "options": [
+        "Leibniz",
+        "Napier",
+        "Hollerith",
+        "Aiken"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "පරිගණක දත්ත සැකසීමෙන් ලැබෙනුයේ?",
+      "options": [
+        "තොරතුරු",
+        "Raw facts",
+        "අංක පමණයි",
+        "සංකේත"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "ආදාන උපාංගයක් වන්නේ කුමක්ද?",
+      "options": [
+        "Printer",
+        "Scanner",
+        "Monitor",
+        "Speaker"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "ප්‍රතිදාන උපාංගයක් වන්නේ කුමක්ද?",
+      "options": [
+        "යතුරු පුවරුව",
+        "මූසිකය",
+        "පරිගණක තිරය",
+        "Scanner"
+      ],
+      "answer": 2
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Microprocessor කුමන පරම්පරාවේ උපාංගයක්ද?",
+      "options": [
+        "First",
+        "Second",
+        "Third",
+        "Fourth"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "රික්තක නළ භාවිතා කළේ කුමන පරම්පරාවේද?",
+      "options": [
+        "First",
+        "Second",
+        "Third",
+        "Fourth"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Transistors ආරම්භ කළේ කුමන පරම්පරාවේද?",
+      "options": [
+        "First",
+        "Second",
+        "Third",
+        "Fourth"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Integrated Circuits (ICs) භාවිතා කළේ කුමන පරම්පරාවේද?",
+      "options": [
+        "First",
+        "Second",
+        "Third",
+        "Fourth"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Microprocessors හේතුවෙන් පරිගණක වෙනස් වුණේ?",
+      "options": [
+        "Bigger and slower",
+        "Smaller and faster",
+        "Less reliable",
+        "More mechanical"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "පළමු පරම්පරාවේ පරිගණක වල ලක්ෂණයක් වන්නේ?",
+      "options": [
+        "රික්තක නළ භාවිතා කිරීම",
+        "ICs භාවිතා කිරීම",
+        "Microprocessors භාවිතා කිරීම",
+        "AI භාවිතා කිරීම"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "දෙවන පරම්පරාවේ පරිගණක භාවිතා කළේ?",
+      "options": [
+        "රික්තක නළ",
+        "Transistors",
+        "Microchips",
+        "Cloud"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "තුන්වන පරම්පරාවේ පරිගණක භාවිතා කළේ?",
+      "options": [
+        "Transistors",
+        "Integrated Circuits (ICs)",
+        "රික්තක නළ",
+        "Quantum logic"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "හතරවන පරම්පරාවේ පරිගණක භාවිතා කළේ?",
+      "options": [
+        "රික්තක නළ",
+        "ICs",
+        "Microprocessors",
+        "Nanotechnology"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "පස්වන පරම්පරාවේ පරිගණක සම්බන්ධ වෙන්නේ?",
+      "options": [
+        "රික්තක නළ",
+        "Artificial Intelligence (AI)",
+        "Punch cards",
+        "Abacus"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Secondary storage එකක් උදාහරණයක් කුමක්ද?",
+      "options": [
+        "RAM",
+        "ROM",
+        "Hard Disk",
+        "Cache"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Primary storage එකක් උදාහරණයක් කුමක්ද?",
+      "options": [
+        "RAM",
+        "Hard Disk",
+        "CD-ROM",
+        "USB"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "RAM එකේ ප්‍රධාන කාර්යය කුමක්ද?",
+      "options": [
+        "Permanent storage",
+        "Temporary working memory",
+        "Input processing",
+        "Output display"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "ROM යනු?",
+      "options": [
+        "Read-Only Memory",
+        "Random Operating Memory",
+        "Rapid Output Module",
+        "Rotating Optical Media"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Software එකක් උදාහරණයක් කුමක්ද?",
+      "options": [
+        "Mouse",
+        "Keyboard",
+        "MS Word",
+        "Printer"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Hardware එකක් නොවන එක කුමක්ද?",
+      "options": [
+        "Monitor",
+        "CPU",
+        "Operating System",
+        "Keyboard"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Operating System එක classify කරන ක්‍රමය කුමක්ද?",
+      "options": [
+        "System software",
+        "Application software",
+        "Utility",
+        "Hardware"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Excel යනු?",
+      "options": [
+        "System software",
+        "Application software",
+        "Utility program",
+        "Firmware"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Computer එකේ Arithmetic operations කරන කොටස කුමක්ද?",
+      "options": [
+        "Control Unit",
+        "Memory Unit",
+        "ALU",
+        "Input device"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Computer එකේ brain යනු?",
+      "options": [
+        "RAM",
+        "CPU",
+        "Hard Disk",
+        "Monitor"
+      ],
+      "answer": 1
+    }
+  ]
+}

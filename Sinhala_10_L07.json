@@ -1,0 +1,608 @@
+{
+  "Series 1": [
+    {
+      "question": "MS Excel කියන්නේ කුමන software එකක්ද?",
+      "options": [
+        "Spreadsheet",
+        "Word processing",
+        "Presentation",
+        "Database"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel workbook එකේ එක sheet එකකට කියන්නේ?",
+      "options": [
+        "Worksheet",
+        "Page",
+        "Table",
+        "Chart"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel worksheet එකේ Row identify කරනවා?",
+      "options": [
+        "Numbers",
+        "Letters",
+        "Symbols",
+        "Colors"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel worksheet එකේ Column identify කරනවා?",
+      "options": [
+        "Letters",
+        "Numbers",
+        "Symbols",
+        "Colors"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Row සහ Column එකේ intersection එකට කියන්නේ?",
+      "options": [
+        "Cell",
+        "Table",
+        "Chart",
+        "Box"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Default file extension එක මොකක්ද?",
+      "options": [
+        ".docx",
+        ".pptx",
+        ".xlsx",
+        ".txt"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Excel එකේ Default font එක මොකක්ද?",
+      "options": [
+        "Times New Roman",
+        "Calibri",
+        "Arial",
+        "Verdana"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Excel එකේ Formula start කරන symbol එක මොකක්ද?",
+      "options": [
+        "=",
+        "+",
+        "-",
+        "*"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Cell address එකේ Column එක represent කරනවා?",
+      "options": [
+        "Letter",
+        "Number",
+        "Symbol",
+        "Color"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Cell address එකේ Row එක represent කරනවා?",
+      "options": [
+        "Letter",
+        "Number",
+        "Symbol",
+        "Color"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Excel එකේ SUM function එකේ main use එක මොකක්ද?",
+      "options": [
+        "Addition",
+        "Subtraction",
+        "Multiplication",
+        "Division"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ AVERAGE function එකේ main use එක මොකක්ද?",
+      "options": [
+        "Mean value",
+        "Sum",
+        "Count",
+        "Maximum"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ MAX function එකේ main use එක මොකක්ද?",
+      "options": [
+        "Find largest value",
+        "Find smallest value",
+        "Find average",
+        "Find sum"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ MIN function එකේ main use එක මොකක්ද?",
+      "options": [
+        "Find smallest value",
+        "Find largest value",
+        "Find sum",
+        "Find average"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ COUNT function එකේ main use එක මොකක්ද?",
+      "options": [
+        "Count numbers",
+        "Find average",
+        "Find max",
+        "Find min"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Chart mainly use කරනවා?",
+      "options": [
+        "Data visualization",
+        "Data entry",
+        "Text editing",
+        "Formatting"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Pie chart mainly show කරනවා?",
+      "options": [
+        "Parts of whole",
+        "Trends",
+        "Comparisons",
+        "Distribution"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Bar chart mainly show කරනවා?",
+      "options": [
+        "Comparisons",
+        "Trends",
+        "Parts of whole",
+        "Distribution"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Line chart mainly show කරනවා?",
+      "options": [
+        "Trends over time",
+        "Comparisons",
+        "Parts of whole",
+        "Distribution"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Default chart type එක මොකක්ද?",
+      "options": [
+        "Column chart",
+        "Pie chart",
+        "Bar chart",
+        "Line chart"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Excel එකේ AutoSum button mainly use කරනවා?",
+      "options": [
+        "Quick total",
+        "Average",
+        "Max",
+        "Min"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Formula bar mainly show කරනවා?",
+      "options": [
+        "Active cell content",
+        "Worksheet name",
+        "Chart",
+        "Data type"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Active cell identify කරනවා?",
+      "options": [
+        "Thick border",
+        "Color",
+        "Letter",
+        "Symbol"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Merge & Center mainly use කරනවා?",
+      "options": [
+        "Combine cells",
+        "Split cells",
+        "Format cells",
+        "Delete cells"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Wrap Text mainly use කරනවා?",
+      "options": [
+        "Fit text in cell",
+        "Delete text",
+        "Move text",
+        "Copy text"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Freeze Panes mainly use කරනවා?",
+      "options": [
+        "Lock rows/columns",
+        "Hide rows/columns",
+        "Delete rows/columns",
+        "Copy rows/columns"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Default worksheet name එක මොකක්ද?",
+      "options": [
+        "Sheet1",
+        "Book1",
+        "Page1",
+        "Doc1"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Shortcut key Ctrl + C use කරනවා?",
+      "options": [
+        "Copy",
+        "Cut",
+        "Paste",
+        "Clear"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Shortcut key Ctrl + V use කරනවා?",
+      "options": [
+        "Paste",
+        "Copy",
+        "Cut",
+        "Delete"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Shortcut key Ctrl + X use කරනවා?",
+      "options": [
+        "Cut",
+        "Copy",
+        "Paste",
+        "Save"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Shortcut key Ctrl + Z use කරනවා?",
+      "options": [
+        "Undo",
+        "Redo",
+        "Save",
+        "Close"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Shortcut key Ctrl + Y use කරනවා?",
+      "options": [
+        "Redo",
+        "Undo",
+        "Cut",
+        "Copy"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Shortcut key Ctrl + A use කරනවා?",
+      "options": [
+        "Select all",
+        "Save all",
+        "Delete all",
+        "Close all"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Shortcut key Ctrl + N use කරනවා?",
+      "options": [
+        "New workbook",
+        "Open workbook",
+        "Save workbook",
+        "Print workbook"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Shortcut key Ctrl + O use කරනවා?",
+      "options": [
+        "Open workbook",
+        "New workbook",
+        "Save workbook",
+        "Close workbook"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Shortcut key Ctrl + S use කරනවා?",
+      "options": [
+        "Save workbook",
+        "Open workbook",
+        "Close workbook",
+        "Print workbook"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Shortcut key Ctrl + P use කරනවා?",
+      "options": [
+        "Print workbook",
+        "Save workbook",
+        "Open workbook",
+        "Paste workbook"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Shortcut key Ctrl + F use කරනවා?",
+      "options": [
+        "Find",
+        "Replace",
+        "Format",
+        "Close"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Shortcut key Ctrl + H use කරනවා?",
+      "options": [
+        "Replace",
+        "Find",
+        "Save",
+        "Open"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Shortcut key F2 use කරනවා?",
+      "options": [
+        "Edit active cell",
+        "Save",
+        "Undo",
+        "Redo"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "Excel එකේ IF function mainly use කරනවා?",
+      "options": [
+        "Conditional check",
+        "Addition",
+        "Subtraction",
+        "Division"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Relative reference කියන්නේ?",
+      "options": [
+        "Change with copy",
+        "Fixed always",
+        "Absolute value",
+        "Symbol reference"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Absolute reference identify කරනවා?",
+      "options": [
+        "$",
+        "=",
+        "+",
+        "#"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Mixed reference එකේ example එක මොකක්ද?",
+      "options": [
+        "$A1",
+        "A$1",
+        "Both A and B",
+        "A1$"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Excel එකේ COUNTIF mainly use කරනවා?",
+      "options": [
+        "Count with condition",
+        "Find max",
+        "Find min",
+        "Find average"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ CONCATENATE function mainly use කරනවා?",
+      "options": [
+        "Join text",
+        "Split text",
+        "Delete text",
+        "Format text"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ LEFT function mainly use කරනවා?",
+      "options": [
+        "Extract left characters",
+        "Extract right characters",
+        "Extract middle",
+        "Join text"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ RIGHT function mainly use කරනවා?",
+      "options": [
+        "Extract right characters",
+        "Extract left characters",
+        "Extract middle",
+        "Join text"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ MID function mainly use කරනවා?",
+      "options": [
+        "Extract middle characters",
+        "Extract left characters",
+        "Extract right characters",
+        "Join text"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ NOW function mainly show කරනවා?",
+      "options": [
+        "Current date & time",
+        "Current date only",
+        "Current time only",
+        "Random number"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ TODAY function mainly show කරනවා?",
+      "options": [
+        "Current date",
+        "Current time",
+        "Date & time",
+        "Random number"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ ROUND function mainly use කරනවා?",
+      "options": [
+        "Round numbers",
+        "Find sum",
+        "Find average",
+        "Find min"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ ROUNDUP function mainly use කරනවා?",
+      "options": [
+        "Round towards up",
+        "Round towards down",
+        "Find sum",
+        "Find average"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ ROUNDDOWN function mainly use කරනවා?",
+      "options": [
+        "Round towards down",
+        "Round towards up",
+        "Find sum",
+        "Find average"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Chart title mainly show කරනවා?",
+      "options": [
+        "Heading of chart",
+        "Heading of table",
+        "Heading of page",
+        "Heading of cell"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Legend mainly show කරනවා?",
+      "options": [
+        "Data series identification",
+        "Title",
+        "Axis",
+        "Table"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ X-axis mainly represent කරනවා?",
+      "options": [
+        "Horizontal values",
+        "Vertical values",
+        "Data series",
+        "Legends"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Y-axis mainly represent කරනවා?",
+      "options": [
+        "Vertical values",
+        "Horizontal values",
+        "Data series",
+        "Legends"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Filter mainly use කරනවා?",
+      "options": [
+        "Display selected data",
+        "Sort data",
+        "Delete data",
+        "Join data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Excel එකේ Sort mainly use කරනවා?",
+      "options": [
+        "Arrange data",
+        "Filter data",
+        "Delete data",
+        "Join data"
+      ],
+      "answer": 0
+    }
+  ]
+}

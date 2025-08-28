@@ -1,0 +1,708 @@
+{
+  "Series 1": [
+    {
+      "question": "Computer එකක Data එකේ කුඩාම ඒකකය මොකක්ද?",
+      "options": [
+        "Bit",
+        "Byte",
+        "Word",
+        "Nibble"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Byte එකක තියෙන්නේ කොච්චර Bits ද?",
+      "options": [
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Base 2 තියෙන්නේ කුමන Number system එකටද?",
+      "options": [
+        "Decimal",
+        "Binary",
+        "Octal",
+        "Hexadecimal"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Base 16 තියෙන්නේ කුමන Number system එකටද?",
+      "options": [
+        "Octal",
+        "Hexadecimal",
+        "Decimal",
+        "Binary"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Digits 0 – 7 භාවිතා කරන Number system එක මොකක්ද?",
+      "options": [
+        "Binary",
+        "Decimal",
+        "Octal",
+        "Hexadecimal"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "දිනපතා ජීවිතේ මනුෂ්‍යයින් භාවිතා කරන Number system එක මොකක්ද?",
+      "options": [
+        "Decimal",
+        "Binary",
+        "Octal",
+        "Hexadecimal"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "1 Megabyte එකක් සාදන්න කොච්චර Kilobytes තියෙන්න ඕනේද?",
+      "options": [
+        "512",
+        "1024",
+        "2048",
+        "1000"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "1 Kilobyte එකක තියෙන්නේ කොච්චර Bytes ද?",
+      "options": [
+        "100",
+        "512",
+        "1024",
+        "2048"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "1 Gigabyte එකට සමානව තියෙන්නේ?",
+      "options": [
+        "1024 MB",
+        "100 MB",
+        "512 MB",
+        "1000 MB"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Decimal system එකේ Base එක මොකක්ද?",
+      "options": [
+        "2",
+        "8",
+        "10",
+        "16"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Hexadecimal system එකේ Symbols කොච්චරද?",
+      "options": [
+        "2",
+        "8",
+        "10",
+        "16"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "පහත දක්වා ඇතිවලින් Positional number system එකක් මොකක්ද?",
+      "options": [
+        "Roman Numerals",
+        "Binary",
+        "Both A and B",
+        "None"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Computer storage එකේ 1 Terabyte = කොච්චර Gigabytes ද?",
+      "options": [
+        "512",
+        "1000",
+        "1024",
+        "2048"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Nibble එකක අගය මොනවට සමානද?",
+      "options": [
+        "2 bits",
+        "4 bits",
+        "8 bits",
+        "16 bits"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Computer internal operations සඳහා සුදුසුම Number system එක මොකක්ද?",
+      "options": [
+        "Decimal",
+        "Binary",
+        "Hexadecimal",
+        "Octal"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "2^10 = ?",
+      "options": [
+        "100",
+        "512",
+        "1024",
+        "2048"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Digits 0-9 සහ Letters A-F භාවිතා කරන Base එක මොකක්ද?",
+      "options": [
+        "Decimal",
+        "Hexadecimal",
+        "Octal",
+        "Binary"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "KB abbreviation එක stands for?",
+      "options": [
+        "Kilo Byte",
+        "Key Bit",
+        "Kernel Base",
+        "Kilo Band"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "පහත දක්වා ඇතිවලින් Storage unit එකක් නොවන එක මොකක්ද?",
+      "options": [
+        "Byte",
+        "Megabit",
+        "Gigabit",
+        "Cache"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Base-8 කියලා හැඳින්වෙන්නේ කුමන Number system එකද?",
+      "options": [
+        "Decimal",
+        "Binary",
+        "Octal",
+        "Hexadecimal"
+      ],
+      "answer": 2
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Convert කරන්න 1010 (binary) වෙත decimal.",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "12"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Convert කරන්න 1101 (binary) වෙත decimal.",
+      "options": [
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න 11111111 (binary) වෙත decimal.",
+      "options": [
+        "254",
+        "255",
+        "256",
+        "257"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න 1001 (binary) වෙත decimal.",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Convert කරන්න 25 (decimal) වෙත binary.",
+      "options": [
+        "11001",
+        "10011",
+        "11101",
+        "10101"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert කරන්න 64 (decimal) වෙත binary.",
+      "options": [
+        "1000000",
+        "111111",
+        "110000",
+        "101010"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert කරන්න 255 (decimal) වෙත binary.",
+      "options": [
+        "1111111",
+        "11111111",
+        "10000000",
+        "11110000"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න 45 (decimal) වෙත binary.",
+      "options": [
+        "101001",
+        "110101",
+        "101101",
+        "101110"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert කරන්න 77 (octal) වෙත decimal.",
+      "options": [
+        "61",
+        "63",
+        "65",
+        "63"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න 57 (octal) වෙත decimal.",
+      "options": [
+        "47",
+        "49",
+        "51",
+        "55"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න 101 (octal) වෙත decimal.",
+      "options": [
+        "65",
+        "67",
+        "69",
+        "71"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert කරන්න 255 (decimal) වෙත hexadecimal.",
+      "options": [
+        "FE",
+        "FF",
+        "AA",
+        "DD"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න 64 (decimal) වෙත hexadecimal.",
+      "options": [
+        "3F",
+        "40",
+        "41",
+        "42"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න 100 (decimal) වෙත hexadecimal.",
+      "options": [
+        "63",
+        "64",
+        "65",
+        "66"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න 1111 (binary) වෙත hexadecimal.",
+      "options": [
+        "E",
+        "F",
+        "G",
+        "D"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න 1010 (binary) වෙත hexadecimal.",
+      "options": [
+        "9",
+        "A",
+        "B",
+        "C"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න A (hexadecimal) වෙත decimal.",
+      "options": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න F (hexadecimal) වෙත decimal.",
+      "options": [
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න 1A (hexadecimal) වෙත decimal.",
+      "options": [
+        "24",
+        "25",
+        "26",
+        "27"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Convert කරන්න 2F (hexadecimal) වෙත decimal.",
+      "options": [
+        "45",
+        "46",
+        "47",
+        "48"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Convert කරන්න 7B (hexadecimal) වෙත decimal.",
+      "options": [
+        "122",
+        "123",
+        "124",
+        "125"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න 2C (hexadecimal) වෙත decimal.",
+      "options": [
+        "43",
+        "44",
+        "45",
+        "46"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න 3E (hexadecimal) වෙත decimal.",
+      "options": [
+        "61",
+        "62",
+        "63",
+        "64"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Convert කරන්න 1110 (binary) වෙත octal.",
+      "options": [
+        "16",
+        "14",
+        "15",
+        "17"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න 110011 (binary) වෙත octal.",
+      "options": [
+        "63",
+        "61",
+        "67",
+        "65"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert කරන්න 100110 (binary) වෙත octal.",
+      "options": [
+        "44",
+        "46",
+        "48",
+        "42"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert කරන්න 25 (decimal) වෙත octal.",
+      "options": [
+        "30",
+        "31",
+        "32",
+        "33"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert කරන්න 64 (decimal) වෙත octal.",
+      "options": [
+        "100",
+        "101",
+        "102",
+        "103"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert කරන්න 255 (decimal) වෙත octal.",
+      "options": [
+        "377",
+        "370",
+        "371",
+        "372"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert කරන්න 128 (decimal) වෙත binary.",
+      "options": [
+        "1000000",
+        "10000000",
+        "1111111",
+        "1010101"
+      ],
+      "answer": 1
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "BCD කියන්නේ stands for?",
+      "options": [
+        "Binary Coded Decimal",
+        "Bit Code Data",
+        "Basic Computer Decimal",
+        "Binary Character Data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Characters represent කරන්න බහුලව භාවිතා කරන code එක මොකක්ද?",
+      "options": [
+        "ASCII",
+        "BCD",
+        "EBCDIC",
+        "Gray"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "IBM mainframes වල වැඩි වශයෙන් භාවිතා කරන Coding scheme එක මොකක්ද?",
+      "options": [
+        "ASCII",
+        "EBCDIC",
+        "Unicode",
+        "BCD"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Unicode mainly represent කරන්නෙ?",
+      "options": [
+        "Binary digits",
+        "Languages characters (බහු භාෂා)",
+        "Numbers only",
+        "Decimal fractions"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Standard ASCII එකේ භාවිතා කරන Bits ගණන කොච්චරද?",
+      "options": [
+        "7",
+        "8",
+        "16",
+        "32"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Extended ASCII එකේ භාවිතා කරන Bits ගණන කොච්චරද?",
+      "options": [
+        "7",
+        "8",
+        "16",
+        "32"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Consecutive values අතර One bit විතරක් වෙනස් කර Error minimize කරන code එක මොකක්ද?",
+      "options": [
+        "ASCII",
+        "BCD",
+        "Gray",
+        "Unicode"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Nibble එකක තියෙන්නේ කොච්චර Bits ද?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Word එකක (Commonly) තියෙන්නේ කොච්චර Bits ද?",
+      "options": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "4567 හි Most Significant Digit (MSD) එක මොකක්ද?",
+      "options": [
+        "7",
+        "6",
+        "5",
+        "4"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "4567 හි Least Significant Digit (LSD) එක මොකක්ද?",
+      "options": [
+        "7",
+        "6",
+        "5",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "1010 හි Most Significant Bit (MSB) එක මොකක්ද?",
+      "options": [
+        "1 (leftmost)",
+        "0 (second)",
+        "1 (third)",
+        "0 (rightmost)"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "1010 හි Least Significant Bit (LSB) එක මොකක්ද?",
+      "options": [
+        "1 (leftmost)",
+        "0 (second)",
+        "1 (third)",
+        "0 (rightmost)"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "65,000+ Characters represent කරන්න ඉඩ දෙන Coding scheme එක මොකක්ද?",
+      "options": [
+        "ASCII",
+        "BCD",
+        "EBCDIC",
+        "Unicode"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "7-bit ASCII එකෙන් Represent කරන්න පුළුවන් Characters ගණන කොච්චරද?",
+      "options": [
+        "64",
+        "128",
+        "256",
+        "512"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "ASCII එකේ Limitation එක මොකක්ද?",
+      "options": [
+        "Limited characters",
+        "Too many symbols",
+        "Supports all languages",
+        "Supports only graphics"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "ASCII 'A' එකේ Binary value එක මොකක්ද?",
+      "options": [
+        "01000001",
+        "01000010",
+        "01000011",
+        "01000100"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "ASCII 'a' එකේ Binary value එක මොකක්ද?",
+      "options": [
+        "01100001",
+        "01100010",
+        "01100011",
+        "01100100"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Unicode ගැන True statement එක මොකක්ද?",
+      "options": [
+        "Limited to English",
+        "Fixed to 8 bits",
+        "Supports multiple languages",
+        "Same as ASCII"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Binary number එකක Highest place value තීරණය කරන කොටස මොකක්ද?",
+      "options": [
+        "MSB",
+        "LSB",
+        "MSD",
+        "LSD"
+      ],
+      "answer": 0
+    }
+  ]
+}

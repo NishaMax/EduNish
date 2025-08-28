@@ -1,0 +1,406 @@
+{
+  "Series 1": [
+    {
+      "question": "What is a word processor?",
+      "options": [
+        "A device for printing documents",
+        "Software for creating and editing text documents",
+        "Software for calculations",
+        "A database management system"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is a word processing software?",
+      "options": [
+        "MS Word",
+        "MS Excel",
+        "MS Access",
+        "MS PowerPoint"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which of the following is NOT a word processing software?",
+      "options": [
+        "Writer",
+        "Notepad",
+        "WordPad",
+        "Photoshop"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "The file extension of MS Word 2007 and above is?",
+      "options": [
+        ".doc",
+        ".docx",
+        ".txt",
+        ".pdf"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "The default extension of Word 2003 documents is?",
+      "options": [
+        ".docx",
+        ".txt",
+        ".doc",
+        ".pdf"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which bar in Word displays the name of the document?",
+      "options": [
+        "Status Bar",
+        "Title Bar",
+        "Menu Bar",
+        "Task Bar"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which bar in Word shows information like page number and word count?",
+      "options": [
+        "Title Bar",
+        "Status Bar",
+        "Menu Bar",
+        "Scroll Bar"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "In Word, the Ribbon contains?",
+      "options": [
+        "Commands organized in tabs",
+        "Only the title of the document",
+        "Scrollbars",
+        "Notifications"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which key combination is used to create a new document in Word?",
+      "options": [
+        "Ctrl + S",
+        "Ctrl + N",
+        "Ctrl + O",
+        "Ctrl + P"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which key combination is used to open a document?",
+      "options": [
+        "Ctrl + O",
+        "Ctrl + N",
+        "Ctrl + S",
+        "Ctrl + P"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which key combination is used to save a document?",
+      "options": [
+        "Ctrl + N",
+        "Ctrl + O",
+        "Ctrl + S",
+        "Ctrl + C"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which menu or tab is used to insert pictures in Word?",
+      "options": [
+        "Home",
+        "Insert",
+        "Layout",
+        "Review"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature allows you to undo recent actions?",
+      "options": [
+        "Redo",
+        "Undo",
+        "Find",
+        "Replace"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature allows you to redo an undone action?",
+      "options": [
+        "Redo",
+        "Undo",
+        "Find",
+        "Replace"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which shortcut is used to print a document?",
+      "options": [
+        "Ctrl + N",
+        "Ctrl + O",
+        "Ctrl + S",
+        "Ctrl + P"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which of the following is an advantage of word processors?",
+      "options": [
+        "Editing is difficult",
+        "Formatting is not possible",
+        "Easy editing and formatting",
+        "Cannot print"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "In Word, which feature shows how the printed page will look?",
+      "options": [
+        "Page Layout",
+        "Print Preview",
+        "Zoom",
+        "Format Painter"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which option is used to close a document?",
+      "options": [
+        "File → Close",
+        "File → Save",
+        "File → Exit",
+        "File → Print"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which software is an open-source word processor?",
+      "options": [
+        "MS Word",
+        "WordPad",
+        "LibreOffice Writer",
+        "Notepad"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which tool in Word highlights spelling errors?",
+      "options": [
+        "Grammar checker",
+        "Spell checker",
+        "Format painter",
+        "Find and replace"
+      ],
+      "answer": 1
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Which option changes the font style of text?",
+      "options": [
+        "Paragraph",
+        "Font group",
+        "Page layout",
+        "Review"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which option is used to make text bold?",
+      "options": [
+        "Ctrl + I",
+        "Ctrl + B",
+        "Ctrl + U",
+        "Ctrl + P"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which option is used to italicize text?",
+      "options": [
+        "Ctrl + B",
+        "Ctrl + I",
+        "Ctrl + U",
+        "Ctrl + C"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which option is used to underline text?",
+      "options": [
+        "Ctrl + B",
+        "Ctrl + I",
+        "Ctrl + U",
+        "Ctrl + V"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Bullets and numbering are found in which tab?",
+      "options": [
+        "Home",
+        "Insert",
+        "Layout",
+        "Review"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which feature changes the spacing between lines?",
+      "options": [
+        "Paragraph spacing",
+        "Font size",
+        "Page layout",
+        "Alignment"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which alignment places text evenly between left and right margins?",
+      "options": [
+        "Left",
+        "Right",
+        "Center",
+        "Justify"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "To insert a table, we use which tab?",
+      "options": [
+        "Home",
+        "Insert",
+        "Layout",
+        "View"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature checks for synonyms of words?",
+      "options": [
+        "Spell check",
+        "Thesaurus",
+        "Grammar check",
+        "Find"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature finds and replaces words?",
+      "options": [
+        "Spell check",
+        "Find and Replace",
+        "Undo",
+        "Redo"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Page margins can be set using which tab?",
+      "options": [
+        "Insert",
+        "Layout",
+        "Review",
+        "Home"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Page orientation can be?",
+      "options": [
+        "Portrait or Landscape",
+        "Vertical only",
+        "Horizontal only",
+        "Square"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Headers and footers can be added from which tab?",
+      "options": [
+        "Insert",
+        "Layout",
+        "Review",
+        "View"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which feature automatically corrects common typing errors?",
+      "options": [
+        "Spell check",
+        "AutoCorrect",
+        "Thesaurus",
+        "Find"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature highlights grammar mistakes?",
+      "options": [
+        "Grammar checker",
+        "Spell checker",
+        "AutoCorrect",
+        "Replace"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which option is used for merging standard documents with addresses?",
+      "options": [
+        "Mail Merge",
+        "Spell check",
+        "AutoCorrect",
+        "Find and Replace"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which tab allows adding page borders?",
+      "options": [
+        "Insert",
+        "Design",
+        "Review",
+        "Layout"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Shortcut for selecting all text is?",
+      "options": [
+        "Ctrl + S",
+        "Ctrl + A",
+        "Ctrl + P",
+        "Ctrl + C"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Shortcut for copying text is?",
+      "options": [
+        "Ctrl + V",
+        "Ctrl + X",
+        "Ctrl + C",
+        "Ctrl + Z"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Shortcut for pasting text is?",
+      "options": [
+        "Ctrl + C",
+        "Ctrl + V",
+        "Ctrl + X",
+        "Ctrl + Z"
+      ],
+      "answer": 1
+    }
+  ]
+}

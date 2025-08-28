@@ -1,0 +1,1013 @@
+ {
+    "Series 1": [
+      {
+        "question": "What will be the final value of count?\n\ncount = 12\nWHILE count >= 3\n    count = count - 3\nEND WHILE",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "How many times will the loop execute?\n\nx = 1\nWHILE x < 10\n    x = x + 2\nEND WHILE",
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the output of the loop?\n\ny = 5\nWHILE y < 20\n    y = y + 5\nEND WHILE\nPRINT y",
+        "options": [
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the final value of num?\n\nnum = 2\nWHILE num < 50\n    num = num * 2\nEND WHILE",
+        "options": [
+          "16",
+          "32",
+          "64",
+          "128"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is printed?\n\nval = 1\nWHILE val <= 5\n    val = val + 1\nEND WHILE\nPRINT val",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the value of sum after the loop?\n\nsum = 0\ncount = 1\nWHILE count <= 4\n    sum = sum + count\n    count = count + 1\nEND WHILE",
+        "options": [
+          "6",
+          "8",
+          "10",
+          "12"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "How many times will the loop run?\n\ni = 10\nWHILE i > 0\n    i = i - 2\nEND WHILE",
+        "options": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What will be the last printed number?\n\nn = 1\nWHILE n < 15\n    PRINT n\n    n = n + 3\nEND WHILE",
+        "options": [
+          "10",
+          "12",
+          "13",
+          "14"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which value does counter hold after loop ends?\n\ncounter = 3\nWHILE counter < 20\n    counter = counter + 4\nEND WHILE",
+        "options": [
+          "19",
+          "20",
+          "21",
+          "23"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the output?\n\nn = 100\nWHILE n > 25\n    n = n - 25\nEND WHILE\nPRINT n",
+        "options": [
+          "0",
+          "25",
+          "50",
+          "75"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How many times does the loop execute?\n\ncount = 1\nWHILE count < 20\n    count = count * 3\nEND WHILE",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What will be printed?\n\nx = 0\nWHILE x < 12\n    x = x + 4\nEND WHILE\nPRINT x",
+        "options": [
+          "12",
+          "13",
+          "14",
+          "16"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which number will be the final result?\n\ny = 81\nWHILE y > 9\n    y = y / 3\nEND WHILE",
+        "options": [
+          "3",
+          "6",
+          "9",
+          "12"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the sum after loop ends?\n\ns = 0\nn = 1\nWHILE n <= 3\n    s = s + (n * n)\n    n = n + 1\nEND WHILE",
+        "options": [
+          "6",
+          "10",
+          "12",
+          "14"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How many values of n will be printed?\n\nn = 2\nWHILE n <= 20\n    PRINT n\n    n = n + 6\nEND WHILE",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What value does result hold?\n\nresult = 1\nnum = 1\nWHILE num <= 3\n    result = result * num\n    num = num + 1\nEND WHILE",
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What is the final value of count?\n\ncount = 50\nWHILE count > 5\n    count = count - 15\nEND WHILE",
+        "options": [
+          "2",
+          "5",
+          "8",
+          "10"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which number will be printed last?\n\nn = 1\nWHILE n < 25\n    PRINT n\n    n = n * 2\nEND WHILE",
+        "options": [
+          "8",
+          "16",
+          "24",
+          "32"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is printed?\n\nx = 3\nWHILE x < 15\n    x = x + 4\nEND WHILE\nPRINT x",
+        "options": [
+          "11",
+          "13",
+          "15",
+          "17"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "How many times does the loop execute?\n\nval = 128\nWHILE val > 1\n    val = val / 2\nEND WHILE",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "answer": 2
+      }
+    ],
+    "Series 2": [
+      {
+        "question": "What is the final value of y?\n\ny = 20\nWHILE y > 5\n    y = y - 5\nEND WHILE",
+        "options": [
+          "0",
+          "5",
+          "10",
+          "15"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How many times does this loop run?\n\nn = 2\nWHILE n <= 20\n    n = n * 2\nEND WHILE",
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What will be printed?\n\nx = 1\nWHILE x <= 7\n    PRINT x\n    x = x + 3\nEND WHILE",
+        "options": [
+          "1, 4, 7",
+          "1, 3, 5",
+          "1, 2, 3, 4, 5, 6, 7",
+          "None"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is the result?\n\nsum = 0\nn = 1\nWHILE n < 5\n    sum = sum + n\n    n = n + 2\nEND WHILE",
+        "options": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which number will be printed last?\n\nval = 5\nWHILE val <= 25\n    PRINT val\n    val = val + 5\nEND WHILE",
+        "options": [
+          "20",
+          "25",
+          "30",
+          "35"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What will be the final value?\n\nc = 100\nWHILE c > 1\n    c = c / 10\nEND WHILE",
+        "options": [
+          "1",
+          "10",
+          "0",
+          "100"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What value does total hold?\n\ntotal = 1\nn = 1\nWHILE n <= 4\n    total = total * 2\n    n = n + 1\nEND WHILE",
+        "options": [
+          "8",
+          "12",
+          "16",
+          "32"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is printed last?\n\nx = 2\nWHILE x < 100\n    x = x * 5\nEND WHILE\nPRINT x",
+        "options": [
+          "50",
+          "100",
+          "125",
+          "250"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How many times will this loop run?\n\nn = 1\nWHILE n < 64\n    n = n * 4\nEND WHILE",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What value does m hold?\n\nm = 50\nWHILE m >= 10\n    m = m - 20\nEND WHILE",
+        "options": [
+          "-10",
+          "0",
+          "5",
+          "10"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which value will n hold?\n\nn = 9\nWHILE n < 30\n    n = n + 7\nEND WHILE",
+        "options": [
+          "28",
+          "30",
+          "31",
+          "32"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the printed result?\n\nval = 3\nWHILE val < 20\n    val = val + 6\nEND WHILE\nPRINT val",
+        "options": [
+          "15",
+          "18",
+          "21",
+          "24"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "How many times does loop execute?\n\ncount = 256\nWHILE count > 1\n    count = count / 4\nEND WHILE",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What value does x hold?\n\nx = 7\nWHILE x <= 28\n    x = x + 7\nEND WHILE",
+        "options": [
+          "28",
+          "29",
+          "30",
+          "35"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What will be printed last?\n\nval = 4\nWHILE val < 50\n    val = val * 3\nEND WHILE\nPRINT val",
+        "options": [
+          "36",
+          "48",
+          "52",
+          "64"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How many values are printed?\n\nn = 1\nWHILE n < 50\n    PRINT n\n    n = n * 5\nEND WHILE",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the result?\n\nsum = 0\nn = 2\nWHILE n <= 8\n    sum = sum + n\n    n = n + 2\nEND WHILE\nPRINT sum",
+        "options": [
+          "10",
+          "12",
+          "14",
+          "16"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which number will be printed last?\n\nnum = 1\nWHILE num <= 100\n    num = num * 10\nEND WHILE\nPRINT num",
+        "options": [
+          "10",
+          "50",
+          "100",
+          "1000"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What value will remain in val?\n\nval = 40\nWHILE val >= 0\n    val = val - 15\nEND WHILE",
+        "options": [
+          "-5",
+          "-10",
+          "-15",
+          "-20"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How many times will this loop run?\n\nx = 3\nWHILE x < 100\n    x = x * 3\nEND WHILE",
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": 2
+      }
+    ],
+	"Series 3": [
+      {
+        "question": "What is printed?\n\na = 1\nWHILE a < 10\n    a = a + 3\nEND WHILE\nPRINT a",
+        "options": [
+          "7",
+          "9",
+          "10",
+          "12"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "How many times does loop execute?\n\nx = 2\nWHILE x < 100\n    x = x * 4\nEND WHILE",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the output?\n\nsum = 0\nn = 1\nWHILE n <= 5\n    sum = sum + (n * 2)\n    n = n + 1\nEND WHILE\nPRINT sum",
+        "options": [
+          "20",
+          "25",
+          "30",
+          "35"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What will be the final value of y?\n\ny = 128\nWHILE y > 4\n    y = y / 4\nEND WHILE",
+        "options": [
+          "2",
+          "4",
+          "8",
+          "16"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which number will be printed last?\n\nn = 3\nWHILE n <= 50\n    PRINT n\n    n = n * 3\nEND WHILE",
+        "options": [
+          "27",
+          "30",
+          "36",
+          "45"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What value remains in result?\n\nresult = 0\nn = 1\nWHILE n <= 4\n    result = result + (n * n)\n    n = n + 1\nEND WHILE",
+        "options": [
+          "10",
+          "14",
+          "20",
+          "30"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is printed?\n\nx = 5\nWHILE x < 40\n    x = x + 10\nEND WHILE\nPRINT x",
+        "options": [
+          "25",
+          "35",
+          "40",
+          "45"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "How many times does the loop execute?\n\nval = 1\nWHILE val < 500\n    val = val * 5\nEND WHILE",
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What will be printed?\n\nn = 10\nWHILE n >= 2\n    n = n - 3\nEND WHILE\nPRINT n",
+        "options": [
+          "1",
+          "2",
+          "-1",
+          "-2"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which value does sum hold?\n\nsum = 0\nx = 2\nWHILE x <= 6\n    sum = sum + x\n    x = x + 2\nEND WHILE",
+        "options": [
+          "8",
+          "10",
+          "12",
+          "14"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the output?\n\nval = 1\nWHILE val < 20\n    val = val * 2\nEND WHILE\nPRINT val",
+        "options": [
+          "16",
+          "20",
+          "24",
+          "32"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which number will be printed last?\n\nn = 4\nWHILE n < 40\n    PRINT n\n    n = n + 12\nEND WHILE",
+        "options": [
+          "16",
+          "28",
+          "36",
+          "40"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the final value?\n\nc = 81\nWHILE c > 3\n    c = c / 3\nEND WHILE",
+        "options": [
+          "2",
+          "3",
+          "6",
+          "9"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How many values will be printed?\n\nn = 1\nWHILE n <= 64\n    PRINT n\n    n = n * 4\nEND WHILE",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which value does x hold?\n\nx = 0\nWHILE x <= 8\n    x = x + 2\nEND WHILE",
+        "options": [
+          "8",
+          "9",
+          "10",
+          "12"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is printed?\n\ns = 0\nn = 1\nWHILE n <= 3\n    s = s + (n * 2)\n    n = n + 1\nEND WHILE\nPRINT s",
+        "options": [
+          "8",
+          "10",
+          "12",
+          "14"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is the result?\n\nval = 40\nWHILE val >= 10\n    val = val - 12\nEND WHILE",
+        "options": [
+          "-2",
+          "-4",
+          "-6",
+          "0"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How many times does loop run?\n\nn = 3\nWHILE n < 200\n    n = n * 6\nEND WHILE",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the final value of counter?\n\ncounter = 100\nWHILE counter > 10\n    counter = counter - 30\nEND WHILE",
+        "options": [
+          "-10",
+          "0",
+          "10",
+          "20"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is printed?\n\nval = 2\nWHILE val < 30\n    val = val * 3\nEND WHILE\nPRINT val",
+        "options": [
+          "18",
+          "27",
+          "30",
+          "32"
+        ],
+        "answer": 1
+      }
+    ],
+    "Series 4": [
+      {
+        "question": "What is the final value?\n\nx = 256\nWHILE x > 1\n    x = x / 8\nEND WHILE",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "8"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which number will be printed last?\n\nn = 5\nWHILE n <= 100\n    PRINT n\n    n = n * 5\nEND WHILE",
+        "options": [
+          "25",
+          "50",
+          "75",
+          "100"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is printed?\n\nval = 10\nWHILE val < 50\n    val = val + 15\nEND WHILE\nPRINT val",
+        "options": [
+          "40",
+          "45",
+          "50",
+          "55"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which number is result?\n\nresult = 1\nn = 2\nWHILE n <= 8\n    result = result * n\n    n = n + 2\nEND WHILE",
+        "options": [
+          "32",
+          "64",
+          "128",
+          "256"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "How many times does loop execute?\n\nx = 3\nWHILE x < 1000\n    x = x * 7\nEND WHILE",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the output?\n\nn = 15\nWHILE n >= 0\n    n = n - 4\nEND WHILE\nPRINT n",
+        "options": [
+          "-1",
+          "-2",
+          "-3",
+          "-5"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the printed value?\n\nval = 1\nWHILE val < 50\n    val = val * 10\nEND WHILE\nPRINT val",
+        "options": [
+          "10",
+          "50",
+          "100",
+          "200"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which number will be last printed?\n\nx = 4\nWHILE x <= 64\n    PRINT x\n    x = x * 2\nEND WHILE",
+        "options": [
+          "16",
+          "32",
+          "64",
+          "128"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the final result?\n\nsum = 0\nn = 1\nWHILE n <= 5\n    sum = sum + (n * 3)\n    n = n + 1\nEND WHILE",
+        "options": [
+          "30",
+          "45",
+          "60",
+          "75"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "How many values printed?\n\nn = 2\nWHILE n <= 128\n    PRINT n\n    n = n * 2\nEND WHILE",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which number is last?\n\nc = 90\nWHILE c > 0\n    c = c - 25\nEND WHILE",
+        "options": [
+          "-5",
+          "-10",
+          "-15",
+          "-20"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is printed?\n\nx = 2\nWHILE x < 40\n    x = x + 12\nEND WHILE\nPRINT x",
+        "options": [
+          "26",
+          "38",
+          "40",
+          "42"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the output?\n\nval = 3\nWHILE val <= 100\n    val = val * 5\nEND WHILE\nPRINT val",
+        "options": [
+          "75",
+          "100",
+          "125",
+          "150"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is printed last?\n\nn = 1\nWHILE n <= 50\n    PRINT n\n    n = n * 6\nEND WHILE",
+        "options": [
+          "6",
+          "12",
+          "18",
+          "36"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which number is result?\n\nnum = 2\nWHILE num <= 100\n    num = num * num\nEND WHILE",
+        "options": [
+          "4",
+          "16",
+          "64",
+          "256"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What is printed?\n\nval = 5\nWHILE val < 80\n    val = val + 25\nEND WHILE\nPRINT val",
+        "options": [
+          "55",
+          "75",
+          "80",
+          "85"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "How many times loop executes?\n\nx = 9\nWHILE x < 300\n    x = x * 3\nEND WHILE",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is printed last?\n\nn = 1\nWHILE n < 25\n    PRINT n\n    n = n + 7\nEND WHILE",
+        "options": [
+          "8",
+          "15",
+          "22",
+          "29"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the final value?\n\nx = 200\nWHILE x > 20\n    x = x - 60\nEND WHILE",
+        "options": [
+          "-10",
+          "0",
+          "20",
+          "40"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is printed?\n\nval = 1\nWHILE val <= 20\n    val = val * 4\nEND WHILE\nPRINT val",
+        "options": [
+          "16",
+          "20",
+          "24",
+          "64"
+        ],
+        "answer": 3
+      }
+    ],
+	"Series 5": [
+      {
+        "question": "What is printed?\n\nx = 1\nWHILE x <= 20\n    x = x * 5\nEND WHILE\nPRINT x",
+        "options": [
+          "15",
+          "20",
+          "25",
+          "25"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which value is last printed?\n\nn = 2\nWHILE n < 50\n    PRINT n\n    n = n * 4\nEND WHILE",
+        "options": [
+          "8",
+          "16",
+          "32",
+          "64"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What will be the final value of counter?\n\ncounter = 200\nWHILE counter > 10\n    counter = counter - 45\nEND WHILE",
+        "options": [
+          "-5",
+          "-10",
+          "-15",
+          "-20"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How many values are printed?\n\nn = 3\nWHILE n <= 300\n    PRINT n\n    n = n * 6\nEND WHILE",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the result?\n\nval = 2\nWHILE val < 100\n    val = val * val\nEND WHILE\nPRINT val",
+        "options": [
+          "16",
+          "64",
+          "256",
+          "1024"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which number is printed last?\n\nx = 10\nWHILE x >= 1\n    PRINT x\n    x = x - 4\nEND WHILE",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "6"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is the final value of y?\n\ny = 500\nWHILE y > 5\n    y = y / 7\nEND WHILE",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which number is printed last?\n\nn = 2\nWHILE n < 80\n    PRINT n\n    n = n * 5\nEND WHILE",
+        "options": [
+          "10",
+          "20",
+          "25",
+          "50"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What is printed?\n\nval = 1\nWHILE val < 40\n    val = val * 6\nEND WHILE\nPRINT val",
+        "options": [
+          "30",
+          "36",
+          "42",
+          "48"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How many times does loop run?\n\nx = 5\nWHILE x <= 500\n    x = x * 5\nEND WHILE",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which value remains?\n\nn = 100\nWHILE n > 1\n    n = n / 4\nEND WHILE",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What will be printed?\n\nval = 0\nWHILE val < 20\n    val = val + 7\nEND WHILE\nPRINT val",
+        "options": [
+          "14",
+          "21",
+          "28",
+          "35"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which number is last?\n\nx = 2\nWHILE x <= 200\n    PRINT x\n    x = x * 6\nEND WHILE",
+        "options": [
+          "12",
+          "24",
+          "72",
+          "144"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What is the result?\n\nsum = 0\nn = 2\nWHILE n <= 8\n    sum = sum + (n * 2)\n    n = n + 2\nEND WHILE\nPRINT sum",
+        "options": [
+          "16",
+          "20",
+          "24",
+          "28"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is printed?\n\nval = 90\nWHILE val > 0\n    val = val - 30\nEND WHILE\nPRINT val",
+        "options": [
+          "-10",
+          "-20",
+          "-30",
+          "-40"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is printed?\n\nx = 1\nWHILE x < 200\n    x = x * 9\nEND WHILE\nPRINT x",
+        "options": [
+          "81",
+          "90",
+          "100",
+          "120"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which value does y hold?\n\ny = 3\nWHILE y <= 60\n    y = y * 4\nEND WHILE",
+        "options": [
+          "48",
+          "60",
+          "64",
+          "72"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "How many numbers are printed?\n\nn = 2\nWHILE n <= 100\n    PRINT n\n    n = n * 3\nEND WHILE",
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the output?\n\nval = 25\nWHILE val >= 0\n    val = val - 8\nEND WHILE\nPRINT val",
+        "options": [
+          "-1",
+          "-2",
+          "-3",
+          "-7"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which number is result?\n\nnum = 2\nWHILE num < 500\n    num = num * 9\nEND WHILE",
+        "options": [
+          "72",
+          "81",
+          "90",
+          "108"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+  

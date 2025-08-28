@@ -1,0 +1,308 @@
+{
+  "Series 1": [
+    {
+      "question": "Raster image කියන්නේ?",
+      "options": [
+        "Pixel-based image",
+        "Line drawing",
+        "3D model",
+        "Sound file"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Vector image mainly use කරනවා?",
+      "options": [
+        "Mathematical shapes",
+        "Pixels",
+        "Videos",
+        "Audio"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Resolution mainly mean කරනවා?",
+      "options": [
+        "Detail of image",
+        "File size",
+        "Color type",
+        "Length"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "High resolution image එකේ feature එක?",
+      "options": [
+        "More details",
+        "Less details",
+        "No details",
+        "Random details"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Lossless compression mainly keep කරනවා?",
+      "options": [
+        "Original quality",
+        "Less quality",
+        "Delete data",
+        "Low resolution"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Image editing software එකක් මොකක්ද?",
+      "options": [
+        "GIMP",
+        "MS Word",
+        "Excel",
+        "PowerPoint"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "JPEG කියන්නේ?",
+      "options": [
+        "Image format",
+        "Audio format",
+        "Video format",
+        "Text format"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PNG mainly support කරන feature එක?",
+      "options": [
+        "Transparency",
+        "Audio",
+        "Video",
+        "Animation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "GIF mainly use කරනවා?",
+      "options": [
+        "Simple animations",
+        "Text files",
+        "Sound",
+        "High quality print"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Image cropping mainly mean කරනවා?",
+      "options": [
+        "Cut unwanted parts",
+        "Add colors",
+        "Resize file",
+        "Change format"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Animation කියන්නේ?",
+      "options": [
+        "Moving images",
+        "Static images",
+        "Sound only",
+        "Text only"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Frame කියන්නේ?",
+      "options": [
+        "Single image in animation",
+        "Full video",
+        "Sound clip",
+        "Text block"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Frame rate mainly measure කරනවා?",
+      "options": [
+        "Frames per second",
+        "Lines per second",
+        "Words per second",
+        "Sounds per second"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Tweening mainly use කරනවා?",
+      "options": [
+        "Smooth animation",
+        "Cut image",
+        "Change format",
+        "Add sound"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Stop motion animation mainly use කරනවා?",
+      "options": [
+        "Physical objects frame by frame",
+        "Draw only",
+        "Sound record",
+        "Text edit"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "2D animation mainly show කරනවා?",
+      "options": [
+        "Flat images",
+        "3D objects",
+        "Sound",
+        "Static text"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "3D animation mainly show කරනවා?",
+      "options": [
+        "Depth objects",
+        "Flat images",
+        "Sound",
+        "Static text"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Vector animation mainly use කරනවා?",
+      "options": [
+        "Mathematical shapes",
+        "Pixels only",
+        "Audio",
+        "Text only"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "GIF animation mainly use කරන example එකක්?",
+      "options": [
+        "Website banners",
+        "Text files",
+        "Music",
+        "Documents"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SWF file mainly use කරනවා?",
+      "options": [
+        "Flash animations",
+        "Audio",
+        "Text files",
+        "Database"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "Audio editing software එකක් මොකක්ද?",
+      "options": [
+        "Audacity",
+        "MS Word",
+        "Excel",
+        "Paint"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Video editing software එකක් මොකක්ද?",
+      "options": [
+        "Windows Movie Maker",
+        "Excel",
+        "Word",
+        "Access"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Audio compression mainly mean කරනවා?",
+      "options": [
+        "Reduce file size",
+        "Increase volume",
+        "Add colors",
+        "Cut video"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MP3 කියන්නේ?",
+      "options": [
+        "Audio format",
+        "Image format",
+        "Video format",
+        "Text format"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MP4 කියන්නේ?",
+      "options": [
+        "Video format",
+        "Image format",
+        "Text format",
+        "Database"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Video transition mainly use කරනවා?",
+      "options": [
+        "Smooth change between clips",
+        "Cut audio",
+        "Resize images",
+        "Add text only"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Subtitle mainly mean කරනවා?",
+      "options": [
+        "Text with video",
+        "Background sound",
+        "Image overlay",
+        "Database record"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Voice over mainly use කරනවා?",
+      "options": [
+        "Narration for video",
+        "Background color",
+        "Image crop",
+        "Animation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Video rendering mainly mean කරනවා?",
+      "options": [
+        "Final output generate",
+        "Play video",
+        "Delete video",
+        "Compress video"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Multimedia mainly combine කරනවා?",
+      "options": [
+        "Text, audio, video, animation",
+        "Text only",
+        "Audio only",
+        "Video only"
+      ],
+      "answer": 0
+    }
+  ]
+}

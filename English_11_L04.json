@@ -1,0 +1,608 @@
+{
+  "Series 1": [
+    {
+      "question": "What is the smallest unit of a digital image called?",
+      "options": [
+        "Pixel",
+        "Bit",
+        "Vector",
+        "Dot"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which factor mainly determines the clarity of an image?",
+      "options": [
+        "Resolution",
+        "File name",
+        "Monitor brand",
+        "Frame rate"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "In a raster image, each pixel stores",
+      "options": [
+        "Only brightness",
+        "Colour information",
+        "File size",
+        "Frame number"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which colour model is commonly used for computer screens?",
+      "options": [
+        "CMYK",
+        "RGB",
+        "HSB",
+        "Gray"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "The CMYK model is mostly used for",
+      "options": [
+        "Web images",
+        "Print media",
+        "Animations",
+        "Audio files"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What happens to file size when image resolution increases?",
+      "options": [
+        "Decreases",
+        "Increases",
+        "Unchanged",
+        "Becomes zero"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the main difference between raster and vector graphics?",
+      "options": [
+        "Raster uses pixels, vector uses mathematical formulas",
+        "Vector uses pixels, raster uses formulas",
+        "Both are pixel-based",
+        "Both are vector-based"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which type of image is best for logos and illustrations?",
+      "options": [
+        "Raster",
+        "Vector",
+        "Bitmap",
+        "GIF"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Lossless compression in images means",
+      "options": [
+        "Some quality is lost",
+        "File size increases",
+        "No quality is lost",
+        "Colours are reduced"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which is an example of a raster graphic file format?",
+      "options": [
+        ".svg",
+        ".jpg",
+        ".eps",
+        ".ai"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is an example of a vector graphic file format?",
+      "options": [
+        ".png",
+        ".bmp",
+        ".gif",
+        ".svg"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which free software is commonly used for raster graphic editing?",
+      "options": [
+        "Vectorian Giotto",
+        "Audacity",
+        "GIMP",
+        "Movie Maker"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What tool in GIMP is used to remove the background?",
+      "options": [
+        "Crop Tool",
+        "Eraser Tool",
+        "Fuzzy Select Tool",
+        "Move Tool"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which factor affects image file size the most?",
+      "options": [
+        "Resolution and colour depth",
+        "File name length",
+        "Folder name",
+        "Monitor type"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which image property is measured in dpi (dots per inch)?",
+      "options": [
+        "Resolution",
+        "File size",
+        "Frame rate",
+        "Compression"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which type of compression reduces image quality?",
+      "options": [
+        "Lossless",
+        "Lossy",
+        "Vector",
+        "Pixel"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the advantage of vector graphics over raster?",
+      "options": [
+        "Smaller resolution",
+        "Can be scaled without quality loss",
+        "Always smaller file size",
+        "Supports animation"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which colour depth allows more colours in an image?",
+      "options": [
+        "8-bit",
+        "16-bit",
+        "24-bit",
+        "1-bit"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which graphic type is most suitable for photographs?",
+      "options": [
+        "Vector",
+        "Raster",
+        "Line art",
+        "SVG"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which software feature allows saving an image in multiple formats?",
+      "options": [
+        "Import",
+        "Export",
+        "Resize",
+        "Crop"
+      ],
+      "answer": 1
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "What is animation?",
+      "options": [
+        "A static image",
+        "A sequence of images creating motion",
+        "A type of music file",
+        "A compressed video"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a frame in animation?",
+      "options": [
+        "A border of an image",
+        "A single picture in a sequence",
+        "A tool for editing audio",
+        "A type of video file"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How is frame rate measured?",
+      "options": [
+        "Frames per second",
+        "Images per pixel",
+        "Bits per colour",
+        "Seconds per colour"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What happens when frame rate is increased?",
+      "options": [
+        "Animation slows down",
+        "Animation becomes smoother",
+        "Animation stops",
+        "Image quality reduces"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What are keyframes in animation?",
+      "options": [
+        "Special frames that define starting/ending points",
+        "Frames in audio editing",
+        "Frames in videos only",
+        "Unused frames"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is tweening in animation?",
+      "options": [
+        "Creating in-between frames automatically",
+        "Deleting extra frames",
+        "Cropping an image",
+        "Audio mixing"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which free software is used for 2D animations in the lesson?",
+      "options": [
+        "GIMP",
+        "Audacity",
+        "Vectorian Giotto",
+        "Photoshop"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which animation technique moves objects gradually from one position to another?",
+      "options": [
+        "Stop motion",
+        "Motion tweening",
+        "Frame skipping",
+        "Cropping"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which tool allows controlling timing in animation software?",
+      "options": [
+        "Layer manager",
+        "Timeline",
+        "Eraser tool",
+        "Export option"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is an advantage of vector-based animation?",
+      "options": [
+        "Smaller file size and scalable",
+        "Pixelated quality",
+        "Larger file size",
+        "Low clarity"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is layering in animation?",
+      "options": [
+        "Stacking different elements on separate layers",
+        "Editing audio tracks",
+        "Video compression",
+        "Combining pixels"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which file type is commonly used for web animations?",
+      "options": [
+        ".mp3",
+        ".gif",
+        ".wav",
+        ".txt"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which animation technique requires drawing every frame manually?",
+      "options": [
+        "Frame-by-frame animation",
+        "Tweening",
+        "Vector animation",
+        "Raster editing"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is the benefit of using symbols in animation software?",
+      "options": [
+        "They save time by reusing objects",
+        "They compress audio",
+        "They delete layers",
+        "They add colour depth"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which option in animation software is used to preview work?",
+      "options": [
+        "Timeline",
+        "Play/Preview",
+        "Export",
+        "Save as"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which property controls how fast or slow an animation runs?",
+      "options": [
+        "Resolution",
+        "Frame rate",
+        "Colour depth",
+        "File size"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does morphing mean in animation?",
+      "options": [
+        "Smooth transformation of one shape into another",
+        "Changing audio pitch",
+        "Cropping a video",
+        "Scaling text"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which is a disadvantage of frame-by-frame animation?",
+      "options": [
+        "Requires more time and effort",
+        "Produces smooth motion",
+        "Can reuse objects",
+        "Requires fewer drawings"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is the function of onion skinning in animation software?",
+      "options": [
+        "Shows multiple frames at once for smooth transitions",
+        "Removes duplicate frames",
+        "Compresses video",
+        "Adds colour depth"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which export format is often used for publishing animations online?",
+      "options": [
+        ".avi",
+        ".exe",
+        ".swf",
+        ".doc"
+      ],
+      "answer": 2
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "Which free software is used for audio editing in the lesson?",
+      "options": [
+        "Audacity",
+        "Vectorian Giotto",
+        "GIMP",
+        "Movie Maker"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which feature in Audacity reduces background noise?",
+      "options": [
+        "Noise Reduction",
+        "Amplify",
+        "Cut",
+        "Loop"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which file type is commonly used for compressed audio?",
+      "options": [
+        ".wav",
+        ".mp3",
+        ".bmp",
+        ".gif"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which audio property controls volume level?",
+      "options": [
+        "Pitch",
+        "Amplitude",
+        "Frequency",
+        "Frame rate"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature in Audacity allows combining multiple sounds?",
+      "options": [
+        "Mixing",
+        "Looping",
+        "Cutting",
+        "Cropping"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which software is mentioned for simple video editing?",
+      "options": [
+        "Movie Maker",
+        "GIMP",
+        "Audacity",
+        "Vectorian Giotto"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which feature in Movie Maker adds gradual change between two video clips?",
+      "options": [
+        "Transition",
+        "Trim",
+        "Timeline",
+        "Volume"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which video file format is widely used for playback compatibility?",
+      "options": [
+        ".avi",
+        ".jpg",
+        ".png",
+        ".doc"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which option is used to cut unwanted parts of a video?",
+      "options": [
+        "Crop",
+        "Trim",
+        "Export",
+        "Transition"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature in video editing allows adding text titles?",
+      "options": [
+        "Trim",
+        "Titles/Captions",
+        "Noise reduction",
+        "Timeline"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the purpose of exporting a multimedia project?",
+      "options": [
+        "To save it in a usable format for sharing",
+        "To delete unwanted layers",
+        "To compress images",
+        "To change colour depth"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which factor affects video file size the most?",
+      "options": [
+        "Resolution and frame rate",
+        "File name",
+        "Audio pitch",
+        "Colour of background"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which audio format usually has higher quality but larger file size?",
+      "options": [
+        ".mp3",
+        ".wav",
+        ".gif",
+        ".png"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which tool allows adjusting brightness and contrast in video editing?",
+      "options": [
+        "Filters/Effects",
+        "Noise reduction",
+        "Timeline",
+        "Eraser"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which is a common output format for multimedia presentations?",
+      "options": [
+        ".exe",
+        ".mp4",
+        ".png",
+        ".wav"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Why is compression important in multimedia files?",
+      "options": [
+        "To reduce file size for easier storage and sharing",
+        "To increase frame rate",
+        "To reduce resolution only",
+        "To prevent editing"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which step is important before publishing multimedia online?",
+      "options": [
+        "Check compatibility and file size",
+        "Delete source files",
+        "Remove titles",
+        "Avoid compression"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which feature in Audacity allows repeating a sound clip?",
+      "options": [
+        "Loop",
+        "Trim",
+        "Transition",
+        "Morph"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which software is mentioned for combining video, audio, and images together?",
+      "options": [
+        "Movie Maker",
+        "Audacity",
+        "GIMP",
+        "Excel"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is multimedia publishing?",
+      "options": [
+        "Making content available in a format that others can access and use",
+        "Recording only audio",
+        "Drawing raster images",
+        "Compressing text files"
+      ],
+      "answer": 0
+    }
+  ]
+}

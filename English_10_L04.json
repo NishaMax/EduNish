@@ -1,0 +1,406 @@
+{
+  "Series 1": [
+    {
+      "question": "Grade 10 - Lesson 04 (S1): Which of the following is NOT a basic logic gate?",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "NAND"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): The AND gate gives output 1 when?",
+      "options": [
+        "At least one input is 1",
+        "Both inputs are 1",
+        "All inputs are 0",
+        "Any input is 0"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): The OR gate gives output 1 when?",
+      "options": [
+        "Both inputs are 0",
+        "At least one input is 1",
+        "All inputs are 1",
+        "Inputs are opposite"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): The NOT gate is also called?",
+      "options": [
+        "Inverter",
+        "Buffer",
+        "Amplifier",
+        "Comparator"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): The Boolean expression for an AND gate is?",
+      "options": [
+        "A + B",
+        "A . B",
+        "A'",
+        "A ⊕ B"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): The Boolean expression for an OR gate is?",
+      "options": [
+        "A + B",
+        "A . B",
+        "A'",
+        "AB'"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): The Boolean expression for a NOT gate is?",
+      "options": [
+        "A + B",
+        "A'",
+        "A . B",
+        "AB"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): The truth table of AND gate shows output 1 only when?",
+      "options": [
+        "Inputs are 0,0",
+        "Inputs are 1,1",
+        "Inputs are 0,1",
+        "Inputs are 1,0"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): Which of the following symbols represent OR gate?",
+      "options": [
+        "+",
+        ".",
+        "⊕",
+        "→"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): Which logic gate produces the opposite of the input?",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "NAND"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): In Boolean algebra, 1 + 0 equals?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "10"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): In Boolean algebra, 1 . 0 equals?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "10"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): In Boolean algebra, A + A equals?",
+      "options": [
+        "A",
+        "0",
+        "1",
+        "A'"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): In Boolean algebra, A . A equals?",
+      "options": [
+        "A",
+        "0",
+        "1",
+        "A'"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): Which gate is used in switches for street lights (on if either switch is ON)?",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "NAND"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): Which gate can be used to represent a simple alarm that rings only if all sensors detect danger?",
+      "options": [
+        "OR",
+        "AND",
+        "NOT",
+        "NOR"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): What is the output of NOT(1)?",
+      "options": [
+        "0",
+        "1",
+        "10",
+        "11"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): What is the output of A . 1?",
+      "options": [
+        "A",
+        "1",
+        "0",
+        "A'"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): What is the output of A + 0?",
+      "options": [
+        "A",
+        "0",
+        "1",
+        "A'"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S1): Boolean algebra deals with?",
+      "options": [
+        "Decimal numbers",
+        "Binary values",
+        "Octal numbers",
+        "Hexadecimal numbers"
+      ],
+      "answer": 1
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Grade 10 - Lesson 04 (S2): Which logic gate is the complement of OR?",
+      "options": [
+        "AND",
+        "NOR",
+        "NAND",
+        "NOT"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): Which logic gate is the complement of AND?",
+      "options": [
+        "OR",
+        "NOR",
+        "NAND",
+        "NOT"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): The NAND gate gives output 0 only when?",
+      "options": [
+        "All inputs are 0",
+        "All inputs are 1",
+        "At least one input is 0",
+        "Inputs are different"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): The NOR gate gives output 1 only when?",
+      "options": [
+        "All inputs are 1",
+        "All inputs are 0",
+        "At least one input is 1",
+        "Inputs are different"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): Which logic gate is called a universal gate?",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "NAND"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): Another universal gate besides NAND is?",
+      "options": [
+        "OR",
+        "NOR",
+        "NOT",
+        "XOR"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): The XOR gate gives output 1 when?",
+      "options": [
+        "Inputs are same",
+        "Inputs are different",
+        "All inputs are 1",
+        "All inputs are 0"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): The XNOR gate gives output 1 when?",
+      "options": [
+        "Inputs are same",
+        "Inputs are different",
+        "All inputs are 1",
+        "At least one input is 1"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): Which gate is used in parity checkers?",
+      "options": [
+        "AND",
+        "OR",
+        "XOR",
+        "NOR"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): Which logic gate is used to stop errors by detecting even/odd parity?",
+      "options": [
+        "XOR",
+        "XNOR",
+        "NOR",
+        "NAND"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): In Boolean algebra, A + A' equals?",
+      "options": [
+        "0",
+        "1",
+        "A",
+        "A'"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): In Boolean algebra, A . A' equals?",
+      "options": [
+        "0",
+        "1",
+        "A",
+        "A'"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): The alarm system that rings if any sensor is ON uses which gate?",
+      "options": [
+        "AND",
+        "OR",
+        "NOR",
+        "NOT"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): A street light that turns ON only when both switches are ON uses which gate?",
+      "options": [
+        "OR",
+        "AND",
+        "NAND",
+        "NOR"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): Which IC family contains logic gates?",
+      "options": [
+        "TTL",
+        "CMOS",
+        "Both TTL and CMOS",
+        "None"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): Which gate can be made using only NAND gates?",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "All of these"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): Which gate can be made using only NOR gates?",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "All of these"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): Which logic gate is used in calculators for addition?",
+      "options": [
+        "AND",
+        "XOR",
+        "NAND",
+        "XNOR"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): Which logic gate is used in memory storage devices?",
+      "options": [
+        "NAND",
+        "NOR",
+        "XOR",
+        "AND"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Grade 10 - Lesson 04 (S2): Which gate produces HIGH output when both inputs are LOW?",
+      "options": [
+        "AND",
+        "OR",
+        "NOR",
+        "NAND"
+      ],
+      "answer": 2
+    }
+  ]
+}

@@ -1,25 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz - EduNish</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Page</title>
+  <script src="quiz.js" defer></script>
+  <link rel="stylesheet" href="quiz.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200">
-  <div class="bg-white p-10 rounded-2xl shadow-xl text-center max-w-lg w-full">
-    <h1 class="text-3xl font-bold text-gray-800 mb-4">Welcome to the Quiz!</h1>
-    <p class="text-gray-600 mb-6">
-      Your Student ID: <span id="studentId" class="font-mono text-blue-600"></span>
-    </p>
-    <p class="text-gray-500">🚧 Quiz content coming soon...</p>
+<body> 
+  <div id="timer" class="absolute -right-20 top-1/2 transform -translate-y-1/2"></div>
+  <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        EduNish
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="downloads.html" class="text-gray-700 hover:text-blue-600 nav-link">Resources</a>
+                    <a href="quiz.html" class="text-gray-700 hover:text-blue-600">Quizzes</a>
+                    <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
+                    <!-- Auth Buttons 
+                    <button id="loginBtn" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login</button>
+                    <button id="logoutBtn" class="hidden bg-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg">Logout</button>-->
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-md border-t hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700">Home</a>
+                <a href="downloads.html" class="block px-3 py-2 text-gray-700">Resources</a>
+                <a href="quiz.html" class="block px-3 py-2 text-gray-700">Quizzes</a>
+                <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
+                <!-- Auth Buttons 
+                <button id="loginBtn" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login</button>
+                <button id="logoutBtn" class="hidden bg-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg">Logout</button>-->
+            </div>
+        </div>
+    </nav>
+
+
+  <section class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-6"> 
+  <!-- Selection Section -->
+  <div class="w-full max-w-lg bg-white rounded-xl shadow p-6 space-y-4">
+    <h1 class="text-2xl font-bold text-center mb-4">📘 Start Your Quiz</h1>
+
+    <!-- Medium -->
+    <div>
+      <label class="block font-medium mb-1">Select Medium</label>
+      <select id="medium-select" class="w-full border rounded p-2">
+        <option value="">-- Choose Medium --</option>
+        <option value="English">English</option>
+        <option value="Sinhala">සිංහල</option>
+      </select>
+    </div>
+
+    <!-- Grade -->
+    <div class="hidden">
+      <label class="block font-medium mb-1">Select Grade</label>
+      <select id="grade-select" class="w-full border rounded p-2">
+        <option value="">-- Choose Grade --</option>
+        <option value="10">Grade 10</option>
+        <option value="11">Grade 11</option>
+      </select>
+    </div>
+
+    <!-- Lesson -->
+    <div class="hidden">
+      <label class="block font-medium mb-1">Select Lesson</label>
+      <select id="lesson-select" class="w-full border rounded p-2">
+        <option value="">-- Choose Lesson --</option>
+      </select>
+    </div>
+
+    <!-- Series -->
+    <div id="series-section" class="hidden">
+      <label class="block font-medium mb-2">Choose Series</label>
+      <div id="series-cards" class="grid grid-cols-2 gap-4"></div>
+    </div>
   </div>
 
-  <script>
-    const studentData = JSON.parse(localStorage.getItem("studentData"));
-    if (studentData) {
-      document.getElementById("studentId").textContent = studentData.id;
-    }
-  </script>
+  <!-- Quiz Section -->
+  <div id="quiz-container" class="w-full max-w-2xl bg-white rounded-xl shadow p-6 mt-6 hidden">
+    <div class="mb-4">
+      <div class="h-2 bg-gray-200 rounded-full">
+        <div id="progress-bar" class="h-2 bg-blue-500 rounded-full" style="width:0%"></div>
+      </div>
+    </div>
+    <h2 id="quiz-question" class="text-xl font-semibold mb-4"></h2>
+    <div id="quiz-options" class="space-y-2"></div>
+    <button id="next-btn" class="hidden mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg">Next</button>
+  </div>
+
+  <!-- Result Section -->
+  <div id="result-container" class="w-full max-w-lg mt-6 hidden"></div>
+
+  <!-- Progress Overview -->
+  <div class="w-full max-w-lg mt-6">
+    <h2 class="text-lg font-bold mb-2">📊 Your Progress</h2>
+    <div id="progress-list" class="grid gap-2"></div>
+  </div>
+  </section> 
+
+  
+
+    <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>lucide.createIcons();</script>
+  <script type="module" src="script.js"></script>
+
 </body>
 </html>

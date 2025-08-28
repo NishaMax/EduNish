@@ -1,0 +1,608 @@
+{
+  "Series 1": [
+    {
+      "question": "Which of the following is NOT a feature of a computer?",
+      "options": [
+        "Speed",
+        "Accuracy",
+        "Forgetfulness",
+        "Automation"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which type of computer is the largest and most powerful?",
+      "options": [
+        "Mini computer",
+        "Mainframe computer",
+        "Super computer",
+        "Micro computer"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which type of computer is mainly used for business transactions and banking?",
+      "options": [
+        "Mainframe computer",
+        "Super computer",
+        "Hybrid computer",
+        "Analog computer"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which type of computer uses continuous signals?",
+      "options": [
+        "Digital computer",
+        "Analog computer",
+        "Hybrid computer",
+        "Mini computer"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "A computer that can process both analog and digital signals is called",
+      "options": [
+        "Super computer",
+        "Hybrid computer",
+        "Mainframe computer",
+        "Mini computer"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which part of the computer performs arithmetic and logic operations?",
+      "options": [
+        "Control Unit",
+        "Registers",
+        "ALU",
+        "Cache"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which component of CPU directs the flow of instructions?",
+      "options": [
+        "ALU",
+        "Control Unit",
+        "Registers",
+        "Cache"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which memory is volatile and stores data temporarily?",
+      "options": [
+        "ROM",
+        "RAM",
+        "Cache",
+        "Flash"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which memory is non-volatile and permanently stores instructions?",
+      "options": [
+        "RAM",
+        "ROM",
+        "Cache",
+        "Registers"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which storage device uses magnetic disks?",
+      "options": [
+        "SSD",
+        "HDD",
+        "CD-ROM",
+        "Flash drive"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which port is commonly used for connecting pen drives?",
+      "options": [
+        "HDMI",
+        "RJ45",
+        "USB",
+        "VGA"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which port is mainly used for computer networking?",
+      "options": [
+        "USB",
+        "HDMI",
+        "RJ45",
+        "VGA"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which device is considered both input and output?",
+      "options": [
+        "Scanner",
+        "Monitor",
+        "Touchscreen",
+        "Printer"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which device is an example of an input device?",
+      "options": [
+        "Printer",
+        "Keyboard",
+        "Monitor",
+        "Plotter"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which device is an example of an output device?",
+      "options": [
+        "Keyboard",
+        "Mouse",
+        "Speaker",
+        "Scanner"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which unit temporarily holds instructions for execution?",
+      "options": [
+        "Cache",
+        "Registers",
+        "ROM",
+        "HDD"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which storage medium uses laser technology?",
+      "options": [
+        "HDD",
+        "DVD",
+        "Flash drive",
+        "Registers"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is secondary storage?",
+      "options": [
+        "RAM",
+        "Cache",
+        "ROM",
+        "Hard Disk"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which component manages communication between hardware and software?",
+      "options": [
+        "BIOS",
+        "Operating System",
+        "Firewall",
+        "Switch"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which part of the computer is called the brain?",
+      "options": [
+        "RAM",
+        "CPU",
+        "Hard Disk",
+        "ROM"
+      ],
+      "answer": 1
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Which transmission mode allows data to flow in only one direction?",
+      "options": [
+        "Simplex",
+        "Half-duplex",
+        "Full-duplex",
+        "Parallel"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which transmission mode allows data flow in both directions, but one at a time?",
+      "options": [
+        "Simplex",
+        "Half-duplex",
+        "Full-duplex",
+        "Serial"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which transmission mode allows simultaneous two-way communication?",
+      "options": [
+        "Simplex",
+        "Half-duplex",
+        "Full-duplex",
+        "Serial"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which medium uses twisted copper wires for transmission?",
+      "options": [
+        "Fiber optic",
+        "Microwave",
+        "Twisted pair",
+        "Coaxial"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which medium uses light signals for data transfer?",
+      "options": [
+        "Twisted pair",
+        "Fiber optic",
+        "Coaxial",
+        "Microwave"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which medium is most suitable for long-distance communication with high speed?",
+      "options": [
+        "Twisted pair",
+        "Coaxial cable",
+        "Fiber optic",
+        "Infrared"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which device connects a computer to a telephone line for internet?",
+      "options": [
+        "Switch",
+        "Router",
+        "Modem",
+        "NIC"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which device connects multiple devices in a LAN and forwards data?",
+      "options": [
+        "Router",
+        "Switch",
+        "Firewall",
+        "Modem"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which device connects different networks, including LAN to WAN?",
+      "options": [
+        "Switch",
+        "Router",
+        "Firewall",
+        "Hub"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which device provides network security by filtering traffic?",
+      "options": [
+        "NIC",
+        "Firewall",
+        "Switch",
+        "Modem"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which network type is limited to a small area like a school or office?",
+      "options": [
+        "WAN",
+        "LAN",
+        "MAN",
+        "PAN"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which network type covers a city or large campus?",
+      "options": [
+        "LAN",
+        "WAN",
+        "MAN",
+        "PAN"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which network type connects countries worldwide?",
+      "options": [
+        "LAN",
+        "WAN",
+        "MAN",
+        "PAN"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which topology connects all devices to a central hub?",
+      "options": [
+        "Star",
+        "Bus",
+        "Ring",
+        "Mesh"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which topology connects devices in a closed loop?",
+      "options": [
+        "Bus",
+        "Star",
+        "Ring",
+        "Tree"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which topology uses a single backbone cable?",
+      "options": [
+        "Star",
+        "Bus",
+        "Mesh",
+        "Tree"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which topology is most fault-tolerant but expensive?",
+      "options": [
+        "Bus",
+        "Mesh",
+        "Star",
+        "Ring"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which advantage of networking allows sharing of devices like printers?",
+      "options": [
+        "Scalability",
+        "Resource sharing",
+        "Backup",
+        "Simulation"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is a disadvantage of computer networking?",
+      "options": [
+        "Resource sharing",
+        "Data security risks",
+        "Faster communication",
+        "Collaboration"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which network device is built into most computers to connect to a network?",
+      "options": [
+        "NIC",
+        "Switch",
+        "Router",
+        "Firewall"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "Which feature of computers allows them to perform repetitive tasks without getting tired?",
+      "options": [
+        "Automation",
+        "Accuracy",
+        "Speed",
+        "Versatility"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which feature of computers ensures correct results if instructions are correct?",
+      "options": [
+        "Automation",
+        "Versatility",
+        "Accuracy",
+        "Connectivity"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which computer is smallest in size and most common today?",
+      "options": [
+        "Super computer",
+        "Micro computer",
+        "Mini computer",
+        "Mainframe"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which component of CPU temporarily stores frequently accessed data?",
+      "options": [
+        "Registers",
+        "ROM",
+        "Cache",
+        "RAM"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which type of memory is used to start a computer when powered on?",
+      "options": [
+        "RAM",
+        "ROM",
+        "Cache",
+        "Secondary storage"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which memory is faster than RAM but smaller in size?",
+      "options": [
+        "Cache",
+        "ROM",
+        "Secondary storage",
+        "HDD"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which storage is non-volatile and portable?",
+      "options": [
+        "Registers",
+        "Cache",
+        "Flash drive",
+        "RAM"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which optical disk can only be written once?",
+      "options": [
+        "CD-R",
+        "CD-RW",
+        "DVD-RW",
+        "Blu-ray"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which input device is used for drawing and graphic design?",
+      "options": [
+        "Mouse",
+        "Light pen",
+        "Scanner",
+        "Joystick"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which output device is used for producing large drawings and blueprints?",
+      "options": [
+        "Monitor",
+        "Printer",
+        "Plotter",
+        "Projector"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which device is commonly used for video output on large screens?",
+      "options": [
+        "Printer",
+        "Projector",
+        "Plotter",
+        "Scanner"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which port is used for high-definition video and audio transfer?",
+      "options": [
+        "USB",
+        "HDMI",
+        "RJ45",
+        "VGA"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which transmission medium uses radio signals?",
+      "options": [
+        "Microwave",
+        "Infrared",
+        "Wireless (Radio)",
+        "Fiber optic"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which transmission medium requires line-of-sight for communication?",
+      "options": [
+        "Radio waves",
+        "Infrared",
+        "Coaxial cable",
+        "Fiber optic"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which device boosts signals to extend network range?",
+      "options": [
+        "Router",
+        "Switch",
+        "Repeater",
+        "Firewall"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which topology combines characteristics of star and bus?",
+      "options": [
+        "Mesh",
+        "Tree",
+        "Ring",
+        "Hybrid"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which advantage of networking allows centralized storage of files?",
+      "options": [
+        "Backup",
+        "Centralized data management",
+        "Simulation",
+        "Ease of use"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which disadvantage of networking can cause widespread problems if the server fails?",
+      "options": [
+        "Data sharing",
+        "Server dependency",
+        "Collaboration",
+        "Resource sharing"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which network type is mainly used for personal devices like Bluetooth?",
+      "options": [
+        "LAN",
+        "WAN",
+        "PAN",
+        "MAN"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which is an advantage of fiber optic cables?",
+      "options": [
+        "Low speed",
+        "High bandwidth and long distance",
+        "Prone to interference",
+        "Cheap installation"
+      ],
+      "answer": 1
+    }
+  ]
+}

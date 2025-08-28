@@ -1,0 +1,262 @@
+{
+  "Series 1": [
+    {
+      "question": "Programming එකේ Loop mainly use කරනවා?",
+      "options": [
+        "Repeat instructions",
+        "Stop program",
+        "Store data",
+        "Delete data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Loop එකේ WHILE loop කියන්නේ?",
+      "options": [
+        "Repeat while condition true",
+        "Repeat fixed times",
+        "Repeat until false",
+        "Repeat once only"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Loop එකේ FOR loop mainly use කරනවා?",
+      "options": [
+        "Repeat fixed number of times",
+        "Repeat while true",
+        "Repeat infinite",
+        "Repeat random"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Loop එකේ Counter කියන්නේ?",
+      "options": [
+        "Variable for counting",
+        "Function",
+        "Operator",
+        "Constant"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Loop එකේ Condition false නම් මොකක් වෙයි?",
+      "options": [
+        "Loop end",
+        "Loop continue",
+        "Loop skip",
+        "Loop infinite"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "WHILE loop එකේ condition check කරන වෙලාව?",
+      "options": [
+        "Before loop body",
+        "After loop body",
+        "Middle of loop",
+        "Never"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "DO WHILE loop එකේ condition check කරන වෙලාව?",
+      "options": [
+        "After loop body",
+        "Before loop body",
+        "Middle of loop",
+        "Never"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "FOR loop එකේ initialization mainly use කරනවා?",
+      "options": [
+        "Set starting value",
+        "End value",
+        "Condition",
+        "Increment"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "FOR loop එකේ increment mainly use කරනවා?",
+      "options": [
+        "Update counter",
+        "Start loop",
+        "Check condition",
+        "End loop"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Infinite loop කියන්නේ?",
+      "options": [
+        "Loop never end",
+        "Loop one time",
+        "Loop skip",
+        "Loop random"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "Nested loop කියන්නේ?",
+      "options": [
+        "Loop inside another loop",
+        "Loop one time",
+        "Loop skip",
+        "Loop infinite"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Loop එකේ Break statement mainly use කරනවා?",
+      "options": [
+        "Exit loop immediately",
+        "Skip loop",
+        "Repeat loop",
+        "Pause loop"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Loop එකේ Continue statement mainly use කරනවා?",
+      "options": [
+        "Skip iteration",
+        "Exit loop",
+        "Pause loop",
+        "Repeat loop"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Loop එකේ Body කියන්නේ?",
+      "options": [
+        "Instructions inside loop",
+        "Condition",
+        "Counter",
+        "Variable"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Loop එකේ Condition එක True නම්?",
+      "options": [
+        "Loop execute",
+        "Loop stop",
+        "Loop skip",
+        "Loop break"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 4": [
+    {
+      "question": "Loop එකේ Entry controlled loop එකක් මොකක්ද?",
+      "options": [
+        "Condition check before loop body",
+        "Condition check after loop body",
+        "No condition",
+        "Random check"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Loop එකේ Exit controlled loop එකක් මොකක්ද?",
+      "options": [
+        "Condition check after loop body",
+        "Condition check before loop body",
+        "No condition",
+        "Random check"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Counter controlled loop එකේ Example එකක්?",
+      "options": [
+        "FOR loop",
+        "WHILE loop",
+        "DO WHILE loop",
+        "Infinite loop"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Condition controlled loop එකේ Example එකක්?",
+      "options": [
+        "WHILE loop",
+        "FOR loop",
+        "Nested loop",
+        "Infinite loop"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Loop එකේ Off by one error කියන්නේ?",
+      "options": [
+        "Loop run one extra/less time",
+        "Loop infinite",
+        "Loop skip",
+        "Loop never run"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 5": [
+    {
+      "question": "FOR loop එකේ 3 parts මොනවද?",
+      "options": [
+        "Initialization, Condition, Increment",
+        "Condition, Break, Continue",
+        "Counter, Body, Condition",
+        "Variable, Function, Operator"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "WHILE loop එකේ Advantage එකක්?",
+      "options": [
+        "Simple structure",
+        "Complex",
+        "Always infinite",
+        "Slow"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "FOR loop එකේ Advantage එකක්?",
+      "options": [
+        "Clear counter control",
+        "Unclear",
+        "No control",
+        "Infinite always"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "DO WHILE loop එකේ Advantage එකක්?",
+      "options": [
+        "Run at least once",
+        "Never run",
+        "Infinite",
+        "Skip always"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Nested loop mainly use කරන example එකක්?",
+      "options": [
+        "Multiplication table",
+        "Print one value",
+        "Skip value",
+        "Single input"
+      ],
+      "answer": 0
+    }
+  ]
+}

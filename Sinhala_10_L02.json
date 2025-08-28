@@ -1,0 +1,608 @@
+{
+  "Series 1": [
+    {
+      "question": "පහත දක්වා ඇතිවලින් Computer එකේ ලක්ෂණයක් නොවන එක මොකක්ද?",
+      "options": [
+        "Speed",
+        "Accuracy",
+        "Forgetfulness",
+        "Automation"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "වඩාත් විශාල සහ බලවත් Computer type එක මොකක්ද?",
+      "options": [
+        "Mini computer",
+        "Mainframe computer",
+        "Super computer",
+        "Micro computer"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Business transactions සහ Banking සඳහා වැඩි වශයෙන් භාවිතා කරන්නේ කුමන Computer එකද?",
+      "options": [
+        "Mainframe computer",
+        "Super computer",
+        "Hybrid computer",
+        "Analog computer"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Continuous signals භාවිතා කරන Computer එක මොකක්ද?",
+      "options": [
+        "Digital computer",
+        "Analog computer",
+        "Hybrid computer",
+        "Mini computer"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Analog සහ Digital signals දෙකම process කරන Computer එක කියන්නේ?",
+      "options": [
+        "Super computer",
+        "Hybrid computer",
+        "Mainframe computer",
+        "Mini computer"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Arithmetic සහ Logic operations කරන Computer කොටස මොකක්ද?",
+      "options": [
+        "Control Unit",
+        "Registers",
+        "ALU",
+        "Cache"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "CPU එකේ instructions flow control කරන කොටස මොකක්ද?",
+      "options": [
+        "ALU",
+        "Control Unit",
+        "Registers",
+        "Cache"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Temporary data store කරන Volatile memory එක මොකක්ද?",
+      "options": [
+        "ROM",
+        "RAM",
+        "Cache",
+        "Flash"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Permanent instructions store කරන Non-volatile memory එක මොකක්ද?",
+      "options": [
+        "RAM",
+        "ROM",
+        "Cache",
+        "Registers"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Magnetic disks භාවිතා කරන storage device එක මොකක්ද?",
+      "options": [
+        "SSD",
+        "HDD",
+        "CD-ROM",
+        "Flash drive"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Pen drives connect කරන්න භාවිතා කරන port එක මොකක්ද?",
+      "options": [
+        "HDMI",
+        "RJ45",
+        "USB",
+        "VGA"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Computer networking සඳහා භාවිතා කරන port එක මොකක්ද?",
+      "options": [
+        "USB",
+        "HDMI",
+        "RJ45",
+        "VGA"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Input සහ Output දෙකම හැඳින්විය හැකි device එක මොකක්ද?",
+      "options": [
+        "Scanner",
+        "Monitor",
+        "Touchscreen",
+        "Printer"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Input device එකක් උදාහරණයක් මොකක්ද?",
+      "options": [
+        "Printer",
+        "Keyboard",
+        "Monitor",
+        "Plotter"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Output device එකක් උදාහරණයක් මොකක්ද?",
+      "options": [
+        "Keyboard",
+        "Mouse",
+        "Speaker",
+        "Scanner"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Execution සඳහා instructions temporarily hold කරන unit එක මොකක්ද?",
+      "options": [
+        "Cache",
+        "Registers",
+        "ROM",
+        "HDD"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Laser technology භාවිතා කරන storage medium එක මොකක්ද?",
+      "options": [
+        "HDD",
+        "DVD",
+        "Flash drive",
+        "Registers"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Secondary storage එකක් මොකක්ද?",
+      "options": [
+        "RAM",
+        "Cache",
+        "ROM",
+        "Hard Disk"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Hardware සහ Software අතර communication manage කරන කොටස මොකක්ද?",
+      "options": [
+        "BIOS",
+        "Operating System",
+        "Firewall",
+        "Switch"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Computer එකේ Brain කියන්නේ?",
+      "options": [
+        "RAM",
+        "CPU",
+        "Hard Disk",
+        "ROM"
+      ],
+      "answer": 1
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Data එකක් එක දිශාවකට පමණක් ගමන් කරන Transmission mode එක මොකක්ද?",
+      "options": [
+        "Simplex",
+        "Half-duplex",
+        "Full-duplex",
+        "Parallel"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Data දෙපැත්තේම ගියත් එකවර නොව ගමන් කරන Transmission mode එක මොකක්ද?",
+      "options": [
+        "Simplex",
+        "Half-duplex",
+        "Full-duplex",
+        "Serial"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Simultaneous දෙපැත්තේම data flow කරන්න ඉඩ දෙන Transmission mode එක මොකක්ද?",
+      "options": [
+        "Simplex",
+        "Half-duplex",
+        "Full-duplex",
+        "Serial"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Twisted copper wires භාවිතා කරන medium එක මොකක්ද?",
+      "options": [
+        "Fiber optic",
+        "Microwave",
+        "Twisted pair",
+        "Coaxial"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Light signals භාවිතා කරන data transfer medium එක මොකක්ද?",
+      "options": [
+        "Twisted pair",
+        "Fiber optic",
+        "Coaxial",
+        "Microwave"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Long distance communication high speed වලට සුදුසුම medium එක මොකක්ද?",
+      "options": [
+        "Twisted pair",
+        "Coaxial cable",
+        "Fiber optic",
+        "Infrared"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Telephone line එකක් വഴി Internet connect කරන device එක මොකක්ද?",
+      "options": [
+        "Switch",
+        "Router",
+        "Modem",
+        "NIC"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "LAN එකක devices connect කර data forward කරන device එක මොකක්ද?",
+      "options": [
+        "Router",
+        "Switch",
+        "Firewall",
+        "Modem"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Different networks connect කරන device එක (LAN to WAN) මොකක්ද?",
+      "options": [
+        "Switch",
+        "Router",
+        "Firewall",
+        "Hub"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Traffic filter කර Network security දෙන device එක මොකක්ද?",
+      "options": [
+        "NIC",
+        "Firewall",
+        "Switch",
+        "Modem"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "School හෝ Office වගේ small area එකකට යොදාගන්න network එක මොකක්ද?",
+      "options": [
+        "WAN",
+        "LAN",
+        "MAN",
+        "PAN"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "City හෝ විශාල Campus එකකට යොදාගන්න network එක මොකක්ද?",
+      "options": [
+        "LAN",
+        "WAN",
+        "MAN",
+        "PAN"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Countries worldwide connect කරන network එක මොකක්ද?",
+      "options": [
+        "LAN",
+        "WAN",
+        "MAN",
+        "PAN"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Central hub එකකට devices connect කරන topology එක මොකක්ද?",
+      "options": [
+        "Star",
+        "Bus",
+        "Ring",
+        "Mesh"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Closed loop එකක devices connect කරන topology එක මොකක්ද?",
+      "options": [
+        "Bus",
+        "Star",
+        "Ring",
+        "Tree"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Single backbone cable භාවිතා කරන topology එක මොකක්ද?",
+      "options": [
+        "Star",
+        "Bus",
+        "Mesh",
+        "Tree"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Most fault-tolerant නමුත් මිල අධික topology එක මොකක්ද?",
+      "options": [
+        "Bus",
+        "Mesh",
+        "Star",
+        "Ring"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Printers වගේ devices share කරන්න දෙන Networking advantage එක මොකක්ද?",
+      "options": [
+        "Scalability",
+        "Resource sharing",
+        "Backup",
+        "Simulation"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Computer networking එකේ Disadvantage එකක් මොකක්ද?",
+      "options": [
+        "Resource sharing",
+        "Data security risks",
+        "Faster communication",
+        "Collaboration"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Most computers වල built-in වෙලා තියෙන Network connect කරන device එක මොකක්ද?",
+      "options": [
+        "NIC",
+        "Switch",
+        "Router",
+        "Firewall"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "Repetitive tasks කරන්න Computer එකට ඉඩ දෙන feature එක මොකක්ද?",
+      "options": [
+        "Automation",
+        "Accuracy",
+        "Speed",
+        "Versatility"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Correct instructions දුන්නොත් Correct results ලබා දෙන feature එක මොකක්ද?",
+      "options": [
+        "Automation",
+        "Versatility",
+        "Accuracy",
+        "Connectivity"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Smallest size එකේ සහ අද බහුලව භාවිතා වෙන Computer එක මොකක්ද?",
+      "options": [
+        "Super computer",
+        "Micro computer",
+        "Mini computer",
+        "Mainframe"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "CPU එකේ frequently accessed data temporarily store කරන කොටස මොකක්ද?",
+      "options": [
+        "Registers",
+        "ROM",
+        "Cache",
+        "RAM"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Computer එක power on කළ විට start වෙන්න භාවිතා කරන memory එක මොකක්ද?",
+      "options": [
+        "RAM",
+        "ROM",
+        "Cache",
+        "Secondary storage"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "RAM ට වඩා වේගවත් නමුත් විශාලත්වය කුඩා memory එක මොකක්ද?",
+      "options": [
+        "Cache",
+        "ROM",
+        "Secondary storage",
+        "HDD"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Non-volatile සහ portable storage එක මොකක්ද?",
+      "options": [
+        "Registers",
+        "Cache",
+        "Flash drive",
+        "RAM"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Once ලියලා වෙනස් කරන්න බැරි Optical disk එක මොකක්ද?",
+      "options": [
+        "CD-R",
+        "CD-RW",
+        "DVD-RW",
+        "Blu-ray"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Drawing සහ Graphic design සඳහා භාවිතා කරන Input device එක මොකක්ද?",
+      "options": [
+        "Mouse",
+        "Light pen",
+        "Scanner",
+        "Joystick"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "විශාල නාටක හා plans print කරන්න භාවිතා කරන Output device එක මොකක්ද?",
+      "options": [
+        "Monitor",
+        "Printer",
+        "Plotter",
+        "Projector"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "විශාල තිර සඳහා Video output දෙන device එක මොකක්ද?",
+      "options": [
+        "Printer",
+        "Projector",
+        "Plotter",
+        "Scanner"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "High-definition video සහ audio transfer සඳහා භාවිතා කරන port එක මොකක්ද?",
+      "options": [
+        "USB",
+        "HDMI",
+        "RJ45",
+        "VGA"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Radio signals භාවිතා කරන Transmission medium එක මොකක්ද?",
+      "options": [
+        "Microwave",
+        "Infrared",
+        "Wireless (Radio)",
+        "Fiber optic"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Line-of-sight අවශ්‍ය වෙන Transmission medium එක මොකක්ද?",
+      "options": [
+        "Radio waves",
+        "Infrared",
+        "Coaxial cable",
+        "Fiber optic"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Network range දිගු කර signals boost කරන device එක මොකක්ද?",
+      "options": [
+        "Router",
+        "Switch",
+        "Repeater",
+        "Firewall"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Star සහ Bus characteristics එකටම ගත් Topology එක මොකක්ද?",
+      "options": [
+        "Mesh",
+        "Tree",
+        "Ring",
+        "Hybrid"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Centralized storage of files ඉඩ දෙන Networking advantage එක මොකක්ද?",
+      "options": [
+        "Backup",
+        "Centralized data management",
+        "Simulation",
+        "Ease of use"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Server එක fail වුනොත් වැඩි નુકසਾਨ දෙන Networking disadvantage එක මොකක්ද?",
+      "options": [
+        "Data sharing",
+        "Server dependency",
+        "Collaboration",
+        "Resource sharing"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Bluetooth වගේ Personal devices connect කරන Network type එක මොකක්ද?",
+      "options": [
+        "LAN",
+        "WAN",
+        "PAN",
+        "MAN"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Fiber optic cables වල advantage එක මොකක්ද?",
+      "options": [
+        "Low speed",
+        "High bandwidth and long distance",
+        "Prone to interference",
+        "Cheap installation"
+      ],
+      "answer": 1
+    }
+  ]
+}
