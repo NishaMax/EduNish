@@ -104,13 +104,25 @@
       studentId = local.studentId;
 
       try {
-        const snap = await getDoc(doc(db, "students", studentId));
-        if (snap.exists()) {
-          renderProfile(snap.data());
-          loadProgress();
-        } else {
-          loadingDiv.textContent = "⚠️ Profile not found in Firestore.";
-        }
+        let snap = await getDoc(doc(db, "students", studentId));
+if (snap.exists()) {
+  renderProfile(snap.data());
+  loadProgress();
+} else {
+  // 🔎 fallback: try lookup by email
+  const email = local.email?.toLowerCase();
+  if (email) {
+    const emailSnap = await getDoc(doc(db, "studentsByEmail", email));
+    if (emailSnap.exists()) {
+      const record = emailSnap.data();
+      renderProfile(record);
+      loadProgress();
+      return;
+    }
+  }
+  loadingDiv.textContent = "⚠️ Profile not found in Firestore.";
+}
+
       } catch (err) {
         console.error("❌ Firestore error:", err);
         renderProfile(local, "(offline)");
