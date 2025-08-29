@@ -12,10 +12,27 @@
   document.addEventListener("DOMContentLoaded", () => {
     const studentData = JSON.parse(localStorage.getItem("edunishStudentData") || "null");
 
-    if (!studentData || !studentData.studentId) {
-      // Not registered → kick them to registration
+if (!studentData || !studentData.studentId) {
+  // 🔎 If logged in but no local student data → fetch from Firestore
+  import("https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js").then(({ getFirestore, doc, getDoc }) => {
+    const db = getFirestore(firebaseApp);
+    const userEmail = JSON.parse(localStorage.getItem("userEmail") || "null");
+    if (!userEmail) {
       window.location.href = "registration.html";
+    } else {
+      getDoc(doc(db, "studentsByEmail", userEmail.toLowerCase())).then(snap => {
+        if (snap.exists()) {
+          localStorage.setItem("edunishStudentData", JSON.stringify(snap.data()));
+          // reload to continue
+          window.location.reload();
+        } else {
+          window.location.href = "registration.html";
+        }
+      });
     }
+  });
+}
+
   });
 </script>
 
