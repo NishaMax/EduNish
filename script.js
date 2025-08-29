@@ -7,6 +7,8 @@ import {
   signOut,
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
 
 // =================== Firebase Config ===================
   const firebaseConfig = {
@@ -24,6 +26,7 @@ import {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
 document.addEventListener("DOMContentLoaded", () => {
   // ===== DOM =====
@@ -38,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const authForm = document.getElementById("authForm");
   const authMessage = document.getElementById("authMessage");
   const toggleAuthMode = document.getElementById("toggleAuthMode");
-  const quickRegForm = document.getElementById("quickRegForm");
 
   let isLogin = true;
 
@@ -222,52 +224,46 @@ if (loginBtnMobile) {
 }
 
   // ===== Auth state → keep active record in sync =====
- onAuthStateChanged(auth, (user) => {
+ onAuthStateChanged(auth, async (user) => {
   if (user) {
+    const email = user.email.toLowerCase();
+
+    // Try existing local data
+    let local = JSON.parse(localStorage.getItem("edunishStudentData"));
+
+    if (!local || local.email.toLowerCase() !== email) {
+      try {
+        // Fetch from Firestore if not found locally
+        let snapByEmail = await getDoc(doc(db, "studentsByEmail", email));
+        if (snapByEmail.exists()) {
+          const record = snapByEmail.data();
+          localStorage.setItem("edunishStudentData", JSON.stringify(record));
+
+          // update email map in localStorage
+          const map = JSON.parse(localStorage.getItem("edunishStudentsByEmail") || "{}");
+          map[email] = record;
+          localStorage.setItem("edunishStudentsByEmail", JSON.stringify(map));
+        } else {
+          // No student profile found
+          localStorage.removeItem("edunishStudentData");
+        }
+      } catch (err) {
+        console.error("❌ Could not sync profile:", err);
+      }
+    }
+
+    // ✅ Show nav buttons
     loginBtnDesktop?.classList.add("hidden");
     logoutBtnDesktop?.classList.remove("hidden");
 
     loginBtnMobile?.classList.add("hidden");
     logoutBtnMobile?.classList.remove("hidden");
 
-    const rec = getByEmail(user.email);
-
-   if (rec && rec.studentId) {
-  // ✅ Already have record locally
-  localStorage.setItem("edunishStudentData", JSON.stringify(rec));
-  profileBtnDesktop?.classList.remove("hidden");
-  profileBtnMobile?.classList.remove("hidden");
-} else {
-  // 🔎 Try to fetch from Firestore by email
-  import("https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js").then(({ getFirestore, doc, getDoc }) => {
-    const db = getFirestore(app);
-    getDoc(doc(db, "studentsByEmail", user.email.toLowerCase()))
-      .then(snap => {
-        if (snap.exists()) {
-          const record = snap.data();
-          localStorage.setItem("edunishStudentData", JSON.stringify(record));
-          
-          // 🔄 also update email lookup so mobile & desktop nav see it
-          const email = (record.email || "").toLowerCase();
-          if (email) {
-            const map = JSON.parse(localStorage.getItem("edunishStudentsByEmail") || "{}");
-            map[email] = record;
-            localStorage.setItem("edunishStudentsByEmail", JSON.stringify(map));
-          }
-
-          profileBtnDesktop?.classList.remove("hidden");
-          profileBtnMobile?.classList.remove("hidden");
-        } else {
-          // ❌ No student ID yet
-          localStorage.removeItem("edunishStudentData");
-          profileBtnDesktop?.classList.add("hidden");
-          profileBtnMobile?.classList.add("hidden");
-        }
-      });
-  });
-}
+    profileBtnDesktop?.classList.remove("hidden");
+    profileBtnMobile?.classList.remove("hidden");
 
   } else {
+    // User logged out
     loginBtnDesktop?.classList.remove("hidden");
     logoutBtnDesktop?.classList.add("hidden");
 
@@ -279,39 +275,6 @@ if (loginBtnMobile) {
     profileBtnMobile?.classList.add("hidden");
   }
 });
-
-
-  // ===== Quick registration on Home (optional shortcut) =====
-  if (quickRegForm) {
-    quickRegForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const fullName = document.getElementById("fullName").value.trim();
-      const grade = document.getElementById("grade").value;
-      const email = (document.getElementById("email").value || "").trim().toLowerCase();
-      if (!fullName || !grade) return toast("Please fill all fields", "warning");
-
-      // Generate ID
-      const ts = Date.now().toString().slice(-6);
-      const rnd = Math.random().toString(36).substring(2, 6).toUpperCase();
-      const studentId = `EDU${ts}${rnd}`;
-
-      const record = {
-        studentId,
-        fullName,
-        grade,
-        email,
-        createdAt: new Date().toISOString(),
-        medium: "english",
-      };
-
-      // Save by email (if email provided)
-      if (email) saveByEmail(record);
-      else localStorage.setItem("edunishStudentData", JSON.stringify(record));
-
-      toast(`🎉 Student ID created: ${studentId}`, "success");
-      quickRegForm.reset();
-    });
-  }
 
   // ===== Open Quiz flow =====
   window.openQuiz = function () {

@@ -1,134 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>EduNish — Registration</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration - EduNish</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-900">
-  <div class="max-w-lg mx-auto px-4 py-12">
-    <h1 class="text-2xl font-bold mb-2">Create Your Student ID</h1>
-    <p class="text-gray-600 mb-6">Please complete this one-time registration.</p>
-
-    <form id="regForm" class="bg-white rounded-2xl p-6 shadow space-y-4">
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white shadow-lg rounded-2xl p-8 max-w-md w-full">
+    <h1 class="text-2xl font-bold text-center mb-6 text-blue-700">Register</h1>
+    <form id="registrationForm" class="space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-1">Email</label>
-        <input id="regEmail" type="email" class="w-full border rounded-lg px-3 py-2" required />
+        <label class="block text-sm font-semibold">Full Name</label>
+        <input type="text" id="fullName" class="w-full px-4 py-2 border rounded-lg" required />
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1">Full Name</label>
-        <input id="regName" class="w-full border rounded-lg px-3 py-2" required />
+        <label class="block text-sm font-semibold">Email</label>
+        <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg" required />
       </div>
       <div>
-        <label class="block text-sm font-medium mb-1">Grade</label>
-        <select id="regGrade" class="w-full border rounded-lg px-3 py-2" required>
-          <option value="">Select grade</option>
-          <option value="10">Grade 10</option>
-          <option value="11">Grade 11</option>
-        </select>
+        <label class="block text-sm font-semibold">Grade</label>
+        <input type="text" id="grade" class="w-full px-4 py-2 border rounded-lg" required />
       </div>
-      <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">
-        Create Student ID
-      </button>
-      <div id="regMsg" class="text-sm mt-2"></div>
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Register</button>
     </form>
-
-    <div class="text-center mt-6">
-      <a href="index.html" class="text-blue-600">← Back to Home</a>
-    </div>
+    <p id="msg" class="mt-4 text-center"></p>
   </div>
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+    import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-      const firebaseConfig = {
-    apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
-    authDomain: "edunish-211d0.firebaseapp.com",
-    projectId: "edunish-211d0",
-    storageBucket: "edunish-211d0.appspot.com",   // ✅ Correct now
-    messagingSenderId: "1002400429038",
-    appId: "1:1002400429038:web:12ee9a586de10e518694ff",
-    measurementId: "G-7ZSDMMKFQ0"
+    const firebaseConfig = {
+      apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
+      authDomain: "edunish-211d0.firebaseapp.com",
+      projectId: "edunish-211d0",
+      storageBucket: "edunish-211d0.appspot.com",
+      messagingSenderId: "1002400429038",
+      appId: "1:1002400429038:web:12ee9a586de10e518694ff",
+      measurementId: "G-7ZSDMMKFQ0"
     };
-
 
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
-    // Generate unique ID like EduNish001
-    async function genUniqueStudentId() {
-      let id, exists = true;
-      while (exists) {
-        const rnd = Math.floor(1 + Math.random() * 999).toString().padStart(3, "0");
-        id = "EduNish" + rnd;
-        const snap = await getDoc(doc(db, "students", id));
-        exists = snap.exists();
-      }
-      return id;
+    function generateStudentId() {
+      return "STU" + Math.floor(100000 + Math.random() * 900000);
     }
 
-    async function saveStudent(record) {
-      await setDoc(doc(db, "students", record.studentId), record, { merge: true });
-    }
-
-    document.getElementById("regForm").addEventListener("submit", async (e) => {
+    document.getElementById("registrationForm").addEventListener("submit", async (e) => {
       e.preventDefault();
-      const msg = document.getElementById("regMsg");
 
-      const fullName = document.getElementById("regName").value.trim();
-      const grade    = document.getElementById("regGrade").value;
-      const email    = document.getElementById("regEmail").value.trim().toLowerCase();
+      const fullName = document.getElementById("fullName").value.trim();
+      const email = document.getElementById("email").value.trim().toLowerCase();
+      const grade = document.getElementById("grade").value.trim();
+      const msg = document.getElementById("msg");
 
-      if (!fullName || !grade || !email) {
-        msg.className = "text-red-600";
-        msg.textContent = "⚠️ Please fill all fields.";
+      if (!fullName || !email || !grade) {
+        msg.textContent = "⚠️ Please fill in all fields.";
+        msg.className = "text-red-600 text-center";
         return;
       }
 
-      msg.className = "text-blue-600";
-      msg.textContent = "⏳ Creating your Student ID…";
-
       try {
-        // 🔎 Check if this email already exists in Firestore
-        const emailRef = doc(db, "studentsByEmail", email);
-        const emailSnap = await getDoc(emailRef);
+        const studentId = generateStudentId();
+        const record = {
+          studentId,
+          fullName,
+          email,
+          grade,
+          avatarUrl: ""
+        };
 
-        let record;
-        if (emailSnap.exists()) {
-          // ✅ Already registered → reuse existing student record
-          record = emailSnap.data();
-        } else {
-          // ❌ Not registered → create new student
-          const studentId = await genUniqueStudentId();
-          record = { studentId, fullName, grade, email, createdAt: new Date().toISOString() };
+        // Save to Firestore
+        await setDoc(doc(db, "students", studentId), record);
+        await setDoc(doc(db, "studentsByEmail", email), record);
 
-          await saveStudent(record);
-          // save lookup so we can find by email quickly
-          await setDoc(emailRef, record);
-        }
-
-        // Save to localStorage for quick access
+        // ✅ Save to localStorage for profile page
         localStorage.setItem("edunishStudentData", JSON.stringify(record));
 
+        // ✅ Save email→student mapping
         const map = JSON.parse(localStorage.getItem("edunishStudentsByEmail") || "{}");
         map[email] = record;
         localStorage.setItem("edunishStudentsByEmail", JSON.stringify(map));
 
-        msg.className = "text-green-600 font-semibold";
-        msg.textContent = `✅ Student ID ready: ${record.studentId}`;
+        msg.className = "text-green-600 font-semibold text-center";
+        msg.textContent = `✅ Student ID created: ${studentId}`;
 
+        // Redirect after success
         setTimeout(() => (window.location.href = "quiz.html"), 1500);
 
-
-        msg.className = "text-green-600 font-semibold";
-
-        setTimeout(() => (window.location.href = "quiz.html"), 1500);
       } catch (err) {
-        console.error(err);
-        msg.className = "text-red-600";
-        msg.textContent = "❌ Error creating Student ID. Try again.";
+        console.error("❌ Registration error:", err);
+        msg.className = "text-red-600 text-center";
+        msg.textContent = "❌ Failed to register. Please try again.";
       }
     });
   </script>
