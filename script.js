@@ -232,17 +232,32 @@ if (loginBtnMobile) {
 
     const rec = getByEmail(user.email);
 
-    if (rec && rec.studentId) {
-      localStorage.setItem("edunishStudentData", JSON.stringify(rec));
-      // ✅ Show profile buttons
-      profileBtnDesktop?.classList.remove("hidden");
-      profileBtnMobile?.classList.remove("hidden");
-    } else {
-      localStorage.removeItem("edunishStudentData");
-      // ❌ Hide profile buttons if no ID
-      profileBtnDesktop?.classList.add("hidden");
-      profileBtnMobile?.classList.add("hidden");
-    }
+   if (rec && rec.studentId) {
+  // ✅ Already have record locally
+  localStorage.setItem("edunishStudentData", JSON.stringify(rec));
+  profileBtnDesktop?.classList.remove("hidden");
+  profileBtnMobile?.classList.remove("hidden");
+} else {
+  // 🔎 Try to fetch from Firestore by email
+  import("https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js").then(({ getFirestore, doc, getDoc }) => {
+    const db = getFirestore(app);
+    getDoc(doc(db, "studentsByEmail", user.email.toLowerCase()))
+      .then(snap => {
+        if (snap.exists()) {
+          const record = snap.data();
+          localStorage.setItem("edunishStudentData", JSON.stringify(record));
+          profileBtnDesktop?.classList.remove("hidden");
+          profileBtnMobile?.classList.remove("hidden");
+        } else {
+          // ❌ No student ID yet
+          localStorage.removeItem("edunishStudentData");
+          profileBtnDesktop?.classList.add("hidden");
+          profileBtnMobile?.classList.add("hidden");
+        }
+      });
+  });
+}
+
   } else {
     loginBtnDesktop?.classList.remove("hidden");
     logoutBtnDesktop?.classList.add("hidden");

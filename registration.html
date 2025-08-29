@@ -91,15 +91,35 @@
       msg.textContent = "⏳ Creating your Student ID…";
 
       try {
-        const studentId = await genUniqueStudentId();
-        const record = { studentId, fullName, grade, email, createdAt: new Date().toISOString() };
+        // 🔎 Check if this email already exists in Firestore
+        const emailRef = doc(db, "studentsByEmail", email);
+        const emailSnap = await getDoc(emailRef);
 
-        await saveStudent(record);
+        let record;
+        if (emailSnap.exists()) {
+          // ✅ Already registered → reuse existing student record
+          record = emailSnap.data();
+        } else {
+          // ❌ Not registered → create new student
+          const studentId = await genUniqueStudentId();
+          record = { studentId, fullName, grade, email, createdAt: new Date().toISOString() };
+
+          await saveStudent(record);
+          // save lookup so we can find by email quickly
+          await setDoc(emailRef, record);
+        }
+
+        // Save to localStorage for quick access
         localStorage.setItem("edunishStudentData", JSON.stringify(record));
-        // also index by email so openQuiz() can find it
+
         const map = JSON.parse(localStorage.getItem("edunishStudentsByEmail") || "{}");
-        map[email] = record;                    // use the same 'email' you already have
+        map[email] = record;
         localStorage.setItem("edunishStudentsByEmail", JSON.stringify(map));
+
+        msg.className = "text-green-600 font-semibold";
+        msg.textContent = `✅ Student ID ready: ${record.studentId}`;
+
+        setTimeout(() => (window.location.href = "quiz.html"), 1500);
 
 
         msg.className = "text-green-600 font-semibold";
