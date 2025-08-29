@@ -246,6 +246,15 @@ if (loginBtnMobile) {
         if (snap.exists()) {
           const record = snap.data();
           localStorage.setItem("edunishStudentData", JSON.stringify(record));
+          
+          // 🔄 also update email lookup so mobile & desktop nav see it
+          const email = (record.email || "").toLowerCase();
+          if (email) {
+            const map = JSON.parse(localStorage.getItem("edunishStudentsByEmail") || "{}");
+            map[email] = record;
+            localStorage.setItem("edunishStudentsByEmail", JSON.stringify(map));
+          }
+
           profileBtnDesktop?.classList.remove("hidden");
           profileBtnMobile?.classList.remove("hidden");
         } else {

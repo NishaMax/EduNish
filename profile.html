@@ -105,23 +105,23 @@
 
       try {
         let snap = await getDoc(doc(db, "students", studentId));
-if (snap.exists()) {
-  renderProfile(snap.data());
-  loadProgress();
-} else {
-  // 🔎 fallback: try lookup by email
-  const email = local.email?.toLowerCase();
-  if (email) {
-    const emailSnap = await getDoc(doc(db, "studentsByEmail", email));
-    if (emailSnap.exists()) {
-      const record = emailSnap.data();
-      renderProfile(record);
-      loadProgress();
-      return;
-    }
-  }
-  loadingDiv.textContent = "⚠️ Profile not found in Firestore.";
-}
+        if (snap.exists()) {
+          renderProfile(snap.data(), "students"); // ✅ mark source
+          loadProgress();
+        } else {
+          const email = local.email?.toLowerCase();
+          if (email) {
+            const emailSnap = await getDoc(doc(db, "studentsByEmail", email));
+            if (emailSnap.exists()) {
+              const record = emailSnap.data();
+              renderProfile(record, "studentsByEmail"); // ✅ mark source
+              loadProgress();
+              return;
+            }
+          }
+          loadingDiv.textContent = "⚠️ Profile not found in Firestore.";
+        }
+
 
       } catch (err) {
         console.error("❌ Firestore error:", err);
@@ -130,7 +130,7 @@ if (snap.exists()) {
       }
     }
 
-    function renderProfile(data, note = "") {
+    function renderProfile(data, source = "students") {
       document.getElementById("loading").classList.add("hidden");
       const profileDiv = document.getElementById("profileDetails");
       profileDiv.classList.remove("hidden");
@@ -158,7 +158,11 @@ if (snap.exists()) {
       document.querySelectorAll(".avatarOption").forEach(img => {
         img.addEventListener("click", async () => {
           const url = img.src;
+          if (source === "students") {
           await updateDoc(doc(db, "students", studentId), { avatarUrl: url });
+        } else {
+          await updateDoc(doc(db, "studentsByEmail", data.email.toLowerCase()), { avatarUrl: url });
+        }
           document.getElementById("avatarImg").src = url;
         });
       });
