@@ -11,6 +11,7 @@ let currentQuestions = [];
 let currentIndex = 0;
 let score = 0;
 let quizKey = "";
+let userAnswers = []; 
 
 // Timer (20 minutes = 1200 seconds)
 let timerInterval = null;
@@ -159,6 +160,7 @@ function startQuiz(questions, key) {
   currentIndex = 0;
   score = 0;
   quizKey = key;
+  userAnswers = [];
 
   resultContainer.classList.add("hidden");
   quizContainer.classList.remove("hidden");
@@ -250,15 +252,20 @@ function renderQuestion() {
 // ===== Next Button =====
 nextBtn.addEventListener("click", () => {
   if (selectedIndex !== null) {
+    // ✅ Save the user’s selected answer
+    userAnswers[currentIndex] = selectedIndex;
+
     if (selectedIndex === currentQuestions[currentIndex].answer) {
       score++;
     }
   }
+
   currentIndex++;
   nextBtn.classList.add("hidden");
   renderQuestion();
   updateProgress();
 });
+
 
 // ===== Update Progress Bar =====
 function updateProgress() {
@@ -272,19 +279,36 @@ function finishQuiz() {
 
   const total = currentQuestions.length;
   const percent = Math.round((score / total) * 100);
-  const record = { score, total, percent, completedAt: new Date().toISOString() };
+
+  // ✅ Build detailed answers array
+  const answers = currentQuestions.map((q, i) => ({
+    question: q.question,
+    options: q.options,
+    correctAnswer: q.answer,
+    userAnswer: userAnswers[i] ?? null
+  }));
+
+  const record = { 
+    score, 
+    total, 
+    percent, 
+    completedAt: new Date().toISOString(),
+    answers // ✅ store answers
+  };
 
   localStorage.setItem(quizKey, JSON.stringify(record));
 
   quizContainer.classList.add("hidden");
   resultContainer.classList.remove("hidden");
 
+  // ✅ Added Review button
   resultContainer.innerHTML = `
     <div class="p-6 bg-white rounded-xl shadow text-center">
       <h2 class="text-xl font-bold mb-2">Quiz Finished!</h2>
       <p class="mb-4">You scored ${score} / ${total} (${percent}%).</p>
       <p class="text-green-600 font-semibold mb-4">🎉 Great effort, keep practicing!</p>
       <button id="retry-btn" class="bg-blue-600 text-white px-6 py-2 rounded-lg mr-2">Retry</button>
+      <button id="review-btn" class="bg-purple-600 text-white px-6 py-2 rounded-lg mr-2">Review Answers</button>
       <button id="back-btn" class="bg-gray-600 text-white px-6 py-2 rounded-lg">Choose Another</button>
     </div>
   `;
@@ -293,25 +317,22 @@ function finishQuiz() {
     startQuiz([...currentQuestions], quizKey);
   });
 
+  document.getElementById("review-btn").addEventListener("click", () => {
+    showReview(record); // ✅ call review function
+  });
+
   document.getElementById("back-btn").addEventListener("click", () => {
-  // ✅ Stop the timer completely
-  clearInterval(timerInterval);
-
-  resultContainer.classList.add("hidden");
-  quizContainer.classList.add("hidden");
-
-  // ✅ Show the selection card again
-  mediumSelect.parentElement.parentElement.classList.remove("hidden");
-
-  seriesSection.classList.add("hidden");
-  lessonSelect.parentElement.classList.add("hidden");
-  gradeSelect.parentElement.classList.add("hidden");
-
-  // Reset dropdowns
-  mediumSelect.value = "";
-  gradeSelect.value = "";
-  lessonSelect.innerHTML = `<option value="">--Choose Lesson--</option>`;
-});
+    clearInterval(timerInterval);
+    resultContainer.classList.add("hidden");
+    quizContainer.classList.add("hidden");
+    mediumSelect.parentElement.parentElement.classList.remove("hidden");
+    seriesSection.classList.add("hidden");
+    lessonSelect.parentElement.classList.add("hidden");
+    gradeSelect.parentElement.classList.add("hidden");
+    mediumSelect.value = "";
+    gradeSelect.value = "";
+    lessonSelect.innerHTML = `<option value="">--Choose Lesson--</option>`;
+  });
 
   renderProgressOverview();
 }
@@ -651,3 +672,32 @@ document.addEventListener("DOMContentLoaded", () => {
   updateProgressSectionHTML();
   renderProgressOverview();
 });
+function showReview(record) {
+  resultContainer.innerHTML = `
+    <div class="p-6 bg-white rounded-xl shadow text-gray-800">
+      <h2 class="text-xl font-bold mb-4">Review Answers</h2>
+      <div class="space-y-4 max-h-96 overflow-y-auto">
+        ${record.answers.map((a, i) => {
+          const isCorrect = a.userAnswer === a.correctAnswer;
+          return `
+            <div class="p-4 border rounded-lg ${isCorrect ? 'bg-green-50' : 'bg-red-50'} text-gray-800">
+              <p class="font-semibold mb-2">Q${i + 1}: ${a.question}</p>
+              <p>Your Answer: 
+                <span class="${isCorrect ? 'text-green-600' : 'text-red-600'}">
+                  ${a.userAnswer !== null ? a.options[a.userAnswer] : "Not answered"}
+                </span>
+              </p>
+              ${!isCorrect ? `<p>Correct Answer: <span class="text-green-600">${a.options[a.correctAnswer]}</span></p>` : ""}
+            </div>
+          `;
+        }).join("")}
+      </div>
+      <button id="back-to-results" class="mt-4 bg-gray-600 text-white px-6 py-2 rounded-lg">Back to Results</button>
+    </div>
+  `;
+
+  document.getElementById("back-to-results").addEventListener("click", () => {
+    finishQuiz(); 
+  });
+}
+
