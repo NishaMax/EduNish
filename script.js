@@ -1,3 +1,5 @@
+// Script prevous code
+
 // =================== Firebase Imports ===================
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import {
@@ -43,6 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleAuthMode = document.getElementById("toggleAuthMode");
 
   let isLogin = true;
+  const pwdInput = document.getElementById("authPassword");
+  if (pwdInput) {
+    pwdInput.placeholder = "Enter the password you created"; // Login default
+  }
+
 
   // ===== Highlight Active Nav Link =====
   const currentPath = window.location.pathname.split("/").pop();
@@ -160,13 +167,22 @@ if (loginBtnMobile) {
 }
 
   if (toggleAuthMode) {
-    toggleAuthMode.addEventListener("click", () => {
-      isLogin = !isLogin;
-      authTitle.textContent = isLogin ? "Login" : "Sign Up";
-      toggleAuthMode.textContent = isLogin ? "Don't have an account? Sign up" : "Already have an account? Login";
-      authMessage.textContent = "";
-    });
-  }
+  toggleAuthMode.addEventListener("click", () => {
+    isLogin = !isLogin;
+    authTitle.textContent = isLogin ? "Login" : "Sign Up";
+    toggleAuthMode.textContent = isLogin ? "Don't have an account? Sign up" : "Already have an account? Login";
+    authMessage.textContent = "";
+
+    // ✅ Update password placeholder dynamically
+    const pwdInput = document.getElementById("authPassword");
+    if (pwdInput) {
+      pwdInput.placeholder = isLogin 
+        ? "Enter the password you created" 
+        : "Create your own password";
+    }
+  });
+}
+
 
   // ===== Auth Form =====
   if (authForm) {

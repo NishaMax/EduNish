@@ -256,7 +256,7 @@
                         </p>
                         <button id="viewQuizBtn" 
                           onclick="openQuiz()" 
-                          class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">
+                          class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg quizLink">
                           View Quiz
                         </button>
 
@@ -324,7 +324,7 @@
                         </p>
                         <button id="viewQuizBtn" 
                           onclick="openQuiz()" 
-                          class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">
+                          class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg quizLink">
                           View Quiz
                         </button>
 
@@ -393,12 +393,11 @@
                     </p>
                 </div>
             </div>
-
             <!-- Register Button -->
             <div class="text-center">
                 <button id="viewQuizBtn" 
                   onclick="openQuiz()" 
-                  class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">
+                  class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg quizLink">
                   View Quiz
                 </button>
 
@@ -550,27 +549,31 @@ numBase.addEventListener("change", convertNumber);
 
 
   <!-- Auth Modal -->
-  <div id="authModal" class="fixed inset-0 bg-black/40 flex items-center justify-center hidden z-50">
-    <div class="bg-white rounded-2xl p-6 w-full max-w-sm">
-      <div class="flex justify-between items-center mb-4">
-        <h3 id="authTitle" class="text-lg font-semibold">Login</h3>
-        <button onclick="document.getElementById('authModal').classList.add('hidden')" class="text-gray-500">✕</button>
-      </div>
-      <form id="authForm" class="space-y-4">
-        <div>
-          <label class="block text-sm font-medium mb-1">Email</label>
-          <input id="authEmail" type="email" class="w-full border rounded-lg px-3 py-2" required />
-        </div>
-        <div>
-          <label class="block text-sm font-medium mb-1">Password</label>
-          <input id="authPassword" type="password" class="w-full border rounded-lg px-3 py-2" required />
-        </div>
-        <div id="authMessage" class="text-sm"></div>
-        <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">Continue</button>
-      </form>
-      <button id="toggleAuthMode" class="text-blue-600 text-sm mt-3">Don't have an account? Sign up</button>
+  <!-- Auth Modal -->
+<div id="authModal" class="fixed inset-0 bg-black/40 flex items-center justify-center hidden z-50">
+  <div class="bg-white rounded-2xl p-6 w-full max-w-sm">
+    <div class="flex justify-between items-center mb-4">
+      <h3 id="authTitle" class="text-lg font-semibold">Login</h3>
+      <button onclick="document.getElementById('authModal').classList.add('hidden')" class="text-gray-500">✕</button>
     </div>
+    <form id="authForm" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium mb-1">Email</label>
+        <input id="authEmail" type="email" class="w-full border rounded-lg px-3 py-2" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1">Password</label>
+        <input id="authPassword" type="password" 
+               class="w-full border rounded-lg px-3 py-2"
+               placeholder="Enter your password" required />
+      </div>
+      <div id="authMessage" class="text-sm"></div>
+      <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">Continue</button>
+    </form>
+    <button id="toggleAuthMode" class="text-blue-600 text-sm mt-3">Don't have an account? Sign up</button>
   </div>
+</div>
+
 
   <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
