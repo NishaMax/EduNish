@@ -673,31 +673,57 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProgressOverview();
 });
 function showReview(record) {
-  resultContainer.innerHTML = `
-    <div class="p-6 bg-white rounded-xl shadow text-gray-800">
-      <h2 class="text-xl font-bold mb-4">Review Answers</h2>
-      <div class="space-y-4 max-h-96 overflow-y-auto">
-        ${record.answers.map((a, i) => {
-          const isCorrect = a.userAnswer === a.correctAnswer;
-          return `
-            <div class="p-4 border rounded-lg ${isCorrect ? 'bg-green-50' : 'bg-red-50'} text-gray-800">
-              <p class="font-semibold mb-2">Q${i + 1}: ${a.question}</p>
-              <p>Your Answer: 
-                <span class="${isCorrect ? 'text-green-600' : 'text-red-600'}">
-                  ${a.userAnswer !== null ? a.options[a.userAnswer] : "Not answered"}
-                </span>
-              </p>
-              ${!isCorrect ? `<p>Correct Answer: <span class="text-green-600">${a.options[a.correctAnswer]}</span></p>` : ""}
-            </div>
-          `;
-        }).join("")}
-      </div>
-      <button id="back-to-results" class="mt-4 bg-gray-600 text-white px-6 py-2 rounded-lg">Back to Results</button>
-    </div>
-  `;
+  let reviewIndex = 0;
 
-  document.getElementById("back-to-results").addEventListener("click", () => {
-    finishQuiz(); 
-  });
+  function renderReviewCard() {
+    const a = record.answers[reviewIndex];
+    const isCorrect = a.userAnswer === a.correctAnswer;
+
+    resultContainer.innerHTML = `
+      <div class="p-6 bg-white rounded-xl shadow text-gray-800 text-center">
+        <h2 class="text-xl font-bold mb-4">Review Answers (${reviewIndex + 1}/${record.answers.length})</h2>
+        
+        <div class="p-4 border rounded-lg mb-4 ${isCorrect ? 'bg-green-50' : 'bg-red-50'} text-gray-800">
+          <p class="font-semibold mb-2">Q${reviewIndex + 1}: ${a.question}</p>
+          <p>Your Answer: 
+            <span class="${isCorrect ? 'text-green-600' : 'text-red-600'}">
+              ${a.userAnswer !== null ? a.options[a.userAnswer] : "Not answered"}
+            </span>
+          </p>
+          ${!isCorrect ? `<p>Correct Answer: <span class="text-green-600">${a.options[a.correctAnswer]}</span></p>` : ""}
+        </div>
+
+        <div class="flex justify-between">
+          <button id="prev-review" class="bg-gray-600 text-white px-4 py-2 rounded-lg ${reviewIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}">Prev</button>
+          <button id="next-review" class="bg-blue-600 text-white px-4 py-2 rounded-lg ${reviewIndex === record.answers.length - 1 ? 'opacity-50 cursor-not-allowed' : ''}">Next</button>
+        </div>
+        
+        <button id="back-to-results" class="mt-4 bg-purple-600 text-white px-6 py-2 rounded-lg">Back to Results</button>
+      </div>
+    `;
+
+    // Prev button
+    document.getElementById("prev-review").addEventListener("click", () => {
+      if (reviewIndex > 0) {
+        reviewIndex--;
+        renderReviewCard();
+      }
+    });
+
+    // Next button
+    document.getElementById("next-review").addEventListener("click", () => {
+      if (reviewIndex < record.answers.length - 1) {
+        reviewIndex++;
+        renderReviewCard();
+      }
+    });
+
+    // Back button
+    document.getElementById("back-to-results").addEventListener("click", () => {
+      finishQuiz(); 
+    });
+  }
+
+  renderReviewCard(); // show first card
 }
 
