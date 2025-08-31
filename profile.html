@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile - EduNish</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { transition: background-color 0.5s ease, color 0.5s ease; }
+    .theme-card { transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease; }
+  </style>
+</head>
+<body id="body" class="bg-gray-100 text-gray-800 font-sans">
+
+  <div class="max-w-lg mx-auto px-6 py-12">
+    <!-- Page Header -->
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-3xl font-bold text-blue-700 dark:text-blue-300">My Profile</h1>
+      <button id="themeToggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:scale-105 transition">
+        🌙
+      </button>
+    </div>
+
+    <!-- Profile Card -->
+    <div id="profileCard" class="theme-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center">
+      <div id="loading" class="text-gray-500">⏳ Loading profile...</div>
+      <div id="profileDetails" class="hidden"></div>
+    </div>
+
+    <!-- Avatar Selection -->
+    <div id="avatarSelection" class="hidden mt-6">
+      <h2 class="text-lg font-semibold mb-2 text-blue-700 dark:text-blue-300">Choose Your Avatar</h2>
+      <div class="flex justify-center space-x-4">
+        <img src="https://i.pravatar.cc/100?img=5" class="avatarOption w-16 h-16 rounded-full cursor-pointer border-2 border-transparent hover:border-blue-500 transition"/>
+        <img src="https://i.pravatar.cc/100?img=12" class="avatarOption w-16 h-16 rounded-full cursor-pointer border-2 border-transparent hover:border-blue-500 transition"/>
+        <img src="https://i.pravatar.cc/100?img=20" class="avatarOption w-16 h-16 rounded-full cursor-pointer border-2 border-transparent hover:border-blue-500 transition"/>
+        <img src="https://i.pravatar.cc/100?img=33" class="avatarOption w-16 h-16 rounded-full cursor-pointer border-2 border-transparent hover:border-blue-500 transition"/>
+        <img src="https://i.pravatar.cc/100?img=45" class="avatarOption w-16 h-16 rounded-full cursor-pointer border-2 border-transparent hover:border-blue-500 transition"/>
+      </div>
+    </div>
+
+    <!-- Progress Dashboard -->
+    <div id="progressDashboard" class="hidden mt-8">
+      <h2 class="text-xl font-bold mb-4 text-blue-700 dark:text-blue-300">📊 Your Progress</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="theme-card bg-blue-100 dark:bg-blue-900 p-4 rounded-lg text-center shadow">
+          <p id="statQuizzes" class="text-2xl font-bold text-blue-700 dark:text-blue-200">0</p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">Quizzes</p>
+        </div>
+        <div class="theme-card bg-green-100 dark:bg-green-900 p-4 rounded-lg text-center shadow">
+          <p id="statAvg" class="text-2xl font-bold text-green-700 dark:text-green-200">0%</p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">Avg. Score</p>
+        </div>
+        <div class="theme-card bg-yellow-100 dark:bg-yellow-900 p-4 rounded-lg text-center shadow">
+          <p id="statBest" class="text-2xl font-bold text-yellow-700 dark:text-yellow-200">0%</p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">Best Score</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back Link -->
+    <div class="mt-6 text-center">
+      <a href="index.html" class="text-blue-600 dark:text-blue-400 hover:underline">← Back to Home</a>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
+      authDomain: "edunish-211d0.firebaseapp.com",
+      projectId: "edunish-211d0",
+      storageBucket: "edunish-211d0.appspot.com",
+      messagingSenderId: "1002400429038",
+      appId: "1:1002400429038:web:12ee9a586de10e518694ff",
+      measurementId: "G-7ZSDMMKFQ0"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    let studentId = null;
+
+    async function loadProfile() {
+      const profileDiv = document.getElementById("profileDetails");
+      const loadingDiv = document.getElementById("loading");
+
+      const local = JSON.parse(localStorage.getItem("edunishStudentData"));
+      if (!local) {
+        loadingDiv.textContent = "⚠️ No profile found. Please register first.";
+        return;
+      }
+      studentId = local.studentId;
+
+      try {
+        let snap = await getDoc(doc(db, "students", studentId));
+        if (snap.exists()) {
+          renderProfile(snap.data(), "students");
+          loadProgress();
+        } else {
+          // fallback by email
+          const email = local.email?.toLowerCase();
+          if (email) {
+            const emailSnap = await getDoc(doc(db, "studentsByEmail", email));
+            if (emailSnap.exists()) {
+              renderProfile(emailSnap.data(), "studentsByEmail");
+              loadProgress();
+              return;
+            }
+          }
+          loadingDiv.textContent = "⚠️ Profile not found in Firestore.";
+        }
+      } catch (err) {
+        console.error("❌ Firestore error:", err);
+        renderProfile(local, "offline");
+        loadProgress();
+      }
+    }
+
+    function renderProfile(data, source = "students") {
+      document.getElementById("loading").classList.add("hidden");
+      const profileDiv = document.getElementById("profileDetails");
+      profileDiv.classList.remove("hidden");
+
+      profileDiv.innerHTML = `
+        <div class="flex flex-col items-center space-y-4">
+          <img id="avatarImg" src="${data.avatarUrl || 'https://i.pravatar.cc/100?img=5'}"
+            class="w-24 h-24 rounded-full object-cover shadow border-2 border-blue-500"/>
+          <div>
+            <p class="text-lg font-semibold text-gray-800 dark:text-gray-200">${data.fullName}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">${data.email}</p>
+          </div>
+          <div class="w-full text-left mt-4 space-y-2">
+            <p class="text-gray-700 dark:text-gray-300"><span class="font-semibold">🎓 Grade:</span> ${data.grade}</p>
+            <p class="text-gray-700 dark:text-gray-300"><span class="font-semibold">🆔 Student ID:</span> ${data.studentId || studentId}</p>
+          </div>
+        </div>
+      `;
+
+      // Show avatar selection
+      document.getElementById("avatarSelection").classList.remove("hidden");
+
+      document.querySelectorAll(".avatarOption").forEach(img => {
+        img.addEventListener("click", async () => {
+          const url = img.src;
+          try {
+            if (source === "students") {
+              await updateDoc(doc(db, "students", studentId), { avatarUrl: url });
+            } else if (source === "studentsByEmail") {
+              await updateDoc(doc(db, "studentsByEmail", data.email.toLowerCase()), { avatarUrl: url });
+            }
+            document.getElementById("avatarImg").src = url;
+          } catch (err) {
+            console.error("❌ Avatar update failed:", err);
+          }
+        });
+      });
+    }
+
+    function loadProgress() {
+      let total = 0, sum = 0, best = 0;
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.includes("Series")) {
+          const data = JSON.parse(localStorage.getItem(key));
+          total++;
+          sum += data.percent;
+          if (data.percent > best) best = data.percent;
+        }
+      }
+      if (total > 0) {
+        document.getElementById("statQuizzes").textContent = total;
+        document.getElementById("statAvg").textContent = Math.round(sum / total) + "%";
+        document.getElementById("statBest").textContent = best + "%";
+      }
+      document.getElementById("progressDashboard").classList.remove("hidden");
+    }
+
+    // 🌙 Dark Mode Toggle
+    const body = document.getElementById("body");
+    const themeBtn = document.getElementById("themeToggle");
+
+    function applyTheme(theme) {
+      if (theme === "dark") {
+        body.classList.add("dark", "bg-gray-900", "text-gray-100");
+        themeBtn.textContent = "☀️";
+      } else {
+        body.classList.remove("dark", "bg-gray-900", "text-gray-100");
+        themeBtn.textContent = "🌙";
+      }
+    }
+
+    if (localStorage.getItem("theme")) {
+      applyTheme(localStorage.getItem("theme"));
+    }
+
+    themeBtn.addEventListener("click", () => {
+      const newTheme = body.classList.contains("dark") ? "light" : "dark";
+      localStorage.setItem("theme", newTheme);
+      applyTheme(newTheme);
+    });
+
+    document.addEventListener("DOMContentLoaded", loadProfile);
+  </script>
+</body>
+</html>

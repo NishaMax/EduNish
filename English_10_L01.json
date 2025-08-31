@@ -1,0 +1,406 @@
+{
+  "Series 1": [
+    {
+      "question": "What is data?",
+      "options": [
+        "Meaningful information",
+        "Raw facts like numbers, words, symbols",
+        "Decisions made from information",
+        "A computer process"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is information?",
+      "options": [
+        "Unprocessed facts",
+        "Meaningless numbers",
+        "Processed data that has meaning",
+        "Only text and images"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which of the following is an example of information?",
+      "options": [
+        "List of marks: 78, 90, 79",
+        "Average score of students",
+        "Name of a student",
+        "Symbols without context"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is NOT an example of data?",
+      "options": [
+        "Raw numbers",
+        "Unorganized words",
+        "Processed reports",
+        "Symbols"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Who is considered the Father of Computing?",
+      "options": [
+        "Charles Babbage",
+        "Joseph Jacquard",
+        "Blaise Pascal",
+        "Howard Aiken"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What was the earliest known calculating device?",
+      "options": [
+        "Analytical Engine",
+        "Abacus",
+        "MARK I",
+        "Napier’s Bones"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Who invented the Pascaline calculator?",
+      "options": [
+        "Napier",
+        "Leibniz",
+        "Pascal",
+        "Babbage"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which machine used punched cards for weaving patterns?",
+      "options": [
+        "Analytical Engine",
+        "Jacquard Loom",
+        "Pascaline",
+        "Napier’s Bones"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which mathematician invented logarithms?",
+      "options": [
+        "Leibniz",
+        "Napier",
+        "Pascal",
+        "Aiken"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which device was designed by Charles Babbage?",
+      "options": [
+        "Analytical Engine",
+        "Abacus",
+        "Napier’s Bones",
+        "Jacquard Loom"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "The Analytical Engine is an example of what?",
+      "options": [
+        "First mechanical calculator",
+        "First programmable computer design",
+        "First electronic device",
+        "First tabulating machine"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Herman Hollerith is associated with?",
+      "options": [
+        "Abacus",
+        "Pascaline",
+        "Punched card tabulating machine",
+        "Jacquard Loom"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which device was used in the 1890 US census?",
+      "options": [
+        "Jacquard Loom",
+        "Hollerith’s tabulating machine",
+        "Analytical Engine",
+        "Napier’s Bones"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "The MARK I computer was developed in collaboration with?",
+      "options": [
+        "IBM and Harvard",
+        "Microsoft and Apple",
+        "MIT and NASA",
+        "UNIVAC and ENIAC"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Who invented the Difference Engine?",
+      "options": [
+        "Napier",
+        "Pascal",
+        "Babbage",
+        "Aiken"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "UNIVAC I is best described as?",
+      "options": [
+        "First digital electronic computer",
+        "First programmable loom",
+        "First graphical computer",
+        "First handheld calculator"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Who is credited with developing the binary system for computation?",
+      "options": [
+        "Leibniz",
+        "Napier",
+        "Hollerith",
+        "Aiken"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Computers process data to produce?",
+      "options": [
+        "Information",
+        "Raw facts",
+        "Numbers only",
+        "Symbols"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which is an input device?",
+      "options": [
+        "Printer",
+        "Scanner",
+        "Monitor",
+        "Speaker"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is an output device?",
+      "options": [
+        "Keyboard",
+        "Mouse",
+        "Monitor",
+        "Scanner"
+      ],
+      "answer": 2
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Which generation introduced microprocessors?",
+      "options": [
+        "First",
+        "Second",
+        "Third",
+        "Fourth"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which generation used vacuum tubes?",
+      "options": [
+        "First",
+        "Second",
+        "Third",
+        "Fourth"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Transistors were introduced in which generation?",
+      "options": [
+        "First",
+        "Second",
+        "Third",
+        "Fourth"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Integrated circuits belong to which generation?",
+      "options": [
+        "First",
+        "Second",
+        "Third",
+        "Fourth"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Microprocessors allowed computers to become?",
+      "options": [
+        "Bigger and slower",
+        "Smaller and faster",
+        "Less reliable",
+        "More mechanical"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is a characteristic of first generation computers?",
+      "options": [
+        "Used vacuum tubes",
+        "Used ICs",
+        "Used microprocessors",
+        "Used AI"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Second generation computers used?",
+      "options": [
+        "Vacuum tubes",
+        "Transistors",
+        "Microchips",
+        "Cloud"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Third generation computers used?",
+      "options": [
+        "Transistors",
+        "Integrated Circuits",
+        "Vacuum tubes",
+        "Quantum logic"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Fourth generation computers used?",
+      "options": [
+        "Vacuum tubes",
+        "ICs",
+        "Microprocessors",
+        "Nanotechnology"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Fifth generation computers are associated with?",
+      "options": [
+        "Vacuum tubes",
+        "Artificial Intelligence",
+        "Punch cards",
+        "Abacus"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is an example of secondary storage?",
+      "options": [
+        "RAM",
+        "ROM",
+        "Hard Disk",
+        "Cache"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which is an example of primary storage?",
+      "options": [
+        "RAM",
+        "Hard Disk",
+        "CD-ROM",
+        "USB"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "The main function of RAM is?",
+      "options": [
+        "Permanent storage",
+        "Temporary working memory",
+        "Input processing",
+        "Output display"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "ROM is?",
+      "options": [
+        "Read-Only Memory",
+        "Random Operating Memory",
+        "Rapid Output Module",
+        "Rotating Optical Media"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which of these is an example of software?",
+      "options": [
+        "Mouse",
+        "Keyboard",
+        "MS Word",
+        "Printer"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which of these is NOT hardware?",
+      "options": [
+        "Monitor",
+        "CPU",
+        "Operating System",
+        "Keyboard"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Operating system is classified as?",
+      "options": [
+        "System software",
+        "Application software",
+        "Utility",
+        "Hardware"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "MS Excel is an example of?",
+      "options": [
+        "System software",
+        "Application software",
+        "Utility program",
+        "Firmware"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which part of a computer does arithmetic operations?",
+      "options": [
+        "Control Unit",
+        "Memory Unit",
+        "ALU",
+        "Input device"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "The brain of the computer is?",
+      "options": [
+        "RAM",
+        "CPU",
+        "Hard Disk",
+        "Monitor"
+      ],
+      "answer": 1
+    }
+  ]
+}

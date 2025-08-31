@@ -1,0 +1,608 @@
+{
+  "Series 1": [
+    {
+      "question": "මනුෂ්‍යයින්ට හඳුනාගන්නා හැකි Data එකට කියන්නේ?",
+      "options": [
+        "Machine language",
+        "High-level language",
+        "Human readable data",
+        "Source code"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Computer එකට අවබෝධ කරගන්න පුළුවන් Data එකට කියන්නේ?",
+      "options": [
+        "Machine language",
+        "Assembly language",
+        "High-level language",
+        "Human language"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "0101 1110 1010 වගේ Numbers කියන්නේ?",
+      "options": [
+        "Decimal",
+        "Octal",
+        "Binary",
+        "Hexadecimal"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Assembly language එකේ භාවිතා කරන Instructions කියන්නේ?",
+      "options": [
+        "Mnemonics",
+        "Machine codes",
+        "Source code",
+        "Binary"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "පහත දක්වා ඇතිවලින් High-level language එකක් මොකක්ද?",
+      "options": [
+        "C",
+        "Assembly",
+        "Machine",
+        "Binary"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Python කියන්නේ කුමන Language එකක්ද?",
+      "options": [
+        "Machine language",
+        "High-level language",
+        "Assembly language",
+        "Binary language"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "High-level languages translate කරනවා මගින්?",
+      "options": [
+        "Assembler",
+        "Compiler/Interpreter",
+        "Binary converter",
+        "Decoder"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Assembly language එක Translate කරන tool එක මොකක්ද?",
+      "options": [
+        "Assembler",
+        "Compiler",
+        "Interpreter",
+        "Linker"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "High-level program එක එකවර Translate කරන Translator එක මොකක්ද?",
+      "options": [
+        "Assembler",
+        "Compiler",
+        "Interpreter",
+        "Loader"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Line by line Translate කරන Translator එක මොකක්ද?",
+      "options": [
+        "Assembler",
+        "Compiler",
+        "Interpreter",
+        "Debugger"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Source code කියන්නේ?",
+      "options": [
+        "Human readable program",
+        "Machine language",
+        "Binary code",
+        "Assembly code"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Object code කියන්නේ?",
+      "options": [
+        "Translated machine code",
+        "Human readable program",
+        "Mnemonics",
+        "Pseudo code"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Pseudo code කියන්නේ?",
+      "options": [
+        "Programming plan",
+        "Machine code",
+        "Binary digits",
+        "Assembly code"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Flowchart එකේ Decision-making symbol එක මොකක්ද?",
+      "options": [
+        "Oval",
+        "Rectangle",
+        "Diamond",
+        "Parallelogram"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Flowchart එකේ Input/Output symbol එක මොකක්ද?",
+      "options": [
+        "Rectangle",
+        "Diamond",
+        "Oval",
+        "Parallelogram"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Algorithm කියන්නේ?",
+      "options": [
+        "Step by step procedure",
+        "Source code",
+        "Binary conversion",
+        "Assembly instruction"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Flowchart එකේ Start/End symbol එක මොකක්ද?",
+      "options": [
+        "Rectangle",
+        "Oval",
+        "Diamond",
+        "Parallelogram"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Compiler එකේ Disadvantage එක මොකක්ද?",
+      "options": [
+        "Fast execution",
+        "Need whole program",
+        "Line by line translate",
+        "Easy debugging"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Interpreter එකේ Advantage එක මොකක්ද?",
+      "options": [
+        "Fast execution",
+        "Line by line debugging",
+        "Translate whole program",
+        "Generates object code"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Machine language එකේ Limitation එක මොකක්ද?",
+      "options": [
+        "Fast execution",
+        "Difficult to understand",
+        "User friendly",
+        "Portable"
+      ],
+      "answer": 1
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Flowchart එකේ Process symbol එක මොකක්ද?",
+      "options": [
+        "Oval",
+        "Rectangle",
+        "Diamond",
+        "Parallelogram"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Flowchart එකේ Connector symbol එක මොකක්ද?",
+      "options": [
+        "Circle",
+        "Oval",
+        "Diamond",
+        "Rectangle"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Flowchart එකේ Arrow lines කියන්නේ?",
+      "options": [
+        "Flow direction",
+        "Process",
+        "Input/Output",
+        "Connector"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Algorithm එකේ main feature එකක් මොකක්ද?",
+      "options": [
+        "Ambiguity",
+        "Finiteness",
+        "Infinite steps",
+        "Randomness"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Algorithm එකේ Characteristics එකක් නොවන එක මොකක්ද?",
+      "options": [
+        "Definiteness",
+        "Finiteness",
+        "Randomness",
+        "Input/Output"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Algorithm එකේ output තියෙන්න ඕනේ?",
+      "options": [
+        "Zero or more",
+        "At least one",
+        "None",
+        "Random"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Flowchart එකේ Advantage එකක් මොකක්ද?",
+      "options": [
+        "Easy debugging",
+        "Confusing",
+        "Difficult to understand",
+        "Time consuming"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Flowchart එකේ Disadvantage එකක් මොකක්ද?",
+      "options": [
+        "Time consuming",
+        "Easy to understand",
+        "Helps debugging",
+        "Clear logic"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "High-level languages වල portability කියන්නේ?",
+      "options": [
+        "Run on different systems",
+        "Run on one system only",
+        "Machine dependent",
+        "Binary execution"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Assembly language එකේ Limitation එක මොකක්ද?",
+      "options": [
+        "Portable",
+        "Machine dependent",
+        "High-level",
+        "User friendly"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Pseudo code එකේ main use එක මොකක්ද?",
+      "options": [
+        "Program planning",
+        "Execution",
+        "Translation",
+        "Binary coding"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Compiler සහ Interpreter දෙකම?",
+      "options": [
+        "Translators",
+        "Assemblers",
+        "Debuggers",
+        "Flowcharts"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Machine language එකේ Advantage එක මොකක්ද?",
+      "options": [
+        "Fast execution",
+        "User friendly",
+        "Portable",
+        "Easy coding"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Algorithm කියන්නේ කුමක්ද?",
+      "options": [
+        "Step-by-step instructions",
+        "Binary numbers",
+        "Flowchart symbol",
+        "Assembly program"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Flowchart එකේ Disadvantage එකක් මොකක්ද?",
+      "options": [
+        "Confusing with large systems",
+        "Easy debugging",
+        "Clear logic",
+        "User friendly"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Flowchart එකේ Use එකක් මොකක්ද?",
+      "options": [
+        "Visual representation",
+        "Random coding",
+        "Debugging only",
+        "Binary translation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Source code එකේ අර්ථය?",
+      "options": [
+        "Original human readable program",
+        "Translated binary",
+        "Object code",
+        "Pseudo code"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Object code එකේ අර්ථය?",
+      "options": [
+        "Translated machine code",
+        "Human readable",
+        "Pseudo code",
+        "Algorithm"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Algorithm එකේ Basic characteristic එකක් මොකක්ද?",
+      "options": [
+        "Definiteness",
+        "Ambiguity",
+        "Confusion",
+        "Randomness"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Flowchart එකේ Connector symbol එක represent කරනවා?",
+      "options": [
+        "Flow continuation",
+        "Process",
+        "Decision",
+        "Start/End"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "High-level language එකක් උදාහරණයක් මොකක්ද?",
+      "options": [
+        "C",
+        "Assembly",
+        "Machine code",
+        "Binary"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Assembly language එකේ Instructions කියන්නේ?",
+      "options": [
+        "Mnemonics",
+        "Binary numbers",
+        "High-level commands",
+        "Source code"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Machine language එකේ main drawback එක මොකක්ද?",
+      "options": [
+        "Hard to understand",
+        "Fast execution",
+        "Portable",
+        "User friendly"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Flowchart එකේ Start/End symbol එක?",
+      "options": [
+        "Oval",
+        "Diamond",
+        "Rectangle",
+        "Parallelogram"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Flowchart එකේ Input/Output symbol එක?",
+      "options": [
+        "Rectangle",
+        "Parallelogram",
+        "Diamond",
+        "Circle"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Flowchart එකේ Process symbol එක?",
+      "options": [
+        "Rectangle",
+        "Parallelogram",
+        "Oval",
+        "Diamond"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Algorithm එකේ Step by step procedure කියන්නේ?",
+      "options": [
+        "Definiteness",
+        "Finiteness",
+        "Ambiguity",
+        "Randomness"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Pseudo code එක mostly use කරනවා?",
+      "options": [
+        "Program design",
+        "Machine execution",
+        "Binary conversion",
+        "Assembly"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Flowchart එකේ Disadvantage එකක්?",
+      "options": [
+        "Time consuming for large systems",
+        "Clear logic",
+        "Easy debugging",
+        "Visual clarity"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Compiler කියන්නේ?",
+      "options": [
+        "Translates whole program",
+        "Line by line translator",
+        "Assembler",
+        "Debugger"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Interpreter කියන්නේ?",
+      "options": [
+        "Line by line translator",
+        "Whole program translator",
+        "Assembler",
+        "Loader"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Assembler කියන්නේ?",
+      "options": [
+        "Translate Assembly to Machine",
+        "Translate High-level",
+        "Line by line translate",
+        "Flowchart symbol"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Algorithm එකේ Finiteness කියන්නේ?",
+      "options": [
+        "Limited steps",
+        "Ambiguity",
+        "Unlimited steps",
+        "Random flow"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Flowchart එකේ Arrow lines represent කරනවා?",
+      "options": [
+        "Flow direction",
+        "Start/End",
+        "Decision",
+        "Connector"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Object code කියන්නේ?",
+      "options": [
+        "Translated machine code",
+        "Human readable",
+        "Source program",
+        "Algorithm"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Source code කියන්නේ?",
+      "options": [
+        "Original human readable program",
+        "Binary translation",
+        "Object code",
+        "Pseudo code"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Flowchart එකේ Decision symbol එක?",
+      "options": [
+        "Diamond",
+        "Rectangle",
+        "Oval",
+        "Parallelogram"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Algorithm එකේ Input/Output requirement එක?",
+      "options": [
+        "At least one output",
+        "No output",
+        "Random",
+        "Ambiguity"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Machine language එක mostly use කරනවා?",
+      "options": [
+        "Computer execution",
+        "Human design",
+        "Flowchart",
+        "Pseudo code"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Flowchart එකේ Advantage එකක්?",
+      "options": [
+        "Easy debugging",
+        "Time consuming",
+        "Confusing",
+        "Randomness"
+      ],
+      "answer": 0
+    }
+  ]
+}

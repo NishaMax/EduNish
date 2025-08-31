@@ -1,0 +1,206 @@
+{
+  "Series 1": [
+    {
+      "question": "System කියන්නේ කුමක්ද?",
+      "options": [
+        "Interrelated components set",
+        "Single program",
+        "Single machine",
+        "Random process"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "System Development Life Cycle (SDLC) mainly use කරනවා?",
+      "options": [
+        "Develop systems",
+        "Design websites",
+        "Print documents",
+        "Store data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SDLC එකේ First phase මොකක්ද?",
+      "options": [
+        "Planning",
+        "Analysis",
+        "Design",
+        "Implementation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SDLC එකේ Analysis phase mainly do කරනවා?",
+      "options": [
+        "Study requirements",
+        "Develop system",
+        "Test system",
+        "Maintain system"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SDLC එකේ Design phase mainly do කරනවා?",
+      "options": [
+        "System architecture",
+        "Requirement study",
+        "Testing",
+        "Maintenance"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SDLC එකේ Implementation phase mainly do කරනවා?",
+      "options": [
+        "Install & train users",
+        "Requirement analysis",
+        "System design",
+        "Feasibility study"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SDLC එකේ Maintenance phase mainly do කරනවා?",
+      "options": [
+        "System updates & bug fixing",
+        "New requirement analysis",
+        "Feasibility study",
+        "System design"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Feasibility study mainly check කරනවා?",
+      "options": [
+        "Practicality of system",
+        "System design",
+        "System maintenance",
+        "System testing"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Prototype model mainly use කරනවා?",
+      "options": [
+        "Working model for feedback",
+        "Final system",
+        "System maintenance",
+        "Testing only"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Waterfall model කියන්නේ?",
+      "options": [
+        "Sequential SDLC model",
+        "Random model",
+        "Parallel model",
+        "Hybrid model"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "SDLC එකේ Spiral model mainly focus කරනවා?",
+      "options": [
+        "Risk analysis",
+        "Sequential process",
+        "No testing",
+        "No planning"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SDLC එකේ Agile model mainly focus කරනවා?",
+      "options": [
+        "Iterative development",
+        "Sequential process",
+        "No feedback",
+        "No planning"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SDLC එකේ Testing phase mainly do කරනවා?",
+      "options": [
+        "Find & fix errors",
+        "System design",
+        "Requirement analysis",
+        "Implementation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "System analyst mainly do කරන කාර්යය මොනවාද?",
+      "options": [
+        "Study system, collect requirements",
+        "Write programs only",
+        "Maintain computers",
+        "Design networks"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "System documentation mainly mean කරනවා?",
+      "options": [
+        "Detailed system records",
+        "Oral description",
+        "Temporary notes",
+        "Emails"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "End user කියන්නේ?",
+      "options": [
+        "Final user of system",
+        "Programmer",
+        "System analyst",
+        "Tester"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "System Testing mainly mean කරනවා?",
+      "options": [
+        "Check overall system",
+        "Check single program",
+        "Check only design",
+        "Check only user"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "System Conversion mainly mean කරනවා?",
+      "options": [
+        "Shift from old to new system",
+        "Delete old system",
+        "Print system",
+        "Design prototype"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Pilot conversion mainly mean කරනවා?",
+      "options": [
+        "Implement in one area",
+        "Immediate full change",
+        "No change",
+        "Random test"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Parallel conversion mainly mean කරනවා?",
+      "options": [
+        "Run old & new system together",
+        "Only new system",
+        "Only old system",
+        "No system"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,608 @@
+{
+  "Series 1": [
+    {
+      "question": "What does a database primarily store?",
+      "options": [
+        "Images only",
+        "Organized data",
+        "Random text",
+        "Videos"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is NOT a type of database?",
+      "options": [
+        "Manual",
+        "Electronic",
+        "Mechanical",
+        "Relational"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is a major advantage of an electronic database over a manual one?",
+      "options": [
+        "Slower searching",
+        "Automatic calculations",
+        "Limited storage",
+        "Difficult to access"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is a characteristic of a good database?",
+      "options": [
+        "Data redundancy",
+        "Data inconsistency",
+        "Data accuracy",
+        "Data loss"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which feature ensures correctness of data in a database?",
+      "options": [
+        "Validity",
+        "Inconsistency",
+        "Duplication",
+        "Redundancy"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which characteristic ensures the same data is not stored multiple times?",
+      "options": [
+        "Redundancy",
+        "Consistency",
+        "Uniqueness",
+        "Security"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which type of data represents numbers in a database?",
+      "options": [
+        "Text",
+        "Numeric",
+        "Date/Time",
+        "Boolean"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which type of data can have only two values such as Yes/No?",
+      "options": [
+        "Text",
+        "Boolean",
+        "Numeric",
+        "Date/Time"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which type of data stores calendar information?",
+      "options": [
+        "Text",
+        "Date/Time",
+        "Boolean",
+        "Numeric"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which type of data is best for telephone numbers?",
+      "options": [
+        "Numeric",
+        "Text",
+        "Date/Time",
+        "Boolean"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is an example of a database application?",
+      "options": [
+        "MS Excel",
+        "MS Word",
+        "Oracle",
+        "Photoshop"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which of the following is an example of an electronic database?",
+      "options": [
+        "Filing cabinet",
+        "Library catalog software",
+        "Printed address book",
+        "Notebook"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature ensures unauthorized users cannot access the database?",
+      "options": [
+        "Data security",
+        "Data redundancy",
+        "Data accuracy",
+        "Data validity"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which ensures that data entered follows a specific format?",
+      "options": [
+        "Data validity",
+        "Data redundancy",
+        "Data security",
+        "Data inconsistency"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is a disadvantage of a manual database?",
+      "options": [
+        "Fast searching",
+        "Difficult to update",
+        "Automatic calculations",
+        "Data consistency"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of these is an example of data redundancy?",
+      "options": [
+        "Storing student name only once",
+        "Storing the same student name in many tables",
+        "Using a unique key for each record",
+        "Having consistent records"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the smallest unit of data in a database?",
+      "options": [
+        "Field",
+        "Table",
+        "Record",
+        "Database"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is a collection of related fields called?",
+      "options": [
+        "Database",
+        "Table",
+        "Record",
+        "Attribute"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is a collection of related records called?",
+      "options": [
+        "Database",
+        "Table",
+        "Attribute",
+        "Cell"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is a collection of related tables called?",
+      "options": [
+        "Database",
+        "Worksheet",
+        "Report",
+        "Range"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "What is the unique identifier for a record in a table called?",
+      "options": [
+        "Foreign key",
+        "Composite key",
+        "Primary key",
+        "Candidate key"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which key links two tables together?",
+      "options": [
+        "Primary key",
+        "Foreign key",
+        "Composite key",
+        "Super key"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which key consists of more than one attribute?",
+      "options": [
+        "Primary key",
+        "Composite key",
+        "Foreign key",
+        "Candidate key"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which key prevents duplication of records?",
+      "options": [
+        "Foreign key",
+        "Primary key",
+        "Composite key",
+        "Super key"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "In a student table, 'StudentID' is an example of?",
+      "options": [
+        "Foreign key",
+        "Composite key",
+        "Primary key",
+        "Secondary key"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "In a marks table, 'StudentID' referring to another table is?",
+      "options": [
+        "Foreign key",
+        "Composite key",
+        "Primary key",
+        "Candidate key"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "A one-to-one relationship means?",
+      "options": [
+        "One record linked to one record",
+        "One record linked to many records",
+        "Many records linked to one",
+        "Many records linked to many"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "A one-to-many relationship means?",
+      "options": [
+        "One record linked to one record",
+        "One record linked to many records",
+        "Many records linked to one",
+        "Many records linked to many"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "A many-to-many relationship means?",
+      "options": [
+        "One record linked to one record",
+        "One record linked to many records",
+        "Many records linked to one",
+        "Many records linked to many"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does relational database mean?",
+      "options": [
+        "Database with no relations",
+        "Database with tables connected by keys",
+        "Database in text format",
+        "Database with only one table"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature avoids repeating same data in many tables?",
+      "options": [
+        "Redundancy",
+        "Normalization",
+        "Duplication",
+        "Replication"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which ensures accuracy and reliability of data?",
+      "options": [
+        "Data consistency",
+        "Data redundancy",
+        "Data duplication",
+        "Data security"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which ensures no two rows in a table have the same primary key?",
+      "options": [
+        "Consistency",
+        "Uniqueness",
+        "Duplication",
+        "Validity"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which ensures that foreign keys match primary keys in related tables?",
+      "options": [
+        "Entity integrity",
+        "Referential integrity",
+        "Data security",
+        "Normalization"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is an advantage of relational databases?",
+      "options": [
+        "Complexity",
+        "Easier relationships",
+        "More redundancy",
+        "Less accuracy"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which problem occurs if same data is stored in multiple places?",
+      "options": [
+        "Data redundancy",
+        "Data validity",
+        "Data uniqueness",
+        "Data integrity"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which problem occurs if data values contradict in different places?",
+      "options": [
+        "Data consistency",
+        "Data inconsistency",
+        "Data validity",
+        "Data uniqueness"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which term means correctness and reliability of data?",
+      "options": [
+        "Data validity",
+        "Data integrity",
+        "Data redundancy",
+        "Data duplication"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which key allows linking a table to itself?",
+      "options": [
+        "Self key",
+        "Foreign key",
+        "Recursive key",
+        "Composite key"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is NOT a relationship type in databases?",
+      "options": [
+        "One-to-one",
+        "One-to-many",
+        "Many-to-many",
+        "Many-to-one-to-one"
+      ],
+      "answer": 3
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "Which DBMS object is used to store data?",
+      "options": [
+        "Form",
+        "Query",
+        "Table",
+        "Report"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which DBMS object is used to extract specific information?",
+      "options": [
+        "Table",
+        "Form",
+        "Query",
+        "Report"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which DBMS object is used for entering data easily?",
+      "options": [
+        "Table",
+        "Form",
+        "Query",
+        "Report"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which DBMS object is used to present data in a structured way?",
+      "options": [
+        "Form",
+        "Query",
+        "Table",
+        "Report"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which DBMS object is designed for printing and sharing data?",
+      "options": [
+        "Table",
+        "Form",
+        "Report",
+        "Query"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which DBMS object is mainly used for calculations?",
+      "options": [
+        "Form",
+        "Table",
+        "Query",
+        "Report"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which DBMS object is designed with labels and text boxes?",
+      "options": [
+        "Form",
+        "Query",
+        "Report",
+        "Table"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which object retrieves records that match criteria?",
+      "options": [
+        "Query",
+        "Form",
+        "Table",
+        "Report"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which ensures only authorized users access DB?",
+      "options": [
+        "Data redundancy",
+        "Data security",
+        "Data duplication",
+        "Data consistency"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature encrypts data for protection?",
+      "options": [
+        "Compression",
+        "Encryption",
+        "Validation",
+        "Formatting"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature ensures only correct type of data is entered?",
+      "options": [
+        "Data security",
+        "Data redundancy",
+        "Data validation",
+        "Data duplication"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which feature checks whether entered data is reasonable?",
+      "options": [
+        "Data validity",
+        "Data inconsistency",
+        "Data redundancy",
+        "Data duplication"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which language is commonly used to query databases?",
+      "options": [
+        "HTML",
+        "SQL",
+        "XML",
+        "CSS"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which SQL command is used to extract data?",
+      "options": [
+        "UPDATE",
+        "DELETE",
+        "SELECT",
+        "INSERT"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which SQL command is used to add new data?",
+      "options": [
+        "INSERT",
+        "UPDATE",
+        "SELECT",
+        "DELETE"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which SQL command is used to remove data?",
+      "options": [
+        "DELETE",
+        "REMOVE",
+        "CLEAR",
+        "DROP"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which SQL command is used to modify data?",
+      "options": [
+        "SELECT",
+        "UPDATE",
+        "ALTER",
+        "INSERT"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature of DBMS ensures consistency of changes?",
+      "options": [
+        "Transactions",
+        "Encryption",
+        "Security",
+        "Redundancy"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which DBMS object is best for creating user-friendly input screens?",
+      "options": [
+        "Forms",
+        "Reports",
+        "Tables",
+        "Queries"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which DBMS object is best for printing summaries of data?",
+      "options": [
+        "Reports",
+        "Queries",
+        "Forms",
+        "Tables"
+      ],
+      "answer": 0
+    }
+  ]
+}

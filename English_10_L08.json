@@ -1,0 +1,506 @@
+{
+  "Series 1": [
+    {
+      "question": "What is a presentation?",
+      "options": [
+        "A written report",
+        "A spoken or visual communication to an audience",
+        "A printed handout",
+        "A database table"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is a traditional presentation tool?",
+      "options": [
+        "PowerPoint",
+        "OHP",
+        "Keynote",
+        "Impress"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is NOT an electronic presentation software?",
+      "options": [
+        "PowerPoint",
+        "Impress",
+        "Keynote",
+        "WordPad"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which of the following is NOT a multimedia element?",
+      "options": [
+        "Text",
+        "Images",
+        "Audio",
+        "Tables"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "The full form of OHP is?",
+      "options": [
+        "Over High Projector",
+        "Over Head Projector",
+        "Online Hardware Projector",
+        "Output Handling Projector"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "A slide presentation is?",
+      "options": [
+        "A series of slides displayed to an audience",
+        "A video clip",
+        "A spreadsheet",
+        "A printed report"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which of the following projectors displays slides from a computer?",
+      "options": [
+        "Overhead Projector",
+        "Multimedia Projector",
+        "Slide Projector",
+        "Film Projector"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is an advantage of electronic presentations?",
+      "options": [
+        "Not interactive",
+        "Difficult to update",
+        "Easy to edit and present",
+        "Cannot include graphics"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "A good presentation should have?",
+      "options": [
+        "Too many words per slide",
+        "Readable fonts and limited lines",
+        "Unclear images",
+        "Complex grammar"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following should be avoided in presentations?",
+      "options": [
+        "Simple fonts",
+        "Correct grammar",
+        "Too many animations",
+        "Relevant images"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "The suitable font size for titles in a presentation is?",
+      "options": [
+        "10–12",
+        "20–24",
+        "30–36",
+        "8–10"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "The suitable font size for text in a presentation is?",
+      "options": [
+        "10–12",
+        "20–24",
+        "30–36",
+        "40–50"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following helps maintain audience interest?",
+      "options": [
+        "Irrelevant animations",
+        "Appropriate use of graphics",
+        "Too much text",
+        "Complex tables"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is NOT a feature of a good presentation?",
+      "options": [
+        "Clarity",
+        "Relevance",
+        "Overloaded text",
+        "Audience focus"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which of the following is considered a multimedia element?",
+      "options": [
+        "Audio",
+        "Video",
+        "Animations",
+        "All of the above"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "The background of slides should be?",
+      "options": [
+        "Bright and flashy",
+        "Simple and readable",
+        "Overly decorated",
+        "Filled with text"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "The number of lines per slide should be limited to?",
+      "options": [
+        "5–6",
+        "10–12",
+        "15–20",
+        "Unlimited"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Grammar in a presentation should be?",
+      "options": [
+        "Complex",
+        "Incorrect",
+        "Accurate and simple",
+        "Not important"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which of the following is used to connect a computer presentation to a large audience?",
+      "options": [
+        "Printer",
+        "Projector",
+        "Scanner",
+        "Monitor"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is a disadvantage of traditional presentations?",
+      "options": [
+        "Portable",
+        "Cannot be easily edited",
+        "Interactive",
+        "Colorful"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is used to display slides on a screen?",
+      "options": [
+        "Scanner",
+        "Projector",
+        "Printer",
+        "Keyboard"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "A multimedia presentation includes?",
+      "options": [
+        "Only text",
+        "Text and images",
+        "Text, images, audio, video",
+        "Only audio"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which of the following improves the attractiveness of slides?",
+      "options": [
+        "Proper use of colors",
+        "Too many fonts",
+        "Overcrowding text",
+        "Ignoring images"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which of the following is NOT suitable for a good presentation?",
+      "options": [
+        "Relevant content",
+        "Readable fonts",
+        "Too much text",
+        "Proper images"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "A presentation is mainly used for?",
+      "options": [
+        "Entertainment only",
+        "Effective communication of ideas",
+        "Storing data",
+        "Only calculations"
+      ],
+      "answer": 1
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Which of the following is a presentation software?",
+      "options": [
+        "MS Excel",
+        "MS PowerPoint",
+        "MS Word",
+        "MS Access"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "LibreOffice Impress is?",
+      "options": [
+        "Spreadsheet software",
+        "Presentation software",
+        "Database software",
+        "Word processor"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Apple’s presentation software is called?",
+      "options": [
+        "Slides",
+        "Keynote",
+        "Impress",
+        "Show"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Google’s online presentation tool is?",
+      "options": [
+        "Google Docs",
+        "Google Slides",
+        "Google Sheets",
+        "Google Forms"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "The area where slides are displayed is called?",
+      "options": [
+        "Slide Pane",
+        "Task Pane",
+        "Notes Pane",
+        "Title Bar"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which bar shows the name of the presentation?",
+      "options": [
+        "Status Bar",
+        "Title Bar",
+        "Menu Bar",
+        "Scroll Bar"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "The area where speaker notes are written is?",
+      "options": [
+        "Slide Pane",
+        "Task Pane",
+        "Notes Pane",
+        "Ribbon"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "The bar at the bottom showing slide number is?",
+      "options": [
+        "Status Bar",
+        "Formula Bar",
+        "Menu Bar",
+        "Title Bar"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which tab is used to insert pictures in PowerPoint?",
+      "options": [
+        "Insert",
+        "Home",
+        "Review",
+        "Layout"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which feature applies effects when moving from one slide to another?",
+      "options": [
+        "Animation",
+        "Transition",
+        "Formatting",
+        "Layout"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature adds movement to objects within a slide?",
+      "options": [
+        "Transition",
+        "Animation",
+        "Design",
+        "Layout"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following can be inserted in slides?",
+      "options": [
+        "Pictures",
+        "Audio",
+        "Video",
+        "All of these"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "To start a slide show, the shortcut key is?",
+      "options": [
+        "F2",
+        "F5",
+        "F7",
+        "F9"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which view shows miniature slides for easy rearrangement?",
+      "options": [
+        "Slide Sorter View",
+        "Slide Show View",
+        "Normal View",
+        "Notes View"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which view is used for editing slides?",
+      "options": [
+        "Normal View",
+        "Slide Sorter View",
+        "Reading View",
+        "Slide Show View"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which menu is used to apply slide design templates?",
+      "options": [
+        "Insert",
+        "Design",
+        "Review",
+        "Layout"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature is used to rehearse slide timing?",
+      "options": [
+        "Record Narration",
+        "Rehearse Timings",
+        "Slide Master",
+        "Custom Animation"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Handouts in PowerPoint are used for?",
+      "options": [
+        "Printing slides for audience",
+        "Saving slides as PDF",
+        "Editing slides",
+        "Adding notes"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which option saves a presentation with all multimedia?",
+      "options": [
+        "Save",
+        "Save As",
+        "Package Presentation for CD",
+        "Export"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which option is used to print slides?",
+      "options": [
+        "File → Save",
+        "File → Print",
+        "File → Open",
+        "File → Export"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "The slide master controls?",
+      "options": [
+        "Design and layout of all slides",
+        "Animations only",
+        "Transitions only",
+        "Text editing only"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which option allows adding audio narration?",
+      "options": [
+        "Insert → Sound",
+        "Slide Show → Record Narration",
+        "Design → Background",
+        "Review → Comments"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is NOT a PowerPoint view?",
+      "options": [
+        "Normal View",
+        "Slide Sorter View",
+        "Page Layout View",
+        "Slide Show View"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "A presentation file created in PowerPoint 2010 is saved with extension?",
+      "options": [
+        ".ppt",
+        ".pptx",
+        ".pdf",
+        ".txt"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following can be used to add shapes?",
+      "options": [
+        "Insert → Shapes",
+        "Design → Shapes",
+        "Review → Shapes",
+        "Layout → Shapes"
+      ],
+      "answer": 0
+    }
+  ]
+}

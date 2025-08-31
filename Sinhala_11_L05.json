@@ -1,0 +1,308 @@
+{
+  "Series 1": [
+    {
+      "question": "Web publishing mainly mean කරනවා?",
+      "options": [
+        "Making website available online",
+        "Writing books",
+        "Printing",
+        "Email only"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Domain name mainly identify කරනවා?",
+      "options": [
+        "Website address",
+        "Computer device",
+        "Email only",
+        "Database"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "URL කියන්නේ?",
+      "options": [
+        "Uniform Resource Locator",
+        "Universal Record Link",
+        "Uniform Routing List",
+        "Universal Register Locator"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "DNS mainly use කරනවා?",
+      "options": [
+        "Convert domain to IP",
+        "Store data",
+        "Print files",
+        "Encrypt files"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Web hosting mainly provide කරනවා?",
+      "options": [
+        "Storage for websites",
+        "Storage for MS Word",
+        "Print text",
+        "Store offline only"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "IP address mainly identify කරනවා?",
+      "options": [
+        "Computer on network",
+        "Website text only",
+        "File type",
+        "Database"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Cloud hosting mainly provide කරනවා?",
+      "options": [
+        "Online scalable hosting",
+        "Offline storage only",
+        "Print files",
+        "Temporary memory"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "CDN (Content Delivery Network) mainly use කරනවා?",
+      "options": [
+        "Fast website delivery",
+        "Database storage",
+        "Programming",
+        "Offline backup"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Static website කියන්නේ?",
+      "options": [
+        "Fixed content website",
+        "Dynamic content website",
+        "Database driven",
+        "E-commerce only"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Dynamic website mainly mean කරනවා?",
+      "options": [
+        "Website with interactive content",
+        "Fixed content",
+        "No database",
+        "Offline only"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "HTML mainly use කරනවා?",
+      "options": [
+        "Structure of webpage",
+        "Style only",
+        "Database",
+        "Programming language"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "CSS mainly use කරනවා?",
+      "options": [
+        "Style webpage",
+        "Structure webpage",
+        "Database",
+        "Server hosting"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "JavaScript mainly use කරනවා?",
+      "options": [
+        "Add interactivity",
+        "Add only style",
+        "Add only structure",
+        "Database"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "<img> tag mainly use කරනවා?",
+      "options": [
+        "Insert image",
+        "Insert video",
+        "Insert audio",
+        "Insert link"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "<a> tag mainly use කරනවා?",
+      "options": [
+        "Hyperlink",
+        "Image",
+        "Audio",
+        "Table"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "<form> tag mainly use කරනවා?",
+      "options": [
+        "Collect user input",
+        "Show images",
+        "Play audio",
+        "Print page"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Semantic tag එකක් මොකක්ද?",
+      "options": [
+        "<header>",
+        "<div>",
+        "<span>",
+        "<br>"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "CSS file එක HTML එකට link කරන tag එක?",
+      "options": [
+        "<link>",
+        "<a>",
+        "<style>",
+        "<css>"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "JavaScript link කරන tag එක?",
+      "options": [
+        "<script>",
+        "<js>",
+        "<link>",
+        "<code>"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Responsive design mainly mean කරනවා?",
+      "options": [
+        "Website adapt to devices",
+        "Fixed layout only",
+        "Desktop only",
+        "No design"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "CMS (Content Management System) mainly provide කරනවා?",
+      "options": [
+        "Easy web development",
+        "Database only",
+        "Static pages only",
+        "Offline apps"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "WordPress mainly use කරනවා?",
+      "options": [
+        "CMS for websites",
+        "Programming language",
+        "Database only",
+        "Operating system"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SSL certificate mainly use කරනවා?",
+      "options": [
+        "Secure website data",
+        "Print website",
+        "Delete files",
+        "Offline backup"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SEO mainly mean කරනවා?",
+      "options": [
+        "Search Engine Optimization",
+        "System Error Output",
+        "Software Encryption Option",
+        "Secure External Operation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Git mainly use කරනවා?",
+      "options": [
+        "Version control",
+        "Database",
+        "Browser",
+        "Compiler"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Responsive frameworks example එකක් මොකක්ද?",
+      "options": [
+        "Bootstrap",
+        "MS Word",
+        "Excel",
+        "Photoshop"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Web maintenance mainly mean කරනවා?",
+      "options": [
+        "Update and fix website",
+        "Delete website",
+        "Print pages",
+        "Offline backup"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Web server software එකක් මොකක්ද?",
+      "options": [
+        "Apache",
+        "MS Excel",
+        "Photoshop",
+        "Notepad"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Dynamic web language එකක් මොකක්ද?",
+      "options": [
+        "PHP",
+        "HTML",
+        "CSS",
+        "Bootstrap"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "E-commerce website එකක් මොකක්ද?",
+      "options": [
+        "Online shopping site",
+        "News site",
+        "Blog site",
+        "Static page"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,608 @@
+{
+  "Series 1": [
+    {
+      "question": "Database කියන්නේ කුමක්ද?",
+      "options": [
+        "Collection of data",
+        "Spreadsheet",
+        "Document",
+        "Presentation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ එක row එකට කියන්නේ?",
+      "options": [
+        "Record",
+        "Table",
+        "Field",
+        "Query"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ එක column එකට කියන්නේ?",
+      "options": [
+        "Field",
+        "Record",
+        "Table",
+        "Form"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Table mainly contain කරනවා?",
+      "options": [
+        "Rows & Columns",
+        "Charts",
+        "Images",
+        "Slides"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Primary Key mainly use කරනවා?",
+      "options": [
+        "Unique identification",
+        "Sorting",
+        "Searching",
+        "Formatting"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Foreign Key mainly use කරනවා?",
+      "options": [
+        "Relationship between tables",
+        "Delete data",
+        "Format data",
+        "Print data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ SQL කියන්නේ?",
+      "options": [
+        "Structured Query Language",
+        "Standard Question Language",
+        "System Query Logic",
+        "Simple Question Logic"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ SELECT statement mainly use කරනවා?",
+      "options": [
+        "Retrieve data",
+        "Delete data",
+        "Insert data",
+        "Update data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ INSERT statement mainly use කරනවා?",
+      "options": [
+        "Add new data",
+        "Delete data",
+        "Update data",
+        "Search data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ UPDATE statement mainly use කරනවා?",
+      "options": [
+        "Modify data",
+        "Insert data",
+        "Delete data",
+        "Sort data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ DELETE statement mainly use කරනවා?",
+      "options": [
+        "Remove data",
+        "Insert data",
+        "Modify data",
+        "Select data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database Management System (DBMS) mainly use කරනවා?",
+      "options": [
+        "Manage databases",
+        "Design slides",
+        "Create charts",
+        "Edit documents"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Form mainly use කරනවා?",
+      "options": [
+        "Data entry",
+        "Data deletion",
+        "Data backup",
+        "Data print"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Report mainly use කරනවා?",
+      "options": [
+        "Summarize data",
+        "Delete data",
+        "Insert data",
+        "Sort data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Query mainly use කරනවා?",
+      "options": [
+        "Search/filter data",
+        "Print data",
+        "Delete data",
+        "Insert data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Relationship mainly use කරනවා?",
+      "options": [
+        "Connect tables",
+        "Insert data",
+        "Delete data",
+        "Format data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Cardinality කියන්නේ?",
+      "options": [
+        "Number of relationships",
+        "Number of rows",
+        "Number of columns",
+        "Number of fields"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Normalization mainly use කරනවා?",
+      "options": [
+        "Remove redundancy",
+        "Add redundancy",
+        "Delete tables",
+        "Sort tables"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ One-to-Many relationship example එකක්?",
+      "options": [
+        "Teacher - Students",
+        "Student - Teacher",
+        "Book - Page",
+        "Car - Wheel"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Many-to-Many relationship example එකක්?",
+      "options": [
+        "Students - Courses",
+        "Teacher - Principal",
+        "Book - Author",
+        "Car - Owner"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Database එකේ DBMS කියන්නේ?",
+      "options": [
+        "Database Management System",
+        "Data Base Main Storage",
+        "Direct Base Management System",
+        "Database Main System"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "DBMS එකේ Example එකක් මොකක්ද?",
+      "options": [
+        "MySQL",
+        "MS Word",
+        "MS Excel",
+        "PowerPoint"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ WHERE clause mainly use කරනවා?",
+      "options": [
+        "Filter data",
+        "Insert data",
+        "Delete data",
+        "Sort data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ ORDER BY clause mainly use කරනවා?",
+      "options": [
+        "Sort data",
+        "Filter data",
+        "Insert data",
+        "Delete data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ GROUP BY clause mainly use කරනවා?",
+      "options": [
+        "Group data",
+        "Filter data",
+        "Insert data",
+        "Delete data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ HAVING clause mainly use කරනවා?",
+      "options": [
+        "Condition with groups",
+        "Insert data",
+        "Delete data",
+        "Update data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ DISTINCT keyword mainly use කරනවා?",
+      "options": [
+        "Remove duplicates",
+        "Add duplicates",
+        "Sort data",
+        "Delete data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ COUNT function mainly use කරනවා?",
+      "options": [
+        "Count rows",
+        "Count columns",
+        "Count tables",
+        "Count fields"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ AVG function mainly use කරනවා?",
+      "options": [
+        "Find average",
+        "Find sum",
+        "Find max",
+        "Find min"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ SUM function mainly use කරනවා?",
+      "options": [
+        "Find total",
+        "Find average",
+        "Find max",
+        "Find min"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ MIN function mainly use කරනවා?",
+      "options": [
+        "Find minimum",
+        "Find maximum",
+        "Find average",
+        "Find total"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ MAX function mainly use කරනවා?",
+      "options": [
+        "Find maximum",
+        "Find minimum",
+        "Find average",
+        "Find total"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ LIKE operator mainly use කරනවා?",
+      "options": [
+        "Pattern matching",
+        "Sorting",
+        "Deleting",
+        "Joining"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ BETWEEN operator mainly use කරනවා?",
+      "options": [
+        "Range selection",
+        "Sorting",
+        "Deleting",
+        "Joining"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ IN operator mainly use කරනවා?",
+      "options": [
+        "Match values in list",
+        "Insert values",
+        "Delete values",
+        "Sort values"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Index mainly use කරනවා?",
+      "options": [
+        "Fast search",
+        "Data backup",
+        "Data deletion",
+        "Data printing"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Backup mainly use කරනවා?",
+      "options": [
+        "Data recovery",
+        "Data delete",
+        "Data sort",
+        "Data filter"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Data Integrity mainly mean කරනවා?",
+      "options": [
+        "Accuracy & consistency",
+        "Redundancy",
+        "Speed",
+        "Format"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Transaction mainly mean කරනවා?",
+      "options": [
+        "Unit of work",
+        "Sorting",
+        "Backup",
+        "Delete"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Transaction එකේ ACID properties වලින් එකක්?",
+      "options": [
+        "Atomicity",
+        "Redundancy",
+        "Duplication",
+        "Simplicity"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "SQL එකේ JOIN mainly use කරනවා?",
+      "options": [
+        "Combine tables",
+        "Delete tables",
+        "Sort tables",
+        "Insert tables"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ INNER JOIN mainly return කරනවා?",
+      "options": [
+        "Matching rows",
+        "All rows",
+        "Only first row",
+        "Only last row"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ LEFT JOIN mainly return කරනවා?",
+      "options": [
+        "All rows from left table",
+        "All rows from right table",
+        "Only matching rows",
+        "No rows"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ RIGHT JOIN mainly return කරනවා?",
+      "options": [
+        "All rows from right table",
+        "All rows from left table",
+        "Only matching rows",
+        "No rows"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ FULL JOIN mainly return කරනවා?",
+      "options": [
+        "All rows from both tables",
+        "Only matching rows",
+        "Only left rows",
+        "Only right rows"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Data Redundancy කියන්නේ?",
+      "options": [
+        "Unnecessary repetition",
+        "Accuracy",
+        "Consistency",
+        "Backup"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Data Security mainly mean කරනවා?",
+      "options": [
+        "Protect data",
+        "Delete data",
+        "Backup data",
+        "Sort data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Authentication mainly mean කරනවා?",
+      "options": [
+        "User verification",
+        "Data backup",
+        "Data deletion",
+        "Data formatting"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Authorization mainly mean කරනවා?",
+      "options": [
+        "Access control",
+        "Data backup",
+        "Data delete",
+        "Data sort"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Data Model mainly represent කරනවා?",
+      "options": [
+        "Structure of data",
+        "Backup of data",
+        "Delete of data",
+        "Format of data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Entity-Relationship (ER) Diagram mainly show කරනවා?",
+      "options": [
+        "Entities & relationships",
+        "Tables only",
+        "Records only",
+        "Queries only"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Entity කියන්නේ?",
+      "options": [
+        "Object in database",
+        "Field",
+        "Record",
+        "Query"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Attribute කියන්නේ?",
+      "options": [
+        "Property of entity",
+        "Relationship",
+        "Record",
+        "Table"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Tuple කියන්නේ?",
+      "options": [
+        "Row",
+        "Column",
+        "Field",
+        "Table"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Domain කියන්නේ?",
+      "options": [
+        "Set of values",
+        "Field",
+        "Table",
+        "Record"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ CREATE statement mainly use කරනවා?",
+      "options": [
+        "Create database objects",
+        "Delete objects",
+        "Update objects",
+        "Insert objects"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ DROP statement mainly use කරනවා?",
+      "options": [
+        "Delete objects",
+        "Create objects",
+        "Insert objects",
+        "Update objects"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ ALTER statement mainly use කරනවා?",
+      "options": [
+        "Modify objects",
+        "Delete objects",
+        "Insert objects",
+        "Create objects"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "SQL එකේ TRUNCATE statement mainly use කරනවා?",
+      "options": [
+        "Remove all rows",
+        "Delete table",
+        "Create table",
+        "Update table"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Database එකේ Data Dictionary mainly contain කරනවා?",
+      "options": [
+        "Metadata",
+        "Records",
+        "Tables",
+        "Queries"
+      ],
+      "answer": 0
+    }
+  ]
+}

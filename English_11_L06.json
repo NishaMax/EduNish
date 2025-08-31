@@ -1,0 +1,608 @@
+{
+  "Series 1": [
+    {
+      "question": "What is holography mainly used for in ICT entertainment?",
+      "options": [
+        "Creating 2D images",
+        "Producing 3D visual effects",
+        "Recording audio tracks",
+        "Improving internet speed"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which technology allows users to experience a simulated environment?",
+      "options": [
+        "Augmented Reality",
+        "Simulation",
+        "Word Processing",
+        "Data Encryption"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is a popular ICT application in the gaming industry?",
+      "options": [
+        "Simulation games",
+        "Video editing",
+        "Spreadsheet analysis",
+        "Word processing"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Digital audio is stored using which technology?",
+      "options": [
+        "Analog signals",
+        "Binary codes",
+        "Handwritten notes",
+        "Optical illusions"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is a common legal issue in ICT?",
+      "options": [
+        "Cyber bullying",
+        "Intellectual property violation",
+        "Ergonomics",
+        "Eye strain"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Accessing someone’s private files without permission is called",
+      "options": [
+        "Data entry",
+        "Unauthorized access",
+        "Legal browsing",
+        "Phishing"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is considered intellectual property?",
+      "options": [
+        "Passwords",
+        "Music compositions",
+        "Backup files",
+        "Computer viruses"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Making unauthorized copies of software is known as",
+      "options": [
+        "Piracy",
+        "Encryption",
+        "Holography",
+        "Simulation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which is an example of online fraud?",
+      "options": [
+        "Keylogging",
+        "Phishing emails",
+        "Digital animation",
+        "Video editing"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which malware attaches itself to other files and spreads?",
+      "options": [
+        "Virus",
+        "Worm",
+        "Spyware",
+        "Adware"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which malware spreads without attaching to files?",
+      "options": [
+        "Virus",
+        "Worm",
+        "Trojan",
+        "Firewall"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which malware secretly records user activity?",
+      "options": [
+        "Adware",
+        "Spyware",
+        "Worm",
+        "Trojan"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which malware displays unwanted advertisements?",
+      "options": [
+        "Spyware",
+        "Adware",
+        "Trojan",
+        "Worm"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is phishing mainly aimed at stealing?",
+      "options": [
+        "Usernames, passwords, financial details",
+        "CDs and DVDs",
+        "Movies",
+        "Computer hardware"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "A group of compromised computers controlled remotely is called",
+      "options": [
+        "Firewall",
+        "Botnet",
+        "Cloud",
+        "Backup"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is an example of ICT use in education and entertainment?",
+      "options": [
+        "Simulation games",
+        "Word processing",
+        "Databases",
+        "Spreadsheets"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which legal concept protects authors’ creative works?",
+      "options": [
+        "Copyright",
+        "Piracy",
+        "Firewall",
+        "Ergonomics"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Making a copy of another person’s work without credit is called",
+      "options": [
+        "Plagiarism",
+        "Simulation",
+        "Piracy",
+        "Encryption"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which ICT application is commonly used for realistic training?",
+      "options": [
+        "Word processing",
+        "Simulation software",
+        "Antivirus software",
+        "Firewalls"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which malware often comes disguised as useful software?",
+      "options": [
+        "Trojan Horse",
+        "Worm",
+        "Spyware",
+        "Botnet"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Which device provides backup power during a power failure?",
+      "options": [
+        "Firewall",
+        "Surge protector",
+        "UPS",
+        "Router"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which device protects equipment from sudden voltage changes?",
+      "options": [
+        "UPS",
+        "Firewall",
+        "Surge protector",
+        "Modem"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which system monitors a place using cameras?",
+      "options": [
+        "Firewall",
+        "CCTV",
+        "Simulation",
+        "Proxy"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the main function of a firewall?",
+      "options": [
+        "Block unauthorized access",
+        "Increase file size",
+        "Protect hardware from dust",
+        "Improve graphics quality"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which method helps protect data if the original is lost?",
+      "options": [
+        "Piracy",
+        "Backup",
+        "Phishing",
+        "Spyware"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is the safest way to create a backup?",
+      "options": [
+        "Store in same device",
+        "Store in multiple devices or cloud",
+        "Delete original files",
+        "Print copies"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which is an example of logical security?",
+      "options": [
+        "Password protection",
+        "CCTV camera",
+        "Fire alarm",
+        "Ergonomic chair"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which is an example of physical security?",
+      "options": [
+        "Firewall",
+        "Backup",
+        "CCTV camera",
+        "Antivirus software"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which health issue is caused by repetitive computer use?",
+      "options": [
+        "RSI",
+        "E-waste",
+        "Digital divide",
+        "Firewall"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which condition affects the wrists and hands from prolonged typing?",
+      "options": [
+        "Carpal Tunnel Syndrome (CTS)",
+        "Eye strain",
+        "Headache",
+        "Stress"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which health issue is related to prolonged computer use and screen glare?",
+      "options": [
+        "Computer Vision Syndrome (CVS)",
+        "Digital divide",
+        "Botnet",
+        "Piracy"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which practice reduces musculoskeletal problems?",
+      "options": [
+        "Proper ergonomics",
+        "Using pirated software",
+        "Deleting files",
+        "Increasing brightness"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Improper use of ICT may cause",
+      "options": [
+        "Stress and headaches",
+        "Fire safety",
+        "UPS backup",
+        "Data security"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which is an environmental issue caused by discarded ICT equipment?",
+      "options": [
+        "E-waste",
+        "Simulation",
+        "Piracy",
+        "Encryption"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which toxic element in e-waste affects human health?",
+      "options": [
+        "Mercury",
+        "Carbon",
+        "Helium",
+        "Oxygen"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which method is environmentally friendly for ICT disposal?",
+      "options": [
+        "Burning devices",
+        "Recycling e-waste",
+        "Dumping into rivers",
+        "Throwing away"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which practice minimizes ICT health problems?",
+      "options": [
+        "Taking breaks and correct posture",
+        "Using pirated games",
+        "Working nonstop",
+        "Viewing bright screen"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is the main advantage of cloud backup?",
+      "options": [
+        "Accessible from anywhere",
+        "Consumes more space",
+        "Needs no internet",
+        "Slows down device"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which ICT safety measure is both physical and logical?",
+      "options": [
+        "Backup",
+        "Firewall",
+        "Strong passwords and CCTV",
+        "Ergonomics"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which factor helps reduce electrical hazards?",
+      "options": [
+        "Surge protector",
+        "Piracy",
+        "Simulation",
+        "Copyright"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "The gap between people with and without access to ICT is called",
+      "options": [
+        "Digital divide",
+        "Cybercrime",
+        "Simulation",
+        "Piracy"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What term is used for reducing the digital divide?",
+      "options": [
+        "Digital bridging",
+        "Digital hacking",
+        "Digital piracy",
+        "Digital fraud"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Using machines instead of humans for tasks is called",
+      "options": [
+        "De-skilling",
+        "Simulation",
+        "Ergonomics",
+        "Encryption"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which organization is often involved in preventing cybercrime?",
+      "options": [
+        "CERT",
+        "CCTV",
+        "UPS",
+        "Firewall"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which is an example of ICT-related employment?",
+      "options": [
+        "Software developer",
+        "Farmer",
+        "Chef",
+        "Driver"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which is an example of misuse of ICT?",
+      "options": [
+        "Hacking",
+        "Data backup",
+        "Encryption",
+        "Ergonomics"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Cyber bullying is an example of",
+      "options": [
+        "ICT misuse",
+        "Physical security",
+        "Cloud backup",
+        "Ergonomics"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Sharing false information online is called",
+      "options": [
+        "Spreading misinformation",
+        "Backup",
+        "Firewall protection",
+        "Simulation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which ICT issue can cause loss of traditional jobs?",
+      "options": [
+        "De-skilling",
+        "E-waste",
+        "Piracy",
+        "Ergonomics"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which safe practice protects from phishing emails?",
+      "options": [
+        "Do not click unknown links",
+        "Always click links",
+        "Share passwords",
+        "Ignore antivirus"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which safe social media practice protects privacy?",
+      "options": [
+        "Use strong privacy settings",
+        "Post all details online",
+        "Accept unknown requests",
+        "Share passwords"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which ICT misuse involves stealing someone's identity?",
+      "options": [
+        "Identity theft",
+        "Simulation",
+        "Backup",
+        "Copyright"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which ICT misuse involves sending bulk unwanted emails?",
+      "options": [
+        "Spam",
+        "Firewall",
+        "Antivirus",
+        "Simulation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does cyber security mainly aim to protect?",
+      "options": [
+        "Data, devices, and networks",
+        "Pirated movies",
+        "Stress at work",
+        "Digital divide"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which ICT career involves protecting computer systems?",
+      "options": [
+        "Cyber security analyst",
+        "Driver",
+        "Chef",
+        "Musician"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which government unit often investigates ICT misuse?",
+      "options": [
+        "Police cybercrime unit",
+        "UPS",
+        "CCTV",
+        "Surge protector"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which social issue arises when only rich countries have ICT facilities?",
+      "options": [
+        "Digital divide",
+        "Piracy",
+        "Backup",
+        "Spam"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Using ICT responsibly and legally is called",
+      "options": [
+        "Ethical ICT use",
+        "Piracy",
+        "Hacking",
+        "De-skilling"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which ICT practice improves safe employment opportunities?",
+      "options": [
+        "Learning ICT skills",
+        "Ignoring ICT",
+        "Piracy",
+        "Plagiarism"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which is a safe use of social media?",
+      "options": [
+        "Avoid oversharing personal details",
+        "Accept all requests",
+        "Disable privacy settings",
+        "Post passwords"
+      ],
+      "answer": 0
+    }
+  ]
+}

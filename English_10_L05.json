@@ -1,0 +1,608 @@
+{
+  "Series 1": [
+    {
+      "question": " What is an Operating System?",
+      "options": [
+        "A hardware device",
+        "System software that manages computer resources",
+        "An application program",
+        "A programming language"
+      ],
+      "answer": 1
+    },
+    {
+      "question": " Which of the following is NOT an operating system?",
+      "options": [
+        "Windows",
+        "Linux",
+        "Android",
+        "MS Word"
+      ],
+      "answer": 3
+    },
+    {
+      "question": " The Operating System is an example of?",
+      "options": [
+        "System Software",
+        "Application Software",
+        "Utility Software",
+        "Firmware"
+      ],
+      "answer": 0
+    },
+    {
+      "question": " Which OS is used in Apple computers?",
+      "options": [
+        "Windows",
+        "Linux",
+        "macOS",
+        "Unix"
+      ],
+      "answer": 2
+    },
+    {
+      "question": " Android OS is mainly used in?",
+      "options": [
+        "Servers",
+        "Mobile devices",
+        "Supercomputers",
+        "Smart TVs only"
+      ],
+      "answer": 1
+    },
+    {
+      "question": " Which of the following is a Linux distribution?",
+      "options": [
+        "Ubuntu",
+        "Windows 10",
+        "MS Excel",
+        "MacOS"
+      ],
+      "answer": 0
+    },
+    {
+      "question": " The process of starting the computer by loading the OS is called?",
+      "options": [
+        "Shutting down",
+        "Formatting",
+        "Booting",
+        "Installing"
+      ],
+      "answer": 2
+    },
+    {
+      "question": " Which type of software provides an interface between user and hardware?",
+      "options": [
+        "Application software",
+        "System software",
+        "Firmware",
+        "Utility software"
+      ],
+      "answer": 1
+    },
+    {
+      "question": " Which OS is open-source?",
+      "options": [
+        "Windows",
+        "Linux",
+        "MacOS",
+        "MS DOS"
+      ],
+      "answer": 1
+    },
+    {
+      "question": " Which of the following is a single-user OS?",
+      "options": [
+        "Windows 10",
+        "Unix",
+        "Linux Server",
+        "Android"
+      ],
+      "answer": 0
+    },
+    {
+      "question": " Which of the following is a multi-user OS?",
+      "options": [
+        "MS DOS",
+        "Unix",
+        "Windows XP Home",
+        "MacOS"
+      ],
+      "answer": 1
+    },
+    {
+      "question": " Which of the following is a real-time OS example?",
+      "options": [
+        "Windows 7",
+        "Linux",
+        "VxWorks",
+        "MacOS"
+      ],
+      "answer": 2
+    },
+    {
+      "question": " The OS that is mainly used in smartphones is?",
+      "options": [
+        "Linux",
+        "Windows",
+        "Android",
+        "DOS"
+      ],
+      "answer": 2
+    },
+    {
+      "question": " MS-DOS is a?",
+      "options": [
+        "Single-user OS",
+        "Multi-user OS",
+        "Network OS",
+        "Real-time OS"
+      ],
+      "answer": 0
+    },
+    {
+      "question": " An OS that allows more than one program to run at the same time is called?",
+      "options": [
+        "Single-tasking",
+        "Multi-tasking",
+        "Batch processing",
+        "Real-time"
+      ],
+      "answer": 1
+    },
+    {
+      "question": " Which OS uses a command-line interface?",
+      "options": [
+        "Windows 10",
+        "Linux (Shell)",
+        "MS DOS",
+        "All of these"
+      ],
+      "answer": 3
+    },
+    {
+      "question": " Which OS was the first to provide a graphical user interface?",
+      "options": [
+        "MS DOS",
+        "Windows 95",
+        "Linux",
+        "Unix"
+      ],
+      "answer": 1
+    },
+    {
+      "question": " The OS that supports networking is called?",
+      "options": [
+        "Real-time OS",
+        "Distributed OS",
+        "Network OS",
+        "Batch OS"
+      ],
+      "answer": 2
+    },
+    {
+      "question": " The OS acts as an intermediary between?",
+      "options": [
+        "User and applications",
+        "User and hardware",
+        "Applications and hardware",
+        "All of these"
+      ],
+      "answer": 3
+    },
+    {
+      "question": " BIOS loads which software during booting?",
+      "options": [
+        "Application programs",
+        "Operating System",
+        "Utility software",
+        "Firmware"
+      ],
+      "answer": 1
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Which of the following is NOT a function of an OS?",
+      "options": [
+        "Process management",
+        "File management",
+        "Memory management",
+        "Spreadsheet calculation"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which OS function allocates CPU to processes?",
+      "options": [
+        "Process management",
+        "File management",
+        "Device management",
+        "Memory management"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which OS function keeps track of storage and directories?",
+      "options": [
+        "Memory management",
+        "File management",
+        "Security management",
+        "Network management"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which OS function ensures authorized access to resources?",
+      "options": [
+        "Process scheduling",
+        "Security management",
+        "File management",
+        "Device drivers"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which part of OS controls input and output devices?",
+      "options": [
+        "Compiler",
+        "Device drivers",
+        "Memory manager",
+        "Kernel"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "The core part of the OS is called?",
+      "options": [
+        "Shell",
+        "Kernel",
+        "Driver",
+        "Loader"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "In multiprogramming, the OS?",
+      "options": [
+        "Executes one process only",
+        "Switches between processes",
+        "Blocks all processes",
+        "Runs processes without scheduling"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Virtual memory is managed by?",
+      "options": [
+        "Compiler",
+        "Assembler",
+        "Operating System",
+        "Application software"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which OS service prevents data loss during power failure?",
+      "options": [
+        "Backup",
+        "File management",
+        "Security",
+        "Scheduling"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which OS function keeps CPU busy by scheduling tasks?",
+      "options": [
+        "File management",
+        "Memory management",
+        "Process management",
+        "Security"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which memory is managed directly by the OS?",
+      "options": [
+        "Cache",
+        "RAM",
+        "ROM",
+        "Flash"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "OS maintains which table to track open files?",
+      "options": [
+        "File Allocation Table",
+        "Page Table",
+        "Directory Tree",
+        "Inode table"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "In which function of OS is spooling used?",
+      "options": [
+        "File management",
+        "Process management",
+        "Input/Output management",
+        "Security"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which of the following manages memory allocation?",
+      "options": [
+        "Scheduler",
+        "File manager",
+        "Memory manager",
+        "Device driver"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which OS feature provides user accounts and passwords?",
+      "options": [
+        "Memory management",
+        "File management",
+        "Security management",
+        "Process management"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which OS function provides inter-process communication?",
+      "options": [
+        "File management",
+        "Security",
+        "Process management",
+        "Networking"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which OS service handles printing jobs?",
+      "options": [
+        "Spooling",
+        "Formatting",
+        "Scheduling",
+        "Compiling"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "The OS function that ensures fair CPU distribution is?",
+      "options": [
+        "Device management",
+        "Memory management",
+        "Process scheduling",
+        "Security"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which OS function provides encryption?",
+      "options": [
+        "Memory management",
+        "Security management",
+        "Process scheduling",
+        "File system"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which OS part manages hardware resources?",
+      "options": [
+        "Shell",
+        "Kernel",
+        "File system",
+        "Compiler"
+      ],
+      "answer": 1
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "Which type of OS interface uses commands?",
+      "options": [
+        "Graphical User Interface",
+        "Command Line Interface",
+        "Touch Interface",
+        "Voice Interface"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Windows OS provides which type of interface?",
+      "options": [
+        "Command Line Interface",
+        "Graphical User Interface",
+        "Text-based Interface",
+        "None"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is NOT a utility program?",
+      "options": [
+        "Antivirus",
+        "Disk defragmenter",
+        "Compiler",
+        "Backup tool"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which utility program is used to recover lost files?",
+      "options": [
+        "Backup",
+        "Antivirus",
+        "Recycle Bin",
+        "Formatting"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which utility protects the system against malware?",
+      "options": [
+        "Disk cleanup",
+        "Firewall",
+        "Antivirus",
+        "Backup"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Disk partitioning is managed by?",
+      "options": [
+        "Utility software",
+        "Compiler",
+        "Firmware",
+        "Application software"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "File extension .exe indicates?",
+      "options": [
+        "Image file",
+        "Executable file",
+        "Text file",
+        "System backup"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "File extension .txt indicates?",
+      "options": [
+        "Text file",
+        "Image file",
+        "Executable file",
+        "Backup file"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "File extension .docx is used for?",
+      "options": [
+        "Spreadsheet",
+        "Presentation",
+        "Word document",
+        "Database"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "File extension .jpg represents?",
+      "options": [
+        "Audio file",
+        "Video file",
+        "Image file",
+        "Document file"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "File extension .mp3 represents?",
+      "options": [
+        "Audio file",
+        "Video file",
+        "Image file",
+        "Executable file"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "File extension .mp4 is used for?",
+      "options": [
+        "Image file",
+        "Executable file",
+        "Audio file",
+        "Video file"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "A utility that organizes scattered files on disk is?",
+      "options": [
+        "Disk cleanup",
+        "Disk defragmenter",
+        "Recycle bin",
+        "Backup tool"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "A utility that removes unnecessary temporary files is?",
+      "options": [
+        "Antivirus",
+        "Disk cleanup",
+        "Disk partitioning",
+        "Backup"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Formatting a disk means?",
+      "options": [
+        "Deleting all files permanently",
+        "Checking disk errors",
+        "Making disk ready for use",
+        "Partitioning the disk"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "FAT32 and NTFS are types of?",
+      "options": [
+        "Operating Systems",
+        "File Systems",
+        "Utility programs",
+        "Application software"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which file system is commonly used in Windows?",
+      "options": [
+        "FAT",
+        "FAT32",
+        "NTFS",
+        "EXT4"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which file system is commonly used in Linux?",
+      "options": [
+        "FAT32",
+        "EXT4",
+        "NTFS",
+        "exFAT"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which utility schedules programs to run at specific times?",
+      "options": [
+        "Task Scheduler",
+        "Disk Cleanup",
+        "Defragmenter",
+        "File Explorer"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which software provides a GUI shell in Windows?",
+      "options": [
+        "Explorer.exe",
+        "Cmd.exe",
+        "Kernel32.dll",
+        "System32"
+      ],
+      "answer": 0
+    }
+  ]
+}

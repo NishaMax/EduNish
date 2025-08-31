@@ -1,0 +1,708 @@
+{
+  "Series 1": [
+    {
+      "question": "What is the smallest unit of data in a computer?",
+      "options": [
+        "Bit",
+        "Byte",
+        "Word",
+        "Nibble"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "How many bits are in one byte?",
+      "options": [
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which number system has base 2?",
+      "options": [
+        "Decimal",
+        "Binary",
+        "Octal",
+        "Hexadecimal"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which number system has base 16?",
+      "options": [
+        "Octal",
+        "Hexadecimal",
+        "Decimal",
+        "Binary"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which number system uses digits 0 to 7?",
+      "options": [
+        "Binary",
+        "Decimal",
+        "Octal",
+        "Hexadecimal"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which number system do humans commonly use in daily life?",
+      "options": [
+        "Decimal",
+        "Binary",
+        "Octal",
+        "Hexadecimal"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "How many kilobytes make 1 megabyte?",
+      "options": [
+        "512",
+        "1024",
+        "2048",
+        "1000"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How many bytes are in 1 kilobyte?",
+      "options": [
+        "100",
+        "512",
+        "1024",
+        "2048"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which of the following is equal to 1 gigabyte?",
+      "options": [
+        "1024 MB",
+        "100 MB",
+        "512 MB",
+        "1000 MB"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is the base of the decimal system?",
+      "options": [
+        "2",
+        "8",
+        "10",
+        "16"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "How many symbols are used in hexadecimal system?",
+      "options": [
+        "2",
+        "8",
+        "10",
+        "16"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which of the following is a positional number system?",
+      "options": [
+        "Roman Numerals",
+        "Binary",
+        "Both A and B",
+        "None"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "In computer storage, 1 Terabyte is equal to how many gigabytes?",
+      "options": [
+        "512",
+        "1000",
+        "1024",
+        "2048"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is the value of a nibble?",
+      "options": [
+        "2 bits",
+        "4 bits",
+        "8 bits",
+        "16 bits"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which number system is most suitable for computer internal operations?",
+      "options": [
+        "Decimal",
+        "Binary",
+        "Hexadecimal",
+        "Octal"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is 2^10 equal to?",
+      "options": [
+        "100",
+        "512",
+        "1024",
+        "2048"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which base uses digits 0-9 and letters A-F?",
+      "options": [
+        "Decimal",
+        "Hexadecimal",
+        "Octal",
+        "Binary"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the abbreviation of KB?",
+      "options": [
+        "Kilo Byte",
+        "Key Bit",
+        "Kernel Base",
+        "Kilo Band"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which of the following is NOT a storage unit?",
+      "options": [
+        "Byte",
+        "Megabit",
+        "Gigabit",
+        "Cache"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which number system is also known as base-8?",
+      "options": [
+        "Decimal",
+        "Binary",
+        "Octal",
+        "Hexadecimal"
+      ],
+      "answer": 2
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Convert 1010 (binary) into decimal.",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "12"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Convert 1101 (binary) into decimal.",
+      "options": [
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert 11111111 (binary) into decimal.",
+      "options": [
+        "254",
+        "255",
+        "256",
+        "257"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert 1001 (binary) into decimal.",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Convert 25 (decimal) into binary.",
+      "options": [
+        "11001",
+        "10011",
+        "11101",
+        "10101"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert 64 (decimal) into binary.",
+      "options": [
+        "1000000",
+        "111111",
+        "110000",
+        "101010"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert 255 (decimal) into binary.",
+      "options": [
+        "1111111",
+        "11111111",
+        "10000000",
+        "11110000"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert 45 (decimal) into binary.",
+      "options": [
+        "101001",
+        "110101",
+        "101101",
+        "101110"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert 77 (octal) into decimal.",
+      "options": [
+        "61",
+        "63",
+        "65",
+        "63"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert 57 (octal) into decimal.",
+      "options": [
+        "47",
+        "49",
+        "51",
+        "55"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert 101 (octal) into decimal.",
+      "options": [
+        "65",
+        "67",
+        "69",
+        "71"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert 255 (decimal) into hexadecimal.",
+      "options": [
+        "FE",
+        "FF",
+        "AA",
+        "DD"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert 64 (decimal) into hexadecimal.",
+      "options": [
+        "3F",
+        "40",
+        "41",
+        "42"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert 100 (decimal) into hexadecimal.",
+      "options": [
+        "63",
+        "64",
+        "65",
+        "66"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert 1111 (binary) into hexadecimal.",
+      "options": [
+        "E",
+        "F",
+        "G",
+        "D"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert 1010 (binary) into hexadecimal.",
+      "options": [
+        "9",
+        "A",
+        "B",
+        "C"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert A (hexadecimal) into decimal.",
+      "options": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert F (hexadecimal) into decimal.",
+      "options": [
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert 1A (hexadecimal) into decimal.",
+      "options": [
+        "24",
+        "25",
+        "26",
+        "27"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Convert 2F (hexadecimal) into decimal.",
+      "options": [
+        "45",
+        "46",
+        "47",
+        "48"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Convert 7B (hexadecimal) into decimal.",
+      "options": [
+        "122",
+        "123",
+        "124",
+        "125"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert 2C (hexadecimal) into decimal.",
+      "options": [
+        "43",
+        "44",
+        "45",
+        "46"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert 3E (hexadecimal) into decimal.",
+      "options": [
+        "61",
+        "62",
+        "63",
+        "64"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Convert 1110 (binary) into octal.",
+      "options": [
+        "16",
+        "14",
+        "15",
+        "17"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert 110011 (binary) into octal.",
+      "options": [
+        "63",
+        "61",
+        "67",
+        "65"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert 100110 (binary) into octal.",
+      "options": [
+        "44",
+        "46",
+        "48",
+        "42"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Convert 25 (decimal) into octal.",
+      "options": [
+        "30",
+        "31",
+        "32",
+        "33"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert 64 (decimal) into octal.",
+      "options": [
+        "100",
+        "101",
+        "102",
+        "103"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert 255 (decimal) into octal.",
+      "options": [
+        "377",
+        "370",
+        "371",
+        "372"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Convert 128 (decimal) into binary.",
+      "options": [
+        "1000000",
+        "10000000",
+        "1111111",
+        "1010101"
+      ],
+      "answer": 1
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "What does BCD stand for?",
+      "options": [
+        "Binary Coded Decimal",
+        "Bit Code Data",
+        "Basic Computer Decimal",
+        "Binary Character Data"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which code is commonly used to represent characters?",
+      "options": [
+        "ASCII",
+        "BCD",
+        "EBCDIC",
+        "Gray"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which coding scheme is mainly used in IBM mainframes?",
+      "options": [
+        "ASCII",
+        "EBCDIC",
+        "Unicode",
+        "BCD"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Unicode is mainly used to represent?",
+      "options": [
+        "Binary digits",
+        "Characters from many languages",
+        "Numbers only",
+        "Decimal fractions"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How many bits are used in standard ASCII?",
+      "options": [
+        "7",
+        "8",
+        "16",
+        "32"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "How many bits are used in extended ASCII?",
+      "options": [
+        "7",
+        "8",
+        "16",
+        "32"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which code minimizes error by changing only one bit between consecutive values?",
+      "options": [
+        "ASCII",
+        "BCD",
+        "Gray",
+        "Unicode"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "How many bits make one nibble?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How many bits make one word (commonly)?",
+      "options": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which digit is the Most Significant Digit (MSD) in 4567?",
+      "options": [
+        "7",
+        "6",
+        "5",
+        "4"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which digit is the Least Significant Digit (LSD) in 4567?",
+      "options": [
+        "7",
+        "6",
+        "5",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which bit is the Most Significant Bit (MSB) in 1010?",
+      "options": [
+        "1 (leftmost)",
+        "0 (second)",
+        "1 (third)",
+        "0 (rightmost)"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which bit is the Least Significant Bit (LSB) in 1010?",
+      "options": [
+        "1 (leftmost)",
+        "0 (second)",
+        "1 (third)",
+        "0 (rightmost)"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which coding scheme allows for more than 65,000 characters?",
+      "options": [
+        "ASCII",
+        "BCD",
+        "EBCDIC",
+        "Unicode"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "How many characters can be represented using 7-bit ASCII?",
+      "options": [
+        "64",
+        "128",
+        "256",
+        "512"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is a limitation of ASCII?",
+      "options": [
+        "Limited characters",
+        "Too many symbols",
+        "Supports all languages",
+        "Supports only graphics"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is the binary value of ASCII 'A'?",
+      "options": [
+        "01000001",
+        "01000010",
+        "01000011",
+        "01000100"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is the binary value of ASCII 'a'?",
+      "options": [
+        "01100001",
+        "01100010",
+        "01100011",
+        "01100100"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which of the following is true about Unicode?",
+      "options": [
+        "Limited to English",
+        "Fixed to 8 bits",
+        "Supports multiple languages",
+        "Same as ASCII"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which part of a binary number determines its highest place value?",
+      "options": [
+        "MSB",
+        "LSB",
+        "MSD",
+        "LSD"
+      ],
+      "answer": 0
+    }
+  ]
+}

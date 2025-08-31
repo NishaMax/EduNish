@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration - EduNish</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white shadow-lg rounded-2xl p-8 max-w-md w-full">
+    <h1 class="text-2xl font-bold text-center mb-6 text-blue-700">Register</h1>
+    <form id="registrationForm" class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold">Full Name</label>
+        <input type="text" id="fullName" class="w-full px-4 py-2 border rounded-lg" required />
+      </div>
+      <div>
+        <label class="block text-sm font-semibold">Email</label>
+        <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg" required />
+      </div>
+      <div>
+        <label class="block text-sm font-semibold">Grade</label>
+        <input type="text" id="grade" class="w-full px-4 py-2 border rounded-lg" required />
+      </div>
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Register</button>
+    </form>
+    <p id="msg" class="mt-4 text-center"></p>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
+      authDomain: "edunish-211d0.firebaseapp.com",
+      projectId: "edunish-211d0",
+      storageBucket: "edunish-211d0.appspot.com",
+      messagingSenderId: "1002400429038",
+      appId: "1:1002400429038:web:12ee9a586de10e518694ff",
+      measurementId: "G-7ZSDMMKFQ0"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    function generateStudentId() {
+      return "STU" + Math.floor(100000 + Math.random() * 900000);
+    }
+
+    document.getElementById("registrationForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const fullName = document.getElementById("fullName").value.trim();
+      const email = document.getElementById("email").value.trim().toLowerCase();
+      const grade = document.getElementById("grade").value.trim();
+      const msg = document.getElementById("msg");
+
+      if (!fullName || !email || !grade) {
+        msg.textContent = "⚠️ Please fill in all fields.";
+        msg.className = "text-red-600 text-center";
+        return;
+      }
+
+      try {
+        const studentId = generateStudentId();
+        const record = {
+          studentId,
+          fullName,
+          email,
+          grade,
+          avatarUrl: ""
+        };
+
+        // Save to Firestore
+        await setDoc(doc(db, "students", studentId), record);
+        await setDoc(doc(db, "studentsByEmail", email), record);
+
+        // ✅ Save to localStorage for profile page
+        localStorage.setItem("edunishStudentData", JSON.stringify(record));
+
+        // ✅ Save email→student mapping
+        const map = JSON.parse(localStorage.getItem("edunishStudentsByEmail") || "{}");
+        map[email] = record;
+        localStorage.setItem("edunishStudentsByEmail", JSON.stringify(map));
+
+        msg.className = "text-green-600 font-semibold text-center";
+        msg.textContent = `✅ Student ID created: ${studentId}`;
+
+        // Redirect after success
+        setTimeout(() => (window.location.href = "quiz.html"), 1500);
+
+      } catch (err) {
+        console.error("❌ Registration error:", err);
+        msg.className = "text-red-600 text-center";
+        msg.textContent = "❌ Failed to register. Please try again.";
+      }
+    });
+  </script>
+</body>
+</html>

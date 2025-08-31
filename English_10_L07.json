@@ -1,0 +1,608 @@
+{
+  "Series 1": [
+    {
+      "question": "Which application type is an electronic spreadsheet?",
+      "options": [
+        "Word processor",
+        "Spreadsheet",
+        "Presentation",
+        "Database"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is an example of a spreadsheet software?",
+      "options": [
+        "MS Word",
+        "MS Excel",
+        "MS PowerPoint",
+        "Adobe Photoshop"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "A spreadsheet is mainly used for?",
+      "options": [
+        "Image editing",
+        "Numerical calculations",
+        "Graphic design",
+        "Web development"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the intersection of a row and column called?",
+      "options": [
+        "Table",
+        "Range",
+        "Cell",
+        "Address"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which symbol is used to represent a column in a cell address?",
+      "options": [
+        "Letter",
+        "Number",
+        "Symbol",
+        "Word"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does the address 'B5' mean?",
+      "options": [
+        "Column B, Row 5",
+        "Row B, Column 5",
+        "Row 2, Column 3",
+        "Row 5, Column B"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is a group of cells called?",
+      "options": [
+        "Cluster",
+        "Range",
+        "Block",
+        "Field"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is NOT a spreadsheet use?",
+      "options": [
+        "Budgeting",
+        "Payroll",
+        "Image Editing",
+        "Data Analysis"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which bar shows the content of the active cell?",
+      "options": [
+        "Status Bar",
+        "Title Bar",
+        "Formula Bar",
+        "Menu Bar"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is entered in a cell to identify it as a label?",
+      "options": [
+        "Text",
+        "Number",
+        "Symbol",
+        "Formula"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which of the following is entered in a cell to identify it as a value?",
+      "options": [
+        "Text",
+        "Number",
+        "Image",
+        "Label"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which shortcut creates a new workbook in Excel?",
+      "options": [
+        "Ctrl + N",
+        "Ctrl + O",
+        "Ctrl + W",
+        "Ctrl + S"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which key moves the active cell one step to the right?",
+      "options": [
+        "Enter",
+        "Tab",
+        "Shift",
+        "Ctrl"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which shortcut saves a workbook?",
+      "options": [
+        "Ctrl + P",
+        "Ctrl + N",
+        "Ctrl + S",
+        "Ctrl + O"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which feature allows filling a series of numbers or days automatically?",
+      "options": [
+        "AutoFormat",
+        "AutoFill",
+        "AutoCorrect",
+        "AutoReplace"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which type of data is used to perform arithmetic operations in Excel?",
+      "options": [
+        "Labels",
+        "Values",
+        "Charts",
+        "Ranges"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which sign is used before a formula in Excel?",
+      "options": [
+        "@",
+        "=",
+        "#",
+        "$"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which function key is used to edit the active cell?",
+      "options": [
+        "F1",
+        "F2",
+        "F5",
+        "F7"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the maximum column label in modern Excel versions?",
+      "options": [
+        "XFD",
+        "ZZZ",
+        "AAA",
+        "ZZ"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which menu is used to insert charts in Excel?",
+      "options": [
+        "Data",
+        "Insert",
+        "Review",
+        "View"
+      ],
+      "answer": 1
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "Which operator is used for multiplication in Excel formulas?",
+      "options": [
+        "x",
+        "*",
+        "/",
+        "^"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which operator is used for division in Excel formulas?",
+      "options": [
+        "*",
+        "/",
+        "-",
+        "+"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which operator is used for exponentiation in Excel?",
+      "options": [
+        "*",
+        "/",
+        "^",
+        "%"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is the correct formula to add values in A1 and B1?",
+      "options": [
+        "=A1+B1",
+        "=SUM(A1+B1)",
+        "=A1*B1",
+        "A1+B1"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is the correct formula to subtract B1 from A1?",
+      "options": [
+        "=B1-A1",
+        "=A1-B1",
+        "A1-B1",
+        "=SUB(A1,B1)"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which function adds a set of numbers?",
+      "options": [
+        "AVERAGE()",
+        "MAX()",
+        "SUM()",
+        "COUNT()"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which function finds the largest value in a range?",
+      "options": [
+        "SUM()",
+        "AVERAGE()",
+        "MIN()",
+        "MAX()"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which function finds the smallest value in a range?",
+      "options": [
+        "SUM()",
+        "MAX()",
+        "MIN()",
+        "COUNT()"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which function returns the average of numbers?",
+      "options": [
+        "MAX()",
+        "MIN()",
+        "AVERAGE()",
+        "SUM()"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which function counts numeric entries in a range?",
+      "options": [
+        "COUNT()",
+        "SUM()",
+        "MIN()",
+        "MAX()"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is the correct formula for adding A1 to A10?",
+      "options": [
+        "=SUM(A1:A10)",
+        "=ADD(A1:A10)",
+        "=A1+A10",
+        "=TOTAL(A1:A10)"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which symbol is used for absolute reference?",
+      "options": [
+        "@",
+        "#",
+        "$",
+        "&"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which of the following is a relative reference?",
+      "options": [
+        "A1",
+        "$A$1",
+        "A$1",
+        "$A1"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which of the following is an absolute reference?",
+      "options": [
+        "A1",
+        "$A$1",
+        "A$1",
+        "$A1"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which reference type keeps column fixed but row changes?",
+      "options": [
+        "$A$1",
+        "A$1",
+        "$A1",
+        "A1"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which reference type keeps row fixed but column changes?",
+      "options": [
+        "A1",
+        "$A$1",
+        "A$1",
+        "$A1"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is the result of =2+3*4?",
+      "options": [
+        "20",
+        "14",
+        "24",
+        "18"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which operator has the highest precedence?",
+      "options": [
+        "+",
+        "-",
+        "*",
+        "^"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which operator has the lowest precedence?",
+      "options": [
+        "+",
+        "-",
+        "*",
+        "^"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which function is used to calculate percentage?",
+      "options": [
+        "PERCENT()",
+        "SUM()",
+        "MIN()",
+        "No direct function"
+      ],
+      "answer": 3
+    }
+  ],
+  "Series 3": [
+    {
+      "question": "Which symbol is used in Excel to make a reference absolute?",
+      "options": [
+        "@",
+        "#",
+        "$",
+        "&"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does $A$1 represent?",
+      "options": [
+        "Relative reference",
+        "Absolute reference",
+        "Mixed reference",
+        "Row reference"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does A$1 represent?",
+      "options": [
+        "Row fixed",
+        "Column fixed",
+        "Relative",
+        "Absolute"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does $A1 represent?",
+      "options": [
+        "Row fixed",
+        "Column fixed",
+        "Relative",
+        "Absolute"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which chart type is best for showing parts of a whole?",
+      "options": [
+        "Pie chart",
+        "Bar chart",
+        "Line chart",
+        "Column chart"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which chart type is best for comparing categories?",
+      "options": [
+        "Pie chart",
+        "Bar chart",
+        "Scatter plot",
+        "Column chart"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which chart type shows trends over time?",
+      "options": [
+        "Pie chart",
+        "Line chart",
+        "Bar chart",
+        "Column chart"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which chart type is best for frequency distribution?",
+      "options": [
+        "Histogram",
+        "Pie chart",
+        "Bar chart",
+        "Line chart"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which tab is used to change chart styles?",
+      "options": [
+        "Insert",
+        "Format",
+        "Design",
+        "Data"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which feature helps in changing number format to currency?",
+      "options": [
+        "Cell Style",
+        "Format Painter",
+        "Number Format",
+        "Conditional Formatting"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which format shows a value with % sign?",
+      "options": [
+        "Currency",
+        "Percentage",
+        "Date",
+        "Fraction"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature highlights cells based on conditions?",
+      "options": [
+        "Data Validation",
+        "Conditional Formatting",
+        "Format Painter",
+        "AutoFormat"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which option aligns text to the right in a cell?",
+      "options": [
+        "Left",
+        "Center",
+        "Right",
+        "Justify"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which option merges two or more cells?",
+      "options": [
+        "Merge & Center",
+        "Combine",
+        "Join",
+        "Align"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which tool repeats formatting to another cell?",
+      "options": [
+        "Format Painter",
+        "AutoFormat",
+        "Conditional Formatting",
+        "Cell Style"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which alignment option is default for numbers?",
+      "options": [
+        "Left",
+        "Center",
+        "Right",
+        "Justify"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which alignment option is default for text?",
+      "options": [
+        "Left",
+        "Center",
+        "Right",
+        "Justify"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which feature protects cell contents?",
+      "options": [
+        "Cell Locking",
+        "Protect Sheet",
+        "Format Painter",
+        "Validation"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which feature ensures only valid data is entered?",
+      "options": [
+        "Conditional Formatting",
+        "Data Validation",
+        "Cell Locking",
+        "Protection"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which option creates a bar diagram in Excel?",
+      "options": [
+        "Insert > Bar Chart",
+        "Data > Chart",
+        "Format > Bar",
+        "Review > Chart"
+      ],
+      "answer": 0
+    }
+  ]
+}

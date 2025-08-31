@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EduNish — Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="circuit.js" defer></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- ✅ Navbar with correct IDs -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+          <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
+        </div>
+        <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          EduNish
+        </span>
+      </div>
+      <!-- Desktop -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-gray-700 hover:text-blue-600 nav-link">Home</a>
+        <a href="downloads.html" class="text-gray-700 hover:text-blue-600">Resources</a>
+        <!-- <a href="quiz.html" class="text-gray-700 hover:text-blue-600">Quizzes</a> -->
+        <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
+        <button id="loginBtnDesktop" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login</button>
+        <button id="logoutBtnDesktop" class="hidden bg-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg">Logout</button>
+        <a id="profileBtnDesktop" href="profile.html"
+          class="hidden px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+          My Profile
+        </a>
+
+      </div>
+      <!-- Mobile -->
+      <button id="mobile-menu-btn" class="md:hidden p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden mobile-menu-transition transform scale-y-0 opacity-0">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="index.html" class="block px-3 py-2 text-gray-700">Home</a>
+        <a href="downloads.html" class="block px-3 py-2 text-gray-700">Resources</a>
+        <!-- <a href="quiz.html" class="block px-3 py-2 text-gray-700">Quizzes</a> -->
+        <a href="community.html" class="block px-3 py-2 text-gray-700">Community</a>
+        <a id="loginBtnMobile" class="block px-3 py-2 text-gray-800 hover:bg-gray-200">Login</a>
+        <a id="logoutBtnMobile" class="hidden block px-3 py-2 text-gray-800 hover:bg-gray-200">Logout</a>
+        <a id="profileBtnMobile" href="profile.html"
+          class="hidden block px-4 py-2 text-blue-600 hover:underline">
+          My Profile
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <div class="relative">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        Learn ICT 
+                        <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                            Easily & Creatively
+                        </span>
+                    </h1>
+                    <div class="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-bounce hidden lg:block">
+                        <i data-lucide="star" class="w-5 h-5 text-yellow-600 mt-1.5 ml-1.5"></i>
+                    </div>
+                </div>
+                
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Master O/L ICT for Grade 10 & 11 with comprehensive notes, past papers, and interactive quizzes
+                </p>
+
+                <!-- Creative Feature Section -->
+                <div class="max-w-2xl mx-auto grid sm:grid-cols-3 gap-4 mb-12">
+                <div class="bg-white p-4 rounded-xl shadow text-center">
+                    <i data-lucide="book-open" class="w-6 h-6 mx-auto text-blue-600 mb-2"></i>
+                    <p class="font-semibold">100+ Quizzes</p>
+                    <p class="text-xs text-gray-500">For Grade 10 & 11</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow text-center">
+                    <i data-lucide="award" class="w-6 h-6 mx-auto text-yellow-500 mb-2"></i>
+                    <p class="font-semibold">Track Progress</p>
+                    <p class="text-xs text-gray-500">See your growth</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow text-center">
+                    <i data-lucide="users" class="w-6 h-6 mx-auto text-green-600 mb-2"></i>
+                    <p class="font-semibold">Join Community</p>
+                    <p class="text-xs text-gray-500">Learn together</p>
+                </div>
+                </div>
+
+
+
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                        <div class="text-gray-600">Study Materials</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-600 mb-2">50+</div>
+                        <div class="text-gray-600">Past Papers</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-pink-600 mb-2">1000+</div>
+                        <div class="text-gray-600">Quiz Questions</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">95%</div>
+                        <div class="text-gray-600">Success Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Header 
+  <header class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <h1 class="text-xl font-bold">EduNish</h1>
+      <div class="space-x-3">
+        <button id="loginBtnDesktop" class="px-4 py-2 rounded-lg bg-blue-600 text-white">Login</button>
+        <button id="logoutBtnDesktop" class="px-4 py-2 rounded-lg bg-gray-200 hidden">Logout</button>
+      </div>
+    </div>
+  </header>-->
+  <!-- Replace your circuit section with this Digital Waterfall section -->
+<div class="digital-waterfall-container">
+  <section class="waterfall-title">
+    <h1>Digital Knowledge Waterfall</h1>
+    <p>Catch the flowing knowledge bubbles as they cascade down!</p>
+  </section>
+
+  <!-- Grade 10 Waterfall -->
+  <section class="waterfall-section">
+    <h2 class="grade-label grade10-flow">Grade 10 Knowledge Stream</h2>
+    <div class="waterfall-canvas-container">
+      <canvas id="waterfall10" class="waterfall-canvas"></canvas>
+      <div class="waterfall-overlay">
+        <div class="stream-info grade10-info">
+          <div class="topic-display" id="topic10">Hover over bubbles to explore topics</div>
+          <div class="progress-indicator">
+            <div class="progress-bar grade10-progress" style="width: 65%;"></div>
+            <span class="progress-text">65% Mastered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grade 11 Waterfall -->
+  <section class="waterfall-section">
+    <h2 class="grade-label grade11-flow">Grade 11 Advanced Stream</h2>
+    <div class="waterfall-canvas-container">
+      <canvas id="waterfall11" class="waterfall-canvas"></canvas>
+      <div class="waterfall-overlay">
+        <div class="stream-info grade11-info">
+          <div class="topic-display" id="topic11">Dive deeper into advanced concepts</div>
+          <div class="progress-indicator">
+            <div class="progress-bar grade11-progress" style="width: 40%;"></div>
+            <span class="progress-text">40% Mastered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievement Pool -->
+  <section class="achievement-pool">
+    <h3>Achievement Pool</h3>
+    <div class="pool-container">
+      <div class="achievement-bubble completed">
+        <i data-lucide="cpu" class="achievement-icon"></i>
+        <span>Hardware Expert</span>
+      </div>
+      <div class="achievement-bubble completed">
+        <i data-lucide="code" class="achievement-icon"></i>
+        <span>Logic Master</span>
+      </div>
+      <div class="achievement-bubble locked">
+        <i data-lucide="database" class="achievement-icon"></i>
+        <span>Data Wizard</span>
+      </div>
+      <div class="achievement-bubble locked">
+        <i data-lucide="shield" class="achievement-icon"></i>
+        <span>Security Guardian</span>
+      </div>
+    </div>
+  </section>
+</div>
+  <!-- Grade-specific Features -->
+    <section id="resources" class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 mb-4">
+                    Grade 10 ICT
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Build your foundation in Information & Communication Technology with comprehensive resources
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- PDF Notes -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-blue-200 hover:shadow-xl transition-all duration-300">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="file-text" class="w-8 h-8 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-blue-700 mb-4">PDF Notes</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Comprehensive study materials covering all Grade 10 ICT syllabus topics
+                        </p>
+                        <a href="downloads.html#g10-tute" 
+                        class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center space-x-2 mx-auto">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                            <span>Download Notes</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Past Papers -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-green-200 hover:shadow-xl transition-all duration-300">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="clipboard-list" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-green-700 mb-4">Past Papers</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Practice with previous O/L ICT examination papers
+                        </p>
+                        <a href="downloads.html#quiz-pp" 
+                        class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center space-x-2 mx-auto">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                            <span>Download Papers</span>
+                        </a>
+
+                    </div>
+                </div>
+                <!-- Interactive Quizzes -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-orange-200 hover:shadow-xl transition-all duration-300">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="help-circle" class="w-8 h-8 text-orange-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-orange-700 mb-4">Interactive Quizzes</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Test your knowledge with fun, interactive quizzes and instant feedback
+                        </p>
+                        <button id="viewQuizBtn" 
+                          onclick="openQuiz()" 
+                          class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">
+                          View Quiz
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grade 11 Section -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 mb-4">
+                    Grade 11 ICT
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Advance your skills in Information & Communication Technology with comprehensive resources
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- PDF Notes -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-blue-200 hover:shadow-xl transition-all duration-300">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="file-text" class="w-8 h-8 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-blue-700 mb-4">PDF Notes</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            In-depth study materials for Grade 11 ICT covering advanced topics
+                        </p>
+                       <a href="downloads.html#g11-tute" 
+                        class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center space-x-2 mx-auto">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                            <span>Download Notes</span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Past Papers -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-green-200 hover:shadow-xl transition-all duration-300">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="clipboard-list" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-green-700 mb-4">Past Papers Answers</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Check Answers with previous O/L ICT examination marking schemes
+                        </p>
+                        <a href="downloads.html#answers-pp" 
+                        class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center space-x-2 mx-auto">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                            <span>Download Marking Schemes</span>
+                        </a>
+
+                    </div>
+                </div>
+                <!-- Interactive Quizzes -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-orange-200 hover:shadow-xl transition-all duration-300">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="help-circle" class="w-8 h-8 text-orange-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-orange-700 mb-4">Interactive Quizzes</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Test your knowledge with fun, interactive quizzes and instant feedback
+                        </p>
+                        <button id="viewQuizBtn" 
+                          onclick="openQuiz()" 
+                          class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">
+                          View Quiz
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <!-- Fun Learning Quizzes Section - Updated Design -->
+    <section id="quizzes" class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-500 via-blue-600 to-green-400 relative overflow-hidden">
+        <!-- Background geometric shapes -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-white rounded-3xl transform rotate-12"></div>
+            <div class="absolute top-40 right-20 w-24 h-24 bg-white rounded-2xl transform -rotate-6"></div>
+            <div class="absolute bottom-20 left-1/4 w-28 h-28 bg-white rounded-full"></div>
+            <div class="absolute bottom-40 right-1/3 w-20 h-20 bg-white rounded-xl transform rotate-45"></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="flex items-center justify-center mb-4">
+                    <i data-lucide="gamepad-2" class="w-12 h-12 text-white mr-4"></i>
+                    <h2 class="text-4xl sm:text-5xl font-bold text-white">
+                        Fun Learning Quizzes
+                    </h2>
+                </div>
+                <p class="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                    Make learning enjoyable with our interactive quiz system designed specifically for O/L ICT students
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Instant Results -->
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                    <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i data-lucide="trophy" class="w-8 h-8 text-yellow-800"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Instant Results</h3>
+                    <p class="text-blue-100 text-center leading-relaxed">
+                        Get immediate feedback and explanations
+                    </p>
+                </div>
+
+                <!-- Timed Challenges -->
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                    <div class="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i data-lucide="timer" class="w-8 h-8 text-green-800"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Timed Challenges</h3>
+                    <p class="text-blue-100 text-center leading-relaxed">
+                        Practice under exam conditions
+                    </p>
+                </div>
+
+                <!-- Progress Tracking -->
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                    <div class="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-purple-800"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Progress Tracking</h3>
+                    <p class="text-blue-100 text-center leading-relaxed">
+                        Monitor your improvement over time
+                    </p>
+                </div>
+            </div>
+
+            <!-- Register Button -->
+            <div class="text-center">
+                <button id="viewQuizBtn" 
+                  onclick="openQuiz()" 
+                  class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">
+                  View Quiz
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Calendar + Number Converter Section ====== -->
+<section class="py-16 bg-gradient-to-r from-blue-50 to-purple-100">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+
+    <!-- 📅 Calendar -->
+    <div class="bg-white rounded-2xl shadow-xl p-6">
+      <div class="flex justify-between items-center mb-4">
+        <button id="prevMonth" class="px-3 py-1 bg-gray-200 rounded-lg">&lt;</button>
+        <h2 id="calendarTitle" class="text-xl font-bold text-gray-800"></h2>
+        <button id="nextMonth" class="px-3 py-1 bg-gray-200 rounded-lg">&gt;</button>
+      </div>
+      <div class="grid grid-cols-7 text-center font-semibold text-gray-600 mb-2">
+        <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
+      </div>
+      <div id="calendarDays" class="grid grid-cols-7 text-center gap-1"></div>
+      <div id="noteSection" class="mt-6 hidden">
+        <h3 class="font-bold text-gray-800 mb-2">Note for <span id="noteDate"></span></h3>
+        <textarea id="noteInput" class="w-full p-2 border rounded-lg" rows="2"></textarea>
+        <button id="saveNote" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg">Save Note</button>
+      </div>
+    </div>
+ <!-- 🔢 Number Converter -->
+    <div class="bg-white rounded-2xl shadow-xl p-6">
+      <h2 class="text-xl font-bold text-gray-800 mb-4">Number System Converter</h2>
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center mb-4 space-y-2 sm:space-y-0 sm:space-x-2">
+        <input id="numInput" type="text" placeholder="Enter number"
+          class="flex-1 border rounded-lg p-2 w-full" />
+        <select id="numBase" class="border rounded-lg p-2 w-full sm:w-auto">
+          <option value="2">Binary</option>
+          <option value="10" selected>Decimal</option>
+          <option value="8">Octal</option>
+          <option value="16">Hexadecimal</option>
+        </select>
+      </div>
+
+      <div id="conversionResults" class="space-y-2 text-gray-700">
+        <p><strong>Binary:</strong> <span id="binResult">-</span></p>
+        <p><strong>Decimal:</strong> <span id="decResult">-</span></p>
+        <p><strong>Octal:</strong> <span id="octResult">-</span></p>
+        <p><strong>Hexadecimal:</strong> <span id="hexResult">-</span></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== Script for Calendar + Converter ====== -->
+<script>
+/* ---------------- Calendar ---------------- */
+const calendarTitle = document.getElementById("calendarTitle");
+const calendarDays = document.getElementById("calendarDays");
+const noteSection = document.getElementById("noteSection");
+const noteDateEl = document.getElementById("noteDate");
+const noteInput = document.getElementById("noteInput");
+let currentDate = new Date();
+let selectedDate = null;
+
+function renderCalendar() {
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+  const firstDay = new Date(year, month, 1).getDay();
+  const lastDate = new Date(year, month + 1, 0).getDate();
+  calendarTitle.textContent = currentDate.toLocaleString("default", { month: "long", year: "numeric" });
+  calendarDays.innerHTML = "";
+
+  // Padding days
+  for (let i = 0; i < firstDay; i++) {
+    calendarDays.innerHTML += `<div></div>`;
+  }
+
+  // Dates
+  for (let day = 1; day <= lastDate; day++) {
+    const fullDate = `${year}-${month + 1}-${day}`;
+    const storedNote = localStorage.getItem("note-" + fullDate);
+    const isToday = new Date().toDateString() === new Date(year, month, day).toDateString();
+
+    calendarDays.innerHTML += `
+      <div class="p-2 rounded-lg cursor-pointer ${isToday ? "bg-blue-200 font-bold" : "hover:bg-gray-100"} ${storedNote ? "bg-yellow-100" : ""}"
+           onclick="selectDate(${year}, ${month}, ${day})">${day}</div>
+    `;
+  }
+}
+
+window.selectDate = function (year, month, day) {
+  selectedDate = `${year}-${month + 1}-${day}`;
+  noteDateEl.textContent = new Date(year, month, day).toDateString();
+  noteInput.value = localStorage.getItem("note-" + selectedDate) || "";
+  noteSection.classList.remove("hidden");
+};
+
+document.getElementById("prevMonth").onclick = () => {
+  currentDate.setMonth(currentDate.getMonth() - 1);
+  renderCalendar();
+};
+
+document.getElementById("nextMonth").onclick = () => {
+  currentDate.setMonth(currentDate.getMonth() + 1);
+  renderCalendar();
+};
+
+document.getElementById("saveNote").onclick = () => {
+  if (selectedDate) {
+    localStorage.setItem("note-" + selectedDate, noteInput.value);
+    renderCalendar();
+    alert("Note saved!");
+  }
+};
+
+renderCalendar();
+
+/* ---------------- Number Converter ---------------- */
+const numInput = document.getElementById("numInput");
+const numBase = document.getElementById("numBase");
+
+function convertNumber() {
+  let val = numInput.value.trim();
+  if (!val) return;
+
+  let base = parseInt(numBase.value);
+  let decimal;
+
+  try {
+    decimal = parseInt(val, base);
+    if (isNaN(decimal)) throw "Invalid";
+  } catch {
+    document.getElementById("binResult").textContent = "Invalid";
+    document.getElementById("decResult").textContent = "Invalid";
+    document.getElementById("octResult").textContent = "Invalid";
+    document.getElementById("hexResult").textContent = "Invalid";
+    return;
+  }
+
+  document.getElementById("binResult").textContent = decimal.toString(2);
+  document.getElementById("decResult").textContent = decimal.toString(10);
+  document.getElementById("octResult").textContent = decimal.toString(8);
+  document.getElementById("hexResult").textContent = decimal.toString(16).toUpperCase();
+}
+
+numInput.addEventListener("input", convertNumber);
+numBase.addEventListener("change", convertNumber);
+</script>
+
+
+  <!-- Auth Modal -->
+  <div id="authModal" class="fixed inset-0 bg-black/40 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-2xl p-6 w-full max-w-sm">
+      <div class="flex justify-between items-center mb-4">
+        <h3 id="authTitle" class="text-lg font-semibold">Login</h3>
+        <button onclick="document.getElementById('authModal').classList.add('hidden')" class="text-gray-500">✕</button>
+      </div>
+      <form id="authForm" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">Email</label>
+          <input id="authEmail" type="email" class="w-full border rounded-lg px-3 py-2" required />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Password</label>
+          <input id="authPassword" type="password" class="w-full border rounded-lg px-3 py-2" required />
+        </div>
+        <div id="authMessage" class="text-sm"></div>
+        <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">Continue</button>
+      </form>
+      <button id="toggleAuthMode" class="text-blue-600 text-sm mt-3">Don't have an account? Sign up</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold">EduNish</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Making ICT learning easy and enjoyable for O/L students across Sri Lanka.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="downloads.html" class="hover:text-white transition-colors">Study Materials</a></li>
+                        <li><a href="downloads.html" class="hover:text-white transition-colors">Past Papers</a></li>
+                        <!-- <li><a href="quiz.html" class="hover:text-white transition-colors">Quizzes</a></li>
+                        <li><a href="quiz.html" class="hover:text-white transition-colors">Solutions</a></li> -->
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Community</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="community.html" class="hover:text-white transition-colors">Discussion Forum</a></li>
+                        <li><a href="profile.html" class="hover:text-white transition-colors">Study Groups</a></li>
+                        <li><a href="downloads.html" class="hover:text-white transition-colors">Share Resources</a></li>
+                        <li><a href="community.html" class="hover:text-white transition-colors">Help Center</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="community.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="community.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 EduNish. All rights reserved. Made with ❤️ for ICT students.</p>
+            </div>
+        </div>
+    </footer>
+
+  <script>lucide.createIcons();</script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

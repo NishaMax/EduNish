@@ -1,0 +1,406 @@
+{
+  "Series 1": [
+    {
+      "question": "MS PowerPoint කියන්නේ කුමන software එකක්ද?",
+      "options": [
+        "Presentation",
+        "Spreadsheet",
+        "Word processing",
+        "Database"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint file extension එක මොකක්ද?",
+      "options": [
+        ".pptx",
+        ".docx",
+        ".xlsx",
+        ".txt"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ එක presentation එකේ එක page එකට කියන්නේ?",
+      "options": [
+        "Slide",
+        "Worksheet",
+        "Page",
+        "Document"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ default view එක මොකක්ද?",
+      "options": [
+        "Normal view",
+        "Slide Sorter view",
+        "Reading view",
+        "Slide Show view"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Slide Show start කරන්න shortcut key එක මොකක්ද?",
+      "options": [
+        "F5",
+        "F2",
+        "Ctrl + S",
+        "Ctrl + P"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ New Slide insert කරන්න shortcut key එක මොකක්ද?",
+      "options": [
+        "Ctrl + M",
+        "Ctrl + N",
+        "Ctrl + S",
+        "Ctrl + P"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Slide Duplicate කරන්න shortcut key එක මොකක්ද?",
+      "options": [
+        "Ctrl + D",
+        "Ctrl + C",
+        "Ctrl + V",
+        "Ctrl + X"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Slide Delete කරන්න shortcut key එක මොකක්ද?",
+      "options": [
+        "Delete",
+        "Ctrl + D",
+        "Ctrl + X",
+        "Ctrl + C"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Transition mainly use කරනවා?",
+      "options": [
+        "Between slides effect",
+        "Text formatting",
+        "Data analysis",
+        "Printing"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Animation mainly use කරනවා?",
+      "options": [
+        "Object movement effect",
+        "Slide change",
+        "Font design",
+        "Printing"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Slide Master mainly use කරනවා?",
+      "options": [
+        "Uniform slide design",
+        "Add chart",
+        "Insert image",
+        "Print slides"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Handout mainly use කරනවා?",
+      "options": [
+        "Print slides for audience",
+        "Save slides",
+        "View slides",
+        "Animate slides"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Notes Pane mainly use කරනවා?",
+      "options": [
+        "Speaker notes",
+        "Audience handout",
+        "Slide sorter",
+        "Design themes"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Theme mainly use කරනවා?",
+      "options": [
+        "Design consistency",
+        "Animations",
+        "Slide transition",
+        "Slide duplication"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Default slide orientation එක මොකක්ද?",
+      "options": [
+        "Landscape",
+        "Portrait",
+        "Vertical",
+        "Horizontal"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Slide Sorter view mainly show කරනවා?",
+      "options": [
+        "All slides thumbnail view",
+        "One slide large view",
+        "Slide show view",
+        "Normal view"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Rehearse Timings mainly use කරනවා?",
+      "options": [
+        "Practice slide timing",
+        "Record audio",
+        "Add animations",
+        "Insert tables"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Record Slide Show mainly use කරනවා?",
+      "options": [
+        "Record narration and timing",
+        "Insert charts",
+        "Insert images",
+        "Change design"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Slide Layout mainly use කරනවා?",
+      "options": [
+        "Arrange slide content",
+        "Change font",
+        "Add animations",
+        "Print slides"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Presenter View mainly use කරනවා?",
+      "options": [
+        "Presenter tools with notes",
+        "Audience handout",
+        "Print view",
+        "Animation view"
+      ],
+      "answer": 0
+    }
+  ],
+  "Series 2": [
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + C use කරනවා?",
+      "options": [
+        "Copy",
+        "Cut",
+        "Paste",
+        "Delete"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + V use කරනවා?",
+      "options": [
+        "Paste",
+        "Copy",
+        "Cut",
+        "Delete"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + X use කරනවා?",
+      "options": [
+        "Cut",
+        "Copy",
+        "Paste",
+        "Undo"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + Z use කරනවා?",
+      "options": [
+        "Undo",
+        "Redo",
+        "Save",
+        "Open"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + Y use කරනවා?",
+      "options": [
+        "Redo",
+        "Undo",
+        "Cut",
+        "Copy"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + N use කරනවා?",
+      "options": [
+        "New presentation",
+        "Open presentation",
+        "Save presentation",
+        "Print presentation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + O use කරනවා?",
+      "options": [
+        "Open presentation",
+        "New presentation",
+        "Save presentation",
+        "Print presentation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + S use කරනවා?",
+      "options": [
+        "Save presentation",
+        "Open presentation",
+        "Close presentation",
+        "Print presentation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + P use කරනවා?",
+      "options": [
+        "Print presentation",
+        "Save presentation",
+        "Open presentation",
+        "Close presentation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + A use කරනවා?",
+      "options": [
+        "Select all",
+        "Save all",
+        "Close all",
+        "Print all"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + F use කරනවා?",
+      "options": [
+        "Find",
+        "Replace",
+        "Save",
+        "Undo"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + H use කරනවා?",
+      "options": [
+        "Replace",
+        "Find",
+        "Open",
+        "Close"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + M use කරනවා?",
+      "options": [
+        "New slide",
+        "Duplicate slide",
+        "Delete slide",
+        "Move slide"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + D use කරනවා?",
+      "options": [
+        "Duplicate slide",
+        "Delete slide",
+        "New slide",
+        "Move slide"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key F5 use කරනවා?",
+      "options": [
+        "Start slide show",
+        "Print slide show",
+        "Save slide show",
+        "Close slide show"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Esc use කරනවා?",
+      "options": [
+        "End slide show",
+        "Start slide show",
+        "Pause slide show",
+        "Save slide show"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + K use කරනවා?",
+      "options": [
+        "Insert hyperlink",
+        "Insert chart",
+        "Insert table",
+        "Insert image"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + T use කරනවා?",
+      "options": [
+        "Font dialog box",
+        "Insert table",
+        "Insert text box",
+        "Insert theme"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + U use කරනවා?",
+      "options": [
+        "Underline",
+        "Bold",
+        "Italic",
+        "Save"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "PowerPoint එකේ Shortcut key Ctrl + I use කරනවා?",
+      "options": [
+        "Italic",
+        "Underline",
+        "Bold",
+        "Insert"
+      ],
+      "answer": 0
+    }
+  ]
+}
