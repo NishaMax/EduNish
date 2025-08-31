@@ -272,7 +272,7 @@ function finishQuiz() {
 
   const total = currentQuestions.length;
   const percent = Math.round((score / total) * 100);
-  const record = { score, total, percent };
+  const record = { score, total, percent, completedAt: new Date().toISOString() };
 
   localStorage.setItem(quizKey, JSON.stringify(record));
 
@@ -317,27 +317,337 @@ function finishQuiz() {
 }
 
 // ===== Render Progress Overview =====
-function renderProgressOverview() {
-  progressList.innerHTML = "";
+// ===== COMPLETE ENHANCED PROGRESS OVERVIEW CODE =====
+
+// ===== Interactive Effects =====
+function createRipple(e) {
+  const card = e.currentTarget;
+  const rect = card.getBoundingClientRect();
+  const ripple = document.createElement('span');
+  
+  const size = Math.max(rect.width, rect.height);
+  const x = e.clientX - rect.left - size / 2;
+  const y = e.clientY - rect.top - size / 2;
+  
+  ripple.style.width = ripple.style.height = size + 'px';
+  ripple.style.left = x + 'px';
+  ripple.style.top = y + 'px';
+  ripple.classList.add('ripple');
+  
+  card.appendChild(ripple);
+  
+  setTimeout(() => ripple.remove(), 600);
+}
+
+function generateConfetti() {
+  let confetti = '';
+  for (let i = 0; i < 6; i++) {
+    const left = Math.random() * 100;
+    const delay = Math.random() * 2;
+    confetti += `<div class="confetti" style="left: ${left}%; animation-delay: ${delay}s;"></div>`;
+  }
+  return confetti;
+}
+
+function generateSparkles() {
+  let sparkles = '';
+  for (let i = 0; i < 4; i++) {
+    const left = Math.random() * 80 + 10;
+    const top = Math.random() * 80 + 10;
+    const delay = Math.random() * 3;
+    sparkles += `<div class="sparkle" style="left: ${left}%; top: ${top}%; animation-delay: ${delay}s;"></div>`;
+  }
+  return sparkles;
+}
+
+function addFloatingParticles(card) {
+  const createParticle = () => {
+    const particle = document.createElement('div');
+    particle.className = 'progress-particle';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.animationDelay = Math.random() * 2 + 's';
+    card.appendChild(particle);
+    
+    setTimeout(() => particle.remove(), 3000);
+  };
+  
+  // Create particles periodically
+  const particleInterval = setInterval(createParticle, 800);
+  
+  // Stop after 10 seconds
+  setTimeout(() => clearInterval(particleInterval), 10000);
+}
+
+// ===== Progress Card Click Handler =====
+function handleProgressCardClick(key, data) {
+  const modal = document.createElement('div');
+  modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+  modal.innerHTML = `
+    <div class="bg-white rounded-xl p-8 max-w-md mx-4 text-center relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+      
+      <h3 class="text-xl font-bold mb-4 text-gray-800">${key.replace(/_/g, ' ')}</h3>
+      <div class="space-y-3 mb-6 text-gray-700">
+        <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg">
+          <p class="text-lg"><strong>Score:</strong> ${data.score} out of ${data.total}</p>
+          <p class="text-lg"><strong>Percentage:</strong> ${data.percent}%</p>
+          ${data.completedAt ? `<p class="text-sm opacity-75"><strong>Completed:</strong> ${new Date(data.completedAt).toLocaleDateString()}</p>` : ''}
+        </div>
+      </div>
+      <div class="flex justify-center space-x-4">
+        <button class="close-modal bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+          Close
+        </button>
+        <button class="retry-quiz bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors" data-quiz-key="${key}">
+          Retry Quiz
+        </button>
+      </div>
+    </div>
+  `;
+  
+  document.body.appendChild(modal);
+  
+  // Add event listeners
+  modal.querySelector('.close-modal').addEventListener('click', () => modal.remove());
+  modal.querySelector('.retry-quiz').addEventListener('click', (e) => {
+    retryQuiz(e.target.dataset.quizKey);
+    modal.remove();
+  });
+  
+  // Close modal when clicking outside
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.remove();
+    }
+  });
+}
+
+// ===== Retry Quiz from Progress Card =====
+function retryQuiz(quizKey) {
+  const parts = quizKey.split('_');
+  if (parts.length >= 4) {
+    const medium = parts[0];
+    const grade = parts[1];
+    const lesson = parts[2];
+    const series = parts.slice(3).join('_');
+    
+    mediumSelect.value = medium;
+    gradeSelect.value = grade;
+    
+    gradeSelect.dispatchEvent(new Event('change'));
+    
+    setTimeout(() => {
+      lessonSelect.value = lesson.replace('L', '');
+      lessonSelect.dispatchEvent(new Event('change'));
+      
+      setTimeout(() => {
+        const seriesCard = Array.from(seriesCards.children)
+          .find(card => card.textContent.trim() === series);
+        if (seriesCard) {
+          seriesCard.click();
+        }
+      }, 500);
+    }, 300);
+  }
+}
+
+// ===== Enhanced Progress Statistics =====
+function calculateOverallStats() {
+  const allProgress = [];
+  
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
     if (key.includes("Series")) {
       const data = JSON.parse(localStorage.getItem(key));
-      const card = document.createElement("div");
-      card.className =
-        "p-4 rounded-xl shadow-md text-white " +
-        (data.percent >= 75
-          ? "bg-green-500"
-          : data.percent >= 50
-          ? "bg-yellow-500"
-          : "bg-red-500");
-      card.innerHTML = `
-        <h3 class="font-semibold">${key.replace(/_/g, " ")}</h3>
-        <p>Score: ${data.score} / ${data.total} (${data.percent}%)</p>
-      `;
-      progressList.appendChild(card);
+      allProgress.push(data);
+    }
+  }
+  
+  if (allProgress.length === 0) return null;
+  
+  const totalQuizzes = allProgress.length;
+  const totalQuestions = allProgress.reduce((sum, p) => sum + p.total, 0);
+  const totalCorrect = allProgress.reduce((sum, p) => sum + p.score, 0);
+  const averagePercent = Math.round(allProgress.reduce((sum, p) => sum + p.percent, 0) / totalQuizzes);
+  const perfectScores = allProgress.filter(p => p.percent === 100).length;
+  
+  return {
+    totalQuizzes,
+    totalQuestions,
+    totalCorrect,
+    averagePercent,
+    perfectScores
+  };
+}
+
+// ===== Overall Stats Display =====
+function renderOverallStats() {
+  const stats = calculateOverallStats();
+  if (!stats) return;
+  
+  const statsCard = document.createElement('div');
+  statsCard.className = 'col-span-full mb-6 p-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-xl text-white relative overflow-hidden';
+  statsCard.innerHTML = `
+    <div class="relative z-10">
+      <h3 class="text-xl font-bold mb-4 text-center">🎯 Overall Performance</h3>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+        <div class="stat-item">
+          <div class="stat-number text-2xl font-black">${stats.totalQuizzes}</div>
+          <div class="stat-label text-sm opacity-90">Quizzes</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number text-2xl font-black">${stats.totalQuestions}</div>
+          <div class="stat-label text-sm opacity-90">Questions</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number text-2xl font-black">${stats.totalCorrect}</div>
+          <div class="stat-label text-sm opacity-90">Correct</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number text-2xl font-black">${stats.averagePercent}%</div>
+          <div class="stat-label text-sm opacity-90">Average</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number text-2xl font-black">${stats.perfectScores}</div>
+          <div class="stat-label text-sm opacity-90">Perfect</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
+      <div class="absolute top-4 left-4 text-4xl animate-spin">⚡</div>
+      <div class="absolute top-4 right-4 text-3xl animate-bounce">🚀</div>
+      <div class="absolute bottom-4 left-8 text-2xl animate-pulse">💎</div>
+      <div class="absolute bottom-4 right-8 text-3xl animate-ping">🌟</div>
+    </div>
+  `;
+  
+  progressList.insertBefore(statsCard, progressList.firstChild);
+}
+
+// ===== Enhanced Progress Overview Renderer =====
+function renderProgressOverview() {
+  progressList.innerHTML = "";
+  
+  const progressData = [];
+  
+  // Collect all quiz progress from localStorage
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key.includes("Series")) {
+      const data = JSON.parse(localStorage.getItem(key));
+      progressData.push({ key, ...data });
+    }
+  }
+  
+  // Add overall stats if there's data
+  if (progressData.length > 0) {
+    renderOverallStats();
+  }
+  
+  // Sort by percentage (highest first)
+  progressData.sort((a, b) => b.percent - a.percent);
+  
+  progressData.forEach((data, index) => {
+    const card = document.createElement("div");
+    
+    // Determine card class based on percentage
+    let cardClass = "bg-red-500";
+    let achievement = "try-again";
+    
+    if (data.percent >= 90) {
+      cardClass = "bg-green-500";
+      achievement = "perfect";
+    } else if (data.percent >= 75) {
+      cardClass = "bg-green-500";
+      achievement = "high";
+    } else if (data.percent >= 50) {
+      cardClass = "bg-yellow-500";
+      achievement = "good";
+    }
+    
+    card.className = `relative p-6 rounded-xl shadow-lg text-white transform transition-all duration-500 cursor-pointer ${cardClass}`;
+    card.setAttribute('data-percent', data.percent);
+    card.setAttribute('data-achievement', achievement);
+    
+    // Format the series name
+    const formattedName = data.key
+      .replace(/_/g, " ")
+      .replace(/Series/g, "")
+      .trim();
+    
+    // Add grade indicator
+    const gradeMatch = data.key.match(/(\d{1,2})/);
+    const grade = gradeMatch ? gradeMatch[1] : "?";
+    
+    card.innerHTML = `
+      <div class="grade-indicator">${grade}</div>
+      
+      ${data.percent === 100 ? '<div class="achievement-badge">🏆</div>' : ''}
+      ${data.percent >= 75 && data.percent < 100 ? '<div class="achievement-badge">⭐</div>' : ''}
+      ${data.percent >= 50 && data.percent < 75 ? '<div class="achievement-badge">👍</div>' : ''}
+      
+      <div class="relative z-10">
+        <h3 class="font-bold text-lg mb-2 pr-16">${formattedName}</h3>
+        
+        <div class="progress-stats">
+          <div class="stat-item">
+            <span class="stat-number">${data.score}</span>
+            <span class="stat-label">Correct</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">${data.total}</span>
+            <span class="stat-label">Total</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">${data.percent}%</span>
+            <span class="stat-label">Score</span>
+          </div>
+        </div>
+        
+        <div class="mini-progress">
+          <div class="mini-progress-fill" style="width: ${data.percent}%"></div>
+        </div>
+        
+        ${data.completedAt ? `<div class="text-xs opacity-75 mt-2">Completed: ${new Date(data.completedAt).toLocaleDateString()}</div>` : ''}
+      </div>
+      
+      ${data.percent === 100 ? generateConfetti() : ''}
+      ${data.percent >= 90 ? generateSparkles() : ''}
+    `;
+    
+    // Add click events
+    card.addEventListener('click', (e) => {
+      createRipple(e);
+      setTimeout(() => handleProgressCardClick(data.key, data), 100);
+    });
+    
+    // Add floating particles for high scores
+    if (data.percent >= 75) {
+      setTimeout(() => addFloatingParticles(card), index * 200);
+    }
+    
+    progressList.appendChild(card);
+  });
+}
+
+// ===== Update the HTML structure for the progress section =====
+function updateProgressSectionHTML() {
+  const progressSection = progressList.parentElement;
+  
+  // Wrap in enhanced container if not already wrapped
+  if (!progressSection.id || progressSection.id !== 'progress-section') {
+    progressSection.id = 'progress-section';
+    progressSection.className = 'w-full max-w-4xl mx-auto mt-8';
+    
+    const title = progressSection.querySelector('h2');
+    if (title) {
+      title.innerHTML = '📊 Your Learning Journey ✨';
     }
   }
 }
-
-renderProgressOverview();
+// Initialize enhanced progress on page load
+document.addEventListener("DOMContentLoaded", () => {
+  updateProgressSectionHTML();
+  renderProgressOverview();
+});
