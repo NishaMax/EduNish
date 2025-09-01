@@ -407,7 +407,9 @@ function handleProgressCardClick(key, data) {
     <div class="bg-white rounded-xl p-8 max-w-md mx-4 text-center relative overflow-hidden">
       <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
       
-      <h3 class="text-xl font-bold mb-4 text-gray-800">${key.replace(/_/g, ' ')}</h3>
+      <h3 class="text-xl font-bold mb-4 text-gray-500">
+        ${key.replace(/_/g, ' ')}
+      </h3>
       <div class="space-y-3 mb-6 text-gray-700">
         <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg">
           <p class="text-lg"><strong>Score:</strong> ${data.score} out of ${data.total}</p>

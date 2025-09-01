@@ -1268,3 +1268,9 @@ pre {
 #progress-list > div[data-achievement="good"] .achievement-badge::after {
     content: '👍 GOOD JOB!';
 }
+.ed-modal { color:#1f2937 !important; }              /* default text */
+.ed-modal h1, .ed-modal h2, .ed-modal h3 {
+  color:#1f2937 !important;
+  text-shadow:none !important;
+}
+.ed-modal .text-gray-700 { color:#374151 !important; } /* body lines */
