@@ -25,9 +25,9 @@
       <div class="hidden md:flex items-center space-x-8">
         <a href="index.html" class="text-gray-700 hover:text-blue-600 nav-link">Home</a>
         <a href="downloads.html" class="text-gray-700 hover:text-blue-600">Resources</a>
-        <!-- <a href="quiz.html" class="text-gray-700 hover:text-blue-600">Quizzes</a> -->
+        <a href="quiz.html" id="quizNavBtnDesktop" class="hover:underline">Quiz</a>
         <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
-        <button id="loginBtnDesktop" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login/Signup</button>
+        <button id="loginBtnDesktop" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login/SignUp</button>
         <button id="logoutBtnDesktop" class="hidden bg-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg">Logout</button>
         <a id="profileBtnDesktop" href="profile.html"
           class="hidden px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
@@ -44,9 +44,9 @@
       <div class="px-2 pt-2 pb-3 space-y-1">
         <a href="index.html" class="block px-3 py-2 text-gray-700">Home</a>
         <a href="downloads.html" class="block px-3 py-2 text-gray-700">Resources</a>
-        <!-- <a href="quiz.html" class="block px-3 py-2 text-gray-700">Quizzes</a> -->
+        <a href="quiz.html" id="quizNavBtnMobile" class="block px-4 py-2 hover:bg-gray-700">Quiz</a>
         <a href="community.html" class="block px-3 py-2 text-gray-700">Community</a>
-        <a id="loginBtnMobile" class="block px-3 py-2 text-gray-800 hover:bg-gray-200">Login</a>
+        <a id="loginBtnMobile" class="block px-3 py-2 text-gray-800 hover:bg-gray-200">Login/SignUp</a>
         <a id="logoutBtnMobile" class="hidden block px-3 py-2 text-gray-800 hover:bg-gray-200">Logout</a>
         <a id="profileBtnMobile" href="profile.html"
           class="hidden block px-4 py-2 text-blue-600 hover:underline">
@@ -254,12 +254,16 @@
                         <p class="text-gray-600 mb-6 leading-relaxed">
                             Test your knowledge with fun, interactive quizzes and instant feedback
                         </p>
-                        <button id="viewQuizBtn" 
+                        <!-- <button id="viewQuizBtn" 
                           onclick="openQuiz()" 
                           class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg quizLink">
                           Play Quiz
-                        </button>
-
+                        </button> -->
+                        <a href="quiz.html" 
+                        class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center space-x-2 mx-auto">
+                            <!-- <i data-lucide="download" class="w-4 h-4"></i> -->
+                            <span>Play Quiz</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -322,12 +326,16 @@
                         <p class="text-gray-600 mb-6 leading-relaxed">
                             Test your knowledge with fun, interactive quizzes and instant feedback
                         </p>
-                        <button id="viewQuizBtn" 
+                        <!-- <button id="viewQuizBtn" 
                           onclick="openQuiz()" 
                           class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg quizLink">
                           Play Quiz
-                        </button>
-
+                        </button> -->
+                        <a href="quiz.html" 
+                        class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center space-x-2 mx-auto">
+                            <!-- <i data-lucide="download" class="w-4 h-4"></i> -->
+                            <span>Play Quiz</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -395,12 +403,11 @@
             </div>
             <!-- Register Button -->
             <div class="text-center">
-                <button id="viewQuizBtn" 
+                <!-- <button id="viewQuizBtn" 
                   onclick="openQuiz()" 
                   class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg quizLink">
                   Play Quiz
-                </button>
-
+                </button> -->
             </div>
         </div>
     </section>
@@ -627,6 +634,18 @@ numBase.addEventListener("change", convertNumber);
             </div>
         </div>
     </footer>
+  
+  <!-- Quiz Choice Modal -->
+<div id="quizChoiceModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
+    <h2 class="text-xl font-bold mb-4">Choose an Option</h2>
+    <button id="createStudentIdBtn" class="bg-blue-600 text-white px-4 py-2 rounded mr-2">Create Student ID</button>
+    <button id="playQuizBtn" class="bg-green-600 text-white px-4 py-2 rounded">Play Quiz</button>
+    <button id="closeQuizChoice" class="mt-4 block text-gray-500 text-sm underline">Cancel</button>
+  </div>
+</div>
+
+
 
   <script>lucide.createIcons();</script>
   <script type="module" src="script.js"></script>

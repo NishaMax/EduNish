@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const studentData = localStorage.getItem("edunishStudentData");
-  if (!studentData) {
-    window.location.href = "registration.html";
-  }
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   const studentData = localStorage.getItem("edunishStudentData");
+//   if (!studentData) {
+//     window.location.href = "registration.html";
+//   }
+// });
 
 
 // ===== State =====

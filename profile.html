@@ -25,6 +25,7 @@
     <div id="profileCard" class="theme-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center">
       <div id="loading" class="text-gray-500">⏳ Loading profile...</div>
       <div id="profileDetails" class="hidden"></div>
+      <div id="registerRedirect" class="hidden mt-4 text-center"></div>
     </div>
 
     <!-- Avatar Selection -->
@@ -89,7 +90,8 @@
 
       const local = JSON.parse(localStorage.getItem("edunishStudentData"));
       if (!local) {
-        loadingDiv.textContent = "⚠️ No profile found. Please register first.";
+        loadingDiv.textContent = "⚠️ Profile not found in Database.";
+        showRegistrationButton();
         return;
       }
       studentId = local.studentId;
@@ -203,6 +205,18 @@
     });
 
     document.addEventListener("DOMContentLoaded", loadProfile);
+   
+    function showRegistrationButton() {
+      const div = document.getElementById("registerRedirect");
+      div.classList.remove("hidden");
+      div.innerHTML = `
+        <a href="registration.html" 
+          class="inline-block mt-2 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+          📝 Go to Registration
+        </a>
+      `;
+    }
+
   </script>
 </body>
 </html>
