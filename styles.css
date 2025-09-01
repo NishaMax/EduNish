@@ -147,6 +147,14 @@ html {
     border-bottom: 2px solid #2563eb;
 }
 
+/* Highlight the active page link in mobile menu */
+#mobile-menu a.active {
+  background-color: #3b82f6; /* Tailwind blue-500 */
+  color: white;
+  border-radius: 0.25rem; /* optional rounded corners */
+}
+
+
 /* Progress bar smooth animation */
 .progress-bar {
     transition: width 0.5s ease;
