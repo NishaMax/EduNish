@@ -1125,7 +1125,7 @@ pre {
 }
 
 /* Grade Indicators */
-.grade-indicator {
+/* .grade-indicator {
     position: absolute;
     top: 1rem;
     left: 1rem;
@@ -1141,7 +1141,7 @@ pre {
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.3);
     animation: gradeFloat 3s ease-in-out infinite;
-}
+} */
 
 @keyframes gradeFloat {
     0%, 100% { transform: translateY(0) rotate(0deg); }
