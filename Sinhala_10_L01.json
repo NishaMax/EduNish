@@ -4,18 +4,18 @@
       "question": "දත්ත යනු කුමක්ද?",
       "options": [
         "අර්ථවත් තොරතුරු",
-        "Raw facts (අංක, වචන, සංකේත වගේ)",
+        "අංක, වචන, සංකේත වැනි දෑ",
         "තොරතුරු මත ගත් තීරණ",
-        "Computer process එකක්"
+        "පරිගණක ක්‍රියාවලියක්"
       ],
       "answer": 1
     },
     {
       "question": "තොරතුරු යනු කුමක්ද?",
       "options": [
-        "Unprocessed facts",
+        "ක්‍රියාවලියට පත් නොවූ දත්ත",
         "අර්ථ නැති අංක",
-        "අර්ථවත් බවට පරිපාලනය කළ Data",
+        "අර්ථවත් බවට පරිපාලනය කළ දත්ත",
         "පෙළ සහ රූප පමණයි"
       ],
       "answer": 2
@@ -71,7 +71,7 @@
       "answer": 2
     },
     {
-      "question": "‍රෙදි විවීම සඳහා punched cards භාවිතා කළ යන්ත්‍රය කුමක්ද?",
+      "question": "‍රෙදි විවීම සඳහා සිදුරුපත් භාවිතා කළ යන්ත්‍රය කුමක්ද?",
       "options": [
         "Analytical Engine",
         "Jacquard Loom",
@@ -103,19 +103,19 @@
     {
       "question": "Analytical Engine හදුන්වන වෙනත් නමක් වන්නේ?",
       "options": [
-        "පළමු mechanical calculator",
-        "පළමු programmable computer design",
-        "පළමු electronic device",
-        "පළමු tabulating machine"
+        "පළමු යාන්ත්‍රික පරිගණකය",
+        "පළමු ක්‍රමලේඛක පරිගණකය",
+        "පළමු විද්‍යුත් පරිගණකය",
+        "පළමු සටහන් කළ හැකි යන්ත්‍රය"
       ],
       "answer": 1
     },
     {
       "question": "Herman Hollerith සම්බන්ධ වෙන්නේ?",
       "options": [
-        "Abacus",
-        "Pascaline",
-        "Punched card tabulating machine",
+        "ඇබකසය",
+        "පැස්කලයින් යන්ත්‍රය",
+        "සිදුරුපත් සංකල්පය",
         "Jacquard Loom"
       ],
       "answer": 2
@@ -131,7 +131,7 @@
       "answer": 1
     },
     {
-      "question": "MARK I computer නිර්මාණය කළේ කවුරුන් සමගද?",
+      "question": "MARK I පරිගණකය නිර්මාණය කළේ කවුරුන් සමගද?",
       "options": [
         "IBM and Harvard",
         "Microsoft and Apple",
@@ -383,7 +383,7 @@
       "answer": 1
     },
     {
-      "question": "Computer එකේ Arithmetic operations කරන කොටස කුමක්ද?",
+      "question": "පරිගණකයඑකේ Arithmetic operations කරන කොටස කුමක්ද?",
       "options": [
         "Control Unit",
         "Memory Unit",
@@ -393,7 +393,7 @@
       "answer": 2
     },
     {
-      "question": "Computer එකේ brain යනු?",
+      "question": "පරිගණකයේ මොළය යනු?",
       "options": [
         "RAM",
         "CPU",
