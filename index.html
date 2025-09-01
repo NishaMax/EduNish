@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EduNish — Home</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="circuit.css">
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="circuit.js" defer></script>
@@ -132,65 +133,70 @@
     </div>
   </header>-->
   <!-- Replace your circuit section with this Digital Waterfall section -->
-<div class="digital-waterfall-container">
-  <section class="waterfall-title">
-    <h1>Digital Knowledge Waterfall</h1>
-    <p>Catch the flowing knowledge bubbles as they cascade down!</p>
+<!-- Digital Circuit Board City Section -->
+<div class="circuit-board-city-container">
+  <section class="circuit-title">
+    <h1>Digital Circuit Board City</h1>
+    <p>Explore the pulsing pathways of knowledge in our interactive ICT learning environment!</p>
   </section>
 
-  <!-- Grade 10 Waterfall -->
-  <section class="waterfall-section">
-    <h2 class="grade-label grade10-flow">Grade 10 Knowledge Stream</h2>
-    <div class="waterfall-canvas-container">
-      <canvas id="waterfall10" class="waterfall-canvas"></canvas>
-      <div class="waterfall-overlay">
-        <div class="stream-info grade10-info">
-          <div class="topic-display" id="topic10">Hover over bubbles to explore topics</div>
-          <div class="progress-indicator">
-            <div class="progress-bar grade10-progress" style="width: 65%;"></div>
-            <span class="progress-text">65% Mastered</span>
+  <!-- Grade 10 Circuit Board -->
+  <section class="circuit-section">
+    <h2 class="grade-label grade10-circuit">Grade 10 Circuit Network</h2>
+    <div class="circuit-canvas-container">
+      <canvas id="circuit10" class="circuit-canvas"></canvas>
+      <div class="circuit-overlay">
+        <div class="circuit-info grade10-info">
+          <div class="topic-display" id="circuitTopic10">Click on glowing nodes to explore topics</div>
+          <div class="power-indicator">
+            <div class="power-bar grade10-power" style="width: 65%;"></div>
+            <span class="power-text">65% Network Powered</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Grade 11 Waterfall -->
-  <section class="waterfall-section">
-    <h2 class="grade-label grade11-flow">Grade 11 Advanced Stream</h2>
-    <div class="waterfall-canvas-container">
-      <canvas id="waterfall11" class="waterfall-canvas"></canvas>
-      <div class="waterfall-overlay">
-        <div class="stream-info grade11-info">
-          <div class="topic-display" id="topic11">Dive deeper into advanced concepts</div>
-          <div class="progress-indicator">
-            <div class="progress-bar grade11-progress" style="width: 40%;"></div>
-            <span class="progress-text">40% Mastered</span>
+  <!-- Grade 11 Circuit Board -->
+  <section class="circuit-section">
+    <h2 class="grade-label grade11-circuit">Grade 11 Advanced Network</h2>
+    <div class="circuit-canvas-container">
+      <canvas id="circuit11" class="circuit-canvas"></canvas>
+      <div class="circuit-overlay">
+        <div class="circuit-info grade11-info">
+          <div class="topic-display" id="circuitTopic11">Navigate the complex pathways of advanced ICT</div>
+          <div class="power-indicator">
+            <div class="power-bar grade11-power" style="width: 40%;"></div>
+            <span class="power-text">40% Network Powered</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Achievement Pool -->
-  <section class="achievement-pool">
-    <h3>Achievement Pool</h3>
-    <div class="pool-container">
-      <div class="achievement-bubble completed">
-        <i data-lucide="cpu" class="achievement-icon"></i>
-        <span>Hardware Expert</span>
+  <!-- Achievement Control Panel -->
+  <section class="control-panel">
+    <h3>System Control Panel</h3>
+    <div class="panel-container">
+      <div class="control-module completed" data-achievement="hardware">
+        <i data-lucide="cpu" class="module-icon"></i>
+        <span class="module-label">Hardware Core</span>
+        <div class="status-light active"></div>
       </div>
-      <div class="achievement-bubble completed">
-        <i data-lucide="code" class="achievement-icon"></i>
-        <span>Logic Master</span>
+      <div class="control-module completed" data-achievement="logic">
+        <i data-lucide="zap" class="module-icon"></i>
+        <span class="module-label">Logic Circuit</span>
+        <div class="status-light active"></div>
       </div>
-      <div class="achievement-bubble locked">
-        <i data-lucide="database" class="achievement-icon"></i>
-        <span>Data Wizard</span>
+      <div class="control-module locked" data-achievement="database">
+        <i data-lucide="database" class="module-icon"></i>
+        <span class="module-label">Data Hub</span>
+        <div class="status-light"></div>
       </div>
-      <div class="achievement-bubble locked">
-        <i data-lucide="shield" class="achievement-icon"></i>
-        <span>Security Guardian</span>
+      <div class="control-module locked" data-achievement="security">
+        <i data-lucide="shield" class="module-icon"></i>
+        <span class="module-label">Security Grid</span>
+        <div class="status-light"></div>
       </div>
     </div>
   </section>

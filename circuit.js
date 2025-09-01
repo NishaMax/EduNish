@@ -1,19 +1,21 @@
-// Digital Waterfall Interactive Learning System
-class DigitalWaterfall {
+// Digital Circuit Board City Interactive Learning System
+class CircuitBoardCity {
   constructor(canvasId, grade) {
     this.canvas = document.getElementById(canvasId);
     this.ctx = this.canvas.getContext('2d');
     this.grade = grade;
-    this.bubbles = [];
+    this.nodes = [];
+    this.connections = [];
+    this.dataPackets = [];
     this.particles = [];
-    this.streams = [];
     this.mouse = { x: 0, y: 0 };
     this.isRunning = false;
+    this.time = 0;
     
     this.setupCanvas();
     this.setupTopics();
     this.setupEventListeners();
-    this.createStreams();
+    this.createCircuitBoard();
     this.start();
   }
 
@@ -28,25 +30,25 @@ class DigitalWaterfall {
 
   setupTopics() {
     this.topics = this.grade === 10 ? {
-      'Introduction to ICT': { color: '#06b6d4', difficulty: 1 },
-      'Computer Hardware': { color: '#3b82f6', difficulty: 2 },
-      'Operating Systems': { color: '#1e40af', difficulty: 3 },
-      'Input/Output Devices': { color: '#0ea5e9', difficulty: 2 },
-      'Storage Devices': { color: '#0284c7', difficulty: 2 },
-      'Computer Networks': { color: '#0369a1', difficulty: 4 },
-      'Internet & Web': { color: '#075985', difficulty: 3 },
-      'Digital Communication': { color: '#0c4a6e', difficulty: 3 },
-      'Computer Security': { color: '#164e63', difficulty: 4 }
+      'ICT Basics': { color: '#06b6d4', type: 'processor', importance: 5 },
+      'Hardware': { color: '#3b82f6', type: 'memory', importance: 4 },
+      'Operating Systems': { color: '#1e40af', type: 'processor', importance: 4 },
+      'Input/Output': { color: '#0ea5e9', type: 'interface', importance: 3 },
+      'Storage': { color: '#0284c7', type: 'memory', importance: 3 },
+      'Networks': { color: '#0369a1', type: 'network', importance: 5 },
+      'Internet': { color: '#075985', type: 'network', importance: 4 },
+      'Communication': { color: '#0c4a6e', type: 'interface', importance: 3 },
+      'Security': { color: '#164e63', type: 'shield', importance: 4 }
     } : {
-      'Programming Concepts': { color: '#8b5cf6', difficulty: 4 },
-      'Algorithm Design': { color: '#7c3aed', difficulty: 5 },
-      'Database Systems': { color: '#6d28d9', difficulty: 5 },
-      'Web Development': { color: '#5b21b6', difficulty: 4 },
-      'System Analysis': { color: '#581c87', difficulty: 5 },
-      'Project Management': { color: '#4c1d95', difficulty: 4 },
-      'Advanced Security': { color: '#ec4899', difficulty: 5 },
-      'Data Analytics': { color: '#db2777', difficulty: 5 },
-      'Emerging Technologies': { color: '#be185d', difficulty: 5 }
+      'Programming': { color: '#8b5cf6', type: 'processor', importance: 5 },
+      'Algorithms': { color: '#7c3aed', type: 'processor', importance: 5 },
+      'Databases': { color: '#6d28d9', type: 'memory', importance: 5 },
+      'Web Dev': { color: '#5b21b6', type: 'interface', importance: 4 },
+      'Analysis': { color: '#581c87', type: 'processor', importance: 5 },
+      'Management': { color: '#4c1d95', type: 'interface', importance: 4 },
+      'Advanced Security': { color: '#ec4899', type: 'shield', importance: 5 },
+      'Data Analytics': { color: '#db2777', type: 'memory', importance: 5 },
+      'Emerging Tech': { color: '#be185d', type: 'network', importance: 5 }
     };
   }
 
@@ -58,92 +60,139 @@ class DigitalWaterfall {
     });
 
     this.canvas.addEventListener('click', (e) => {
-      this.handleBubbleClick(e);
+      this.handleNodeClick(e);
     });
 
     window.addEventListener('resize', () => {
       this.setupCanvas();
+      this.createCircuitBoard();
     });
   }
 
-  createStreams() {
-    const streamCount = 5;
-    for (let i = 0; i < streamCount; i++) {
-      this.streams.push({
-        x: (this.width / (streamCount + 1)) * (i + 1),
-        opacity: 0.1 + Math.random() * 0.2,
-        speed: 0.5 + Math.random() * 0.5
-      });
-    }
+  createCircuitBoard() {
+    this.nodes = [];
+    this.connections = [];
+    
+    const topicKeys = Object.keys(this.topics);
+    const cols = 3;
+    const rows = Math.ceil(topicKeys.length / cols);
+    
+    // Create grid layout for nodes
+    topicKeys.forEach((topic, index) => {
+      const col = index % cols;
+      const row = Math.floor(index / cols);
+      
+      const x = (this.width / (cols + 1)) * (col + 1);
+      const y = (this.height / (rows + 1)) * (row + 1);
+      
+      const topicData = this.topics[topic];
+      
+      const node = {
+        id: index,
+        x: x + (Math.random() - 0.5) * 50,
+        y: y + (Math.random() - 0.5) * 30,
+        topic: topic,
+        color: topicData.color,
+        type: topicData.type,
+        importance: topicData.importance,
+        radius: 15 + topicData.importance * 3,
+        isActive: Math.random() > 0.5,
+        pulsePhase: Math.random() * Math.PI * 2,
+        connections: [],
+        powerLevel: 0.3 + Math.random() * 0.7,
+        dataFlow: 0
+      };
+      
+      this.nodes.push(node);
+    });
+    
+    // Create connections between related nodes
+    this.createConnections();
   }
 
-  createBubble() {
-    const topicKeys = Object.keys(this.topics);
-    const topic = topicKeys[Math.floor(Math.random() * topicKeys.length)];
-    const topicData = this.topics[topic];
+  createConnections() {
+    const connectionRules = {
+      'processor': ['memory', 'interface'],
+      'memory': ['processor', 'network'],
+      'network': ['interface', 'shield'],
+      'interface': ['processor', 'shield'],
+      'shield': ['network', 'processor']
+    };
     
-    const stream = this.streams[Math.floor(Math.random() * this.streams.length)];
-    
-    const bubble = {
-      x: stream.x + (Math.random() - 0.5) * 100,
-      y: -50,
-      radius: 15 + topicData.difficulty * 5,
-      topic: topic,
-      color: topicData.color,
-      speed: 1 + Math.random() * 2,
-      opacity: 0.8 + Math.random() * 0.2,
-      wobble: Math.random() * Math.PI * 2,
-      collected: false,
+    this.nodes.forEach(node => {
+      const compatibleTypes = connectionRules[node.type] || [];
+      
+      this.nodes.forEach(otherNode => {
+        if (node.id !== otherNode.id && 
+            compatibleTypes.includes(otherNode.type) &&
+            Math.random() > 0.6) {
+          
+          const distance = Math.sqrt(
+            Math.pow(node.x - otherNode.x, 2) + 
+            Math.pow(node.y - otherNode.y, 2)
+          );
+          
+          if (distance < 200) {
+            this.connections.push({
+              from: node.id,
+              to: otherNode.id,
+              strength: 0.3 + Math.random() * 0.7,
+              dataFlow: 0,
+              isActive: false
+            });
+          }
+        }
+      });
+    });
+  }
+
+  createDataPacket(fromNode, toNode) {
+    const packet = {
+      x: fromNode.x,
+      y: fromNode.y,
+      targetX: toNode.x,
+      targetY: toNode.y,
+      progress: 0,
+      speed: 0.02 + Math.random() * 0.03,
+      color: fromNode.color,
+      size: 3 + Math.random() * 3,
       trail: []
     };
     
-    this.bubbles.push(bubble);
+    this.dataPackets.push(packet);
   }
 
-  updateBubbles() {
-    this.bubbles.forEach((bubble, index) => {
-      if (bubble.collected) return;
+  updateDataPackets() {
+    this.dataPackets.forEach((packet, index) => {
+      packet.progress += packet.speed;
       
-      // Update position with wobble effect
-      bubble.y += bubble.speed;
-      bubble.x += Math.sin(bubble.wobble + bubble.y * 0.01) * 0.5;
-      bubble.wobble += 0.02;
+      // Interpolate position
+      packet.x = packet.x + (packet.targetX - packet.x) * packet.speed;
+      packet.y = packet.y + (packet.targetY - packet.y) * packet.speed;
       
       // Add trail point
-      bubble.trail.push({ x: bubble.x, y: bubble.y, opacity: bubble.opacity });
-      if (bubble.trail.length > 10) bubble.trail.shift();
+      packet.trail.push({ x: packet.x, y: packet.y, alpha: 1 });
+      if (packet.trail.length > 8) packet.trail.shift();
       
-      // Check for mouse interaction
-      const distance = Math.sqrt(
-        Math.pow(bubble.x - this.mouse.x, 2) + 
-        Math.pow(bubble.y - this.mouse.y, 2)
-      );
-      
-      if (distance < bubble.radius + 10) {
-        this.showTopicInfo(bubble.topic);
-        bubble.radius += 0.5; // Grow on hover
-        this.createParticleEffect(bubble.x, bubble.y, bubble.color);
-      } else {
-        bubble.radius = Math.max(bubble.radius - 0.2, 15 + this.topics[bubble.topic].difficulty * 5);
-      }
-      
-      // Remove bubbles that are off screen
-      if (bubble.y > this.height + 100) {
-        this.bubbles.splice(index, 1);
+      // Remove completed packets
+      if (packet.progress >= 1) {
+        this.createPacketExplosion(packet.targetX, packet.targetY, packet.color);
+        this.dataPackets.splice(index, 1);
       }
     });
   }
 
-  createParticleEffect(x, y, color) {
-    for (let i = 0; i < 3; i++) {
+  createPacketExplosion(x, y, color) {
+    for (let i = 0; i < 8; i++) {
       this.particles.push({
-        x: x + (Math.random() - 0.5) * 20,
-        y: y + (Math.random() - 0.5) * 20,
-        vx: (Math.random() - 0.5) * 4,
-        vy: (Math.random() - 0.5) * 4,
+        x: x,
+        y: y,
+        vx: (Math.random() - 0.5) * 6,
+        vy: (Math.random() - 0.5) * 6,
         color: color,
         life: 1,
-        decay: 0.02
+        decay: 0.03,
+        size: 2 + Math.random() * 2
       });
     }
   }
@@ -152,6 +201,8 @@ class DigitalWaterfall {
     this.particles.forEach((particle, index) => {
       particle.x += particle.vx;
       particle.y += particle.vy;
+      particle.vx *= 0.98; // Friction
+      particle.vy *= 0.98;
       particle.life -= particle.decay;
       
       if (particle.life <= 0) {
@@ -160,94 +211,322 @@ class DigitalWaterfall {
     });
   }
 
-  drawStreams() {
-    this.streams.forEach(stream => {
+  drawCircuitBoard() {
+    // Draw background grid
+    this.drawGrid();
+    
+    // Draw connections first (behind nodes)
+    this.drawConnections();
+    
+    // Draw nodes
+    this.drawNodes();
+    
+    // Draw data packets
+    this.drawDataPackets();
+    
+    // Draw particles
+    this.drawParticles();
+  }
+
+  drawGrid() {
+    this.ctx.save();
+    this.ctx.strokeStyle = this.grade === 10 ? 'rgba(6, 182, 212, 0.1)' : 'rgba(139, 92, 246, 0.1)';
+    this.ctx.lineWidth = 1;
+    
+    // Vertical lines
+    for (let x = 0; x < this.width; x += 30) {
+      this.ctx.beginPath();
+      this.ctx.moveTo(x, 0);
+      this.ctx.lineTo(x, this.height);
+      this.ctx.stroke();
+    }
+    
+    // Horizontal lines
+    for (let y = 0; y < this.height; y += 30) {
+      this.ctx.beginPath();
+      this.ctx.moveTo(0, y);
+      this.ctx.lineTo(this.width, y);
+      this.ctx.stroke();
+    }
+    
+    this.ctx.restore();
+  }
+
+  drawConnections() {
+    this.connections.forEach(connection => {
+      const fromNode = this.nodes[connection.from];
+      const toNode = this.nodes[connection.to];
+      
+      if (!fromNode || !toNode) return;
+      
       this.ctx.save();
-      this.ctx.globalAlpha = stream.opacity;
       
-      const gradient = this.ctx.createLinearGradient(0, 0, 0, this.height);
-      if (this.grade === 10) {
-        gradient.addColorStop(0, 'rgba(6, 182, 212, 0)');
-        gradient.addColorStop(0.5, 'rgba(6, 182, 212, 0.3)');
-        gradient.addColorStop(1, 'rgba(6, 182, 212, 0)');
-      } else {
-        gradient.addColorStop(0, 'rgba(236, 72, 153, 0)');
-        gradient.addColorStop(0.5, 'rgba(236, 72, 153, 0.3)');
-        gradient.addColorStop(1, 'rgba(236, 72, 153, 0)');
-      }
+      // Draw circuit trace
+      const gradient = this.ctx.createLinearGradient(
+        fromNode.x, fromNode.y, toNode.x, toNode.y
+      );
       
-      this.ctx.fillStyle = gradient;
-      this.ctx.fillRect(stream.x - 20, 0, 40, this.height);
+      const alpha = connection.isActive ? 0.8 : 0.3;
+      const baseColor = this.grade === 10 ? '6, 182, 212' : '139, 92, 246';
+      
+      gradient.addColorStop(0, `rgba(${baseColor}, ${alpha})`);
+      gradient.addColorStop(0.5, `rgba(${baseColor}, ${alpha * 1.5})`);
+      gradient.addColorStop(1, `rgba(${baseColor}, ${alpha})`);
+      
+      this.ctx.strokeStyle = gradient;
+      this.ctx.lineWidth = connection.isActive ? 4 : 2;
+      this.ctx.shadowColor = `rgba(${baseColor}, 0.5)`;
+      this.ctx.shadowBlur = connection.isActive ? 10 : 0;
+      
+      // Draw the trace with slight curve
+      const midX = (fromNode.x + toNode.x) / 2;
+      const midY = (fromNode.y + toNode.y) / 2;
+      const offset = 20;
+      
+      this.ctx.beginPath();
+      this.ctx.moveTo(fromNode.x, fromNode.y);
+      this.ctx.quadraticCurveTo(midX + offset, midY, toNode.x, toNode.y);
+      this.ctx.stroke();
+      
       this.ctx.restore();
     });
   }
 
-  drawBubbles() {
-    this.bubbles.forEach(bubble => {
+  drawNodes() {
+    this.nodes.forEach((node, index) => {
+      const distance = Math.sqrt(
+        Math.pow(node.x - this.mouse.x, 2) + 
+        Math.pow(node.y - this.mouse.y, 2)
+      );
+      
+      const isHovered = distance < node.radius + 20;
+      
+      // Update pulse animation
+      node.pulsePhase += 0.05;
+      const pulseScale = 1 + Math.sin(node.pulsePhase) * 0.1;
+      
+      this.ctx.save();
+      
+      // Draw node glow
+      if (node.isActive || isHovered) {
+        const glowRadius = node.radius * (isHovered ? 3 : 2);
+        const glowGradient = this.ctx.createRadialGradient(
+          node.x, node.y, 0,
+          node.x, node.y, glowRadius
+        );
+        glowGradient.addColorStop(0, this.hexToRgba(node.color, 0.3));
+        glowGradient.addColorStop(1, 'transparent');
+        
+        this.ctx.fillStyle = glowGradient;
+        this.ctx.beginPath();
+        this.ctx.arc(node.x, node.y, glowRadius, 0, Math.PI * 2);
+        this.ctx.fill();
+      }
+      
+      // Draw node body based on type
+      this.drawNodeByType(node, pulseScale, isHovered);
+      
+      // Draw topic label
+      if (isHovered) {
+        this.ctx.fillStyle = '#ffffff';
+        this.ctx.font = 'bold 12px Arial';
+        this.ctx.textAlign = 'center';
+        this.ctx.fillText(node.topic, node.x, node.y - node.radius - 15);
+        
+        // Show topic info
+        this.showTopicInfo(node.topic);
+        
+        // Activate connected nodes
+        this.activateConnections(index);
+      }
+      
+      this.ctx.restore();
+    });
+  }
+
+  drawNodeByType(node, pulseScale, isHovered) {
+    const radius = node.radius * pulseScale;
+    
+    switch (node.type) {
+      case 'processor':
+        this.drawProcessorNode(node, radius, isHovered);
+        break;
+      case 'memory':
+        this.drawMemoryNode(node, radius, isHovered);
+        break;
+      case 'network':
+        this.drawNetworkNode(node, radius, isHovered);
+        break;
+      case 'interface':
+        this.drawInterfaceNode(node, radius, isHovered);
+        break;
+      case 'shield':
+        this.drawShieldNode(node, radius, isHovered);
+        break;
+    }
+  }
+
+  drawProcessorNode(node, radius, isHovered) {
+    // Square processor with rounded corners
+    this.ctx.fillStyle = node.color;
+    this.ctx.shadowColor = node.color;
+    this.ctx.shadowBlur = isHovered ? 20 : 10;
+    
+    const size = radius * 1.5;
+    this.ctx.beginPath();
+    this.ctx.roundRect(node.x - size/2, node.y - size/2, size, size, 5);
+    this.ctx.fill();
+    
+    // Internal grid pattern
+    this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.6)';
+    this.ctx.lineWidth = 1;
+    for (let i = 1; i < 3; i++) {
+      const offset = (size / 3) * i - size/2;
+      this.ctx.beginPath();
+      this.ctx.moveTo(node.x - size/2, node.y + offset);
+      this.ctx.lineTo(node.x + size/2, node.y + offset);
+      this.ctx.moveTo(node.x + offset, node.y - size/2);
+      this.ctx.lineTo(node.x + offset, node.y + size/2);
+      this.ctx.stroke();
+    }
+  }
+
+  drawMemoryNode(node, radius, isHovered) {
+    // Rectangular memory chip
+    this.ctx.fillStyle = node.color;
+    this.ctx.shadowColor = node.color;
+    this.ctx.shadowBlur = isHovered ? 20 : 10;
+    
+    const width = radius * 2;
+    const height = radius * 1.2;
+    this.ctx.beginPath();
+    this.ctx.roundRect(node.x - width/2, node.y - height/2, width, height, 3);
+    this.ctx.fill();
+    
+    // Memory segments
+    this.ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+    for (let i = 0; i < 4; i++) {
+      const segY = node.y - height/2 + (height / 4) * i + 2;
+      this.ctx.fillRect(node.x - width/2 + 5, segY, width - 10, height/4 - 4);
+    }
+  }
+
+  drawNetworkNode(node, radius, isHovered) {
+    // Hexagonal network node
+    this.ctx.fillStyle = node.color;
+    this.ctx.shadowColor = node.color;
+    this.ctx.shadowBlur = isHovered ? 20 : 10;
+    
+    this.ctx.beginPath();
+    for (let i = 0; i < 6; i++) {
+      const angle = (i * Math.PI) / 3;
+      const x = node.x + Math.cos(angle) * radius;
+      const y = node.y + Math.sin(angle) * radius;
+      if (i === 0) this.ctx.moveTo(x, y);
+      else this.ctx.lineTo(x, y);
+    }
+    this.ctx.closePath();
+    this.ctx.fill();
+    
+    // Network symbol
+    this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+    this.ctx.lineWidth = 2;
+    this.ctx.beginPath();
+    this.ctx.arc(node.x, node.y, radius * 0.3, 0, Math.PI * 2);
+    this.ctx.stroke();
+    
+    for (let i = 0; i < 4; i++) {
+      const angle = (i * Math.PI) / 2;
+      this.ctx.beginPath();
+      this.ctx.moveTo(node.x, node.y);
+      this.ctx.lineTo(
+        node.x + Math.cos(angle) * radius * 0.6,
+        node.y + Math.sin(angle) * radius * 0.6
+      );
+      this.ctx.stroke();
+    }
+  }
+
+  drawInterfaceNode(node, radius, isHovered) {
+    // Diamond-shaped interface
+    this.ctx.fillStyle = node.color;
+    this.ctx.shadowColor = node.color;
+    this.ctx.shadowBlur = isHovered ? 20 : 10;
+    
+    this.ctx.beginPath();
+    this.ctx.moveTo(node.x, node.y - radius);
+    this.ctx.lineTo(node.x + radius, node.y);
+    this.ctx.lineTo(node.x, node.y + radius);
+    this.ctx.lineTo(node.x - radius, node.y);
+    this.ctx.closePath();
+    this.ctx.fill();
+    
+    // Interface lines
+    this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.6)';
+    this.ctx.lineWidth = 2;
+    this.ctx.beginPath();
+    this.ctx.moveTo(node.x - radius * 0.5, node.y);
+    this.ctx.lineTo(node.x + radius * 0.5, node.y);
+    this.ctx.moveTo(node.x, node.y - radius * 0.5);
+    this.ctx.lineTo(node.x, node.y + radius * 0.5);
+    this.ctx.stroke();
+  }
+
+  drawShieldNode(node, radius, isHovered) {
+    // Shield-shaped security node
+    this.ctx.fillStyle = node.color;
+    this.ctx.shadowColor = node.color;
+    this.ctx.shadowBlur = isHovered ? 20 : 10;
+    
+    this.ctx.beginPath();
+    this.ctx.moveTo(node.x, node.y - radius);
+    this.ctx.lineTo(node.x + radius * 0.8, node.y - radius * 0.3);
+    this.ctx.lineTo(node.x + radius * 0.8, node.y + radius * 0.5);
+    this.ctx.lineTo(node.x, node.y + radius);
+    this.ctx.lineTo(node.x - radius * 0.8, node.y + radius * 0.5);
+    this.ctx.lineTo(node.x - radius * 0.8, node.y - radius * 0.3);
+    this.ctx.closePath();
+    this.ctx.fill();
+    
+    // Shield symbol
+    this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+    this.ctx.lineWidth = 2;
+    this.ctx.beginPath();
+    this.ctx.moveTo(node.x, node.y - radius * 0.4);
+    this.ctx.lineTo(node.x, node.y + radius * 0.4);
+    this.ctx.moveTo(node.x - radius * 0.3, node.y);
+    this.ctx.lineTo(node.x + radius * 0.3, node.y);
+    this.ctx.stroke();
+  }
+
+  drawDataPackets() {
+    this.dataPackets.forEach(packet => {
       // Draw trail
-      bubble.trail.forEach((point, index) => {
-        const alpha = (index / bubble.trail.length) * bubble.opacity * 0.3;
+      packet.trail.forEach((point, index) => {
+        const alpha = (index / packet.trail.length) * 0.5;
         this.ctx.save();
         this.ctx.globalAlpha = alpha;
-        this.ctx.fillStyle = bubble.color;
+        this.ctx.fillStyle = packet.color;
         this.ctx.beginPath();
-        this.ctx.arc(point.x, point.y, 3, 0, Math.PI * 2);
+        this.ctx.arc(point.x, point.y, packet.size * (alpha + 0.3), 0, Math.PI * 2);
         this.ctx.fill();
         this.ctx.restore();
       });
       
-      // Draw main bubble
+      // Draw main packet
       this.ctx.save();
-      this.ctx.globalAlpha = bubble.opacity;
-      
-      // Outer glow
-      const glowGradient = this.ctx.createRadialGradient(
-        bubble.x, bubble.y, 0,
-        bubble.x, bubble.y, bubble.radius * 2
-      );
-      glowGradient.addColorStop(0, bubble.color);
-      glowGradient.addColorStop(1, 'transparent');
-      
-      this.ctx.fillStyle = glowGradient;
+      this.ctx.fillStyle = packet.color;
+      this.ctx.shadowColor = packet.color;
+      this.ctx.shadowBlur = 15;
       this.ctx.beginPath();
-      this.ctx.arc(bubble.x, bubble.y, bubble.radius * 2, 0, Math.PI * 2);
+      this.ctx.arc(packet.x, packet.y, packet.size, 0, Math.PI * 2);
       this.ctx.fill();
       
-      // Main bubble
-      const bubbleGradient = this.ctx.createRadialGradient(
-        bubble.x - bubble.radius * 0.3, bubble.y - bubble.radius * 0.3, 0,
-        bubble.x, bubble.y, bubble.radius
-      );
-      bubbleGradient.addColorStop(0, this.hexToRgba(bubble.color, 0.9));
-      bubbleGradient.addColorStop(0.7, this.hexToRgba(bubble.color, 0.6));
-      bubbleGradient.addColorStop(1, this.hexToRgba(bubble.color, 0.3));
-      
-      this.ctx.fillStyle = bubbleGradient;
+      // Packet highlight
+      this.ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
       this.ctx.beginPath();
-      this.ctx.arc(bubble.x, bubble.y, bubble.radius, 0, Math.PI * 2);
+      this.ctx.arc(packet.x - packet.size * 0.3, packet.y - packet.size * 0.3, packet.size * 0.4, 0, Math.PI * 2);
       this.ctx.fill();
-      
-      // Bubble highlight
-      this.ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
-      this.ctx.beginPath();
-      this.ctx.arc(
-        bubble.x - bubble.radius * 0.4, 
-        bubble.y - bubble.radius * 0.4, 
-        bubble.radius * 0.3, 
-        0, Math.PI * 2
-      );
-      this.ctx.fill();
-      
-      // Topic text (abbreviated)
-      this.ctx.fillStyle = '#ffffff';
-      this.ctx.font = 'bold 10px Arial';
-      this.ctx.textAlign = 'center';
-      this.ctx.fillText(
-        bubble.topic.split(' ')[0], 
-        bubble.x, 
-        bubble.y + 3
-      );
-      
       this.ctx.restore();
     });
   }
@@ -257,82 +536,133 @@ class DigitalWaterfall {
       this.ctx.save();
       this.ctx.globalAlpha = particle.life;
       this.ctx.fillStyle = particle.color;
+      this.ctx.shadowColor = particle.color;
+      this.ctx.shadowBlur = 8;
       this.ctx.beginPath();
-      this.ctx.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
+      this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
       this.ctx.fill();
       this.ctx.restore();
     });
   }
 
+  activateConnections(nodeIndex) {
+    this.connections.forEach(connection => {
+      if (connection.from === nodeIndex || connection.to === nodeIndex) {
+        connection.isActive = true;
+        
+        // Create data flow
+        if (Math.random() > 0.7) {
+          const fromNode = this.nodes[connection.from];
+          const toNode = this.nodes[connection.to];
+          this.createDataPacket(fromNode, toNode);
+        }
+      }
+    });
+    
+    // Deactivate after a delay
+    setTimeout(() => {
+      this.connections.forEach(connection => {
+        if (connection.from === nodeIndex || connection.to === nodeIndex) {
+          connection.isActive = false;
+        }
+      });
+    }, 2000);
+  }
+
   showTopicInfo(topic) {
-    const topicDisplay = document.getElementById(`topic${this.grade}`);
+    const topicDisplay = document.getElementById(`circuitTopic${this.grade}`);
     if (topicDisplay) {
-      topicDisplay.textContent = `${topic} - ${this.topics[topic].difficulty}/5 difficulty`;
+      const topicData = this.topics[topic];
+      topicDisplay.textContent = `${topic} - ${topicData.type.toUpperCase()} MODULE (Level ${topicData.importance}/5)`;
     }
   }
 
-  handleBubbleClick(e) {
+  handleNodeClick(e) {
     const rect = this.canvas.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
     const clickY = e.clientY - rect.top;
     
-    this.bubbles.forEach((bubble, index) => {
+    this.nodes.forEach((node, index) => {
       const distance = Math.sqrt(
-        Math.pow(bubble.x - clickX, 2) + 
-        Math.pow(bubble.y - clickY, 2)
+        Math.pow(node.x - clickX, 2) + 
+        Math.pow(node.y - clickY, 2)
       );
       
-      if (distance < bubble.radius && !bubble.collected) {
-        bubble.collected = true;
-        this.collectBubble(bubble, clickX, clickY);
-        this.bubbles.splice(index, 1);
+      if (distance < node.radius + 10) {
+        this.collectNode(node, clickX, clickY);
+        this.activateConnections(index);
       }
     });
   }
 
-  collectBubble(bubble, x, y) {
-    // Create splash effect
-    this.createSplashEffect(x, y);
+  collectNode(node, x, y) {
+    // Create electrical explosion effect
+    this.createElectricalExplosion(x, y, node.color);
     
-    // Create particle explosion
-    for (let i = 0; i < 15; i++) {
+    // Show achievement notification
+    this.showAchievement(node.topic, node.type);
+    
+    // Power up the node
+    node.powerLevel = Math.min(node.powerLevel + 0.2, 1);
+    node.isActive = true;
+  }
+
+  createElectricalExplosion(x, y, color) {
+    // Create lightning-like particles
+    for (let i = 0; i < 20; i++) {
       this.particles.push({
         x: x,
         y: y,
-        vx: (Math.random() - 0.5) * 10,
-        vy: (Math.random() - 0.5) * 10,
-        color: bubble.color,
+        vx: (Math.random() - 0.5) * 12,
+        vy: (Math.random() - 0.5) * 12,
+        color: color,
         life: 1,
-        decay: 0.03
+        decay: 0.04,
+        size: 2 + Math.random() * 4
       });
     }
     
-    // Show achievement notification
-    this.showAchievement(bubble.topic);
-  }
-
-  createSplashEffect(x, y) {
-    const splash = document.createElement('div');
-    splash.className = `bubble-splash ${this.grade === 10 ? 'grade10-splash' : 'grade11-splash'}`;
-    splash.style.left = (x - 50) + 'px';
-    splash.style.top = (y - 50) + 'px';
+    // Create screen flash effect
+    const flash = document.createElement('div');
+    flash.className = 'circuit-flash';
+    flash.style.cssText = `
+      position: fixed;
+      left: ${x - 100}px;
+      top: ${y - 100}px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, ${color}50, transparent);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1000;
+      animation: electricFlash 0.5s ease-out forwards;
+    `;
     
     const container = this.canvas.parentElement;
-    container.appendChild(splash);
+    container.appendChild(flash);
     
-    setTimeout(() => splash.remove(), 600);
+    setTimeout(() => flash.remove(), 500);
   }
 
-  showAchievement(topic) {
+  showAchievement(topic, type) {
     const notification = document.createElement('div');
-    notification.className = 'achievement-notification';
+    notification.className = 'circuit-achievement-notification';
+    
+    const typeIcons = {
+      'processor': 'cpu',
+      'memory': 'hard-drive',
+      'network': 'wifi',
+      'interface': 'monitor',
+      'shield': 'shield'
+    };
+    
     notification.innerHTML = `
       <div class="achievement-icon-container">
-        <i data-lucide="check-circle" class="achievement-check-icon"></i>
+        <i data-lucide="${typeIcons[type]}" class="achievement-circuit-icon"></i>
       </div>
       <div class="achievement-text">
-        <strong>Knowledge Collected!</strong><br>
-        <span>${topic}</span>
+        <strong>Circuit Activated!</strong><br>
+        <span>${topic} ${type.toUpperCase()} Module</span>
       </div>
     `;
     
@@ -341,7 +671,7 @@ class DigitalWaterfall {
       position: 'fixed',
       top: '20px',
       right: '20px',
-      background: 'rgba(34, 197, 94, 0.9)',
+      background: 'linear-gradient(135deg, rgba(6, 182, 212, 0.9), rgba(59, 130, 246, 0.9))',
       color: 'white',
       padding: '1rem',
       borderRadius: '15px',
@@ -352,28 +682,34 @@ class DigitalWaterfall {
       backdropFilter: 'blur(10px)',
       border: '1px solid rgba(255, 255, 255, 0.2)',
       boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
-      animation: 'slideInRight 0.5s ease-out forwards'
+      animation: 'circuitSlideIn 0.5s ease-out forwards'
     });
     
     document.body.appendChild(notification);
     
-    // Add slide animation
-    const slideKeyframes = `
-      @keyframes slideInRight {
-        from { transform: translateX(100%); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-      }
-    `;
-    
-    if (!document.getElementById('achievement-styles')) {
+    // Add circuit animation
+    if (!document.getElementById('circuit-styles')) {
       const style = document.createElement('style');
-      style.id = 'achievement-styles';
-      style.textContent = slideKeyframes;
+      style.id = 'circuit-styles';
+      style.textContent = `
+        @keyframes circuitSlideIn {
+          from { transform: translateX(100%) scale(0.8); opacity: 0; }
+          to { transform: translateX(0) scale(1); opacity: 1; }
+        }
+        @keyframes electricFlash {
+          0% { opacity: 0; transform: scale(0); }
+          50% { opacity: 1; transform: scale(1); }
+          100% { opacity: 0; transform: scale(1.5); }
+        }
+        @keyframes circuitSlideOut {
+          to { transform: translateX(100%) scale(0.8); opacity: 0; }
+        }
+      `;
       document.head.appendChild(style);
     }
     
     setTimeout(() => {
-      notification.style.animation = 'slideOutRight 0.5s ease-in forwards';
+      notification.style.animation = 'circuitSlideOut 0.5s ease-in forwards';
       setTimeout(() => notification.remove(), 500);
     }, 3000);
   }
@@ -385,27 +721,41 @@ class DigitalWaterfall {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   }
 
+  // Auto-generate random data flow
+  generateRandomDataFlow() {
+    if (Math.random() < 0.3) {
+      const activeNodes = this.nodes.filter(node => node.isActive);
+      if (activeNodes.length >= 2) {
+        const fromNode = activeNodes[Math.floor(Math.random() * activeNodes.length)];
+        const toNode = activeNodes[Math.floor(Math.random() * activeNodes.length)];
+        if (fromNode !== toNode) {
+          this.createDataPacket(fromNode, toNode);
+        }
+      }
+    }
+  }
+
   animate() {
     if (!this.isRunning) return;
+    
+    this.time += 0.016; // Approximate 60fps
     
     // Clear canvas with fade effect
     this.ctx.fillStyle = 'rgba(15, 23, 42, 0.1)';
     this.ctx.fillRect(0, 0, this.width, this.height);
     
-    // Draw streams
-    this.drawStreams();
+    // Draw the circuit board
+    this.drawCircuitBoard();
     
-    // Update and draw bubbles
-    this.updateBubbles();
-    this.drawBubbles();
-    
-    // Update and draw particles
+    // Update systems
+    this.updateDataPackets();
     this.updateParticles();
-    this.drawParticles();
+    this.generateRandomDataFlow();
     
-    // Create new bubbles periodically
+    // Random node activation
     if (Math.random() < 0.02) {
-      this.createBubble();
+      const randomNode = this.nodes[Math.floor(Math.random() * this.nodes.length)];
+      randomNode.isActive = !randomNode.isActive;
     }
     
     requestAnimationFrame(() => this.animate());
@@ -421,136 +771,169 @@ class DigitalWaterfall {
   }
 }
 
-// Initialize waterfalls when DOM is loaded
+// Initialize circuit board cities when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  // Wait for canvas elements to be available
   setTimeout(() => {
-    const canvas10 = document.getElementById('waterfall10');
-    const canvas11 = document.getElementById('waterfall11');
+    const canvas10 = document.getElementById('circuit10');
+    const canvas11 = document.getElementById('circuit11');
     
     if (canvas10) {
-      window.waterfall10 = new DigitalWaterfall('waterfall10', 10);
+      window.circuit10 = new CircuitBoardCity('circuit10', 10);
     }
     
     if (canvas11) {
-      window.waterfall11 = new DigitalWaterfall('waterfall11', 11);
+      window.circuit11 = new CircuitBoardCity('circuit11', 11);
     }
   }, 100);
 });
 
-// Achievement bubble interactions
+// Control panel interactions
 document.addEventListener('DOMContentLoaded', () => {
-  const achievementBubbles = document.querySelectorAll('.achievement-bubble');
+  const controlModules = document.querySelectorAll('.control-module');
   
-  achievementBubbles.forEach(bubble => {
-    bubble.addEventListener('click', () => {
-      if (bubble.classList.contains('completed')) {
-        const icon = bubble.querySelector('.achievement-icon');
-        const iconName = icon.getAttribute('data-lucide');
-        
-        // Create celebration effect
-        createCelebrationEffect(bubble, iconName);
+  controlModules.forEach(module => {
+    module.addEventListener('click', () => {
+      if (module.classList.contains('completed')) {
+        const achievement = module.getAttribute('data-achievement');
+        createElectricalCelebration(module, achievement);
       } else {
-        showLockedMessage();
+        showSystemLockedMessage();
       }
     });
   });
 });
 
-function createCelebrationEffect(element, iconName) {
+function createElectricalCelebration(element, achievement) {
   const rect = element.getBoundingClientRect();
   const centerX = rect.left + rect.width / 2;
   const centerY = rect.top + rect.height / 2;
   
-  for (let i = 0; i < 20; i++) {
-    const particle = document.createElement('div');
-    particle.style.cssText = `
+  // Create electrical sparks
+  for (let i = 0; i < 25; i++) {
+    const spark = document.createElement('div');
+    spark.style.cssText = `
       position: fixed;
       left: ${centerX}px;
       top: ${centerY}px;
-      width: 8px;
-      height: 8px;
-      background: linear-gradient(45deg, #fbbf24, #f59e0b);
-      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+      background: linear-gradient(45deg, #06b6d4, #3b82f6);
+      box-shadow: 0 0 10px #06b6d4;
       pointer-events: none;
       z-index: 1000;
-      animation: explode 1s ease-out forwards;
+      animation: electricSpark 1.2s ease-out forwards;
     `;
     
-    // Random direction for explosion
-    const angle = (i / 20) * Math.PI * 2;
-    const velocity = 50 + Math.random() * 50;
+    // Random lightning-like direction
+    const angle = (i / 25) * Math.PI * 2;
+    const velocity = 60 + Math.random() * 40;
     const vx = Math.cos(angle) * velocity;
     const vy = Math.sin(angle) * velocity;
     
-    particle.style.setProperty('--vx', vx + 'px');
-    particle.style.setProperty('--vy', vy + 'px');
+    spark.style.setProperty('--vx', vx + 'px');
+    spark.style.setProperty('--vy', vy + 'px');
     
-    document.body.appendChild(particle);
-    
-    setTimeout(() => particle.remove(), 1000);
+    document.body.appendChild(spark);
+    setTimeout(() => spark.remove(), 1200);
   }
   
-  // Add explosion keyframes if not exists
-  if (!document.getElementById('explosion-styles')) {
+  // Add spark animation if not exists
+  if (!document.getElementById('electrical-styles')) {
     const style = document.createElement('style');
-    style.id = 'explosion-styles';
+    style.id = 'electrical-styles';
     style.textContent = `
-      @keyframes explode {
+      @keyframes electricSpark {
         0% {
           transform: translate(0, 0) scale(1);
           opacity: 1;
+          box-shadow: 0 0 10px currentColor;
         }
         100% {
           transform: translate(var(--vx), var(--vy)) scale(0);
           opacity: 0;
+          box-shadow: 0 0 30px currentColor;
         }
-      }
-      @keyframes slideOutRight {
-        to { transform: translateX(100%); opacity: 0; }
       }
     `;
     document.head.appendChild(style);
   }
+  
+  // Pulse the module
+  element.style.animation = 'modulePulse 0.6s ease-in-out';
+  setTimeout(() => element.style.animation = '', 600);
 }
 
-function showLockedMessage() {
+function showSystemLockedMessage() {
   const message = document.createElement('div');
-  message.textContent = 'Complete more lessons to unlock this achievement!';
+  message.innerHTML = `
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <i data-lucide="lock" style="width: 20px; height: 20px;"></i>
+      <span>System Module Locked - Complete more circuits to unlock!</span>
+    </div>
+  `;
+  
   Object.assign(message.style, {
     position: 'fixed',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    background: 'rgba(239, 68, 68, 0.9)',
+    background: 'linear-gradient(135deg, rgba(239, 68, 68, 0.9), rgba(220, 38, 38, 0.9))',
     color: 'white',
     padding: '1rem 2rem',
-    borderRadius: '25px',
+    borderRadius: '15px',
     zIndex: '1000',
     backdropFilter: 'blur(10px)',
     border: '1px solid rgba(255, 255, 255, 0.2)',
-    animation: 'fadeInOut 2s ease-in-out forwards'
+    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+    animation: 'systemAlert 2.5s ease-in-out forwards'
   });
   
-  // Add fade animation
-  if (!document.getElementById('fade-styles')) {
+  // Add system alert animation
+  if (!document.getElementById('system-styles')) {
     const style = document.createElement('style');
-    style.id = 'fade-styles';
+    style.id = 'system-styles';
     style.textContent = `
-      @keyframes fadeInOut {
+      @keyframes systemAlert {
         0%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-        20%, 80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        15%, 85% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+      }
+      @keyframes modulePulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); box-shadow: 0 0 30px rgba(6, 182, 212, 0.6); }
       }
     `;
     document.head.appendChild(style);
   }
   
   document.body.appendChild(message);
-  setTimeout(() => message.remove(), 2000);
+  
+  // Initialize lucide icons for the message
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+  
+  setTimeout(() => message.remove(), 2500);
 }
 
 // Auto-cleanup on page unload
 window.addEventListener('beforeunload', () => {
-  if (window.waterfall10) window.waterfall10.stop();
-  if (window.waterfall11) window.waterfall11.stop();
+  if (window.circuit10) window.circuit10.stop();
+  if (window.circuit11) window.circuit11.stop();
 });
+
+// Add CanvasRenderingContext2D.roundRect polyfill for older browsers
+if (!CanvasRenderingContext2D.prototype.roundRect) {
+  CanvasRenderingContext2D.prototype.roundRect = function(x, y, width, height, radius) {
+    this.beginPath();
+    this.moveTo(x + radius, y);
+    this.lineTo(x + width - radius, y);
+    this.quadraticCurveTo(x + width, y, x + width, y + radius);
+    this.lineTo(x + width, y + height - radius);
+    this.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+    this.lineTo(x + radius, y + height);
+    this.quadraticCurveTo(x, y + height, x, y + height - radius);
+    this.lineTo(x, y + radius);
+    this.quadraticCurveTo(x, y, x + radius, y);
+    this.closePath();
+  };
+}
