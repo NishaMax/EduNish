@@ -393,10 +393,10 @@ function addFloatingParticles(card) {
   };
   
   // Create particles periodically
-  const particleInterval = setInterval(createParticle, 800);
+  const particleInterval = setInterval(createParticle, window.innerWidth < 768 ? 2000 : 800);
   
   // Stop after 10 seconds
-  setTimeout(() => clearInterval(particleInterval), 10000);
+  setTimeout(() => clearInterval(particleInterval), window.innerWidth < 768 ? 5000 : 10000);
 }
 
 // ===== Progress Card Click Handler =====
