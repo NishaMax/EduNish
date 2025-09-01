@@ -549,9 +549,11 @@ button:hover {
 
 /* Dark Theme Responsive Enhancements */
 @media (max-width: 768px) {
-    body::before {
-        background-size: 300% 300%;
-    }
+    body::before,
+    body::after {
+        animation: none !important; /* stop infinite shifting */
+        background-size: 200% 200%; /* lighter load */
+    } 
     
     section {
         margin-top: 60px;
@@ -1274,3 +1276,32 @@ pre {
   text-shadow:none !important;
 }
 .ed-modal .text-gray-700 { color:#374151 !important; } /* body lines */
+
+@media (max-width: 768px) {
+  .progress-particle {
+    display: none; /* turn off floating particles on phones */
+  }
+}
+@media (max-width: 768px) {
+  .bg-white, #progress-list > div, button {
+    box-shadow: none !important;
+  }
+}
+@media (max-width: 768px) {
+  #progress-list > div:hover {
+    transform: translateY(-8px) scale(1.02) !important; /* simpler */
+  }
+}
+@media (max-width: 768px) {
+  .bg-white, #progress-section {
+    backdrop-filter: none !important;
+    background: rgba(30, 30, 60, 0.9) !important;
+  }
+}
+@media (max-width: 768px) {
+  #timer {
+    animation: none !important; /* stop glow pulsing */
+    box-shadow: 0 0 10px rgba(99,102,241,0.4);
+  }
+}
+
