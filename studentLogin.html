@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login - EduNish</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+    <h1 class="text-2xl font-bold text-center mb-6 text-blue-700">Student Login</h1>
+    <form id="loginForm" class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold">Student ID</label>
+        <input type="text" id="studentId" class="w-full px-4 py-2 border rounded-lg" placeholder="Enter your Student ID" required />
+      </div>
+      <div>
+        <label class="block text-sm font-semibold">Email</label>
+        <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg" placeholder="Enter your Email" required />
+      </div>
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Login</button>
+    </form>
+    <p id="msg" class="mt-4 text-center"></p>
+    <p class="text-center mt-4 text-sm">Don’t have an account? <a href="registration.html" class="text-blue-600 hover:underline">Register</a></p>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
+      authDomain: "edunish-211d0.firebaseapp.com",
+      projectId: "edunish-211d0",
+      storageBucket: "edunish-211d0.appspot.com",
+      messagingSenderId: "1002400429038",
+      appId: "1:1002400429038:web:12ee9a586de10e518694ff",
+      measurementId: "G-7ZSDMMKFQ0"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const msg = document.getElementById("msg");
+    const form = document.getElementById("loginForm");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const studentId = document.getElementById("studentId").value.trim();
+      const email = document.getElementById("email").value.trim();
+
+      try {
+        const docRef = doc(db, "students", studentId);
+        const docSnap = await getDoc(docRef);
+
+        if (!docSnap.exists()) {
+          msg.textContent = "❌ Student ID not found!";
+          msg.className = "text-red-600 text-center";
+          return;
+        }
+
+        const student = docSnap.data();
+        if (student.email !== email) {
+          msg.textContent = "❌ Email doesn't match our records!";
+          msg.className = "text-red-600 text-center";
+          return;
+        }
+
+        localStorage.setItem("edunishStudentData", JSON.stringify(student));
+        msg.textContent = "✅ Login successful! Redirecting...";
+        msg.className = "text-green-600 text-center";
+
+        setTimeout(() => window.location.href = "index.html", 1500);
+      } catch (err) {
+        console.error(err);
+        msg.textContent = "❌ Error logging in. Try again.";
+        msg.className = "text-red-600 text-center";
+      }
+    });
+  </script>
+</body>
+</html>

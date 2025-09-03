@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login - EduNish</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white shadow-lg rounded-2xl p-8 max-w-md w-full">
+    <h1 class="text-2xl font-bold text-center mb-6 text-blue-700">Admin Login</h1>
+
+    <form id="adminLoginForm" class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold">Admin Email</label>
+        <input type="email" id="adminEmail" class="w-full px-4 py-2 border rounded-lg" required />
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold">Password</label>
+        <input type="password" id="adminPassword" class="w-full px-4 py-2 border rounded-lg" required />
+      </div>
+
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Login</button>
+    </form>
+
+    <p id="msg" class="mt-4 text-center"></p>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+    // 🔹 Firebase Config
+    const firebaseConfig = {
+      apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
+      authDomain: "edunish-211d0.firebaseapp.com",
+      projectId: "edunish-211d0",
+      storageBucket: "edunish-211d0.appspot.com",
+      messagingSenderId: "1002400429038",
+      appId: "1:1002400429038:web:12ee9a586de10e518694ff",
+      measurementId: "G-7ZSDMMKFQ0"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // 🔹 Set your admin email
+    const ADMIN_EMAIL = "nishantharasikumar@gmail.com";
+    const msg = document.getElementById("msg");
+
+    document.getElementById("adminLoginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById("adminEmail").value.trim();
+      const password = document.getElementById("adminPassword").value.trim();
+
+      if (email !== ADMIN_EMAIL) {
+        msg.textContent = "❌ Access denied. Not an admin account.";
+        msg.className = "text-red-600 text-center";
+        return;
+      }
+
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        localStorage.setItem("edunishAdmin", JSON.stringify({ email }));
+        msg.className = "text-green-600 text-center";
+        msg.textContent = "✅ Login successful! Redirecting...";
+        setTimeout(() => window.location.href = "admin.html", 1500);
+      } catch (err) {
+        console.error(err);
+        msg.className = "text-red-600 text-center";
+        msg.textContent = "❌ Invalid credentials. Please try again.";
+      }
+    });
+  </script>
+</body>
+</html>

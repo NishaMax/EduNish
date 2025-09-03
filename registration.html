@@ -9,28 +9,49 @@
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
   <div class="bg-white shadow-lg rounded-2xl p-8 max-w-md w-full">
     <h1 class="text-2xl font-bold text-center mb-6 text-blue-700">Register</h1>
+
     <form id="registrationForm" class="space-y-4">
+      <!-- Full Name -->
       <div>
         <label class="block text-sm font-semibold">Full Name</label>
         <input type="text" id="fullName" class="w-full px-4 py-2 border rounded-lg" required />
       </div>
+
+      <!-- Email -->
       <div>
         <label class="block text-sm font-semibold">Email</label>
         <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg" required />
       </div>
+
+      <!-- Grade Dropdown -->
       <div>
-        <label class="block text-sm font-semibold">Grade</label>
-        <input type="text" id="grade" class="w-full px-4 py-2 border rounded-lg" required />
+        <label class="block text-sm font-semibold">Select Grade</label>
+        <select id="grade" class="w-full px-4 py-2 border rounded-lg" required>
+          <option value="">-- Select Grade --</option>
+          <option value="10">Grade 10</option>
+          <option value="11">Grade 11</option>
+        </select>
       </div>
+
+      <!-- Password -->
+      <div>
+        <label class="block text-sm font-semibold">Password</label>
+        <input type="password" id="password" class="w-full px-4 py-2 border rounded-lg" required />
+      </div>
+
+      <!-- Register Button -->
       <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Register</button>
     </form>
+
     <p id="msg" class="mt-4 text-center"></p>
   </div>
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
+    // 🔹 Firebase Config
     const firebaseConfig = {
       apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
       authDomain: "edunish-211d0.firebaseapp.com",
@@ -43,53 +64,55 @@
 
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
+    const auth = getAuth(app);
 
+    // 🔹 Generate Unique Student ID
     function generateStudentId() {
       return "STU" + Math.floor(100000 + Math.random() * 900000);
     }
 
+    // 🔹 Handle Registration
     document.getElementById("registrationForm").addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const fullName = document.getElementById("fullName").value.trim();
       const email = document.getElementById("email").value.trim().toLowerCase();
       const grade = document.getElementById("grade").value.trim();
+      const password = document.getElementById("password").value.trim();
       const msg = document.getElementById("msg");
 
-      if (!fullName || !email || !grade) {
+      if (!fullName || !email || !grade || !password) {
         msg.textContent = "⚠️ Please fill in all fields.";
         msg.className = "text-red-600 text-center";
         return;
       }
 
       try {
+        // 🔹 Create Firebase Auth User
+        await createUserWithEmailAndPassword(auth, email, password);
+
+        // 🔹 Generate Student ID & Save Data
         const studentId = generateStudentId();
         const record = {
           studentId,
           fullName,
           email,
           grade,
-          avatarUrl: ""
+          role: "student", // students cannot change this
+          createdAt: new Date().toISOString()
         };
 
-        // Save to Firestore
+        // 🔹 Save Record to Firestore
         await setDoc(doc(db, "students", studentId), record);
         await setDoc(doc(db, "studentsByEmail", email), record);
 
-        // ✅ Save to localStorage for profile page
+        // 🔹 Save Locally
         localStorage.setItem("edunishStudentData", JSON.stringify(record));
 
-        // ✅ Save email→student mapping
-        const map = JSON.parse(localStorage.getItem("edunishStudentsByEmail") || "{}");
-        map[email] = record;
-        localStorage.setItem("edunishStudentsByEmail", JSON.stringify(map));
-
         msg.className = "text-green-600 font-semibold text-center";
-        msg.textContent = `✅ Student ID created: ${studentId}`;
+        msg.textContent = `✅ Registered successfully! Student ID: ${studentId}`;
 
-        // Redirect after success
-        setTimeout(() => (window.location.href = "profile.html"), 1500);
-
+        setTimeout(() => (window.location.href = "index.html"), 1500);
       } catch (err) {
         console.error("❌ Registration error:", err);
         msg.className = "text-red-600 text-center";

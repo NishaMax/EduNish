@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduNish - Grade 10 Resources</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50">
+
+  <script>
+  const studentData = localStorage.getItem("edunishStudentData");
+
+  if (!studentData) {
+    alert("Please log in first!");
+    window.location.href = "studentLogin.html";
+  } else {
+    const student = JSON.parse(studentData);
+
+    // ✅ Default permissions if missing
+    const access = student.access || {
+      grade10: student.grade === "10" || student.grade === "11",
+      grade11: student.grade === "11",
+      quizzes: true,
+      downloads: true
+    };
+
+    // ✅ Restrict Grade 10 page
+    if (window.location.pathname.includes("grade10.html") && access.grade10 === false) {
+      alert("❌ Access Denied! Contact your administrator.");
+      window.location.href = "index.html";
+    }
+
+    // ✅ Restrict Grade 11 page
+    if (window.location.pathname.includes("grade11.html") && (student.grade === "10" || access.grade11 === false)) {
+      alert("❌ Access Denied! Contact your administrator.");
+      window.location.href = "index.html";
+    }
+  }
+</script>
+
+
+  
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+          <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
+        </div>
+        <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          EduNish
+        </span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+        <a href="grade10.html" class="text-blue-600 font-bold">Grade 10</a>
+        <a href="grade11.html" class="text-gray-700 hover:text-blue-600">Grade 11</a>
+        <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
+        <a href="profile.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">My Profile</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <section class="pt-28 pb-12 text-center">
+    <h1 class="text-4xl font-bold text-gray-800">📘 Grade 10 Resources</h1>
+    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+      Access Grade 10 tutorials and notes below.
+    </p>
+  </section>
+
+  <!-- Grade 10 Tutorials -->
+  <section class="max-w-6xl mx-auto px-6 py-10">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">📘 Grade 10 Tutorials</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Example Tutorial Card -->
+      <div class="file-card bg-white rounded-2xl shadow-lg p-6 border hover:shadow-xl transition-all">
+        <h3 class="text-xl font-semibold text-gray-800">Grade 10 - Chapter 1 Tute</h3>
+        <p class="text-gray-600 text-sm mb-4">File size: 1.2 MB</p>
+        <a href="Notes_papers/grade10_chapter1_notes.pdf" download
+          class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center hover:shadow-lg">
+          Download
+        </a>
+      </div>
+
+      <!-- Add more Grade 10 resources here as needed -->
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 mt-10">
+    <div class="text-center text-gray-400">
+      © 2025 EduNish. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - EduNish</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <div class="max-w-6xl mx-auto py-10">
+    <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">Admin Dashboard</h1>
+
+    <!-- Table -->
+    <div class="bg-white rounded-lg shadow-lg p-6 overflow-x-auto">
+      <table class="min-w-full border">
+        <thead>
+          <tr class="bg-blue-600 text-white text-left">
+            <th class="py-2 px-4">Student ID</th>
+            <th class="py-2 px-4">Full Name</th>
+            <th class="py-2 px-4">Email</th>
+            <th class="py-2 px-4">Grade</th>
+            <th class="py-2 px-4">Page Access</th>
+            <th class="py-2 px-4">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="studentTable" class="divide-y"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module">
+    // ✅ Check admin login first
+    const adminData = JSON.parse(localStorage.getItem("edunishAdmin"));
+    if (!adminData || adminData.email !== "nishantharasikumar@gmail.com") {
+      alert("Access Denied! Admin login required.");
+      window.location.href = "adminLogin.html";
+    }
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, collection, getDocs, doc, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
+      authDomain: "edunish-211d0.firebaseapp.com",
+      projectId: "edunish-211d0",
+      storageBucket: "edunish-211d0.appspot.com",
+      messagingSenderId: "1002400429038",
+      appId: "1:1002400429038:web:12ee9a586de10e518694ff",
+      measurementId: "G-7ZSDMMKFQ0"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // ✅ Fetch All Students
+    async function fetchStudents() {
+      const studentTable = document.getElementById("studentTable");
+      studentTable.innerHTML = "";
+
+      const querySnapshot = await getDocs(collection(db, "students"));
+      querySnapshot.forEach(docSnap => {
+        const student = docSnap.data();
+
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td class="py-2 px-4">${student.studentId}</td>
+          <td class="py-2 px-4">${student.fullName}</td>
+          <td class="py-2 px-4">${student.email}</td>
+          <td class="py-2 px-4">${student.grade}</td>
+          <td class="py-2 px-4 space-y-1">
+            <label><input type="checkbox" class="access-toggle" data-id="${student.studentId}" data-field="grade10" ${student.access?.grade10 !== false ? "checked" : ""}> Grade 10</label><br>
+            <label><input type="checkbox" class="access-toggle" data-id="${student.studentId}" data-field="grade11" ${student.access?.grade11 ? "checked" : ""}> Grade 11</label><br>
+            <label><input type="checkbox" class="access-toggle" data-id="${student.studentId}" data-field="quizzes" ${student.access?.quizzes !== false ? "checked" : ""}> Quizzes</label><br>
+            <label><input type="checkbox" class="access-toggle" data-id="${student.studentId}" data-field="downloads" ${student.access?.downloads !== false ? "checked" : ""}> Downloads</label>
+          </td>
+          <td class="py-2 px-4 space-x-2">
+            <button class="bg-yellow-500 text-white px-3 py-1 rounded editBtn" data-id="${student.studentId}">Edit</button>
+            <button class="bg-red-500 text-white px-3 py-1 rounded deleteBtn" data-id="${student.studentId}">Delete</button>
+          </td>
+        `;
+        studentTable.appendChild(row);
+      });
+
+      addEventListeners();
+    }
+
+    // ✅ Edit Student Grade
+    async function editStudent(studentId) {
+      const newGrade = prompt("Enter new grade (10 or 11):");
+      if (!newGrade || (newGrade !== "10" && newGrade !== "11")) {
+        alert("Invalid grade!");
+        return;
+      }
+      await updateDoc(doc(db, "students", studentId), { grade: newGrade });
+      fetchStudents();
+    }
+
+    // ✅ Delete Student
+    async function deleteStudent(studentId) {
+      if (confirm("Are you sure you want to delete this student?")) {
+        await deleteDoc(doc(db, "students", studentId));
+        fetchStudents();
+      }
+    }
+
+    // ✅ Update Access Permissions
+    document.addEventListener("change", async (e) => {
+      if (e.target.classList.contains("access-toggle")) {
+        const studentId = e.target.dataset.id;
+        const field = e.target.dataset.field;
+        const value = e.target.checked;
+
+        const studentRef = doc(db, "students", studentId);
+        await updateDoc(studentRef, {
+          [`access.${field}`]: value
+        });
+
+        alert(`✅ Updated ${field} access for ${studentId}`);
+      }
+    });
+
+    function addEventListeners() {
+      document.querySelectorAll(".editBtn").forEach(btn =>
+        btn.addEventListener("click", () => editStudent(btn.dataset.id))
+      );
+      document.querySelectorAll(".deleteBtn").forEach(btn =>
+        btn.addEventListener("click", () => deleteStudent(btn.dataset.id))
+      );
+    }
+
+    fetchStudents();
+  </script>
+</body>
+</html>

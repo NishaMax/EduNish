@@ -1,9 +1,31 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//   const studentData = localStorage.getItem("edunishStudentData");
-//   if (!studentData) {
-//     window.location.href = "registration.html";
-//   }
-// });
+// ✅ Check login
+const studentData = localStorage.getItem("edunishStudentData");
+if (!studentData) {
+  window.location.href = "studentLogin.html";
+}
+const student = JSON.parse(studentData);
+
+// ✅ Block quiz access if admin disabled quizzes
+if (student.access && student.access.quizzes === false) {
+  alert("❌ You do not have quiz access. Contact admin.");
+  window.location.href = "index.html";
+}
+
+// ✅ Auto-select student's grade & disable Grade 11 for Grade 10 students
+const gradeSelect = document.getElementById("grade-select");
+if (gradeSelect) {
+  gradeSelect.value = student.grade;
+
+  if (student.grade === "10") {
+    [...gradeSelect.options].forEach(option => {
+      if (option.value === "11") {
+        option.disabled = true;
+      }
+    });
+  }
+}
+
+
 
 
 // ===== State =====
@@ -19,10 +41,28 @@ let timeLeft = 20 * 60; // 20 minutes in seconds
 
 // ===== DOM =====
 const mediumSelect = document.getElementById("medium-select");
-const gradeSelect = document.getElementById("grade-select");
+// const gradeSelect = document.getElementById("grade-select");
 const lessonSelect = document.getElementById("lesson-select");
 const seriesSection = document.getElementById("series-section");
 const seriesCards = document.getElementById("series-cards");
+
+// ✅ Restrict quiz grade selection based on student's grade
+if (student) {
+  // Auto-select the student's grade
+  gradeSelect.value = student.grade;
+
+  // If student is Grade 10 → disable Grade 11 quizzes
+  if (student.grade === "10") {
+    [...gradeSelect.options].forEach(option => {
+      if (option.value === "11") {
+        option.disabled = true;
+      }
+    });
+  }
+
+  // If student is Grade 11 → can access everything (no restrictions)
+}
+
 
 const quizContainer = document.getElementById("quiz-container");
 const quizQuestion = document.getElementById("quiz-question");
