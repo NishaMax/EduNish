@@ -66,7 +66,7 @@
           return;
         }
 
-        localStorage.setItem("edunishStudentData", JSON.stringify(student));
+        sessionStorage.setItem("edunishStudentData", JSON.stringify(student));
         msg.textContent = "✅ Login successful! Redirecting...";
         msg.className = "text-green-600 text-center";
 

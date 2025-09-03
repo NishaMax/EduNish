@@ -5,6 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Profile - EduNish</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  const studentData = sessionStorage.getItem("edunishStudentData");
+  if (!studentData) {
+    // Always force login
+    window.location.href = "studentLogin.html";
+  } else {
+    const student = JSON.parse(studentData);
+
+    // ✅ Grade 10 page restriction
+    if (window.location.pathname.includes("grade10.html") && student.access?.grade10 === false) {
+      alert("❌ You do not have access to Grade 10 resources. Contact admin.");
+      window.location.href = "index.html";
+    }
+
+    // ✅ Grade 11 page restriction
+    if (window.location.pathname.includes("grade11.html") &&
+        (student.grade === "10" || student.access?.grade11 === false)) {
+      alert("❌ You do not have access to Grade 11 resources. Contact admin.");
+      window.location.href = "index.html";
+    }
+
+    // ✅ Quiz restriction
+    if (window.location.pathname.includes("quiz.html") && student.access?.quizzes === false) {
+      alert("❌ You do not have access to quizzes. Contact admin.");
+      window.location.href = "index.html";
+    }
+  }
+</script>
+
 </head>
 <body class="bg-gray-100">
 
@@ -55,7 +84,7 @@
     const db = getFirestore(app);
 
     // ✅ Get local student data
-    const studentData = localStorage.getItem("edunishStudentData");
+    // const studentData = localStorage.getItem("edunishStudentData");
 
     if (!studentData) {
       alert("⚠ Please log in first!");

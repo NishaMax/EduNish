@@ -327,4 +327,8 @@ if (loginBtnMobile) {
 
 });
 
+document.getElementById("logout-btn").addEventListener("click", () => {
+  sessionStorage.removeItem("edunishStudentData");
+  window.location.href = "studentLogin.html";
+});
 

@@ -9,6 +9,35 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="circuit.js" defer></script>
+  <script>
+  const studentData = sessionStorage.getItem("edunishStudentData");
+  if (!studentData) {
+    // Always force login
+    window.location.href = "studentLogin.html";
+  } else {
+    const student = JSON.parse(studentData);
+
+    // ✅ Grade 10 page restriction
+    if (window.location.pathname.includes("grade10.html") && student.access?.grade10 === false) {
+      alert("❌ You do not have access to Grade 10 resources. Contact admin.");
+      window.location.href = "index.html";
+    }
+
+    // ✅ Grade 11 page restriction
+    if (window.location.pathname.includes("grade11.html") &&
+        (student.grade === "10" || student.access?.grade11 === false)) {
+      alert("❌ You do not have access to Grade 11 resources. Contact admin.");
+      window.location.href = "index.html";
+    }
+
+    // ✅ Quiz restriction
+    if (window.location.pathname.includes("quiz.html") && student.access?.quizzes === false) {
+      alert("❌ You do not have access to quizzes. Contact admin.");
+      window.location.href = "index.html";
+    }
+  }
+</script>
+
 </head>
 <body class="bg-gray-50 text-gray-900">
     <!-- ✅ Navbar with correct IDs -->
