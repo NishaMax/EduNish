@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - EduNish</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js"></script>
+  <style>
+    body {
+      padding-top: 64px;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+
+  <nav class="fixed top-0 w-full z-50 transition-all duration-300 bg-gray-800 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <div class="flex items-center space-x-2">
+        <i data-lucide="shield" class="w-6 h-6 text-yellow-400"></i>
+        <span class="text-xl font-bold text-yellow-400">EduNish Admin</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="#manage-exams" class="text-gray-300 hover:text-white transition-colors">Manage Exams</a>
+        <a href="#view-submissions" class="text-gray-300 hover:text-white transition-colors">View Submissions</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mx-auto px-4 py-12">
+    <section id="manage-exams" class="mb-12">
+      <div class="flex items-center space-x-4 mb-8">
+        <i data-lucide="plus-circle" class="w-8 h-8 text-blue-400"></i>
+        <h2 class="text-3xl font-bold text-blue-400">Create New Exam</h2>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-6 shadow-xl space-y-4">
+        <div>
+          <label class="block mb-1">Exam Name</label>
+          <input type="text" id="exam-name" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-2" required>
+        </div>
+        <div>
+          <label class="block mb-1">Duration (in minutes)</label>
+          <input type="number" id="exam-duration" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-2" required>
+        </div>
+        <div>
+          <label class="block mb-1">Exam Start Time</label>
+          <input type="datetime-local" id="exam-start-time" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-2" required>
+        </div>
+        <div>
+          <label class="block mb-1">Exam End Time</label>
+          <input type="datetime-local" id="exam-end-time" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-2" required>
+        </div>
+        <div>
+          <label class="block mb-1">Upload Exam Question Paper (PDF)</label>
+          <input type="file" id="exam-questions-pdf" accept=".pdf" class="w-full text-sm text-gray-500
+            file:mr-4 file:py-2 file:px-4
+            file:rounded-full file:border-0
+            file:text-sm file:font-semibold
+            file:bg-blue-50 file:text-blue-700
+            hover:file:bg-blue-100 cursor-pointer" required>
+        </div>
+        <button id="create-exam-btn" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 font-semibold">
+          Create Exam
+        </button>
+        <p id="exam-status" class="mt-2 text-sm text-center"></p>
+      </div>
+    </section>
+
+    <section id="view-submissions">
+      <div class="flex items-center space-x-4 mb-8">
+        <i data-lucide="clipboard-check" class="w-8 h-8 text-green-400"></i>
+        <h2 class="text-3xl font-bold text-green-400">View Submissions</h2>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-6 shadow-xl">
+        <div id="submissions-list" class="space-y-4">
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, collection, doc, setDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+    import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
+      authDomain: "edunish-211d0.firebaseapp.com",
+      projectId: "edunish-211d0",
+      storageBucket: "edunish-211d0.appspot.com",
+      messagingSenderId: "1002400429038",
+      appId: "1:1002400429038:web:12ee9a586de10e518694ff",
+      measurementId: "G-7ZSDMMKFQ0"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const storage = getStorage(app);
+
+    const examNameInput = document.getElementById('exam-name');
+    const examDurationInput = document.getElementById('exam-duration');
+    const examStartTimeInput = document.getElementById('exam-start-time');
+    const examEndTimeInput = document.getElementById('exam-end-time');
+    const examQuestionsPdfInput = document.getElementById('exam-questions-pdf');
+    const createExamBtn = document.getElementById('create-exam-btn');
+    const examStatusEl = document.getElementById('exam-status');
+    const submissionsList = document.getElementById('submissions-list');
+
+    createExamBtn.addEventListener('click', async () => {
+      const examId = `exam_${Date.now()}`;
+      const examName = examNameInput.value.trim();
+      const duration = parseInt(examDurationInput.value);
+      const startTime = new Date(examStartTimeInput.value);
+      const endTime = new Date(examEndTimeInput.value);
+      const questionFile = examQuestionsPdfInput.files[0];
+
+      if (!examName || isNaN(duration) || !startTime || !endTime || !questionFile) {
+        examStatusEl.textContent = "Please fill in all fields and upload a question paper.";
+        examStatusEl.className = "mt-2 text-sm text-center text-red-500";
+        return;
+      }
+
+      createExamBtn.disabled = true;
+      examStatusEl.textContent = 'Uploading file and creating exam...';
+      examStatusEl.className = "mt-2 text-sm text-center text-gray-400";
+
+      try {
+        const questionFileRef = ref(storage, `question_papers/${examId}.pdf`);
+        await uploadBytes(questionFileRef, questionFile);
+        const questionPaperUrl = await getDownloadURL(questionFileRef);
+
+        await setDoc(doc(db, "exams", examId), {
+          examId: examId,
+          examName: examName,
+          durationMinutes: duration,
+          startTime: startTime,
+          endTime: endTime,
+          questionPaperUrl: questionPaperUrl
+        });
+
+        examStatusEl.textContent = "Exam created successfully!";
+        examStatusEl.className = "mt-2 text-sm text-center text-green-500";
+        
+        examNameInput.value = '';
+        examDurationInput.value = '';
+        examStartTimeInput.value = '';
+        examEndTimeInput.value = '';
+        examQuestionsPdfInput.value = '';
+        createExamBtn.disabled = false;
+      } catch (e) {
+        console.error("Error creating exam: ", e);
+        examStatusEl.textContent = "Error creating exam.";
+        examStatusEl.className = "mt-2 text-sm text-center text-red-500";
+        createExamBtn.disabled = false;
+      }
+    });
+
+    async function fetchSubmissions() {
+      submissionsList.innerHTML = `<div class="text-center text-gray-500">Loading submissions...</div>`;
+
+      try {
+        const querySnapshot = await getDocs(collection(db, "submissions"));
+        if (querySnapshot.empty) {
+          submissionsList.innerHTML = `<div class="text-center text-gray-500">No submissions found yet.</div>`;
+          return;
+        }
+
+        submissionsList.innerHTML = '';
+        querySnapshot.forEach(doc => {
+          const submission = doc.data();
+          renderSubmissionCard(submission);
+        });
+      } catch (e) {
+        console.error("Error fetching submissions: ", e);
+        submissionsList.innerHTML = `<div class="text-center text-red-500">Failed to load submissions.</div>`;
+      }
+    }
+
+    function renderSubmissionCard(submission) {
+      const card = document.createElement("div");
+      card.className = "p-4 bg-gray-700 rounded-lg shadow-md";
+      card.innerHTML = `
+        <div class="flex justify-between items-center mb-2">
+          <h3 class="font-bold text-lg">${submission.examName}</h3>
+          <span class="text-xs text-gray-400">Submitted: ${submission.submissionTime.toDate().toLocaleString()}</span>
+        </div>
+        <p class="text-sm"><strong>Student:</strong> ${submission.studentName} (${submission.studentId})</p>
+        <p class="text-sm"><strong>Grade:</strong> ${submission.grade}</p>
+        <a href="${submission.submissionUrl}" target="_blank" class="mt-2 inline-flex items-center text-blue-400 hover:underline">
+          <i data-lucide="file-text" class="w-4 h-4 mr-1"></i>
+          View Paper
+        </a>
+      `;
+      submissionsList.appendChild(card);
+    }
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        fetchSubmissions();
+        lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Take Exam - EduNish</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js"></script>
+  <style>
+    body {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center p-4">
+  <div id="exam-container" class="w-full max-w-4xl bg-gray-800 rounded-lg shadow-xl p-8 space-y-6 hidden">
+    <div class="flex justify-between items-center border-b pb-4 border-gray-700">
+      <h1 id="exam-title" class="text-2xl font-bold text-blue-400">Loading Exam...</h1>
+      <div class="flex items-center space-x-2">
+        <i data-lucide="timer" class="w-6 h-6 text-red-500"></i>
+        <span id="timer" class="text-xl font-mono text-red-500">00:00</span>
+      </div>
+    </div>
+    
+    <div id="exam-paper-viewer" class="w-full h-96 bg-gray-700 rounded-lg overflow-hidden">
+      </div>
+    
+    <div class="text-center mt-8">
+      <h2 class="text-xl font-semibold mb-4">Upload Your Answer Sheet (PDF)</h2>
+      <label class="block mb-2 text-sm text-gray-400">
+        Please upload your handwritten answer sheet as a single PDF file.
+      </label>
+      <input type="file" id="answer-sheet" accept=".pdf" class="block w-full text-sm text-gray-500
+        file:mr-4 file:py-2 file:px-4
+        file:rounded-full file:border-0
+        file:text-sm file:font-semibold
+        file:bg-blue-50 file:text-blue-700
+        hover:file:bg-blue-100 cursor-pointer" />
+      <div id="upload-status" class="mt-4 text-sm text-gray-400"></div>
+    </div>
+    
+    <button id="submit-btn" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 font-semibold mt-4">
+      Submit Paper
+    </button>
+  </div>
+
+  <div id="loading" class="text-white">
+    <div class="flex items-center space-x-2">
+      <svg class="animate-spin h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+      </svg>
+      <span>Loading...</span>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+    import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
+      authDomain: "edunish-211d0.firebaseapp.com",
+      projectId: "edunish-211d0",
+      storageBucket: "edunish-211d0.appspot.com",
+      messagingSenderId: "1002400429038",
+      appId: "1:1002400429038:web:12ee9a586de10e518694ff",
+      measurementId: "G-7ZSDMMKFQ0"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const storage = getStorage(app);
+
+    const params = new URLSearchParams(window.location.search);
+    const examId = params.get('examId');
+
+    const studentData = JSON.parse(localStorage.getItem('edunishStudentData'));
+    const submittedExams = JSON.parse(localStorage.getItem('submittedExams') || '{}');
+
+    if (!studentData || !examId) {
+      window.location.href = 'online_papers.html';
+    }
+
+    if (submittedExams[examId]) {
+      alert("You have already submitted this exam.");
+      window.location.href = 'online_papers.html';
+    }
+
+    const examContainer = document.getElementById('exam-container');
+    const loadingEl = document.getElementById('loading');
+    const examTitleEl = document.getElementById('exam-title');
+    const examPaperViewer = document.getElementById('exam-paper-viewer');
+    const timerEl = document.getElementById('timer');
+    const submitBtn = document.getElementById('submit-btn');
+    const fileInput = document.getElementById('answer-sheet');
+    const uploadStatusEl = document.getElementById('upload-status');
+
+    let examDuration;
+    let timerInterval;
+
+    async function startExam() {
+      window.addEventListener('beforeunload', (e) => {
+        e.preventDefault();
+        e.returnValue = '';
+      });
+
+      try {
+        const examDoc = await getDoc(doc(db, "exams", examId));
+        if (!examDoc.exists()) {
+          alert("Exam not found!");
+          window.location.href = 'online_papers.html';
+          return;
+        }
+
+        const exam = examDoc.data();
+        const now = Date.now();
+        const startTime = exam.startTime.toDate().getTime();
+        const endTime = exam.endTime.toDate().getTime();
+
+        if (now < startTime || now > endTime) {
+          alert("This exam is not currently active.");
+          window.location.href = 'online_papers.html';
+          return;
+        }
+
+        loadingEl.classList.add('hidden');
+        examContainer.classList.remove('hidden');
+
+        examTitleEl.textContent = exam.examName;
+        
+        // Display PDF in iframe
+        const iframe = document.createElement('iframe');
+        iframe.src = `${exam.questionPaperUrl}#toolbar=0&navpanes=0&scrollbar=0`; // Hides toolbars
+        iframe.className = 'w-full h-full';
+        examPaperViewer.appendChild(iframe);
+
+        examDuration = exam.durationMinutes * 60;
+        
+        startTimer();
+
+        submitBtn.addEventListener('click', handleSubmit);
+      } catch (e) {
+        console.error("Error loading exam: ", e);
+        loadingEl.innerHTML = '<div class="text-red-500">Failed to load exam. Please try again.</div>';
+      }
+    }
+
+    function startTimer() {
+      let timeLeft = examDuration;
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerEl.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+        if (timeLeft <= 60) {
+          timerEl.classList.add('text-yellow-500');
+        }
+        if (timeLeft <= 30) {
+          timerEl.classList.add('text-red-500');
+        }
+
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert("Time's up! Your paper will now be submitted.");
+          handleSubmit();
+        }
+      }, 1000);
+    }
+
+    async function handleSubmit() {
+      if (submitBtn.disabled) return;
+
+      const file = fileInput.files[0];
+      if (!file) {
+        alert("Please upload your PDF answer sheet.");
+        return;
+      }
+      
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+      uploadStatusEl.textContent = 'Uploading file...';
+
+      const studentId = studentData.studentId;
+      const fileRef = ref(storage, `submissions/${examId}/${studentId}.pdf`);
+      
+      try {
+        await uploadBytes(fileRef, file);
+        const downloadURL = await getDownloadURL(fileRef);
+
+        const submissionDoc = doc(db, "submissions", `${studentId}_${examId}`);
+        await setDoc(submissionDoc, {
+          studentId: studentId,
+          examId: examId,
+          submissionUrl: downloadURL,
+          submissionTime: new Date(),
+          examName: examTitleEl.textContent,
+          studentName: studentData.fullName,
+          grade: studentData.grade
+        });
+
+        submittedExams[examId] = true;
+        localStorage.setItem('submittedExams', JSON.stringify(submittedExams));
+
+        uploadStatusEl.textContent = 'Submission successful! Redirecting...';
+        clearInterval(timerInterval);
+        alert("Your paper has been submitted successfully.");
+        
+        window.location.href = 'online_papers.html';
+      } catch (e) {
+        console.error("Submission error: ", e);
+        uploadStatusEl.textContent = 'Submission failed. Please try again.';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Paper';
+      }
+    }
+
+    lucide.createIcons();
+    startExam();
+  </script>
+</body>
+</html>
