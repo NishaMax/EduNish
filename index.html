@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EduNish — Home</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- <link rel="stylesheet" href="circuit.css"> -->
+  <link rel="stylesheet" href="circuit.css">
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="circuit.js" defer></script>
 </head>
 <body class="bg-gray-50 text-gray-900">
-    <!-- ✅ Navbar with correct IDs -->
   <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
       <div class="flex items-center space-x-2">
@@ -22,21 +21,17 @@
           EduNish
         </span>
       </div>
-      <!-- Desktop -->
       <div class="hidden md:flex items-center space-x-8">
         <a href="index.html" class="text-gray-700 hover:text-blue-600 nav-link">Home</a>
         <a href="downloads.html" class="text-gray-700 hover:text-blue-600">Resources</a>
         <a href="quiz.html" id="quizNavBtnDesktop" class="hover:underline">Quiz</a>
         <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
-        <button id="loginBtnDesktop" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login/SignUp</button>
-        <button id="logoutBtnDesktop" class="hidden bg-red-500 text-white px-6 py-2 rounded-full hover:shadow-lg">Logout</button>
+        <a href="landing.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login/SignUp</a>
         <a id="profileBtnDesktop" href="profile.html"
           class="hidden px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
           My Profile
         </a>
-
       </div>
-      <!-- Mobile -->
       <button id="mobile-menu-btn" class="md:hidden p-2">
         <i data-lucide="menu" class="w-6 h-6"></i>
       </button>
@@ -47,19 +42,16 @@
         <a href="downloads.html" class="block px-3 py-2 text-gray-700">Resources</a>
         <a href="quiz.html" id="quizNavBtnMobile" class="block px-3 py-2 text-gray-700">Quiz</a>
         <a href="community.html" class="block px-3 py-2 text-gray-700">Community</a>
-        <a id="loginBtnMobile" class="block px-3 py-2 text-gray-800 hover:bg-gray-200">Login/SignUp</a>
-        <a id="logoutBtnMobile" class="hidden block px-3 py-2 text-gray-800 hover:bg-gray-200">Logout</a>
+        <a href="landing.html" class="block px-3 py-2 text-gray-800 hover:bg-gray-200">Login/SignUp</a>
         <a id="profileBtnMobile" href="profile.html"
           class="hidden block px-4 py-2 text-blue-600 hover:underline">
           My Profile
         </a>
-
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-    <section id="home" class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+  <section id="home" class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="text-center">
                 <div class="relative">
@@ -78,7 +70,6 @@
                     Master O/L ICT for Grade 10 & 11 with comprehensive notes, past papers, and interactive quizzes
                 </p>
 
-                <!-- Creative Feature Section -->
                 <div class="max-w-2xl mx-auto grid sm:grid-cols-3 gap-4 mb-12">
                 <div class="bg-white p-4 rounded-xl shadow text-center">
                     <i data-lucide="book-open" class="w-6 h-6 mx-auto text-blue-600 mb-2"></i>
@@ -97,9 +88,6 @@
                 </div>
                 </div>
 
-
-
-                <!-- Stats -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
                     <div class="text-center">
                         <div class="text-3xl font-bold text-blue-600 mb-2">500+</div>
@@ -122,83 +110,73 @@
         </div>
     </section>
 
-  <!-- Header 
-  <header class="bg-white border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <h1 class="text-xl font-bold">EduNish</h1>
-      <div class="space-x-3">
-        <button id="loginBtnDesktop" class="px-4 py-2 rounded-lg bg-blue-600 text-white">Login</button>
-        <button id="logoutBtnDesktop" class="px-4 py-2 rounded-lg bg-gray-200 hidden">Logout</button>
-      </div>
-    </div>
-  </header>-->
-  <!-- Replace your circuit section with this Digital Waterfall section -->
-<!-- Digital Circuit Board City Section -->
-<div class="digital-waterfall-container">
-  <section class="waterfall-title">
-    <h1>Digital Knowledge Waterfall</h1>
-    <p>Catch the flowing knowledge bubbles as they cascade down!</p>
+  <div class="circuit-board-city-container">
+  <section class="circuit-title">
+    <h1>Digital Circuit Board City</h1>
+    <p>Journey through the circuits of knowledge. Collect data packets to learn more.</p>
   </section>
 
-  <!-- Grade 10 Waterfall -->
-  <section class="waterfall-section">
-    <h2 class="grade-label grade10-flow">Grade 10 Knowledge Stream</h2>
-    <div class="waterfall-canvas-container">
-      <canvas id="waterfall10" class="waterfall-canvas"></canvas>
-      <div class="waterfall-overlay">
-        <div class="stream-info grade10-info">
-          <div class="topic-display" id="topic10">Hover over bubbles to explore topics</div>
-          <div class="progress-indicator">
-            <div class="progress-bar grade10-progress" style="width: 65%;"></div>
-            <span class="progress-text">65% Mastered</span>
+  <section class="circuit-section">
+    <h2 class="grade-label grade10-circuit">Grade 10 - Foundational Circuits</h2>
+    <div class="circuit-canvas-container">
+      <canvas id="circuit10" class="circuit-canvas"></canvas>
+      <div class="circuit-overlay">
+        <div class="circuit-info">
+          <div class="topic-display" id="topic10">Hover over packets to see topic</div>
+          <div class="power-indicator">
+            <span class="power-text">Signal Strength:</span>
+            <div class="power-bar grade10-power" id="powerBar10" style="width: 0%;"></div>
+            <span class="power-text" id="powerText10">0/5 Power</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Grade 11 Waterfall -->
-  <section class="waterfall-section">
-    <h2 class="grade-label grade11-flow">Grade 11 Advanced Stream</h2>
-    <div class="waterfall-canvas-container">
-      <canvas id="waterfall11" class="waterfall-canvas"></canvas>
-      <div class="waterfall-overlay">
-        <div class="stream-info grade11-info">
-          <div class="topic-display" id="topic11">Dive deeper into advanced concepts</div>
-          <div class="progress-indicator">
-            <div class="progress-bar grade11-progress" style="width: 40%;"></div>
-            <span class="progress-text">40% Mastered</span>
+  <section class="circuit-section">
+    <h2 class="grade-label grade11-circuit">Grade 11 - Advanced Circuits</h2>
+    <div class="circuit-canvas-container">
+      <canvas id="circuit11" class="circuit-canvas"></canvas>
+      <div class="circuit-overlay">
+        <div class="circuit-info">
+          <div class="topic-display" id="topic11">Engage with topics to power up</div>
+          <div class="power-indicator">
+            <span class="power-text">Signal Strength:</span>
+            <div class="power-bar grade11-power" id="powerBar11" style="width: 0%;"></div>
+            <span class="power-text" id="powerText11">0/5 Power</span>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Achievement Pool -->
-  <section class="achievement-pool">
-    <h3>Achievement Pool</h3>
-    <div class="pool-container">
-      <div class="achievement-bubble completed">
-        <i data-lucide="cpu" class="achievement-icon"></i>
-        <span>Hardware Expert</span>
+  
+  <section class="control-panel">
+    <h3>Data Bank Modules</h3>
+    <div class="panel-container">
+      <div class="control-module completed">
+        <i data-lucide="cpu" class="module-icon"></i>
+        <span class="module-label">Hardware Core</span>
+        <div class="status-light active"></div>
       </div>
-      <div class="achievement-bubble completed">
-        <i data-lucide="code" class="achievement-icon"></i>
-        <span>Logic Master</span>
+      <div class="control-module completed">
+        <i data-lucide="code" class="module-icon"></i>
+        <span class="module-label">Logic Gate Array</span>
+        <div class="status-light active"></div>
       </div>
-      <div class="achievement-bubble locked">
-        <i data-lucide="database" class="achievement-icon"></i>
-        <span>Data Wizard</span>
+      <div class="control-module locked">
+        <i data-lucide="database" class="module-icon"></i>
+        <span class="module-label">Database Hub</span>
+        <div class="status-light"></div>
       </div>
-      <div class="achievement-bubble locked">
-        <i data-lucide="shield" class="achievement-icon"></i>
-        <span>Security Guardian</span>
+      <div class="control-module locked">
+        <i data-lucide="shield-check" class="module-icon"></i>
+        <span class="module-label">Security Grid</span>
+        <div class="status-light"></div>
       </div>
     </div>
   </section>
 </div>
-  <!-- Grade-specific Features -->
-    <section id="resources" class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-purple-50">
+  <section id="resources" class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-purple-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 mb-4">
@@ -210,7 +188,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                <!-- PDF Notes -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-blue-200 hover:shadow-xl transition-all duration-300">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -228,7 +205,6 @@
                     </div>
                 </div>
 
-                <!-- Past Papers -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-green-200 hover:shadow-xl transition-all duration-300">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -246,7 +222,6 @@
 
                     </div>
                 </div>
-                <!-- Interactive Quizzes -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-orange-200 hover:shadow-xl transition-all duration-300">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -256,21 +231,14 @@
                         <p class="text-gray-600 mb-6 leading-relaxed">
                             Test your knowledge with fun, interactive quizzes and instant feedback
                         </p>
-                        <!-- <button id="viewQuizBtn" 
-                          onclick="openQuiz()" 
-                          class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg quizLink">
-                          Play Quiz
-                        </button> -->
                         <a href="quiz.html" 
                         class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center space-x-2 mx-auto">
-                            <!-- <i data-lucide="download" class="w-4 h-4"></i> -->
                             <span>Play Quiz</span>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Grade 11 Section -->
             <div class="text-center mb-12">
                 <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 mb-4">
                     Grade 11 ICT
@@ -281,7 +249,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- PDF Notes -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-blue-200 hover:shadow-xl transition-all duration-300">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -296,11 +263,9 @@
                             <i data-lucide="download" class="w-4 h-4"></i>
                             <span>Download Notes</span>
                         </a>
-
                     </div>
                 </div>
 
-                <!-- Past Papers -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-green-200 hover:shadow-xl transition-all duration-300">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -315,10 +280,8 @@
                             <i data-lucide="download" class="w-4 h-4"></i>
                             <span>Download Marking Schemes</span>
                         </a>
-
                     </div>
                 </div>
-                <!-- Interactive Quizzes -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-orange-200 hover:shadow-xl transition-all duration-300">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -328,14 +291,8 @@
                         <p class="text-gray-600 mb-6 leading-relaxed">
                             Test your knowledge with fun, interactive quizzes and instant feedback
                         </p>
-                        <!-- <button id="viewQuizBtn" 
-                          onclick="openQuiz()" 
-                          class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg quizLink">
-                          Play Quiz
-                        </button> -->
                         <a href="quiz.html" 
                         class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center space-x-2 mx-auto">
-                            <!-- <i data-lucide="download" class="w-4 h-4"></i> -->
                             <span>Play Quiz</span>
                         </a>
                     </div>
@@ -344,9 +301,7 @@
          </div>
     </section>
 
-    <!-- Fun Learning Quizzes Section - Updated Design -->
     <section id="quizzes" class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-500 via-blue-600 to-green-400 relative overflow-hidden">
-        <!-- Background geometric shapes -->
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-10 left-10 w-32 h-32 bg-white rounded-3xl transform rotate-12"></div>
             <div class="absolute top-40 right-20 w-24 h-24 bg-white rounded-2xl transform -rotate-6"></div>
@@ -355,7 +310,6 @@
         </div>
         
         <div class="max-w-6xl mx-auto relative z-10">
-            <!-- Header -->
             <div class="text-center mb-12">
                 <div class="flex items-center justify-center mb-4">
                     <i data-lucide="gamepad-2" class="w-12 h-12 text-white mr-4"></i>
@@ -368,9 +322,7 @@
                 </p>
             </div>
 
-            <!-- Features Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <!-- Instant Results -->
                 <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mb-6 mx-auto">
                         <i data-lucide="trophy" class="w-8 h-8 text-yellow-800"></i>
@@ -381,7 +333,6 @@
                     </p>
                 </div>
 
-                <!-- Timed Challenges -->
                 <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <div class="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center mb-6 mx-auto">
                         <i data-lucide="timer" class="w-8 h-8 text-green-800"></i>
@@ -392,7 +343,6 @@
                     </p>
                 </div>
 
-                <!-- Progress Tracking -->
                 <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <div class="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mb-6 mx-auto">
                         <i data-lucide="trending-up" class="w-8 h-8 text-purple-800"></i>
@@ -403,22 +353,11 @@
                     </p>
                 </div>
             </div>
-            <!-- Register Button -->
-            <div class="text-center">
-                <!-- <button id="viewQuizBtn" 
-                  onclick="openQuiz()" 
-                  class="bg-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg quizLink">
-                  Play Quiz
-                </button> -->
-            </div>
         </div>
     </section>
 
-    <!-- ====== Calendar + Number Converter Section ====== -->
-<section class="py-16 bg-gradient-to-r from-blue-50 to-purple-100">
+    <section class="py-16 bg-gradient-to-r from-blue-50 to-purple-100">
   <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
-
-    <!-- 📅 Calendar -->
     <div class="bg-white rounded-2xl shadow-xl p-6">
       <div class="flex justify-between items-center mb-4">
         <button id="prevMonth" class="px-3 py-1 bg-gray-200 rounded-lg">&lt;</button>
@@ -435,7 +374,6 @@
         <button id="saveNote" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg">Save Note</button>
       </div>
     </div>
- <!-- 🔢 Number Converter -->
     <div class="bg-white rounded-2xl shadow-xl p-6">
       <h2 class="text-xl font-bold text-gray-800 mb-4">Number System Converter</h2>
       <div class="flex flex-col sm:flex-row items-stretch sm:items-center mb-4 space-y-2 sm:space-y-0 sm:space-x-2">
@@ -456,11 +394,9 @@
         <p><strong>Hexadecimal:</strong> <span id="hexResult">-</span></p>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- ====== Script for Calendar + Converter ====== -->
 <script>
 /* ---------------- Calendar ---------------- */
 const calendarTitle = document.getElementById("calendarTitle");
@@ -556,36 +492,7 @@ numInput.addEventListener("input", convertNumber);
 numBase.addEventListener("change", convertNumber);
 </script>
 
-
-  <!-- Auth Modal -->
-  <!-- Auth Modal -->
-<div id="authModal" class="fixed inset-0 bg-black/40 flex items-center justify-center hidden z-50">
-  <div class="bg-white rounded-2xl p-6 w-full max-w-sm">
-    <div class="flex justify-between items-center mb-4">
-      <h3 id="authTitle" class="text-lg font-semibold">Login</h3>
-      <button onclick="document.getElementById('authModal').classList.add('hidden')" class="text-gray-500">✕</button>
-    </div>
-    <form id="authForm" class="space-y-4">
-      <div>
-        <label class="block text-sm font-medium mb-1">Email</label>
-        <input id="authEmail" type="email" class="w-full border rounded-lg px-3 py-2" required />
-      </div>
-      <div>
-        <label class="block text-sm font-medium mb-1">Password</label>
-        <input id="authPassword" type="password" 
-               class="w-full border rounded-lg px-3 py-2"
-               placeholder="Enter your password" required />
-      </div>
-      <div id="authMessage" class="text-sm"></div>
-      <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">Continue</button>
-    </form>
-    <button id="toggleAuthMode" class="text-blue-600 text-sm mt-3">Don't have an account? Sign up</button>
-  </div>
-</div>
-
-
-  <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+  <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
@@ -605,8 +512,6 @@ numBase.addEventListener("change", convertNumber);
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="downloads.html" class="hover:text-white transition-colors">Study Materials</a></li>
                         <li><a href="downloads.html" class="hover:text-white transition-colors">Past Papers</a></li>
-                        <!-- <li><a href="quiz.html" class="hover:text-white transition-colors">Quizzes</a></li>
-                        <li><a href="quiz.html" class="hover:text-white transition-colors">Solutions</a></li> -->
                     </ul>
                 </div>
                 
@@ -633,18 +538,6 @@ numBase.addEventListener("change", convertNumber);
         </div>
     </footer>
   
-  <!-- Quiz Choice Modal -->
-<div id="quizChoiceModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-  <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
-    <h2 class="text-xl font-bold mb-4">Choose an Option</h2>
-    <button id="createStudentIdBtn" class="bg-blue-600 text-white px-4 py-2 rounded mr-2">Create Student ID</button>
-    <button id="playQuizBtn" class="bg-green-600 text-white px-4 py-2 rounded">Play Quiz</button>
-    <button id="closeQuizChoice" class="mt-4 block text-gray-500 text-sm underline">Cancel</button>
-  </div>
-</div>
-
-
-
   <script>lucide.createIcons();</script>
   <script type="module" src="script.js"></script>
 </body>

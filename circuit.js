@@ -1,19 +1,19 @@
-// Digital Waterfall Interactive Learning System
-class DigitalWaterfall {
+// Digital Circuit Board City Interactive System
+class DigitalCircuit {
   constructor(canvasId, grade) {
     this.canvas = document.getElementById(canvasId);
     this.ctx = this.canvas.getContext('2d');
     this.grade = grade;
-    this.bubbles = [];
+    this.packets = [];
     this.particles = [];
-    this.streams = [];
+    this.paths = [];
     this.mouse = { x: 0, y: 0 };
     this.isRunning = false;
     
     this.setupCanvas();
     this.setupTopics();
     this.setupEventListeners();
-    this.createStreams();
+    this.createPaths();
     this.start();
   }
 
@@ -28,25 +28,21 @@ class DigitalWaterfall {
 
   setupTopics() {
     this.topics = this.grade === 10 ? {
-      'Introduction to ICT': { color: '#06b6d4', difficulty: 1 },
-      'Computer Hardware': { color: '#3b82f6', difficulty: 2 },
-      'Operating Systems': { color: '#1e40af', difficulty: 3 },
-      'Input/Output Devices': { color: '#0ea5e9', difficulty: 2 },
-      'Storage Devices': { color: '#0284c7', difficulty: 2 },
-      'Computer Networks': { color: '#0369a1', difficulty: 4 },
-      'Internet & Web': { color: '#075985', difficulty: 3 },
-      'Digital Communication': { color: '#0c4a6e', difficulty: 3 },
-      'Computer Security': { color: '#164e63', difficulty: 4 }
+      'Binary System': { color: '#06b6d4', difficulty: 1 },
+      'Data Representation': { color: '#3b82f6', difficulty: 2 },
+      'Logic Gates': { color: '#1e40af', difficulty: 3 },
+      'Computer Architecture': { color: '#0ea5e9', difficulty: 2 },
+      'Flowcharts': { color: '#0284c7', difficulty: 2 },
+      'Internet & WWW': { color: '#0369a1', difficulty: 4 },
+      'Security Threats': { color: '#075985', difficulty: 3 }
     } : {
-      'Programming Concepts': { color: '#8b5cf6', difficulty: 4 },
-      'Algorithm Design': { color: '#7c3aed', difficulty: 5 },
-      'Database Systems': { color: '#6d28d9', difficulty: 5 },
-      'Web Development': { color: '#5b21b6', difficulty: 4 },
-      'System Analysis': { color: '#581c87', difficulty: 5 },
-      'Project Management': { color: '#4c1d95', difficulty: 4 },
-      'Advanced Security': { color: '#ec4899', difficulty: 5 },
-      'Data Analytics': { color: '#db2777', difficulty: 5 },
-      'Emerging Technologies': { color: '#be185d', difficulty: 5 }
+      'Programming Loops': { color: '#8b5cf6', difficulty: 4 },
+      'Arrays & Data Structures': { color: '#7c3aed', difficulty: 5 },
+      'Database Queries': { color: '#6d28d9', difficulty: 5 },
+      'Network Protocols': { color: '#5b21b6', difficulty: 4 },
+      'Website Design': { color: '#581c87', difficulty: 5 },
+      'Software Engineering': { color: '#4c1d95', difficulty: 4 },
+      'Cybersecurity': { color: '#ec4899', difficulty: 5 }
     };
   }
 
@@ -58,7 +54,7 @@ class DigitalWaterfall {
     });
 
     this.canvas.addEventListener('click', (e) => {
-      this.handleBubbleClick(e);
+      this.handlePacketClick(e);
     });
 
     window.addEventListener('resize', () => {
@@ -66,28 +62,29 @@ class DigitalWaterfall {
     });
   }
 
-  createStreams() {
-    const streamCount = 5;
-    for (let i = 0; i < streamCount; i++) {
-      this.streams.push({
-        x: (this.width / (streamCount + 1)) * (i + 1),
-        opacity: 0.1 + Math.random() * 0.2,
-        speed: 0.5 + Math.random() * 0.5
+  createPaths() {
+    const pathCount = 5;
+    for (let i = 0; i < pathCount; i++) {
+      this.paths.push({
+        x: (this.width / (pathCount + 1)) * (i + 1),
+        opacity: 0.1,
+        speed: 0.5 + Math.random() * 0.5,
+        color: this.grade === 10 ? '#06b6d4' : '#8b5cf6'
       });
     }
   }
 
-  createBubble() {
+  createPacket() {
     const topicKeys = Object.keys(this.topics);
     const topic = topicKeys[Math.floor(Math.random() * topicKeys.length)];
     const topicData = this.topics[topic];
     
-    const stream = this.streams[Math.floor(Math.random() * this.streams.length)];
+    const path = this.paths[Math.floor(Math.random() * this.paths.length)];
     
-    const bubble = {
-      x: stream.x + (Math.random() - 0.5) * 100,
+    const packet = {
+      x: path.x + (Math.random() - 0.5) * 60,
       y: -50,
-      radius: 15 + topicData.difficulty * 5,
+      size: 10 + topicData.difficulty * 2,
       topic: topic,
       color: topicData.color,
       speed: 1 + Math.random() * 2,
@@ -97,39 +94,35 @@ class DigitalWaterfall {
       trail: []
     };
     
-    this.bubbles.push(bubble);
+    this.packets.push(packet);
   }
 
-  updateBubbles() {
-    this.bubbles.forEach((bubble, index) => {
-      if (bubble.collected) return;
+  updatePackets() {
+    this.packets.forEach((packet, index) => {
+      if (packet.collected) return;
       
-      // Update position with wobble effect
-      bubble.y += bubble.speed;
-      bubble.x += Math.sin(bubble.wobble + bubble.y * 0.01) * 0.5;
-      bubble.wobble += 0.02;
+      packet.y += packet.speed;
+      packet.x += Math.sin(packet.wobble + packet.y * 0.01) * 0.5;
+      packet.wobble += 0.02;
       
-      // Add trail point
-      bubble.trail.push({ x: bubble.x, y: bubble.y, opacity: bubble.opacity });
-      if (bubble.trail.length > 10) bubble.trail.shift();
+      packet.trail.push({ x: packet.x, y: packet.y, opacity: packet.opacity });
+      if (packet.trail.length > 8) packet.trail.shift();
       
-      // Check for mouse interaction
       const distance = Math.sqrt(
-        Math.pow(bubble.x - this.mouse.x, 2) + 
-        Math.pow(bubble.y - this.mouse.y, 2)
+        Math.pow(packet.x - this.mouse.x, 2) + 
+        Math.pow(packet.y - this.mouse.y, 2)
       );
       
-      if (distance < bubble.radius + 10) {
-        this.showTopicInfo(bubble.topic);
-        bubble.radius += 0.5; // Grow on hover
-        this.createParticleEffect(bubble.x, bubble.y, bubble.color);
+      if (distance < packet.size + 10) {
+        this.showTopicInfo(packet.topic);
+        packet.size += 0.5;
+        this.createParticleEffect(packet.x, packet.y, packet.color);
       } else {
-        bubble.radius = Math.max(bubble.radius - 0.2, 15 + this.topics[bubble.topic].difficulty * 5);
+        packet.size = Math.max(packet.size - 0.2, 10 + this.topics[packet.topic].difficulty * 2);
       }
       
-      // Remove bubbles that are off screen
-      if (bubble.y > this.height + 100) {
-        this.bubbles.splice(index, 1);
+      if (packet.y > this.height + 100) {
+        this.packets.splice(index, 1);
       }
     });
   }
@@ -160,93 +153,52 @@ class DigitalWaterfall {
     });
   }
 
-  drawStreams() {
-    this.streams.forEach(stream => {
+  drawPaths() {
+    this.paths.forEach(path => {
       this.ctx.save();
-      this.ctx.globalAlpha = stream.opacity;
-      
-      const gradient = this.ctx.createLinearGradient(0, 0, 0, this.height);
-      if (this.grade === 10) {
-        gradient.addColorStop(0, 'rgba(6, 182, 212, 0)');
-        gradient.addColorStop(0.5, 'rgba(6, 182, 212, 0.3)');
-        gradient.addColorStop(1, 'rgba(6, 182, 212, 0)');
-      } else {
-        gradient.addColorStop(0, 'rgba(236, 72, 153, 0)');
-        gradient.addColorStop(0.5, 'rgba(236, 72, 153, 0.3)');
-        gradient.addColorStop(1, 'rgba(236, 72, 153, 0)');
-      }
-      
-      this.ctx.fillStyle = gradient;
-      this.ctx.fillRect(stream.x - 20, 0, 40, this.height);
+      this.ctx.globalAlpha = path.opacity;
+      this.ctx.strokeStyle = path.color;
+      this.ctx.lineWidth = 1;
+      this.ctx.beginPath();
+      this.ctx.moveTo(path.x, 0);
+      this.ctx.lineTo(path.x, this.height);
+      this.ctx.stroke();
       this.ctx.restore();
     });
   }
 
-  drawBubbles() {
-    this.bubbles.forEach(bubble => {
+  drawPackets() {
+    this.packets.forEach(packet => {
       // Draw trail
-      bubble.trail.forEach((point, index) => {
-        const alpha = (index / bubble.trail.length) * bubble.opacity * 0.3;
+      packet.trail.forEach((point, index) => {
+        const alpha = (index / packet.trail.length) * packet.opacity * 0.3;
         this.ctx.save();
         this.ctx.globalAlpha = alpha;
-        this.ctx.fillStyle = bubble.color;
+        this.ctx.fillStyle = packet.color;
         this.ctx.beginPath();
-        this.ctx.arc(point.x, point.y, 3, 0, Math.PI * 2);
+        this.ctx.arc(point.x, point.y, 2, 0, Math.PI * 2);
         this.ctx.fill();
         this.ctx.restore();
       });
       
-      // Draw main bubble
+      // Draw main packet
       this.ctx.save();
-      this.ctx.globalAlpha = bubble.opacity;
+      this.ctx.globalAlpha = packet.opacity;
       
-      // Outer glow
-      const glowGradient = this.ctx.createRadialGradient(
-        bubble.x, bubble.y, 0,
-        bubble.x, bubble.y, bubble.radius * 2
-      );
-      glowGradient.addColorStop(0, bubble.color);
-      glowGradient.addColorStop(1, 'transparent');
+      this.ctx.fillStyle = this.hexToRgba(packet.color, 0.9);
+      this.ctx.shadowColor = packet.color;
+      this.ctx.shadowBlur = 15;
       
-      this.ctx.fillStyle = glowGradient;
       this.ctx.beginPath();
-      this.ctx.arc(bubble.x, bubble.y, bubble.radius * 2, 0, Math.PI * 2);
+      this.ctx.arc(packet.x, packet.y, packet.size, 0, Math.PI * 2);
       this.ctx.fill();
       
-      // Main bubble
-      const bubbleGradient = this.ctx.createRadialGradient(
-        bubble.x - bubble.radius * 0.3, bubble.y - bubble.radius * 0.3, 0,
-        bubble.x, bubble.y, bubble.radius
-      );
-      bubbleGradient.addColorStop(0, this.hexToRgba(bubble.color, 0.9));
-      bubbleGradient.addColorStop(0.7, this.hexToRgba(bubble.color, 0.6));
-      bubbleGradient.addColorStop(1, this.hexToRgba(bubble.color, 0.3));
+      this.ctx.shadowBlur = 0;
       
-      this.ctx.fillStyle = bubbleGradient;
-      this.ctx.beginPath();
-      this.ctx.arc(bubble.x, bubble.y, bubble.radius, 0, Math.PI * 2);
-      this.ctx.fill();
-      
-      // Bubble highlight
-      this.ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
-      this.ctx.beginPath();
-      this.ctx.arc(
-        bubble.x - bubble.radius * 0.4, 
-        bubble.y - bubble.radius * 0.4, 
-        bubble.radius * 0.3, 
-        0, Math.PI * 2
-      );
-      this.ctx.fill();
-      
-      // Topic text (abbreviated)
       this.ctx.fillStyle = '#ffffff';
       this.ctx.font = 'bold 10px Arial';
       this.ctx.textAlign = 'center';
-      this.ctx.fillText(
-        bubble.topic.split(' ')[0], 
-        bubble.x, 
-        bubble.y + 3
-      );
+      this.ctx.fillText('DATA', packet.x, packet.y + 3);
       
       this.ctx.restore();
     });
@@ -267,53 +219,55 @@ class DigitalWaterfall {
   showTopicInfo(topic) {
     const topicDisplay = document.getElementById(`topic${this.grade}`);
     if (topicDisplay) {
-      topicDisplay.textContent = `${topic} - ${this.topics[topic].difficulty}/5 difficulty`;
+      topicDisplay.textContent = `${topic}`;
+      const powerBar = document.getElementById(`powerBar${this.grade}`);
+      const difficulty = this.topics[topic].difficulty;
+      powerBar.style.width = `${(difficulty / 5) * 100}%`;
+      const powerText = document.getElementById(`powerText${this.grade}`);
+      powerText.textContent = `${difficulty}/5 Power`;
     }
   }
 
-  handleBubbleClick(e) {
+  handlePacketClick(e) {
     const rect = this.canvas.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
     const clickY = e.clientY - rect.top;
     
-    this.bubbles.forEach((bubble, index) => {
+    this.packets.forEach((packet, index) => {
       const distance = Math.sqrt(
-        Math.pow(bubble.x - clickX, 2) + 
-        Math.pow(bubble.y - clickY, 2)
+        Math.pow(packet.x - clickX, 2) + 
+        Math.pow(packet.y - clickY, 2)
       );
       
-      if (distance < bubble.radius && !bubble.collected) {
-        bubble.collected = true;
-        this.collectBubble(bubble, clickX, clickY);
-        this.bubbles.splice(index, 1);
+      if (distance < packet.size && !packet.collected) {
+        packet.collected = true;
+        this.collectPacket(packet, clickX, clickY);
+        this.packets.splice(index, 1);
       }
     });
   }
 
-  collectBubble(bubble, x, y) {
-    // Create splash effect
+  collectPacket(packet, x, y) {
     this.createSplashEffect(x, y);
     
-    // Create particle explosion
     for (let i = 0; i < 15; i++) {
       this.particles.push({
         x: x,
         y: y,
         vx: (Math.random() - 0.5) * 10,
         vy: (Math.random() - 0.5) * 10,
-        color: bubble.color,
+        color: packet.color,
         life: 1,
         decay: 0.03
       });
     }
     
-    // Show achievement notification
-    this.showAchievement(bubble.topic);
+    this.showAchievement(packet.topic);
   }
 
   createSplashEffect(x, y) {
     const splash = document.createElement('div');
-    splash.className = `bubble-splash ${this.grade === 10 ? 'grade10-splash' : 'grade11-splash'}`;
+    splash.className = 'packet-splash';
     splash.style.left = (x - 50) + 'px';
     splash.style.top = (y - 50) + 'px';
     
@@ -325,52 +279,19 @@ class DigitalWaterfall {
 
   showAchievement(topic) {
     const notification = document.createElement('div');
-    notification.className = 'achievement-notification';
+    notification.className = 'circuit-achievement-notification fixed top-4 right-4 bg-green-600 text-white p-4 rounded-lg shadow-lg z-50 flex items-center gap-2';
     notification.innerHTML = `
-      <div class="achievement-icon-container">
-        <i data-lucide="check-circle" class="achievement-check-icon"></i>
+      <div class="circuit-achievement-icon-container">
+        <i data-lucide="check-circle" class="circuit-achievement-icon"></i>
       </div>
-      <div class="achievement-text">
-        <strong>Knowledge Collected!</strong><br>
+      <div class="circuit-achievement-text">
+        <strong>Data Packet Acquired!</strong><br>
         <span>${topic}</span>
       </div>
     `;
     
-    // Style the notification
-    Object.assign(notification.style, {
-      position: 'fixed',
-      top: '20px',
-      right: '20px',
-      background: 'rgba(34, 197, 94, 0.9)',
-      color: 'white',
-      padding: '1rem',
-      borderRadius: '15px',
-      display: 'flex',
-      alignItems: 'center',
-      gap: '0.5rem',
-      zIndex: '1000',
-      backdropFilter: 'blur(10px)',
-      border: '1px solid rgba(255, 255, 255, 0.2)',
-      boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
-      animation: 'slideInRight 0.5s ease-out forwards'
-    });
-    
     document.body.appendChild(notification);
-    
-    // Add slide animation
-    const slideKeyframes = `
-      @keyframes slideInRight {
-        from { transform: translateX(100%); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-      }
-    `;
-    
-    if (!document.getElementById('achievement-styles')) {
-      const style = document.createElement('style');
-      style.id = 'achievement-styles';
-      style.textContent = slideKeyframes;
-      document.head.appendChild(style);
-    }
+    lucide.createIcons();
     
     setTimeout(() => {
       notification.style.animation = 'slideOutRight 0.5s ease-in forwards';
@@ -388,24 +309,19 @@ class DigitalWaterfall {
   animate() {
     if (!this.isRunning) return;
     
-    // Clear canvas with fade effect
     this.ctx.fillStyle = 'rgba(15, 23, 42, 0.1)';
     this.ctx.fillRect(0, 0, this.width, this.height);
     
-    // Draw streams
-    this.drawStreams();
+    this.drawPaths();
     
-    // Update and draw bubbles
-    this.updateBubbles();
-    this.drawBubbles();
+    this.updatePackets();
+    this.drawPackets();
     
-    // Update and draw particles
     this.updateParticles();
     this.drawParticles();
     
-    // Create new bubbles periodically
     if (Math.random() < 0.02) {
-      this.createBubble();
+      this.createPacket();
     }
     
     requestAnimationFrame(() => this.animate());
@@ -421,35 +337,42 @@ class DigitalWaterfall {
   }
 }
 
-// Initialize waterfalls when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  // Wait for canvas elements to be available
   setTimeout(() => {
-    const canvas10 = document.getElementById('waterfall10');
-    const canvas11 = document.getElementById('waterfall11');
+    const canvas10 = document.getElementById('circuit10');
+    const canvas11 = document.getElementById('circuit11');
     
     if (canvas10) {
-      window.waterfall10 = new DigitalWaterfall('waterfall10', 10);
+      window.circuit10 = new DigitalCircuit('circuit10', 10);
     }
     
     if (canvas11) {
-      window.waterfall11 = new DigitalWaterfall('waterfall11', 11);
+      window.circuit11 = new DigitalCircuit('circuit11', 11);
     }
   }, 100);
 });
 
-// Achievement bubble interactions
 document.addEventListener('DOMContentLoaded', () => {
-  const achievementBubbles = document.querySelectorAll('.achievement-bubble');
+  const controlModules = document.querySelectorAll('.control-module');
   
-  achievementBubbles.forEach(bubble => {
-    bubble.addEventListener('click', () => {
-      if (bubble.classList.contains('completed')) {
-        const icon = bubble.querySelector('.achievement-icon');
-        const iconName = icon.getAttribute('data-lucide');
+  controlModules.forEach(module => {
+    module.addEventListener('click', () => {
+      if (module.classList.contains('completed')) {
+        const icon = module.querySelector('.module-icon');
         
-        // Create celebration effect
-        createCelebrationEffect(bubble, iconName);
+        // Show a completion message
+        const message = document.createElement('div');
+        message.className = 'system-message fixed top-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg z-50 flex items-center gap-2';
+        message.innerHTML = `
+          <div class="system-message-icon">
+            <i data-lucide="check-circle" class="system-icon"></i>
+          </div>
+          <span class="system-message-text">Module already completed!</span>
+        `;
+        document.body.appendChild(message);
+        lucide.createIcons();
+        setTimeout(() => message.remove(), 2000);
+        
       } else {
         showLockedMessage();
       }
@@ -457,100 +380,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function createCelebrationEffect(element, iconName) {
-  const rect = element.getBoundingClientRect();
-  const centerX = rect.left + rect.width / 2;
-  const centerY = rect.top + rect.height / 2;
-  
-  for (let i = 0; i < 20; i++) {
-    const particle = document.createElement('div');
-    particle.style.cssText = `
-      position: fixed;
-      left: ${centerX}px;
-      top: ${centerY}px;
-      width: 8px;
-      height: 8px;
-      background: linear-gradient(45deg, #fbbf24, #f59e0b);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 1000;
-      animation: explode 1s ease-out forwards;
-    `;
-    
-    // Random direction for explosion
-    const angle = (i / 20) * Math.PI * 2;
-    const velocity = 50 + Math.random() * 50;
-    const vx = Math.cos(angle) * velocity;
-    const vy = Math.sin(angle) * velocity;
-    
-    particle.style.setProperty('--vx', vx + 'px');
-    particle.style.setProperty('--vy', vy + 'px');
-    
-    document.body.appendChild(particle);
-    
-    setTimeout(() => particle.remove(), 1000);
-  }
-  
-  // Add explosion keyframes if not exists
-  if (!document.getElementById('explosion-styles')) {
-    const style = document.createElement('style');
-    style.id = 'explosion-styles';
-    style.textContent = `
-      @keyframes explode {
-        0% {
-          transform: translate(0, 0) scale(1);
-          opacity: 1;
-        }
-        100% {
-          transform: translate(var(--vx), var(--vy)) scale(0);
-          opacity: 0;
-        }
-      }
-      @keyframes slideOutRight {
-        to { transform: translateX(100%); opacity: 0; }
-      }
-    `;
-    document.head.appendChild(style);
-  }
-}
-
 function showLockedMessage() {
   const message = document.createElement('div');
-  message.textContent = 'Complete more lessons to unlock this achievement!';
-  Object.assign(message.style, {
-    position: 'fixed',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    background: 'rgba(239, 68, 68, 0.9)',
-    color: 'white',
-    padding: '1rem 2rem',
-    borderRadius: '25px',
-    zIndex: '1000',
-    backdropFilter: 'blur(10px)',
-    border: '1px solid rgba(255, 255, 255, 0.2)',
-    animation: 'fadeInOut 2s ease-in-out forwards'
-  });
-  
-  // Add fade animation
-  if (!document.getElementById('fade-styles')) {
-    const style = document.createElement('style');
-    style.id = 'fade-styles';
-    style.textContent = `
-      @keyframes fadeInOut {
-        0%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-        20%, 80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-      }
-    `;
-    document.head.appendChild(style);
-  }
-  
+  message.className = 'system-message fixed top-4 right-4 bg-red-500 text-white p-4 rounded-lg shadow-lg z-50 flex items-center gap-2';
+  message.innerHTML = `
+    <div class="system-message-icon">
+      <i data-lucide="lock" class="system-icon"></i>
+    </div>
+    <span class="system-message-text">Access Denied. Complete prerequisites to unlock.</span>
+  `;
   document.body.appendChild(message);
+  lucide.createIcons();
   setTimeout(() => message.remove(), 2000);
 }
 
-// Auto-cleanup on page unload
 window.addEventListener('beforeunload', () => {
-  if (window.waterfall10) window.waterfall10.stop();
-  if (window.waterfall11) window.waterfall11.stop();
+  if (window.circuit10) window.circuit10.stop();
+  if (window.circuit11) window.circuit11.stop();
 });

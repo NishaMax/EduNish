@@ -13,7 +13,6 @@
 <body id="body" class="bg-gray-100 text-gray-800 font-sans">
 
   <div class="max-w-lg mx-auto px-6 py-12">
-    <!-- Page Header -->
     <div class="flex justify-between items-center mb-6">
       <h1 class="text-3xl font-bold text-blue-700 dark:text-blue-300">My Profile</h1>
       <button id="themeToggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:scale-105 transition">
@@ -21,14 +20,12 @@
       </button>
     </div>
 
-    <!-- Profile Card -->
     <div id="profileCard" class="theme-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center">
       <div id="loading" class="text-gray-500">⏳ Loading profile...</div>
       <div id="profileDetails" class="hidden"></div>
-      <div id="registerRedirect" class="hidden mt-4 text-center"></div>
+      <div id="redirectLink" class="hidden mt-4 text-center"></div>
     </div>
 
-    <!-- Avatar Selection -->
     <div id="avatarSelection" class="hidden mt-6">
       <h2 class="text-lg font-semibold mb-2 text-blue-700 dark:text-blue-300">Choose Your Avatar</h2>
       <div class="flex justify-center space-x-4">
@@ -40,7 +37,6 @@
       </div>
     </div>
 
-    <!-- Progress Dashboard -->
     <div id="progressDashboard" class="hidden mt-8">
       <h2 class="text-xl font-bold mb-4 text-blue-700 dark:text-blue-300">📊 Your Progress</h2>
       <div class="grid grid-cols-3 gap-4">
@@ -59,7 +55,6 @@
       </div>
     </div>
 
-    <!-- Back Link -->
     <div class="mt-6 text-center">
       <a href="index.html" class="text-blue-600 dark:text-blue-400 hover:underline">← Back to Home</a>
     </div>
@@ -87,41 +82,34 @@
     async function loadProfile() {
       const profileDiv = document.getElementById("profileDetails");
       const loadingDiv = document.getElementById("loading");
-
       const local = JSON.parse(localStorage.getItem("edunishStudentData"));
-      if (!local) {
-        loadingDiv.textContent = "⚠️ Profile not found in Database.";
-        showRegistrationButton();
+
+      if (!local || !local.studentId) {
+        loadingDiv.textContent = "⚠️ No active student profile. Please log in or sign up.";
+        showRedirectLink("landing.html", "Go to Login/Sign Up");
         return;
       }
+
       studentId = local.studentId;
 
       try {
-        let snap = await getDoc(doc(db, "students", studentId));
+        const snap = await getDoc(doc(db, "students", studentId));
         if (snap.exists()) {
-          renderProfile(snap.data(), "students");
+          renderProfile(snap.data());
           loadProgress();
         } else {
-          // fallback by email
-          const email = local.email?.toLowerCase();
-          if (email) {
-            const emailSnap = await getDoc(doc(db, "studentsByEmail", email));
-            if (emailSnap.exists()) {
-              renderProfile(emailSnap.data(), "studentsByEmail");
-              loadProgress();
-              return;
-            }
-          }
-          loadingDiv.textContent = "⚠️ Profile not found in Firestore.";
+          loadingDiv.textContent = "⚠️ Student profile not found in database.";
+          showRedirectLink("landing.html", "Go to Login/Sign Up");
         }
       } catch (err) {
         console.error("❌ Firestore error:", err);
-        renderProfile(local, "offline");
+        loadingDiv.textContent = "❌ Failed to load profile. Using local data.";
+        renderProfile(local);
         loadProgress();
       }
     }
 
-    function renderProfile(data, source = "students") {
+    function renderProfile(data) {
       document.getElementById("loading").classList.add("hidden");
       const profileDiv = document.getElementById("profileDetails");
       profileDiv.classList.remove("hidden");
@@ -132,28 +120,23 @@
             class="w-24 h-24 rounded-full object-cover shadow border-2 border-blue-500"/>
           <div>
             <p class="text-lg font-semibold text-gray-800 dark:text-gray-200">${data.fullName}</p>
-            <p class="text-sm text-gray-600 dark:text-gray-400">${data.email}</p>
-          </div>
-          <div class="w-full text-left mt-4 space-y-2">
-            <p class="text-gray-700 dark:text-gray-300"><span class="font-semibold">🎓 Grade:</span> ${data.grade}</p>
-            <p class="text-gray-700 dark:text-gray-300"><span class="font-semibold">🆔 Student ID:</span> ${data.studentId || studentId}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Student ID: ${data.studentId}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Grade: ${data.grade}</p>
           </div>
         </div>
       `;
 
-      // Show avatar selection
       document.getElementById("avatarSelection").classList.remove("hidden");
 
       document.querySelectorAll(".avatarOption").forEach(img => {
         img.addEventListener("click", async () => {
           const url = img.src;
           try {
-            if (source === "students") {
-              await updateDoc(doc(db, "students", studentId), { avatarUrl: url });
-            } else if (source === "studentsByEmail") {
-              await updateDoc(doc(db, "studentsByEmail", data.email.toLowerCase()), { avatarUrl: url });
-            }
+            await updateDoc(doc(db, "students", studentId), { avatarUrl: url });
             document.getElementById("avatarImg").src = url;
+            const updatedLocal = JSON.parse(localStorage.getItem("edunishStudentData"));
+            updatedLocal.avatarUrl = url;
+            localStorage.setItem("edunishStudentData", JSON.stringify(updatedLocal));
           } catch (err) {
             console.error("❌ Avatar update failed:", err);
           }
@@ -178,6 +161,12 @@
         document.getElementById("statBest").textContent = best + "%";
       }
       document.getElementById("progressDashboard").classList.remove("hidden");
+    }
+
+    function showRedirectLink(href, text) {
+      const div = document.getElementById("redirectLink");
+      div.classList.remove("hidden");
+      div.innerHTML = `<a href="${href}" class="inline-block mt-2 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">📝 ${text}</a>`;
     }
 
     // 🌙 Dark Mode Toggle
@@ -205,18 +194,6 @@
     });
 
     document.addEventListener("DOMContentLoaded", loadProfile);
-   
-    function showRegistrationButton() {
-      const div = document.getElementById("registerRedirect");
-      div.classList.remove("hidden");
-      div.innerHTML = `
-        <a href="registration.html" 
-          class="inline-block mt-2 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-          📝 Go to Registration
-        </a>
-      `;
-    }
-
   </script>
 </body>
 </html>

@@ -3,28 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Registration - EduNish</title>
+  <title>Sign Up - EduNish</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
   <div class="bg-white shadow-lg rounded-2xl p-8 max-w-md w-full">
-    <h1 class="text-2xl font-bold text-center mb-6 text-blue-700">Register</h1>
+    <h1 class="text-2xl font-bold text-center mb-6 text-blue-700">Sign Up</h1>
     <form id="registrationForm" class="space-y-4">
       <div>
         <label class="block text-sm font-semibold">Full Name</label>
         <input type="text" id="fullName" class="w-full px-4 py-2 border rounded-lg" required />
       </div>
       <div>
-        <label class="block text-sm font-semibold">Email</label>
-        <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg" required />
+        <label class="block text-sm font-semibold">Grade</label>
+        <select id="grade" class="w-full px-4 py-2 border rounded-lg" required>
+          <option value="">Select Grade</option>
+          <option value="10">Grade 10</option>
+          <option value="11">Grade 11</option>
+        </select>
       </div>
       <div>
-        <label class="block text-sm font-semibold">Grade</label>
-        <input type="text" id="grade" class="w-full px-4 py-2 border rounded-lg" required />
+        <label class="block text-sm font-semibold">Email (Optional)</label>
+        <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg" />
       </div>
-      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Register</button>
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Create Student ID</button>
     </form>
     <p id="msg" class="mt-4 text-center"></p>
+    <div class="mt-4 text-center">
+      <a href="landing.html" class="text-sm text-gray-500 hover:underline">Go back to options</a>
+    </div>
   </div>
 
   <script type="module">
@@ -45,19 +53,21 @@
     const db = getFirestore(app);
 
     function generateStudentId() {
-      return "STU" + Math.floor(100000 + Math.random() * 900000);
+      const timestamp = Date.now().toString().slice(-6); // Last 6 digits of timestamp
+      const random = Math.floor(Math.random() * 9000).toString().padStart(4, '0');
+      return `STU${timestamp}${random}`;
     }
 
     document.getElementById("registrationForm").addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const fullName = document.getElementById("fullName").value.trim();
-      const email = document.getElementById("email").value.trim().toLowerCase();
       const grade = document.getElementById("grade").value.trim();
+      const email = document.getElementById("email").value.trim().toLowerCase();
       const msg = document.getElementById("msg");
 
-      if (!fullName || !email || !grade) {
-        msg.textContent = "⚠️ Please fill in all fields.";
+      if (!fullName || !grade) {
+        msg.textContent = "⚠️ Please fill in all required fields.";
         msg.className = "text-red-600 text-center";
         return;
       }
@@ -67,33 +77,29 @@
         const record = {
           studentId,
           fullName,
-          email,
           grade,
+          email: email || null, // Store email or null if empty
           avatarUrl: ""
         };
 
-        // Save to Firestore
         await setDoc(doc(db, "students", studentId), record);
-        await setDoc(doc(db, "studentsByEmail", email), record);
+        
+        if (email) {
+          await setDoc(doc(db, "studentsByEmail", email), { studentId });
+        }
 
-        // ✅ Save to localStorage for profile page
         localStorage.setItem("edunishStudentData", JSON.stringify(record));
-
-        // ✅ Save email→student mapping
-        const map = JSON.parse(localStorage.getItem("edunishStudentsByEmail") || "{}");
-        map[email] = record;
-        localStorage.setItem("edunishStudentsByEmail", JSON.stringify(map));
+        localStorage.setItem("isLoggedIn", "true");
 
         msg.className = "text-green-600 font-semibold text-center";
-        msg.textContent = `✅ Student ID created: ${studentId}`;
+        msg.innerHTML = `✅ Student ID created: <br><strong class="text-lg">${studentId}</strong>`;
 
-        // Redirect after success
-        setTimeout(() => (window.location.href = "profile.html"), 1500);
+        setTimeout(() => (window.location.href = "profile.html"), 2000);
 
       } catch (err) {
         console.error("❌ Registration error:", err);
         msg.className = "text-red-600 text-center";
-        msg.textContent = "❌ Failed to register. Please try again.";
+        msg.textContent = "❌ Failed to create Student ID. Please try again.";
       }
     });
   </script>

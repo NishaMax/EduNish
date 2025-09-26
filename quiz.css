@@ -1,1307 +1,204 @@
-/* Epic Result Container */
-#result-container {
-    animation: epicBounceIn 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
+/* Optimized Quiz Page Styles */
 
-@keyframes epicBounceIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.1) rotate(-180deg);
-    }
-    25% {
-        opacity: 0.7;
-        transform: scale(0.7) rotate(-45deg);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.1) rotate(15deg);
-    }
-    75% {
-        transform: scale(0.95) rotate(-5deg);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) rotate(0deg);
-    }
-}
-
-/* Epic Celebration Animation */
-.text-green-600 {
-    animation: celebrate 1.5s ease-in-out infinite alternate;
-    background: linear-gradient(45deg, #10b981, #059669, #34d399);
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: celebrate 1.5s ease-/* Enhanced Quiz Page Styles with Dark Vibes & Wow Factor */
-}
-/* Global Styles */
-* {
-    box-sizing: border-box;
-}
-
+/* --- General Styles --- */
 body {
-    margin: 0;
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow-x: hidden;
-    color: #e2e8f0;
+    color: #374151; /* Dark gray for text */
+    background-color: #f3f4f6; /* Light gray background */
 }
 
-/* Epic Dark Animated Background */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(-45deg, 
-        #0f0f23, #1a1a2e, #16213e, #0f3460, 
-        #533483, #7209b7, #2d1b69, #0d1421);
-    background-size: 400% 400%;
-    animation: gradientShift 20s ease infinite;
-    z-index: -3;
+/* --- Navigation & Header --- */
+nav {
+    border-bottom: 1px solid #e5e7eb;
 }
 
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 100% 50%; }
-    50% { background-position: 100% 100%; }
-    75% { background-position: 0% 100%; }
-    100% { background-position: 0% 50%; }
+/* --- Main Content Layout --- */
+main {
+    padding-top: 64px; /* Ensure content isn't hidden by navbar */
 }
 
-/* Cyber Grid Overlay */
-body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        radial-gradient(circle at 25% 25%, #6366f1 1px, transparent 1px),
-        radial-gradient(circle at 75% 75%, #8b5cf6 1.5px, transparent 1.5px),
-        radial-gradient(circle at 50% 10%, #f59e0b 0.5px, transparent 0.5px),
-        linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
-        linear-gradient(rgba(139, 92, 246, 0.02) 1px, transparent 1px);
-    background-size: 100px 100px, 150px 150px, 200px 200px, 50px 50px, 50px 50px;
-    animation: cyberGrid 25s linear infinite;
-    z-index: -2;
-    pointer-events: none;
-}
-
-@keyframes cyberGrid {
-    0% { transform: translate(0, 0) rotate(0deg); opacity: 0.7; }
-    25% { transform: translate(-10px, -10px) rotate(0.5deg); opacity: 1; }
-    50% { transform: translate(10px, 5px) rotate(-0.5deg); opacity: 0.8; }
-    75% { transform: translate(-5px, 10px) rotate(0.3deg); opacity: 0.9; }
-    100% { transform: translate(0, 0) rotate(0deg); opacity: 0.7; }
-}
-
-/* Floating Orbs */
-body {
-    position: relative;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(-45deg, 
-        #0f0f23, #1a1a2e, #16213e, #0f3460, 
-        #533483, #7209b7, #2d1b69, #0d1421);
-    background-size: 400% 400%;
-    animation: gradientShift 20s ease infinite;
-    z-index: -3;
-}
-
-/* Add floating orbs */
-.floating-orb {
-    position: fixed;
-    border-radius: 50%;
-    filter: blur(40px);
-    animation: floatOrb 20s infinite ease-in-out;
-    z-index: -1;
-}
-
-.orb-1 { width: 300px; height: 300px; background: radial-gradient(circle, rgba(99, 102, 241, 0.4), transparent); top: 10%; left: 10%; animation-delay: 0s; }
-.orb-2 { width: 200px; height: 200px; background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent); top: 60%; right: 20%; animation-delay: 7s; }
-.orb-3 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(245, 158, 11, 0.2), transparent); bottom: 10%; left: 30%; animation-delay: 14s; }
-
-@keyframes floatOrb {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    25% { transform: translate(50px, -30px) scale(1.1); }
-    50% { transform: translate(-30px, 40px) scale(0.9); }
-    75% { transform: translate(40px, -20px) scale(1.05); }
-}
-
-/* Navigation Enhancements - Fixed positioning issue */
-#navbar {
-    backdrop-filter: blur(20px);
-    background: rgba(15, 15, 35, 0.9);
-    border-bottom: 1px solid rgba(99, 102, 241, 0.3);
-    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.2);
-    z-index: 1000;
-}
-
-/* Fix for content being hidden behind navbar */
-section {
-    margin-top: 64px; /* Height of navbar */
-    padding-top: 2rem !important;
-}
-
-#navbar .bg-gradient-to-r {
-    position: relative;
-    overflow: hidden;
-}
-
-#navbar .bg-gradient-to-r::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s;
-}
-
-#navbar .bg-gradient-to-r:hover::before {
-    left: 100%;
-}
-
-/* Section Styling */
-section {
-    margin-top: 64px; /* Height of navbar */
-    padding-top: 2rem !important;
-    background: transparent !important;
-    position: relative;
-}
-
-/* Dark-themed Card Enhancements */
+/* --- Card & Form Element Styles --- */
 .bg-white {
-    background: rgba(30, 30, 60, 0.95) !important;
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(99, 102, 241, 0.4);
-    box-shadow: 
-        0 25px 50px rgba(0, 0, 0, 0.3),
-        0 0 50px rgba(99, 102, 241, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    color: #e2e8f0;
-}
-
-.bg-white::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1), transparent);
-    transform: rotate(45deg);
-    transition: all 0.8s ease;
-    opacity: 0;
-}
-
-.bg-white:hover::before {
-    opacity: 1;
-    transform: rotate(45deg) translate(50%, 50%);
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
 }
 
 .bg-white:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 
-        0 35px 70px rgba(0, 0, 0, 0.4),
-        0 0 80px rgba(99, 102, 241, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    border-color: rgba(139, 92, 246, 0.6);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
 }
 
-/* Dark-themed Form Controls */
-select, input {
-    transition: all 0.4s ease;
-    border: 2px solid rgba(99, 102, 241, 0.4) !important;
-    background: rgba(15, 15, 35, 0.8) !important;
-    color: #e2e8f0 !important;
-    backdrop-filter: blur(10px);
+select, input, button {
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 select:focus, input:focus {
-    border-color: #8b5cf6 !important;
-    box-shadow: 
-        0 0 0 3px rgba(139, 92, 246, 0.2),
-        0 0 20px rgba(139, 92, 246, 0.3);
-    transform: scale(1.02);
-    background: rgba(30, 30, 60, 0.9) !important;
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
 }
 
-select option {
-    background: rgba(15, 15, 35, 0.95);
-    color: #e2e8f0;
-}
-
-/* Epic Series Cards Animation */
+/* --- Quiz Series Cards --- */
 #series-cards > div {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    background: rgba(30, 30, 60, 0.8) !important;
-    border: 1px solid rgba(99, 102, 241, 0.3);
-    color: #e2e8f0 !important;
-}
-
-#series-cards > div::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), transparent);
-    transition: left 0.6s ease;
-}
-
-#series-cards > div::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
 #series-cards > div:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 
-        0 20px 40px rgba(0, 0, 0, 0.4),
-        0 0 40px rgba(99, 102, 241, 0.4);
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
-    color: white !important;
-    border-color: rgba(139, 92, 246, 0.8);
+    background-color: #eff6ff;
+    border-color: #bfdbfe;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-#series-cards > div:hover::before {
-    left: 100%;
+/* --- Quiz Progress Bar --- */
+#progress-bar {
+    background-color: #2563eb;
+    transition: width 0.5s ease-out;
 }
 
-#series-cards > div:hover::after {
-    opacity: 1;
-}
-
-/* Quiz Container Animations */
-#quiz-container {
-    animation: slideInUp 0.6s ease-out;
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Epic Progress Bar Enhancement */
-/* #progress-bar {
-    background: linear-gradient(90deg, #6366f1, #8b5cf6, #f59e0b, #ef4444) !important;
-    background-size: 300% 100%;
-    animation: epicProgressGlow 3s ease-in-out infinite;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
-}
-
-#progress-bar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-    animation: progressShine 2s ease-in-out infinite;
-}
-
-@keyframes epicProgressGlow {
-    0%, 100% { 
-        background-position: 0% 50%; 
-        box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
-    }
-    25% { 
-        background-position: 50% 50%; 
-        box-shadow: 0 0 30px rgba(139, 92, 246, 0.7);
-    }
-    50% { 
-        background-position: 100% 50%; 
-        box-shadow: 0 0 25px rgba(245, 158, 11, 0.6);
-    }
-    75% { 
-        background-position: 150% 50%; 
-        box-shadow: 0 0 35px rgba(239, 68, 68, 0.6);
-    }
-} */
-
-/* Dark Quiz Options */
+/* --- Quiz Options Buttons --- */
 #quiz-options button {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    background: rgba(30, 30, 60, 0.8) !important;
-    color: #e2e8f0 !important;
-    border: 1px solid rgba(99, 102, 241, 0.3) !important;
-}
-
-#quiz-options button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
-    transition: left 0.5s ease;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
 }
 
 #quiz-options button:hover {
-    transform: translateX(8px) scale(1.02);
-    border-left: 4px solid #8b5cf6 !important;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(30, 30, 60, 0.9)) !important;
-    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
-}
-
-#quiz-options button:hover::before {
-    left: 100%;
+    background-color: #eff6ff;
+    border-color: #bfdbfe;
+    transform: translateX(4px);
 }
 
 #quiz-options button.bg-blue-200 {
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
-    color: white !important;
-    transform: translateX(12px) scale(1.03);
-    box-shadow: 
-        0 10px 25px rgba(99, 102, 241, 0.5),
-        0 0 30px rgba(139, 92, 246, 0.4);
-    border: 1px solid rgba(139, 92, 246, 0.8) !important;
+    background-color: #dbeafe !important;
+    border-color: #60a5fa !important;
+    color: #1e40af !important;
+    transform: translateX(8px);
 }
 
-/* Dark-themed Buttons */
+/* --- Buttons --- */
 button {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    color: #e2e8f0 !important;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-button::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    transition: all 0.4s ease;
-    transform: translate(-50%, -50%);
+button.bg-blue-600 {
+    background-color: #2563eb;
+    color: white;
 }
 
-button:hover::before {
-    width: 400px;
-    height: 400px;
+button.bg-blue-600:hover {
+    background-color: #1d4ed8;
 }
 
-button:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 
-        0 15px 30px rgba(0, 0, 0, 0.4),
-        0 0 30px rgba(99, 102, 241, 0.3);
+button.bg-gray-600 {
+    background-color: #4b5563;
+    color: white;
 }
 
-/* Specific button styles */
-.bg-blue-600 {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
-    border: 1px solid rgba(139, 92, 246, 0.5);
+button.bg-gray-600:hover {
+    background-color: #374151;
 }
 
-.bg-gray-600 {
-    background: linear-gradient(135deg, #4b5563, #6b7280) !important;
-    border: 1px solid rgba(107, 114, 128, 0.5);
+/* --- Result Section --- */
+#result-container > div {
+    animation: fadeInScale 0.5s ease-out;
 }
 
-/* Epic Progress Cards */
-/* #progress-list > div {
-    animation: cardSlideIn 0.8s ease-out;
-    animation-fill-mode: both;
-    transition: all 0.4s ease;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-    overflow: hidden;
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
 }
 
-#progress-list > div::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transition: left 0.6s ease;
-}
-
-#progress-list > div:hover::before {
-    left: 100%;
-}
-
-#progress-list > div:nth-child(1) { animation-delay: 0.1s; }
-#progress-list > div:nth-child(2) { animation-delay: 0.2s; }
-#progress-list > div:nth-child(3) { animation-delay: 0.3s; }
-#progress-list > div:nth-child(4) { animation-delay: 0.4s; }
-
-@keyframes cardSlideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-30px) scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-    }
-}
-
-#progress-list > div:hover {
-    transform: translateX(8px) scale(1.03);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
-
-.bg-green-500 { 
-    background: linear-gradient(135deg, #10b981, #059669) !important; 
-    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
-}
-.bg-yellow-500 { 
-    background: linear-gradient(135deg, #f59e0b, #d97706) !important; 
-    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
-}
-.bg-red-500 { 
-    background: linear-gradient(135deg, #ef4444, #dc2626) !important; 
-    box-shadow: 0 10px 20px rgba(239, 68, 68, 0.3);
-}
-
-
-#result-container {
-    animation: epicBounceIn 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-@keyframes epicBounceIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.1) rotate(-180deg);
-    }
-    25% {
-        opacity: 0.7;
-        transform: scale(0.7) rotate(-45deg);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.1) rotate(15deg);
-    }
-    75% {
-        transform: scale(0.95) rotate(-5deg);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) rotate(0deg);
-    }
-} */
-
-/* Epic Celebration Animation */
-.text-green-600 {
-    animation: celebrate 1.5s ease-in-out infinite alternate, rainbowText 3s linear infinite;
-    background: linear-gradient(45deg, #10b981, #059669, #34d399, #6ee7b7);
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-@keyframes celebrate {
-    0% { transform: scale(1) rotate(-3deg); }
-    100% { transform: scale(1.08) rotate(3deg); }
-}
-
-@keyframes rainbowText {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-}
-
-/* Dark Theme Responsive Enhancements */
-@media (max-width: 768px) {
-    body::before,
-    body::after {
-        animation: none !important; /* stop infinite shifting */
-        background-size: 200% 200%; /* lighter load */
-    } 
-    
-    section {
-        margin-top: 60px;
-        padding-top: 1.5rem !important;
-    }
-    
-    #series-cards {
-        grid-template-columns: 1fr !important;
-    }
-    
-    .bg-white {
-        margin: 8px;
-        backdrop-filter: blur(15px);
-    }
-    
-    .floating-orb {
-        display: none; /* Hide orbs on mobile for performance */
-    }
-}
-
-/* Epic Loading Animation */
-.loading {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    border: 3px solid rgba(99, 102, 241, 0.2);
-    border-radius: 50%;
-    border-top-color: #6366f1;
-    border-right-color: #8b5cf6;
-    animation: epicSpin 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
-}
-
-@keyframes epicSpin {
-    0% { transform: rotate(0deg) scale(1); }
-    50% { transform: rotate(180deg) scale(1.1); }
-    100% { transform: rotate(360deg) scale(1); }
-}
-
-/* Dark Pulsing Effect for Headings */
-h1, h2 {
-    animation: darkPulse 3s infinite;
-    text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
-}
-
-@keyframes darkPulse {
-    0% { opacity: 1; text-shadow: 0 0 20px rgba(99, 102, 241, 0.5); }
-    50% { opacity: 0.9; text-shadow: 0 0 30px rgba(139, 92, 246, 0.7); }
-    100% { opacity: 1; text-shadow: 0 0 20px rgba(99, 102, 241, 0.5); }
-}
-
-/* Dark Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(15, 15, 35, 0.3);
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #6366f1, #8b5cf6);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #8b5cf6, #6366f1);
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.7);
-}
-
-/* Floating Orbs HTML Elements (add via JS) */
-body.loaded::after {
-    content: '';
-    position: fixed;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.3), transparent);
-    top: 10%;
-    left: 10%;
-    filter: blur(40px);
-    animation: floatOrb 20s infinite ease-in-out;
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* Text Selection */
-::selection {
-    background: rgba(99, 102, 241, 0.3);
-    color: #e2e8f0;
-}
-
-/* Focus States */
-*:focus {
-    outline: 2px solid rgba(139, 92, 246, 0.6);
-    outline-offset: 2px;
-}
-pre {
-  background: #f3f4f6; /* light gray */
-  padding: 10px;
-  border-radius: 8px;
-  font-family: "Fira Code", monospace;
-  font-size: 14px;
-  white-space: pre-wrap;   /* wraps long lines */
-  word-wrap: break-word;   /* breaks very long strings */
-  color: #111827;          /* dark text */
-}
-/* Floating Timer */
-#timer {
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: conic-gradient(#6366f1 var(--progress, 100%), rgba(255,255,255,0.1) 0%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #fff;
-  font-size: 22px;
-  box-shadow: 0 0 25px rgba(99,102,241,0.6);
-  animation: pulseGlow 2s infinite;
-  z-index: 2000; /* stays on top */
-}
-
-@keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 20px rgba(99,102,241,0.6); }
-  50% { box-shadow: 0 0 35px rgba(139,92,246,0.8); }
-}
-
-/* Responsive fix for Timer */
-@media (max-width: 768px) {
-  #timer {
-    top: auto;
-    bottom: 20px;
-    right: 50%;
-    transform: translateX(50%);
-    width: 80px;
-    height: 80px;
-    font-size: 18px;
-  }
-}
-/* ===== EPIC PROGRESS OVERVIEW SECTION ===== */
-
-/* Progress Section Container */
-#progress-section {
-    background: linear-gradient(135deg, 
-        rgba(99, 102, 241, 0.1) 0%, 
-        rgba(139, 92, 246, 0.1) 50%, 
-        rgba(245, 158, 11, 0.1) 100%);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 24px;
-    padding: 2rem;
-    position: relative;
-    overflow: hidden;
-    animation: sectionGlow 4s ease-in-out infinite alternate;
-}
-
-#progress-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: conic-gradient(
-        from 0deg,
-        transparent,
-        rgba(99, 102, 241, 0.1),
-        transparent,
-        rgba(139, 92, 246, 0.1),
-        transparent,
-        rgba(245, 158, 11, 0.1),
-        transparent
-    );
-    animation: conicRotate 20s linear infinite;
-    z-index: -1;
-}
-
-@keyframes sectionGlow {
-    0% { box-shadow: 0 0 30px rgba(99, 102, 241, 0.3); }
-    100% { box-shadow: 0 0 50px rgba(139, 92, 246, 0.5); }
-}
-
-@keyframes conicRotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Progress Section Title */
-#progress-section h2 {
-    background: linear-gradient(45deg, #6366f1, #8b5cf6, #f59e0b, #ef4444, #6366f1);
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: rainbowTitle 4s ease-in-out infinite;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 900;
-    margin-bottom: 2rem;
-    text-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
-    position: relative;
-}
-
+/* --- Progress Overview --- */
 #progress-section h2::after {
-    content: '📊✨';
-    position: absolute;
-    right: -60px;
-    top: 50%;
-    transform: translateY(-50%);
-    animation: iconBounce 2s ease-in-out infinite;
+    display: none; /* Removed the animated icon */
 }
 
-@keyframes rainbowTitle {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-}
-
-@keyframes iconBounce {
-    0%, 100% { transform: translateY(-50%) scale(1) rotate(0deg); }
-    50% { transform: translateY(-60%) scale(1.2) rotate(10deg); }
-}
-
-/* Progress Grid Layout */
 #progress-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
-    perspective: 1000px;
 }
 
-/* Individual Progress Cards */
 #progress-list > div {
-    position: relative;
     padding: 1.5rem;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
     cursor: pointer;
-    animation: cardAppear 0.8s ease-out;
-    animation-fill-mode: both;
-    transform-style: preserve-3d;
-    backdrop-filter: blur(15px);
-    border: 2px solid transparent;
 }
 
-/* Staggered animation delays */
-#progress-list > div:nth-child(1) { animation-delay: 0.1s; }
-#progress-list > div:nth-child(2) { animation-delay: 0.2s; }
-#progress-list > div:nth-child(3) { animation-delay: 0.3s; }
-#progress-list > div:nth-child(4) { animation-delay: 0.4s; }
-#progress-list > div:nth-child(5) { animation-delay: 0.5s; }
-#progress-list > div:nth-child(6) { animation-delay: 0.6s; }
-
-@keyframes cardAppear {
-    from {
-        opacity: 0;
-        transform: translateY(50px) rotateX(-30deg) scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) rotateX(0deg) scale(1);
-    }
-}
-
-/* Epic Glowing Borders for Different Score Ranges */
-#progress-list > div.bg-green-500 {
-    background: linear-gradient(135deg, 
-        #10b981 0%, #059669 50%, #34d399 100%) !important;
-    border: 2px solid #34d399;
-    box-shadow: 
-        0 0 30px rgba(16, 185, 129, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-#progress-list > div.bg-yellow-500 {
-    background: linear-gradient(135deg, 
-        #f59e0b 0%, #d97706 50%, #fbbf24 100%) !important;
-    border: 2px solid #fbbf24;
-    box-shadow: 
-        0 0 30px rgba(245, 158, 11, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-#progress-list > div.bg-red-500 {
-    background: linear-gradient(135deg, 
-        #ef4444 0%, #dc2626 50%, #f87171 100%) !important;
-    border: 2px solid #f87171;
-    box-shadow: 
-        0 0 30px rgba(239, 68, 68, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-/* Hover Effects with 3D Transform */
 #progress-list > div:hover {
-    transform: translateY(-15px) rotateX(5deg) rotateY(-5deg) scale(1.05);
-    z-index: 10;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-#progress-list > div.bg-green-500:hover {
-    box-shadow: 
-        0 25px 50px rgba(16, 185, 129, 0.6),
-        0 0 60px rgba(52, 211, 153, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    border-color: #6ee7b7;
-}
+/* Score-based colors */
+#progress-list > div.bg-green-500 { background-color: #ecfdf5; border-color: #a7f3d0; }
+#progress-list > div.bg-yellow-500 { background-color: #fffbeb; border-color: #fde68a; }
+#progress-list > div.bg-red-500 { background-color: #fef2f2; border-color: #fca5a5; }
 
-#progress-list > div.bg-yellow-500:hover {
-    box-shadow: 
-        0 25px 50px rgba(245, 158, 11, 0.6),
-        0 0 60px rgba(251, 191, 36, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    border-color: #fde047;
-}
+/* Content inside progress cards */
+#progress-list h3 { font-size: 1.125rem; font-weight: bold; color: #1f2937; }
+#progress-list p { font-size: 0.875rem; color: #6b7280; }
 
-#progress-list > div.bg-red-500:hover {
-    box-shadow: 
-        0 25px 50px rgba(239, 68, 68, 0.6),
-        0 0 60px rgba(248, 113, 113, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    border-color: #fca5a5;
-}
-
-/* Animated Background Patterns */
-#progress-list > div::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-    background-size: 20px 20px;
-    animation: patternMove 10s linear infinite;
-    z-index: -1;
-}
-
-#progress-list > div.bg-green-500::before {
-    background-image: 
-        radial-gradient(circle at 50% 50%, #34d399 2px, transparent 2px);
-}
-
-#progress-list > div.bg-yellow-500::before {
-    background-image: 
-        linear-gradient(45deg, #fbbf24 25%, transparent 25%),
-        linear-gradient(-45deg, #fbbf24 25%, transparent 25%);
-}
-
-#progress-list > div.bg-red-500::before {
-    background-image: 
-        repeating-linear-gradient(45deg, #f87171 0px, #f87171 2px, transparent 2px, transparent 12px);
-}
-
-@keyframes patternMove {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(20px, 20px); }
-}
-
-/* Progress Card Content Styling */
-#progress-list h3 {
-    font-size: 1.25rem;
-    font-weight: 800;
-    margin-bottom: 0.75rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 2;
-}
-
-#progress-list p {
-    font-size: 1rem;
-    font-weight: 600;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 2;
-}
-
-/* Score Percentage Circle */
-#progress-list > div::after {
-    content: attr(data-percent);
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    font-size: 0.875rem;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    animation: percentPulse 2s ease-in-out infinite;
-    z-index: 3;
-}
-
-@keyframes percentPulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
-
-/* Floating Particles Effect */
-.progress-particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-    animation: floatParticle 3s ease-in-out infinite;
-    z-index: 1;
-}
-
-@keyframes floatParticle {
-    0% {
-        opacity: 0;
-        transform: translateY(20px) scale(0);
-    }
-    50% {
-        opacity: 1;
-        transform: translateY(-10px) scale(1);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-30px) scale(0);
-    }
-}
-
-/* No Progress State */
-#progress-list:empty::after {
-    content: '🎯 Complete quizzes to see your progress here!';
-    display: block;
-    text-align: center;
-    padding: 3rem;
-    font-size: 1.125rem;
-    color: rgba(226, 232, 240, 0.7);
-    background: linear-gradient(135deg, 
-        rgba(99, 102, 241, 0.1), 
-        rgba(139, 92, 246, 0.1));
-    border: 2px dashed rgba(99, 102, 241, 0.3);
-    border-radius: 16px;
-    animation: emptyStatePulse 3s ease-in-out infinite;
-}
-
-@keyframes emptyStatePulse {
-    0%, 100% { 
-        border-color: rgba(99, 102, 241, 0.3);
-        box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
-    }
-    50% { 
-        border-color: rgba(139, 92, 246, 0.5);
-        box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
-    }
-}
-
-/* Achievement Badges */
-.achievement-badge {
-    position: absolute;
-    top: -8px;
-    left: 1rem;
-    background: linear-gradient(45deg, #ffd700, #ffed4e);
-    color: #92400e;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
-    animation: badgeShine 3s ease-in-out infinite;
-    z-index: 4;
-}
-
-@keyframes badgeShine {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); box-shadow: 0 6px 12px rgba(255, 215, 0, 0.5); }
-}
-
-/* Progress Stats Enhancement */
-.progress-stats {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.stat-item {
-    text-align: center;
-    flex: 1;
-}
-
-.stat-number {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 900;
-    line-height: 1;
-    animation: numberGlow 2s ease-in-out infinite alternate;
-}
-
-.stat-label {
-    font-size: 0.75rem;
-    opacity: 0.9;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-@keyframes numberGlow {
-    0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
-    100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
-}
-
-/* Interactive Ripple Effect */
-#progress-list > div {
-    position: relative;
-    overflow: hidden;
-}
-
-.ripple {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.6);
-    transform: scale(0);
-    animation: rippleEffect 0.6s ease-out;
-    pointer-events: none;
-}
-
-@keyframes rippleEffect {
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
-}
-
-/* Progress Bar Visualization */
+/* Mini Progress Bar */
 .mini-progress {
-    width: 100%;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
+    height: 6px;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
     margin-top: 1rem;
     overflow: hidden;
-    position: relative;
 }
 
 .mini-progress-fill {
     height: 100%;
-    border-radius: 20px;
-    position: relative;
-    animation: progressFill 1.5s ease-out;
-    background: linear-gradient(90deg, 
-        rgba(255, 255, 255, 0.8), 
-        rgba(255, 255, 255, 1), 
-        rgba(255, 255, 255, 0.8));
-    background-size: 200% 100%;
-    animation: progressFill 1.5s ease-out, progressShimmer 2s ease-in-out infinite;
+    border-radius: 9999px;
+    transition: width 0.5s ease-out;
 }
 
-@keyframes progressFill {
-    from { width: 0; }
-}
+#progress-list > div.bg-green-500 .mini-progress-fill { background-color: #10b981; }
+#progress-list > div.bg-yellow-500 .mini-progress-fill { background-color: #f59e0b; }
+#progress-list > div.bg-red-500 .mini-progress-fill { background-color: #ef4444; }
 
-@keyframes progressShimmer {
-    0%, 100% { background-position: -200% 0; }
-    50% { background-position: 200% 0; }
-}
-
-/* Grade Indicators */
-/* .grade-indicator {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
+/* Statistics display */
+.progress-stats {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    font-size: 1.125rem;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    animation: gradeFloat 3s ease-in-out infinite;
-} */
-
-@keyframes gradeFloat {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-5px) rotate(5deg); }
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
 }
 
-/* Special Effects for Perfect Scores */
-#progress-list > div[data-percent="100"] {
-    position: relative;
-    overflow: hidden;
-}
+.stat-item { text-align: center; }
+.stat-number { font-size: 1.25rem; font-weight: bold; }
+.stat-label { font-size: 0.75rem; color: #9ca3af; }
 
-#progress-list > div[data-percent="100"]::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, 
-        transparent, #ffd700, transparent, #ffd700, transparent);
-    background-size: 60px 60px;
-    animation: perfectGlow 2s linear infinite;
-    z-index: 1;
+/* --- Review Modal --- */
+.ed-modal {
+    color: #1f2937 !important;
 }
-
-@keyframes perfectGlow {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Confetti Animation for High Scores */
-.confetti {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: #ffd700;
-    animation: confettiFall 3s ease-in infinite;
-}
-
-.confetti:nth-child(odd) { 
-    background: #ff6b6b; 
-    animation-delay: 0.5s;
-}
-.confetti:nth-child(3n) { 
-    background: #4ecdc4; 
-    animation-delay: 1s;
-}
-
-@keyframes confettiFall {
-    0% {
-        opacity: 1;
-        transform: translateY(-100px) rotate(0deg);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(100px) rotate(720deg);
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #progress-section {
-        padding: 1.5rem;
-        border-radius: 16px;
-    }
-    
-    #progress-section h2 {
-        font-size: 1.5rem;
-    }
-    
-    #progress-section h2::after {
-        right: -40px;
-        font-size: 1.25rem;
-    }
-    
-    #progress-list {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    #progress-list > div {
-        padding: 1.25rem;
-    }
-    
-    .grade-indicator {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-}
-
-/* Dark theme text colors */
-#progress-section h2,
-#progress-list h3,
-#progress-list p {
-    color: #e2e8f0 !important;
-}
-
-/* Additional Epic Animations */
-@keyframes sparkle {
-    0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
-    50% { opacity: 1; transform: scale(1) rotate(180deg); }
-}
-
-.sparkle {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background: radial-gradient(circle, #ffd700, transparent);
-    border-radius: 50%;
-    animation: sparkle 2s ease-in-out infinite;
-}
-
-/* Score Achievement Levels */
-#progress-list > div[data-percent="100"] .achievement-badge::after {
-    content: '🏆 PERFECT!';
-}
-
-#progress-list > div[data-achievement="high"] .achievement-badge::after {
-    content: '⭐ EXCELLENT!';
-}
-
-#progress-list > div[data-achievement="good"] .achievement-badge::after {
-    content: '👍 GOOD JOB!';
-}
-.ed-modal { color:#1f2937 !important; }              /* default text */
 .ed-modal h1, .ed-modal h2, .ed-modal h3 {
-  color:#1f2937 !important;
-  text-shadow:none !important;
+    color: #1f2937 !important;
 }
-.ed-modal .text-gray-700 { color:#374151 !important; } /* body lines */
-
-@media (max-width: 768px) {
-  .progress-particle {
-    display: none; /* turn off floating particles on phones */
-  }
-}
-@media (max-width: 768px) {
-  .bg-white, #progress-list > div, button {
-    box-shadow: none !important;
-  }
-}
-@media (max-width: 768px) {
-  #progress-list > div:hover {
-    transform: translateY(-8px) scale(1.02) !important; /* simpler */
-  }
-}
-@media (max-width: 768px) {
-  .bg-white, #progress-section {
-    backdrop-filter: none !important;
-    background: rgba(30, 30, 60, 0.9) !important;
-  }
-}
-@media (max-width: 768px) {
-  #timer {
-    animation: none !important; /* stop glow pulsing */
-    box-shadow: 0 0 10px rgba(99,102,241,0.4);
-  }
+.ed-modal .text-gray-700 {
+    color: #374151 !important;
 }
 
+/* Small screen optimizations */
+@media (max-width: 640px) {
+    .ed-modal > div {
+        margin: 1rem;
+    }
+}
