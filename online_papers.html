@@ -8,7 +8,6 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="quiz.css">
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js"></script>
   <style>
     body {
       padding-top: 64px;
@@ -31,9 +30,9 @@
         <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
         <a href="downloads.html" class="text-gray-700 hover:text-blue-600">Resources</a>
         <a href="quiz.html" class="text-gray-700 hover:text-blue-600">Quiz</a>
-        <a href="online_papers.html" class="text-gray-700 hover:text-blue-600 nav-link">Online Papers</a>
+        <a id="onlinePapersBtnDesktop" href="online_papers.html" class="hidden text-gray-700 hover:text-blue-600 nav-link">Online Papers</a>
         <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
-        <a href="landing.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login/SignUp</a>
+        <a id="loginBtnDesktop" href="landing.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login/SignUp</a>
         <a id="profileBtnDesktop" href="profile.html" class="hidden px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">My Profile</a>
       </div>
       <button id="mobile-menu-btn" class="md:hidden p-2">
@@ -45,9 +44,9 @@
         <a href="index.html" class="block px-3 py-2 text-gray-700">Home</a>
         <a href="downloads.html" class="block px-3 py-2 text-gray-700">Resources</a>
         <a href="quiz.html" class="block px-3 py-2 text-gray-700">Quiz</a>
-        <a href="online_papers.html" class="block px-3 py-2 text-gray-700">Online Papers</a>
+        <a id="onlinePapersBtnMobile" href="online_papers.html" class="hidden block px-3 py-2 text-gray-700">Online Papers</a>
         <a href="community.html" class="block px-3 py-2 text-gray-700">Community</a>
-        <a href="landing.html" class="block px-3 py-2 text-gray-800 hover:bg-gray-200">Login/SignUp</a>
+        <a id="loginBtnMobile" href="landing.html" class="block px-3 py-2 text-gray-800 hover:bg-gray-200">Login/SignUp</a>
         <a id="profileBtnMobile" href="profile.html" class="hidden block px-4 py-2 text-blue-600 hover:underline">My Profile</a>
       </div>
     </div>
@@ -56,15 +55,20 @@
   <main class="container mx-auto px-4 py-12">
     <h1 class="text-3xl font-bold text-center mb-8">🗓️ Available Online Papers</h1>
     <div id="papers-list" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      </div>
+    </div>
   </main>
   
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js"></script>
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    // --- Access Control Check ---
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    if (!isLoggedIn) {
+      window.location.href = "landing.html"; 
+    }
     
     // Your Firebase config here
     const firebaseConfig = {
@@ -93,8 +97,9 @@
         }
 
         papersList.innerHTML = '';
-        querySnapshot.forEach(doc => {
-          const exam = doc.data();
+        querySnapshot.forEach(docSnapshot => {
+          const exam = docSnapshot.data();
+          exam.examId = docSnapshot.id;
           renderExamCard(exam);
         });
       } catch (e) {
@@ -142,7 +147,11 @@
       papersList.appendChild(card);
     }
 
-    document.addEventListener("DOMContentLoaded", fetchExams);
+    fetchExams();
   </script>
+  
+  <script>lucide.createIcons();</script>
+  <script type="module" src="script.js"></script>
+
 </body>
 </html>
