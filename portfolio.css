@@ -101,7 +101,7 @@ body {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 999; /* Lowered z-index slightly */
+    z-index: 999; 
     transition: var(--transition);
 }
 
@@ -188,7 +188,7 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    z-index: 1001; /* Ensure it's above the menu */
+    z-index: 1001; 
 }
 
 .nav-toggle span {
@@ -1034,7 +1034,6 @@ body {
         --container-padding: 1rem;
     }
     
-    /* UPDATED: Mobile Navigation Styles */
     .nav-menu {
         flex-direction: column;
         position: absolute;
@@ -1044,16 +1043,16 @@ body {
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(10px);
         padding: 1rem 0;
-        transform: translateY(-150%); /* Start hidden above */
+        transform: translateY(-150%); 
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: var(--shadow-lg);
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-        gap: 0; /* Remove gap for mobile */
+        gap: 0;
     }
 
     .nav-menu.active {
-        transform: translateY(0); /* Slide into view */
+        transform: translateY(0); 
     }
     
     .nav-link {
@@ -1066,7 +1065,6 @@ body {
         display: flex;
     }
     
-    /* Hamburger to Cross Animation */
     .nav-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(6px, 6px);
     }
@@ -1083,7 +1081,6 @@ body {
         gap: 2rem;
     }
 
-    /* FIX: ADDED PADDING TO PUSH CONTENT DOWN */
     .hero {
         padding-top: 150px;
     }
