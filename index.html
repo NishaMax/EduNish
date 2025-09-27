@@ -25,7 +25,7 @@
         <a href="index.html" class="text-gray-700 hover:text-blue-600 nav-link">Home</a>
         <a href="downloads.html" class="text-gray-700 hover:text-blue-600">Resources</a>
         <a href="quiz.html" id="quizNavBtnDesktop" class="hover:underline">Quiz</a>
-        <a href="online_papers.html" class="text-gray-700 hover:text-blue-600">Online Papers</a>
+        <a href="online_papers.html" class="hidden text-gray-700 hover:text-blue-600">Online Papers</a>
         <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
         <a href="landing.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login/SignUp</a>
         <a id="profileBtnDesktop" href="profile.html"
@@ -42,7 +42,7 @@
         <a href="index.html" class="block px-3 py-2 text-gray-700 active">Home</a>
         <a href="downloads.html" class="block px-3 py-2 text-gray-700">Resources</a>
         <a href="quiz.html" id="quizNavBtnMobile" class="block px-3 py-2 text-gray-700">Quiz</a>
-        <a href="online_papers.html" class="block px-3 py-2 text-gray-700">Online Papers</a>
+        <a href="online_papers.html" class="hidden block px-3 py-2 text-gray-700">Online Papers</a>
         <a href="community.html" class="block px-3 py-2 text-gray-700">Community</a>
         <a href="landing.html" class="block px-3 py-2 text-gray-800 hover:bg-gray-200">Login/SignUp</a>
         <a id="profileBtnMobile" href="profile.html"
@@ -542,5 +542,165 @@ numBase.addEventListener("change", convertNumber);
   
   <script>lucide.createIcons();</script>
   <script type="module" src="script.js"></script>
+</body>
+</html>
+}
+
+{
+type: uploaded file
+fileName: online_papers.html
+fullContent:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Papers - EduNish</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="quiz.css">
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js"></script>
+  <style>
+    body {
+      padding-top: 64px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <nav class="fixed top-0 w-full z-50 transition-all duration-300 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+          <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
+        </div>
+        <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          EduNish
+        </span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+        <a href="downloads.html" class="text-gray-700 hover:text-blue-600">Resources</a>
+        <a href="quiz.html" class="text-gray-700 hover:text-blue-600">Quiz</a>
+        <a href="online_papers.html" class="text-gray-700 hover:text-blue-600 nav-link">Online Papers</a>
+        <a href="community.html" class="text-gray-700 hover:text-blue-600">Community</a>
+        <a href="landing.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">Login/SignUp</a>
+        <a id="profileBtnDesktop" href="profile.html" class="hidden px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">My Profile</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden mobile-menu-transition transform scale-y-0 opacity-0">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="index.html" class="block px-3 py-2 text-gray-700">Home</a>
+        <a href="downloads.html" class="block px-3 py-2 text-gray-700">Resources</a>
+        <a href="quiz.html" class="block px-3 py-2 text-gray-700">Quiz</a>
+        <a href="online_papers.html" class="block px-3 py-2 text-gray-700">Online Papers</a>
+        <a href="community.html" class="block px-3 py-2 text-gray-700">Community</a>
+        <a href="landing.html" class="block px-3 py-2 text-gray-800 hover:bg-gray-200">Login/SignUp</a>
+        <a id="profileBtnMobile" href="profile.html" class="hidden block px-4 py-2 text-blue-600 hover:underline">My Profile</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold text-center mb-8">🗓️ Available Online Papers</h1>
+    <div id="papers-list" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      </div>
+  </main>
+  
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    // --- Access Control Check ---
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    if (!isLoggedIn) {
+      window.location.href = "landing.html";
+    }
+    
+    // Your Firebase config here
+    const firebaseConfig = {
+      apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
+      authDomain: "edunish-211d0.firebaseapp.com",
+      projectId: "edunish-211d0",
+      storageBucket: "edunish-211d0.appspot.com",
+      messagingSenderId: "1002400429038",
+      appId: "1:1002400429038:web:12ee9a586de10e518694ff",
+      measurementId: "G-7ZSDMMKFQ0"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const papersList = document.getElementById("papers-list");
+
+    async function fetchExams() {
+      papersList.innerHTML = `<div class="col-span-full text-center text-gray-500">Loading exams...</div>`;
+      
+      try {
+        const querySnapshot = await getDocs(collection(db, "exams"));
+        if (querySnapshot.empty) {
+          papersList.innerHTML = `<div class="col-span-full text-center text-gray-500">No online papers available at the moment.</div>`;
+          return;
+        }
+
+        papersList.innerHTML = '';
+        querySnapshot.forEach(doc => {
+          const exam = doc.data();
+          renderExamCard(exam);
+        });
+      } catch (e) {
+        console.error("Error fetching exams: ", e);
+        papersList.innerHTML = `<div class="col-span-full text-center text-red-500">Failed to load exams. Please try again later.</div>`;
+      }
+    }
+
+    function renderExamCard(exam) {
+      const now = Date.now();
+      const startTime = exam.startTime.toDate();
+      const endTime = exam.endTime.toDate();
+      let status = '';
+      let actionButton = '';
+      let cardClass = '';
+
+      if (now < startTime.getTime()) {
+        status = 'Upcoming';
+        cardClass = 'bg-blue-100 border-blue-200';
+        actionButton = `<span class="text-sm text-blue-600">Starts: ${startTime.toLocaleString()}</span>`;
+      } else if (now >= startTime.getTime() && now <= endTime.getTime()) {
+        status = 'Active';
+        cardClass = 'bg-green-100 border-green-200 animate-pulse';
+        actionButton = `<a href="take_exam.html?examId=${exam.examId}" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Start Exam</a>`;
+      } else {
+        status = 'Closed';
+        cardClass = 'bg-gray-100 border-gray-200 opacity-70';
+        actionButton = `<span class="text-sm text-gray-500">Closed: ${endTime.toLocaleString()}</span>`;
+      }
+
+      const card = document.createElement("div");
+      card.className = `p-6 rounded-xl shadow-md border-2 ${cardClass}`;
+      card.innerHTML = `
+        <div class="flex items-center justify-between mb-2">
+          <h2 class="text-xl font-bold">${exam.examName}</h2>
+          <span class="px-2 py-1 text-xs rounded-full font-semibold ${status === 'Active' ? 'bg-green-500 text-white' : status === 'Upcoming' ? 'bg-blue-500 text-white' : 'bg-gray-500 text-white'}">
+            ${status}
+          </span>
+        </div>
+        <p class="text-sm text-gray-500 mb-4">Duration: ${exam.durationMinutes} minutes</p>
+        <div class="text-center mt-4">
+          ${actionButton}
+        </div>
+      `;
+      papersList.appendChild(card);
+    }
+
+    document.addEventListener("DOMContentLoaded", fetchExams);
+  </script>
 </body>
 </html>

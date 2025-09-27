@@ -7,7 +7,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
   authDomain: "edunish-211d0.firebaseapp.com",
   projectId: "edunish-211d0",
-  storageBucket: "edunish-211d0.appspot.com",
+  storageBucket: "edunish-211d0.firebasestorage.app", // Updated bucket name
   messagingSenderId: "1002400429038",
   appId: "1:1002400429038:web:12ee9a586de10e518694ff",
   measurementId: "G-7ZSDMMKFQ0"
@@ -22,6 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const profileBtnMobile = document.getElementById("profileBtnMobile");
   const loginBtnDesktop = document.querySelector('a[href="landing.html"]');
   const loginBtnMobile = document.querySelector('#mobile-menu a[href="landing.html"]');
+
+  // New DOM elements for Online Papers link
+  const onlinePapersLinkDesktop = document.querySelector('a[href="online_papers.html"]');
+  const onlinePapersLinkMobile = document.querySelector('#mobile-menu a[href="online_papers.html"]');
   
   // ===== Highlight Active Nav Link =====
   const currentPath = window.location.pathname.split("/").pop();
@@ -80,14 +84,23 @@ document.addEventListener("DOMContentLoaded", () => {
       if (loginBtnMobile) loginBtnMobile.classList.add("hidden");
       if (profileBtnDesktop) profileBtnDesktop.classList.remove("hidden");
       if (profileBtnMobile) profileBtnMobile.classList.remove("hidden");
+      
+      // Show Online Papers link when logged in
+      if (onlinePapersLinkDesktop) onlinePapersLinkDesktop.classList.remove("hidden");
+      if (onlinePapersLinkMobile) onlinePapersLinkMobile.classList.remove("hidden");
     } else {
       if (loginBtnDesktop) loginBtnDesktop.classList.remove("hidden");
       if (loginBtnMobile) loginBtnMobile.classList.remove("hidden");
       if (profileBtnDesktop) profileBtnDesktop.classList.add("hidden");
       if (profileBtnMobile) profileBtnMobile.classList.add("hidden");
+      
+      // Hide Online Papers link when logged out
+      if (onlinePapersLinkDesktop) onlinePapersLinkDesktop.classList.add("hidden");
+      if (onlinePapersLinkMobile) onlinePapersLinkMobile.classList.add("hidden");
     }
   }
 
+  // Initial check on page load and a listener for storage changes
   updateNav();
   window.addEventListener("storage", updateNav);
 });

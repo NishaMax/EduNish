@@ -64,11 +64,17 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getFirestore, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
+    // --- Access Control Check ---
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    if (!isLoggedIn) {
+      window.location.href = "landing.html";
+    }
+
     const firebaseConfig = {
       apiKey: "AIzaSyCeqwvVFwmOxIoSWI9qk64t9lnjwxYtrOs",
       authDomain: "edunish-211d0.firebaseapp.com",
       projectId: "edunish-211d0",
-      storageBucket: "edunish-211d0.appspot.com",
+      storageBucket: "edunish-211d0.firebasestorage.app",
       messagingSenderId: "1002400429038",
       appId: "1:1002400429038:web:12ee9a586de10e518694ff",
       measurementId: "G-7ZSDMMKFQ0"
