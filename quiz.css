@@ -1,32 +1,8 @@
-/* Optimized Quiz Page Styles */
-
-/* --- General Styles --- */
+/* CHANGE: Using the more modern 'Inter' font */
 body {
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
     color: #374151; /* Dark gray for text */
     background-color: #f3f4f6; /* Light gray background */
-}
-
-/* --- Navigation & Header --- */
-nav {
-    border-bottom: 1px solid #e5e7eb;
-}
-
-/* --- Main Content Layout --- */
-main {
-    padding-top: 64px; /* Ensure content isn't hidden by navbar */
-}
-
-/* --- Card & Form Element Styles --- */
-.bg-white {
-    background-color: #ffffff;
-    border: 1px solid #e5e7eb;
-    transition: all 0.3s ease;
-}
-
-.bg-white:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transform: translateY(-4px);
 }
 
 select, input, button {
@@ -40,33 +16,10 @@ select:focus, input:focus {
     box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
 }
 
-/* --- Quiz Series Cards --- */
-#series-cards > div {
-    background-color: #f9fafb;
-    border: 1px solid #e5e7eb;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
 #series-cards > div:hover {
     background-color: #eff6ff;
     border-color: #bfdbfe;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-/* --- Quiz Progress Bar --- */
-#progress-bar {
-    background-color: #2563eb;
-    transition: width 0.5s ease-out;
-}
-
-/* --- Quiz Options Buttons --- */
-#quiz-options button {
-    background-color: #f9fafb;
-    border: 1px solid #e5e7eb;
-    transition: all 0.2s ease;
 }
 
 #quiz-options button:hover {
@@ -75,39 +28,6 @@ select:focus, input:focus {
     transform: translateX(4px);
 }
 
-#quiz-options button.bg-blue-200 {
-    background-color: #dbeafe !important;
-    border-color: #60a5fa !important;
-    color: #1e40af !important;
-    transform: translateX(8px);
-}
-
-/* --- Buttons --- */
-button {
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-button.bg-blue-600 {
-    background-color: #2563eb;
-    color: white;
-}
-
-button.bg-blue-600:hover {
-    background-color: #1d4ed8;
-}
-
-button.bg-gray-600 {
-    background-color: #4b5563;
-    color: white;
-}
-
-button.bg-gray-600:hover {
-    background-color: #374151;
-}
-
-/* --- Result Section --- */
 #result-container > div {
     animation: fadeInScale 0.5s ease-out;
 }
@@ -117,88 +37,105 @@ button.bg-gray-600:hover {
     to { opacity: 1; transform: scale(1); }
 }
 
-/* --- Progress Overview --- */
-#progress-section h2::after {
-    display: none; /* Removed the animated icon */
-}
+/* --- NEW: Clean & Modern Quiz Result Card Styles --- */
 
 #progress-list {
     display: grid;
+    /* Responsive grid that adjusts number of columns based on screen width */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    gap: 1.5rem; /* Space between cards */
 }
 
-#progress-list > div {
-    padding: 1.5rem;
-    border-radius: 12px;
-    background-color: #ffffff;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    cursor: pointer;
+.quiz-result-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px B15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e7eb; /* Subtle border */
+  cursor: pointer;
 }
 
-#progress-list > div:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.quiz-result-card:hover {
+  transform: translateY(-4px); /* Lift effect on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* Score-based colors */
-#progress-list > div.bg-green-500 { background-color: #ecfdf5; border-color: #a7f3d0; }
-#progress-list > div.bg-yellow-500 { background-color: #fffbeb; border-color: #fde68a; }
-#progress-list > div.bg-red-500 { background-color: #fef2f2; border-color: #fca5a5; }
-
-/* Content inside progress cards */
-#progress-list h3 { font-size: 1.125rem; font-weight: bold; color: #1f2937; }
-#progress-list p { font-size: 0.875rem; color: #6b7280; }
-
-/* Mini Progress Bar */
-.mini-progress {
-    height: 6px;
-    background-color: #e5e7eb;
-    border-radius: 9999px;
-    margin-top: 1rem;
-    overflow: hidden;
+.quiz-result-card .grade {
+  font-size: 0.875rem;
+  color: #6b7280; /* Muted gray */
+  margin-bottom: 0.25rem;
 }
 
-.mini-progress-fill {
-    height: 100%;
-    border-radius: 9999px;
-    transition: width 0.5s ease-out;
+.quiz-result-card .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937; /* Darker heading */
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
 }
 
-#progress-list > div.bg-green-500 .mini-progress-fill { background-color: #10b981; }
-#progress-list > div.bg-yellow-500 .mini-progress-fill { background-color: #f59e0b; }
-#progress-list > div.bg-red-500 .mini-progress-fill { background-color: #ef4444; }
-
-/* Statistics display */
-.progress-stats {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid #e5e7eb;
+.quiz-result-card .score {
+  font-size: 3rem; /* Large, prominent score */
+  font-weight: 800; /* Extra bold */
+  margin-bottom: 0.75rem;
+  text-align: center;
+  color: #3b82f6; /* Default blue score color */
 }
 
-.stat-item { text-align: center; }
-.stat-number { font-size: 1.25rem; font-weight: bold; }
-.stat-label { font-size: 0.75rem; color: #9ca3af; }
-
-/* --- Review Modal --- */
-.ed-modal {
-    color: #1f2937 !important;
-}
-.ed-modal h1, .ed-modal h2, .ed-modal h3 {
-    color: #1f2937 !important;
-}
-.ed-modal .text-gray-700 {
-    color: #374151 !important;
+.quiz-result-card .stats-summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
 }
 
-/* Small screen optimizations */
-@media (max-width: 640px) {
-    .ed-modal > div {
-        margin: 1rem;
-    }
+.quiz-result-card .correct-total {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* --- Dynamic coloring based on score --- */
+/* High Score (>= 75%) */
+.quiz-result-card.score-high .score { color: #22c55e; } /* Green */
+.quiz-result-card.score-high .quiz-progress-bar { background-color: #22c55e; }
+
+/* Medium Score (>= 50%) */
+.quiz-result-card.score-medium .score { color: #f97316; } /* Orange */
+.quiz-result-card.score-medium .quiz-progress-bar { background-color: #f97316; }
+
+/* Low Score (< 50%) */
+.quiz-result-card.score-low .score { color: #ef4444; } /* Red */
+.quiz-result-card.score-low .quiz-progress-bar { background-color: #ef4444; }
+
+
+/* --- Mini Progress Bar --- */
+.quiz-progress-container {
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  height: 6px;
+  overflow: hidden;
+  margin-top: auto; /* Pushes bar to bottom before date */
+  margin-bottom: 0.75rem;
+}
+
+.quiz-progress-bar {
+  height: 100%;
+  background-color: #3b82f6; /* Default blue */
+  border-radius: 9999px;
+  /* Use CSS variable for dynamic width from JS */
+  width: var(--progress-width, 0%);
+  transition: width 0.5s ease-out;
+}
+
+.quiz-result-card .completion-date {
+  font-size: 0.75rem;
+  color: #9ca3af; /* Lighter muted gray */
+  text-align: center;
 }
