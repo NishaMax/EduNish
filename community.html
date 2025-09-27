@@ -486,17 +486,22 @@
     </footer>
 
     <script src="portfolio.js"></script>
-    <script src="script.js"></script>
+    
     <script>
         // Script to initialize Lucide icons
         lucide.createIcons();
 
-        // Script for mobile menu toggle
+        // UPDATED Script for mobile menu toggle with animation
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+            // Use a timeout to allow the display property to change before transitioning opacity
+            setTimeout(() => {
+                mobileMenu.classList.toggle('opacity-0');
+                mobileMenu.classList.toggle('scale-y-0');
+            }, 10);
         });
     </script>
 </body>
