@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="circuit.css">
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="circuit.js" defer></script>
+  <!-- <script src="circuit.js" defer></script> -->
+  
 </head>
 <body class="bg-gray-50 text-gray-900">
   <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white shadow-md">
@@ -239,6 +240,18 @@
                         </a>
                     </div>
                 </div>
+            </div>
+
+            <div class="chatbot-container">
+              <div id="chatbox" class="chatbox">
+                  <div class="chat-message ai-message">
+                      <p>Hello! I'm ICT Aiya. Ask me any questions you have about O/L or A/L ICT.</p>
+                  </div>
+              </div>
+              <div class="chat-input-container">
+                  <input type="text" id="userInput" class="chat-input" placeholder="Type your question here...">
+                  <button id="sendMessageBtn" class="send-button">Send</button>
+              </div>
             </div>
 
             <div class="text-center mb-12">
@@ -541,6 +554,12 @@ numBase.addEventListener("change", convertNumber);
     </footer>
   
   <script>lucide.createIcons();</script>
-  <script type="module" src="script.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-functions.js"></script>
+
+<script src="/__/firebase/init.js?useEmulator=true"></script>
+
+<script src="circuit.js" defer></script>
+<script src="script.js"></script>
 </body>
 </html>
