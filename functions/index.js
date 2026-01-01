@@ -63,7 +63,7 @@ exports.askGemini = functions.https.onCall(async (data, context) => {
 
     throw new functions.https.HttpsError(
         "internal",
-        "The AI service failed to process the request. Please check the server logs.",
+        `AI Service Error: ${error.message}`,
     );
   }
 });
