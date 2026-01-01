@@ -1,24 +1,28 @@
 /* eslint-disable max-len */
 // functions/index.js
 
-const functions = require("firebase-functions");
+const {onCall} = require("firebase-functions/v2/https");
+const {defineSecret} = require("firebase-functions/params");
 const {GoogleGenerativeAI} = require("@google/generative-ai");
+const functions = require("firebase-functions"); // Keep for HttpsError
+
+const geminiApiKey = defineSecret("GEMINI_API_KEY");
 
 let genAI;
 let model;
 
-exports.askGemini = functions.https.onCall(async (data, context) => {
+exports.askGemini = onCall({secrets: [geminiApiKey]}, async (request) => {
   console.log("Function triggered. Initializing...");
 
   try {
     if (!genAI) {
-      console.log("Attempting to get API key from environment...");
+      console.log("Attempting to get API key from secrets...");
 
-      // Accessing the key from Firebase config (must be lowercase)
-      const geminiKey = functions.config().gemini.key;
+      // Accessing the key from Firebase Secrets
+      const key = geminiApiKey.value();
 
-      if (!geminiKey) {
-        console.error("Gemini API Key is NOT FOUND in functions config.");
+      if (!key) {
+        console.error("Gemini API Key is NOT FOUND in secrets.");
         throw new functions.https.HttpsError(
             "failed-precondition",
             "The Gemini API Key is missing on the server.",
@@ -26,12 +30,13 @@ exports.askGemini = functions.https.onCall(async (data, context) => {
       }
 
       console.log("API Key found. Initializing GoogleGenerativeAI client.");
-      genAI = new GoogleGenerativeAI(geminiKey);
-      model = genAI.getGenerativeModel({model: "gemini-pro"});
+      genAI = new GoogleGenerativeAI(key);
+      // Updated to use the latest stable model
+      model = genAI.getGenerativeModel({model: "gemini-1.5-flash"});
       console.log("AI Model initialized successfully.");
     }
 
-    const userMessage = data.message;
+    const userMessage = request.data.message;
     if (!userMessage) {
       console.error("Request failed: User message was empty.");
       throw new functions.https.HttpsError(
