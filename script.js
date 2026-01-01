@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const menuBtn = document.getElementById("mobile-menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
-  
+
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener("click", () => {
             const isOpen = !mobileMenu.classList.contains('opacity-0');
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 mobileMenu.classList.remove("scale-y-0", "opacity-0", "pointer-events-none");
                 icon.setAttribute("data-lucide", "x");
             }
-            if(window.lucide) {
+            if (window.lucide) {
                 lucide.createIcons();
             }
         });
@@ -57,73 +57,87 @@ document.addEventListener("DOMContentLoaded", () => {
     updateNav();
     window.addEventListener("storage", updateNav);
 
-    if(window.lucide) {
+    if (window.lucide) {
         lucide.createIcons();
     }
 
     // ===============================================
     // =========== Chatbot Logic =====================
     // ===============================================
-    
-    if (typeof firebase !== 'undefined') {
-        const functions = firebase.functions();
-        const askGemini = functions.httpsCallable('askGemini');
 
-        const chatbox = document.getElementById('chatbox');
-        const userInput = document.getElementById('userInput');
-        const sendMessageBtn = document.getElementById('sendMessageBtn');
+    // 1. Select DOM elements first
+    const chatbox = document.getElementById('chatbox');
+    const userInput = document.getElementById('userInput');
+    const sendMessageBtn = document.getElementById('sendMessageBtn');
 
-        if (!chatbox || !userInput || !sendMessageBtn) {
-            console.warn("Chatbot elements not found on this page. Chatbot will not initialize.");
-        } else {
-            function addMessage(message, sender) {
-                const messageElement = document.createElement('div');
-                messageElement.classList.add('chat-message', `${sender}-message`);
-                
-                const p = document.createElement('p');
-                p.textContent = message;
-                messageElement.appendChild(p);
-                
-                chatbox.appendChild(messageElement);
-                chatbox.scrollTop = chatbox.scrollHeight;
-            }
-
-            async function sendMessage() {
-                const message = userInput.value.trim();
-                if (message === '') return;
-
-                addMessage(message, 'user');
-                userInput.value = '';
-                userInput.disabled = true;
-                sendMessageBtn.disabled = true;
-
-                console.log("Attempting to send this object to Firebase:", { message: message });
-
-                try {
-                    const result = await askGemini({ message: message });
-                    if (result && result.data && result.data.response) {
-                         addMessage(result.data.response, 'ai');
-                    } else {
-                         addMessage("I received an empty response. Please try again.", 'ai');
-                    }
-                } catch (error) {
-                    console.error("Error calling Firebase Function:", error);
-                    addMessage("Sorry, I'm having trouble connecting. Please check the console for errors and try again.", 'ai');
-                } finally {
-                    userInput.disabled = false;
-                    sendMessageBtn.disabled = false;
-                    userInput.focus();
-                }
-            }
-
-            sendMessageBtn.addEventListener('click', sendMessage);
-            userInput.addEventListener('keypress', (event) => {
-                if (event.key === 'Enter') {
-                    sendMessage();
-                }
-            });
-        }
+    if (!chatbox || !userInput || !sendMessageBtn) {
+        console.warn("Chatbot elements not found on this page. Chatbot will not initialize.");
     } else {
-        console.error("Firebase is not loaded. Chatbot cannot function.");
+        // 2. Define the UI helper function
+        function addMessage(message, sender) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('chat-message', `${sender}-message`);
+
+            const p = document.createElement('p');
+            p.textContent = message;
+            messageElement.appendChild(p);
+
+            chatbox.appendChild(messageElement);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        // 3. Define the send logic
+        async function sendMessage() {
+            const message = userInput.value.trim();
+            if (message === '') return;
+
+            // Add user message to UI
+            addMessage(message, 'user');
+
+            // Clear input and disable controls
+            userInput.value = '';
+            userInput.disabled = true;
+            sendMessageBtn.disabled = true;
+
+            try {
+                // Initialize Firebase Function
+                if (typeof firebase === 'undefined') {
+                    throw new Error("Firebase SDK not loaded");
+                }
+
+                const functions = firebase.functions();
+                // Use the 'asia-south1' region if that's where you deploy, or default (us-central1)
+                // const askGemini = functions.region('asia-south1').httpsCallable('askGemini');
+                const askGemini = functions.httpsCallable('askGemini');
+
+                const result = await askGemini({ message: message });
+
+                if (result && result.data && result.data.response) {
+                    addMessage(result.data.response, 'ai');
+                } else {
+                    addMessage("I received an empty response. Please try again.", 'ai');
+                }
+            } catch (error) {
+                console.error("Error calling Chatbot API:", error);
+                let errorMsg = "Sorry, I'm having trouble connecting to the server.";
+                if (error.message.includes("Firebase SDK not loaded")) {
+                    errorMsg = "Firebase is not loaded. Please check your internet connection.";
+                }
+                addMessage(errorMsg, 'ai');
+            } finally {
+                // Re-enable controls
+                userInput.disabled = false;
+                sendMessageBtn.disabled = false;
+                userInput.focus();
+            }
+        }
+
+        // 4. Attach Event Listeners (ALWAYS)
+        sendMessageBtn.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
     }
 }); // <-- This is the correct final closing brace

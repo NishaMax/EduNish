@@ -14,11 +14,11 @@ exports.askGemini = functions.https.onCall(async (data, context) => {
     if (!genAI) {
       console.log("Attempting to get API key from environment...");
 
-      // --- THIS IS THE CHANGED LINE ---
-      const geminiKey = process.env.GEMINI_API_KEY;
+      // Accessing the key from Firebase config (must be lowercase)
+      const geminiKey = functions.config().gemini.key;
 
       if (!geminiKey) {
-        console.error("Gemini API Key is NOT FOUND in environment variables.");
+        console.error("Gemini API Key is NOT FOUND in functions config.");
         throw new functions.https.HttpsError(
             "failed-precondition",
             "The Gemini API Key is missing on the server.",
