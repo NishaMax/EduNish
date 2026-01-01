@@ -120,7 +120,16 @@ document.addEventListener("DOMContentLoaded", () => {
             } catch (error) {
                 console.error("Error calling Chatbot API:", error);
                 let errorMsg = "Sorry, I'm having trouble connecting to the server.";
-                if (error.message.includes("Firebase SDK not loaded")) {
+
+                // Enhanced error reporting for debugging
+                if (error.code) {
+                    errorMsg += ` (Error Code: ${error.code})`;
+                }
+                if (error.message) {
+                    errorMsg += `\nDetails: ${error.message}`;
+                }
+
+                if (error.message && error.message.includes("Firebase SDK not loaded")) {
                     errorMsg = "Firebase is not loaded. Please check your internet connection.";
                 }
                 addMessage(errorMsg, 'ai');
