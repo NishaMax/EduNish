@@ -1,74 +1,60 @@
 /* eslint-disable max-len */
-// functions/index.js
 
 const {onCall} = require("firebase-functions/v2/https");
 const {defineSecret} = require("firebase-functions/params");
-const {GoogleGenerativeAI} = require("@google/generative-ai");
-const functions = require("firebase-functions"); // Keep for HttpsError
+const functions = require("firebase-functions");
 
-const geminiApiKey = defineSecret("GEMINI_API_KEY");
+const GEMINI_API_KEY = defineSecret("GEMINI_API_KEY");
 
-let genAI;
-let model;
+exports.askGemini = onCall(
+    {secrets: [GEMINI_API_KEY]},
+    async (request) => {
+      try {
+        const message = request.data.message;
+        if (!message) {
+          throw new functions.https.HttpsError(
+              "invalid-argument",
+              "Message is required",
+          );
+        }
 
-exports.askGemini = onCall({secrets: [geminiApiKey]}, async (request) => {
-  console.log("Function triggered. Initializing...");
+        const prompt = `
+You are ICT Aiya, a friendly ICT tutor for Sri Lankan O/L and A/L students.
+Explain concepts clearly with simple examples.
 
-  try {
-    if (!genAI) {
-      console.log("Attempting to get API key from secrets...");
+Student question: "${message}"
+`;
 
-      // Accessing the key from Firebase Secrets
-      const key = geminiApiKey.value();
+        const response = await fetch(
+            `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro:generateContent?key=${GEMINI_API_KEY.value()}`,
+            {
+              method: "POST",
+              headers: {"Content-Type": "application/json"},
+              body: JSON.stringify({
+                contents: [
+                  {
+                    parts: [{text: prompt}],
+                  },
+                ],
+              }),
+            },
+        );
 
-      if (!key) {
-        console.error("Gemini API Key is NOT FOUND in secrets.");
+        const data = await response.json();
+
+        if (!data.candidates?.length) {
+          throw new Error(JSON.stringify(data));
+        }
+
+        return {
+          response: data.candidates[0].content.parts[0].text,
+        };
+      } catch (error) {
+        console.error("Gemini REST Error:", error);
         throw new functions.https.HttpsError(
-            "failed-precondition",
-            "The Gemini API Key is missing on the server.",
+            "internal",
+            "AI Service Error: " + error.message,
         );
       }
-
-      console.log("API Key found. Initializing GoogleGenerativeAI client.");
-      genAI = new GoogleGenerativeAI(key);
-      // Updated to use the latest stable model
-      model = genAI.getGenerativeModel({model: "gemini-1.5-flash"});
-      console.log("AI Model initialized successfully.");
-    }
-
-    const userMessage = request.data.message;
-    if (!userMessage) {
-      console.error("Request failed: User message was empty.");
-      throw new functions.https.HttpsError(
-          "invalid-argument",
-          "The message cannot be empty.",
-      );
-    }
-
-    console.log(`Received message: "${userMessage}"`);
-
-    const prompt = `
-      You are a friendly and helpful ICT tutor for Sri Lankan students. 
-      Your name is "ICT Aiya". Your purpose is to explain computer science topics
-      (like ERDs, programming, computer hardware) clearly and simply for O/L and A/L students.
-      Use simple language and examples they can relate to.
-
-      Student's question: "${userMessage}"
-    `;
-
-    console.log("Generating content from Gemini API...");
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    const text = response.text();
-    console.log("Successfully received response from Gemini.");
-
-    return {response: text};
-  } catch (error) {
-    console.error("A critical error occurred in the function:", error);
-
-    throw new functions.https.HttpsError(
-        "internal",
-        `AI Service Error: ${error.message}`,
-    );
-  }
-});
+    },
+);
