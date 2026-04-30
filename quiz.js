@@ -40,8 +40,9 @@ function showSeriesError(message) {
     seriesSection.classList.remove("hidden");
 }
 
-async function loadLessonFile(filename) {
-    const res = await fetch(`./${filename}`);
+async function loadLessonFile(filename, medium) {
+    const folder = medium === "English" ? "data/english" : "data/sinhala";
+    const res = await fetch(`./${folder}/${filename}`);
     const text = await res.text();
 
     try {
@@ -117,7 +118,7 @@ lessonSelect.addEventListener("change", async () => {
     seriesSection.classList.remove("hidden");
 
     try {
-        const raw = await loadLessonFile(filename);
+        const raw = await loadLessonFile(filename, medium);
         const data = normalizeQuestions(raw);
 
         if (!data.length) {
